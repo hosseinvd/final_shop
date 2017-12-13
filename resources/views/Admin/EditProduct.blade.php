@@ -7,11 +7,12 @@
     @include('partials.errors')
     <br>
 
-    <div class="container ">
+    <div class="container " >
         <div class="panel-heading"><h2>محصول جدید</h2></div>
 
-        <form class="form-horizontal" method="post" action="{{route('a_storeProduct')}}" enctype="multipart/form-data">
-            {{csrf_field()}}
+        <form class="form-horizontal" method="post" action="{{route('a_Update_product')}}" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            <input type="hidden" name="p_id" id="product_id" value="{{$s_product->id}}">
             <div class="col-sm-6">
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="title">عنوان :</label>
@@ -71,7 +72,11 @@
                     <label class="control-label col-sm-2">گروه :</label>
                     <select class="form-control col-sm-4" name="category_id" id="category_id" required>
                         @foreach($categories as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            @if($s_product->category_id==$category->id)
+                                <option value="{{$category->id}}" selected>{{$category->name}}</option>
+                            @else
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endif
                         @endforeach
                     </select>
                 </div>
@@ -95,7 +100,8 @@
             </div>
 
             <row class="form-group">
-                <div class="col-sm-10">
+                <div class="col-sm-10" id="C_table">
+
                     @foreach($s_product->images()->get() as $product_img)
                         <div class="col-md-2">
                             <div class="thumbnail">
@@ -123,7 +129,7 @@
 
         <form method="post" action="{{route('a_Edit_Products_Image')}}" class="dropzone">
             <input type="hidden" name="product_id" value="{{$s_product->id}}">
-            {{--{{ method_field('PATCH') }}--}}
+            {{ method_field('PATCH') }}
             {{ csrf_field() }}
         </form>
     </div>
@@ -142,20 +148,37 @@
         CKEDITOR.config.defaultLanguage = 'fa';
     </script>
     <script type="text/javascript">
-        $(document).on('click', '.up_image', function (event) {
-            var images = $("#images").val();
+        $(document).on('click', '.our_button_d', function (event) {
+            var image_id = $(this).attr("id");
             var product_id= $("#product_id").val();
             CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-            var _method = 'PATCH';
-
-            $.ajax("/admin/EditProducts", {
-                'product_id': product_id,
-                'images':images,
-                _token: CSRF_TOKEN,
-                _method: _method,
-            }, function (data) {
-                $('#C_table').load(location.href + ' #C_table');
-            });
+            var _method = 'DELETE';
+            swal({
+                    title: "آیا از عملیات حذف مطمئن هستید",
+                    text: "عملیات حذف محصول",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonClass: "btn-danger",
+                    confirmButtonText: "بله ",
+                    cancelButtonText: "لغو عملیات",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                },
+                function(isConfirm) {
+                    if (isConfirm) {
+                        $.post("/admin/EditProducts", {
+                            'product_id': product_id,
+                            'image_id':image_id,
+                            _token: CSRF_TOKEN,
+                            _method: _method,
+                        }, function (data) {
+                            $('#C_table').html(data);
+                        });
+                        swal("حذف", "عملیات حذف با موفقیت پایان یافت", "success");
+                    } else {
+                        swal("لغو", "عملیات لغو گردید", "error");
+                    }
+                });
 
         });
     </script>

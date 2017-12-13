@@ -149,6 +149,7 @@
                     'description': description,
                     _token: CSRF_TOKEN
                 }, function (data) {
+
                     $('#C_table').load(location.href + ' #C_table');
                 });
             })
