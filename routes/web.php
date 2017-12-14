@@ -45,6 +45,12 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
     Route::delete('/EditProducts', 'ProductController@EditProducts_Delete_image')->name('a_Edit_Products_delete_Image');
     Route::post('/UpdateProducts', 'ProductController@Update_Products')->name('a_Update_product');
 
+    Route::get('/AddPage','PageController@CreatePage')->name('a_show_create_page');
+    Route::post('/AddPage','PageController@StorePage')->name('a_Store_page');
+    Route::get('/AddPage/{id}','PageController@ShowPage')->name('a_show_page');
+    Route::get('/ShowEditPage','PageController@ShowEditPage')->name('a_show_Edit_page');
+    Route::post('/EditPage','PageController@EditPages')->name('a_Edit_page');
+    Route::post('/UpdatePage','PageController@UpdatePage')->name('a_Update_page');
 
     Route::post('/panel/upload-image','ProductController@UploadImage_ckeditor');
 });

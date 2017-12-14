@@ -331,14 +331,22 @@
                 <li class="active treeview">
                     <a href="#">
                         <i class="fa fa-product-hunt"></i> <span>محصولات</span>
-                        <span class="pull-left-container">
-              <i class="fa fa-angle-right pull-left"></i>
-            </span>
+                        <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
                     </a>
                     <ul class="treeview-menu">
                         <li class="active"><a href="{{route('a_CreateProductCategory')}}"><i class="fa fa-circle-o text-orange "></i> ایجاد دسته جدید</a></li>
                         <li class="active"><a href="{{route('a_CreateProducts')}}"><i class="fa fa-circle-o text-blue"></i> ایجاد محصول جدید</a></li>
                         <li class="active"><a href="{{route('a_Products')}}"><i class="fa fa-circle-o text-light-blue"></i>مشاهده و ویرایش محصولات </a></li>
+                    </ul>
+                </li>
+                <li class="active treeview">
+                    <a href="#">
+                        <i class="fa fa-file-o" aria-hidden="true"></i> <span>مدیریت صفحات</span>
+                        <span class="pull-left-container"></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="{{route('a_show_create_page')}}"><i class="fa fa-file-o text-orange "></i> ایجاد صفحه جدید</a></li>
+                        <li class="active"><a href="{{route('a_show_Edit_page')}}"><i class="fa fa-file-o text-blue"></i> مشاهده و ویرایش صفحه</a></li>
                     </ul>
                 </li>
             </ul>
