@@ -28,12 +28,12 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
 //admin panel route
 Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|administrator|editor']],function(){
     Route::get('/', 'AdminController@Dashboard')->name('a_Dashboard');
-
+// category
     Route::get('/CreateProductCategory', 'CategoryController@CreateProductCategory')->name('a_CreateProductCategory');
     Route::post('/CreateProductCategory','CategoryController@CreateCategory');
     Route::patch('/CreateProductCategory','CategoryController@EditCategory');
     Route::delete('/CreateProductCategory','CategoryController@DeleteCategory');
-
+// Products
     Route::get('/CreateProducts', 'ProductController@CreateProducts')->name('a_CreateProducts');
     Route::post('/CreateProducts', 'ProductController@Store')->name('a_storeProduct');
 
@@ -44,7 +44,7 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
     Route::patch('/EditProducts', 'ProductController@EditProducts_Add_image')->name('a_Edit_Products_Image');
     Route::delete('/EditProducts', 'ProductController@EditProducts_Delete_image')->name('a_Edit_Products_delete_Image');
     Route::post('/UpdateProducts', 'ProductController@Update_Products')->name('a_Update_product');
-
+//  Page manager routes
     Route::get('/AddPage','PageController@CreatePage')->name('a_show_create_page');
     Route::post('/AddPage','PageController@StorePage')->name('a_Store_page');
     Route::get('/AddPage/{id}','PageController@ShowPage')->name('a_show_page');
@@ -53,6 +53,10 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
     Route::post('/UpdatePage','PageController@UpdatePage')->name('a_Update_page');
 
     Route::post('/panel/upload-image','ProductController@UploadImage_ckeditor');
+
+//  Access Controller Route
+    Route::resource('/users','AclController');
+
 });
 
 Route::get('/forbidden',function(){

@@ -351,6 +351,17 @@
                         <li class="active"><a href="{{route('a_show_Edit_page')}}"><i class="fa fa-file-o text-blue"></i> مشاهده و ویرایش صفحه</a></li>
                     </ul>
                 </li>
+                <li class="active treeview">
+                    <a href="#">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                        <span>تنظیمات سطوح دسترسی</span>
+                        <span class="pull-left-container"></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="{{route('users.index')}}"><i class="fa fa-users text-orange" aria-hidden="true" ></i>مدیریت کاربران</a></li>
+                        <li class="active"><a href="{{route('a_show_Edit_page')}}"><i class="fa fa-user-secret text-blue" aria-hidden="true" ></i>سطوح دسترسی</a></li>
+                    </ul>
+                </li>
             </ul>
         </section>
         <!-- /.sidebar -->
