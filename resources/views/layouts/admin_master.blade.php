@@ -328,6 +328,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="active"><a href="{{route('a_Dashboard')}}"><i class="fa fa-dashboard text-orange "></i> <span>داشبورد</span></a></li>
+                @role('superadministrator|administrator')
                 <li class="active treeview">
                     <a href="#">
                         <i class="fa fa-product-hunt"></i> <span>محصولات</span>
@@ -339,6 +340,7 @@
                         <li class="active"><a href="{{route('a_Products')}}"><i class="fa fa-circle-o text-light-blue"></i>مشاهده و ویرایش محصولات </a></li>
                     </ul>
                 </li>
+                @endrole
                 <li class="active treeview">
                     <a href="#">
                         <i class="fa fa-file-o" aria-hidden="true"></i> <span>مدیریت صفحات</span>

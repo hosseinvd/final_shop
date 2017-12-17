@@ -26,7 +26,7 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
 });
 
 //admin panel route
-Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
+Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|administrator|editor']],function(){
     Route::get('/', 'AdminController@Dashboard')->name('a_Dashboard');
 
     Route::get('/CreateProductCategory', 'CategoryController@CreateProductCategory')->name('a_CreateProductCategory');
@@ -55,7 +55,9 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
     Route::post('/panel/upload-image','ProductController@UploadImage_ckeditor');
 });
 
-
+Route::get('/forbidden',function(){
+    return view('Forbidden');
+});
 Route::get('/basket', 'UserController@basket')->name('user-basket');
 
 Auth::routes();

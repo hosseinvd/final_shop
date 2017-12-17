@@ -15,6 +15,7 @@ class PageController extends Controller
 
     public function StorePage(Request $request)
     {
+
         $page=new page;
         $page->body=$request->body;
         $page->title=$request->title;

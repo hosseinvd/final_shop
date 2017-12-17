@@ -22,13 +22,22 @@
                         <td>
                             <button type="submit" name="page_id" class="btn btn-submit btn-block"
                                     value="{{$page->id}}"
-                            >ویرایش
+                            ><i class="fa fa-pencil" aria-hidden="true"></i>
+                                ویرایش
                             </button>
                             <button type="button" class="btn btn-danger btn-block our_button_d"
                                     id="{{$page->id}}"
-                            >حذف
+                            ><i class="fa fa-trash" aria-hidden="true"></i>
+                                حذف
                             </button>
+                            <br>
+                            <a href="{{route('a_show_page',$page->id)}}" class="btn btn-success">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
 
+                                مشاهده
+                            </a>
+
+                            </button>
                         </td>
                     </tr>
                 @endforeach

@@ -11,10 +11,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(LaratrustSeeder::class);
         // $this->call(UsersTableSeeder::class);
-        $categories = factory(\App\Category::class, 2)->create();
-        $products = factory(\App\Product::class, 6)->create();
-        $images = factory(\App\m_image::class, 48)->create();
+//        $categories = factory(\App\Category::class, 2)->create();
+//        $products = factory(\App\Product::class, 6)->create();
+//        $images = factory(\App\m_image::class, 48)->create();
 
     }
 }
