@@ -19,11 +19,11 @@
                     <div class="panel panel-info">
                         <div class="panel-heading" >جایگاه</div>
                         <div class="panel-body">
-                        @foreach ($roles as $role)
-                            <div class="field">
-                                <input type="checkbox" name="Role_select[]" value="{{$role->id}}"> {{$role->display_name}}</input>
-                            </div>
-                        @endforeach
+                            @foreach ($roles as $role)
+                                <div class="field">
+                                    <input type="checkbox" name="Role_select[]" value="{{$role->id}}"> {{$role->display_name}}</input>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block" id="add_category">ثبت</button>

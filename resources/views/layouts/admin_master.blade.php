@@ -37,7 +37,8 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{asset('js/adminlte/demo.js')}}"></script>
     <script src="{{asset('js/sweetalert.min.js')}}"></script>
-
+    {{--<script src="{{asset('js/vue.min.js')}}"></script>--}}
+    {{--<script type="text/javascript" src="//unpkg.com/uiv/dist/uiv.min.js"></script>--}}
     {{----------------}}
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -359,7 +360,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li class="active"><a href="{{route('users.index')}}"><i class="fa fa-users text-orange" aria-hidden="true" ></i>مدیریت کاربران</a></li>
-                        <li class="active"><a href="{{route('a_show_Edit_page')}}"><i class="fa fa-user-secret text-blue" aria-hidden="true" ></i>سطوح دسترسی</a></li>
+                        <li class="active"><a href="{{route('permissions.index')}}"><i class="fa fa-user-secret text-blue" aria-hidden="true" ></i>سطوح دسترسی</a></li>
                     </ul>
                 </li>
             </ul>

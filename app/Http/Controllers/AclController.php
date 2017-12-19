@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class AclController extends Controller
 {
@@ -38,41 +40,64 @@ class AclController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'name'=>'required|max:255',
+            'email'=>'required|email|unique:users'
+        ]);
+        $password=trim($request->password);
+        $user=new User();
+        $user->name=$request->name;
+        $user->email=$request->email;
+        $user->password=Hash::make($password);
+        $user->save();
+        if ($request->Role_select) {
+            $user->syncRoles($request->Role_select);
+        }
+        if($user->save()){
+            return redirect()->route('users.show',$user->id);
+        }else{
+            Session::flash('danger','Sorry a problem occurred while creating this user.');
+            return redirect()->route('users.create');
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
-        //
+        $user = User::where('id', $id)->with('roles')->first();
+        return view('Admin.users.show',compact('user'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $roles = Role::all();
+        $user = User::where('id', $id)->with('roles')->first();
+        return view('Admin.Users.Edit',compact('user','roles'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+//dd($request->Role_select);
+        $this->validateWith([
+            'name' => 'required|max:255',
+            'email' => 'required|email|unique:users,email,'.$id
+        ]);
+        $user=User::findOrFail($id);
+        $user->name=$request->name;
+        $user->email=$request->email;
+        if(isset($request->change_pass)){
+            $password=trim($request->password);
+            $user->password=Hash::make($password);
+        }
+        $user->save();
+        if ($request->Role_select) {
+            $user->syncRoles($request->Role_select);
+        }
+        if($user->save()){
+            return redirect()->route('users.show',$user->id);
+        }else{
+            Session::flash('danger','Sorry a problem occurred while creating this user.');
+            return redirect()->route('users.create');
+        }
     }
 
     /**

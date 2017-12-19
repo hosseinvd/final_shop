@@ -56,6 +56,11 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
 
 //  Access Controller Route
     Route::resource('/users','AclController');
+// permission Controller
+    Route::resource('/permissions', 'PermissionController', ['except' => 'destroy']);
+    Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
+
+
 
 });
 

@@ -85,18 +85,18 @@ export function mergeDataOrFn (
     // it has to be a function to pass previous merges.
     return function mergedDataFn () {
       return mergeData(
-        typeof childVal === 'function' ? childVal.call(this) : childVal,
-        typeof parentVal === 'function' ? parentVal.call(this) : parentVal
+        typeof childVal === 'function' ? childVal.call(this, this) : childVal,
+        typeof parentVal === 'function' ? parentVal.call(this, this) : parentVal
       )
     }
   } else {
     return function mergedInstanceDataFn () {
       // instance merge
       const instanceData = typeof childVal === 'function'
-        ? childVal.call(vm)
+        ? childVal.call(vm, vm)
         : childVal
       const defaultData = typeof parentVal === 'function'
-        ? parentVal.call(vm)
+        ? parentVal.call(vm, vm)
         : parentVal
       if (instanceData) {
         return mergeData(instanceData, defaultData)
@@ -248,13 +248,23 @@ const defaultStrat = function (parentVal: any, childVal: any): any {
  */
 function checkComponents (options: Object) {
   for (const key in options.components) {
-    const lower = key.toLowerCase()
-    if (isBuiltInTag(lower) || config.isReservedTag(lower)) {
-      warn(
-        'Do not use built-in or reserved HTML elements as component ' +
-        'id: ' + key
-      )
-    }
+    validateComponentName(key)
+  }
+}
+
+export function validateComponentName (name: string) {
+  if (!/^[a-zA-Z][\w-]*$/.test(name)) {
+    warn(
+      'Invalid component name: "' + name + '". Component names ' +
+      'can only contain alphanumeric characters and the hyphen, ' +
+      'and must start with a letter.'
+    )
+  }
+  if (isBuiltInTag(name) || config.isReservedTag(name)) {
+    warn(
+      'Do not use built-in or reserved HTML elements as component ' +
+      'id: ' + name
+    )
   }
 }
 
@@ -282,6 +292,9 @@ function normalizeProps (options: Object, vm: ?Component) {
     for (const key in props) {
       val = props[key]
       name = camelize(key)
+      if (process.env.NODE_ENV !== 'production' && isPlainObject(val)) {
+        validatePropObject(name, val, vm)
+      }
       res[name] = isPlainObject(val)
         ? val
         : { type: val }
@@ -294,6 +307,26 @@ function normalizeProps (options: Object, vm: ?Component) {
     )
   }
   options.props = res
+}
+
+/**
+ * Validate whether a prop object keys are valid.
+ */
+const propOptionsRE = /^(type|default|required|validator)$/
+
+function validatePropObject (
+  propName: string,
+  prop: Object,
+  vm: ?Component
+) {
+  for (const key in prop) {
+    if (!propOptionsRE.test(key)) {
+      warn(
+        `Invalid key "${key}" in validation rules object for prop "${propName}".`,
+        vm
+      )
+    }
+  }
 }
 
 /**
