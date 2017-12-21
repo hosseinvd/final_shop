@@ -1,78 +1,117 @@
 @extends('layouts.admin_master')
 @section('title','Admic Create Page')
 @section('content')
-  <div class="flex-container" id="app">
+  <div class="flex-container" xmlns="http://www.w3.org/1999/html">
     <div class="columns m-t-10">
       <div class="column">
-        <h1 class="title">Edit User</h1>
+        <h1 class="title">Create New Permission</h1>
       </div>
     </div>
     <hr class="m-t-0">
 
-    <form action="" method="POST">
-      {{method_field('PUT')}}
-      {{csrf_field()}}
-      <div class="columns">
-        <div class="column">
-          <div class="field">
-            <label for="name" class="label">Name:</label>
+    <div class="columns" id="app">
+      <div class="column">
+        <form action="{{route('permissions.store')}}" method="POST">
+          {{csrf_field()}}
+
+          <div class="block">
+            <input type="radio" v-model="permissionType" name="permission_type" native-value="basic">Basic Permission</input>
+            <input type="radio" v-model="permissionType" name="permission_type" native-value="crud">CRUD Permission</input>
+          </div>
+
+          <div class="field" v-if="permissionType == 'basic'">
+            <label for="display_name" class="label">Name (Display Name)</label>
             <p class="control">
-              <input type="text" class="input" name="name" id="name" value="">
+              <input type="text" class="input" name="display_name" id="display_name">
             </p>
           </div>
 
-          <div class="field">
-            <label for="email" class="label">Email:</label>
+          <div class="field" v-if="permissionType == 'basic'">
+            <label for="name" class="label">Slug</label>
             <p class="control">
-              <input type="text" class="input" name="email" id="email" value="">
+              <input type="text" class="input" name="name" id="name">
             </p>
           </div>
 
-          <div class="field">
-            <label for="password" class="label">Password</label>
-            <b-radio-group v-model="password_options">
-              <div class="field">
-                <b-radio name="password_options" value="keep">Do Not Change Password</b-radio>
-              </div>
-              <div class="field">
-                <b-radio name="password_options" value="auto">Auto-Generate New Password</b-radio>
-              </div>
-              <div class="field">
-                <b-radio name="password_options" value="manual">Manually Set New Password</b-radio>
-                <p class="control">
-                  <input type="text" class="input" name="password" id="password" v-if="password_options == 'manual'" placeholder="Manually give a password to this user">
-                </p>
-              </div>
-            </b-radio-group>
+          <div class="field" v-if="permissionType == 'basic'">
+            <label for="description" class="label">Description</label>
+            <p class="control">
+              <input type="text" class="input" name="description" id="description" placeholder="Describe what this permission does">
+            </p>
           </div>
-        </div> <!-- end of .column -->
 
+          <div class="field" v-if="permissionType == 'crud'">
+            <label for="resource" class="label">Resource</label>
+            <p class="control">
+              <input type="text" class="input" name="resource" id="resource" v-model="resource" placeholder="The name of the resource">
+            </p>
+          </div>
 
+          <div class="columns" v-if="permissionType == 'crud'">
+            <div class="column is-one-quarter">
+              <div class="field">
+                <input type="checkbox" v-model="crudSelected" native-value="create">Create</input>
+              </div>
+              <div class="field">
+                <input type="checkbox" v-model="crudSelected" v-model="crudSelected" native-value="read">Read</input>
+              </div>
+              <div class="field">
+                <input type="checkbox" v-model="crudSelected" native-value="update">Update</input>
+              </div>
+              <div class="field">
+                <input type="checkbox" v-model="crudSelected" native-value="delete">Delete</input>
+              </div>
+            </div> <!-- end of .column -->
+
+            <input type="hidden" name="crud_selected" :value="crudSelected">
+
+            <div class="column">
+              <table class="table" v-if="resource.length >= 3 && crudSelected.length > 0">
+                <thead>
+                <th>Name</th>
+                <th>Slug</th>
+                <th>Description</th>
+                </thead>
+                <tbody>
+                <tr v-for="item in crudSelected">
+                  <td v-text="crudName(item)"></td>
+                  <td v-text="crudSlug(item)"></td>
+                  <td v-text="crudDescription(item)"></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <button class="button is-success">Create Permission</button>
+        </form>
       </div>
-      <div class="columns">
-        <div class="column">
-          <hr />
-          <button class="button is-primary is-pulled-right" style="width: 250px;">Edit User</button>
-        </div>
-      </div>
-    </form>
+    </div>
 
   </div> <!-- end of .flex-container -->
 @endsection
 
-
 @section('scripts')
-
-
   <script>
-
       var app = new Vue({
           el: '#app',
           data: {
-              password_options: 'keep'
+              permissionType: 'basic',
+              resource: '',
+              crudSelected: ['create', 'read', 'update', 'delete']
+          },
+          methods: {
+              crudName: function(item) {
+                  return item.substr(0,1).toUpperCase() + item.substr(1) + " " + app.resource.substr(0,1).toUpperCase() + app.resource.substr(1);
+              },
+              crudSlug: function(item) {
+                  return item.toLowerCase() + "-" + app.resource.toLowerCase();
+              },
+              crudDescription: function(item) {
+                  return "Allow a User to " + item.toUpperCase() + " a " + app.resource.substr(0,1).toUpperCase() + app.resource.substr(1);
+              }
           }
       });
-
   </script>
 @endsection
 

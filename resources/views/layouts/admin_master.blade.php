@@ -37,7 +37,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{asset('js/adminlte/demo.js')}}"></script>
     <script src="{{asset('js/sweetalert.min.js')}}"></script>
-    {{--<script src="{{asset('js/vue.min.js')}}"></script>--}}
+    <script src="{{asset('js/vue.min.js')}}"></script>
     {{--<script type="text/javascript" src="//unpkg.com/uiv/dist/uiv.min.js"></script>--}}
     {{----------------}}
 </head>

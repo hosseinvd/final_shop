@@ -2,7 +2,7 @@
 @section('title','Admic Create Page')
 
 @section('content')
-    <div class="col-sm-10 center-block" style="margin-top: 2%">
+    <div class="col-sm-10 center-block" id="app" style="margin-top: 2%">
 
         <form action="{{route('users.update',$user->id)}}" method="POST">
             {{csrf_field()}}
@@ -35,7 +35,7 @@
                     <div class="form-group">
                             @foreach ($roles as $role)
                                 <div class="field">
-                                    <input type="checkbox" name="Role_select[]"
+                                    <input v-model="rolesSelected" type="checkbox" name="Role_select[]"
                                            value="{{$role->id}}"> {{$role->display_name}}</input>
                                 </div>
                             @endforeach
@@ -50,5 +50,13 @@
 @endsection
 
 @section('scripts')
-
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                password_options: 'keep',
+                rolesSelected:{!! $user->roles->pluck('id') !!}
+            }
+        });
+    </script>
 @endsection
