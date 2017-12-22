@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,6 +59,8 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
     Route::resource('/permissions', 'PermissionController', ['except' => 'destroy']);
     Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
 
+// jquery post request to page update
+    Route::post('/Update','AdminController@jquery_post');
 
 
 });
