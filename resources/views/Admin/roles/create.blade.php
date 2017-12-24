@@ -1,84 +1,58 @@
-@extends('layouts.manage')
-
+@extends('layouts.admin_master')
+@section('title','Roles')
 @section('content')
-  <div class="flex-container">
-    <div class="columns m-t-10">
-      <div class="column">
-        <h1 class="title">Create New Role</h1>
-      </div>
+
+    <div class="flex-container" xmlns="http://www.w3.org/1999/html">
+        <div class="container col-md-2 center-block"></div>
+        <div class="container col-md-8 center-block">
+            <div class="panel panel-group">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Create New Role</div>
+                    <div class="panel-body">
+                        <form action="{{route('roles.store')}}" method="POST">
+                            {{csrf_field()}}
+                            <label for="display_name" >Name (Human Readable)</label>
+                            <input type="text" class="form-control" name="display_name" value="{{old('display_name')}}"
+                                   id="display_name">
+                            <label for="name" >Slug (Can not be changed)</label>
+                            <input type="text" class="form-control" name="name" value="{{old('name')}}" id="name">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" value="{{old('description')}}" id="description"
+                                   name="description">
+                            <br>
+                            <button class="button is-success">ثبت</button>
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">Permission</div>
+                                <div class="checkbox-group">
+                                    @foreach ($permissions as $permission)
+                                        <div class="field">
+                                            <input type="checkbox" v-model="permissionsSelected"
+                                                   value="{{$permission->id}}">{{$permission->display_name}}
+                                            <em>({{$permission->description}})</em></input>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <hr class="m-t-0">
-    <form action="{{route('roles.store')}}" method="POST">
-      {{ csrf_field() }}
-      <div class="columns">
-        <div class="column">
-          <div class="box">
-            <article class="media">
-              <div class="media-content">
-                <div class="content">
-                  <h2 class="title">Role Details:</h1>
-                  <div class="field">
-                    <p class="control">
-                      <label for="display_name" class="label">Name (Human Readable)</label>
-                      <input type="text" class="input" name="display_name" value="{{old('display_name')}}" id="display_name">
-                    </p>
-                  </div>
-                  <div class="field">
-                    <p class="control">
-                      <label for="name" class="label">Slug (Can not be changed)</label>
-                      <input type="text" class="input" name="name" value="{{old('name')}}" id="name">
-                    </p>
-                  </div>
-                  <div class="field">
-                    <p class="control">
-                      <label for="description" class="label">Description</label>
-                      <input type="text" class="input" value="{{old('description')}}" id="description" name="description">
-                    </p>
-                  </div>
-                  <input type="hidden" :value="permissionsSelected" name="permissions">
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="box">
-            <article class="media">
-              <div class="media-content">
-                <div class="content">
-                  <h2 class="title">Permissions:</h1>
-                  <b-checkbox-group>
-                    @foreach ($permissions as $permission)
-                      <div class="field">
-                        <b-checkbox v-model="permissionsSelected" :native-value="{{$permission->id}}">{{$permission->display_name}} <em>({{$permission->description}})</em></b-checkbox>
-                      </div>
-                    @endforeach
-                  </ul>
-                </div>
-              </div>
-            </article>
-          </div> <!-- end of .box -->
-
-          <button class="button is-primary">Create new Role</button>
-        </div>
-      </div>
-    </form>
-  </div>
 @endsection
 
 
 @section('scripts')
-  <script>
+    <script>
 
-  var app = new Vue({
-    el: '#app',
-    data: {
-      permissionsSelected: []
-    }
-  });
+        var app = new Vue({
+            el: '#app',
+            data: {
+                permissionsSelected: []
+            }
+        });
 
-  </script>
+    </script>
 @endsection

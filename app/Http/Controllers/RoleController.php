@@ -17,7 +17,7 @@ class RoleController extends Controller
     public function index()
     {
       $roles = Role::all();
-      return view('manage.roles.index')->withRoles($roles);
+      return view('Admin.roles.index')->withRoles($roles);
     }
 
     /**
@@ -28,7 +28,7 @@ class RoleController extends Controller
     public function create()
     {
       $permissions = Permission::all();
-      return view('manage.roles.create')->withPermissions($permissions);
+      return view('Admin.roles.create')->withPermissions($permissions);
     }
 
     /**
@@ -51,9 +51,9 @@ class RoleController extends Controller
       $role->description = $request->description;
       $role->save();
 
-      if ($request->permissions) {
-        $role->syncPermissions(explode(',', $request->permissions));
-      }
+        if ($request->permissions_select) {
+            $role->syncPermissions($request->permissions_select);
+        }
 
       Session::flash('success', 'Successfully created the new '. $role->display_name . ' role in the database.');
       return redirect()->route('roles.show', $role->id);
@@ -68,7 +68,7 @@ class RoleController extends Controller
     public function show($id)
     {
       $role = Role::where('id', $id)->with('permissions')->first();
-      return view('manage.roles.show')->withRole($role);
+      return view('Admin.roles.show')->withRole($role);
     }
 
     /**
@@ -81,7 +81,7 @@ class RoleController extends Controller
     {
       $role = Role::where('id', $id)->with('permissions')->first();
       $permissions = Permission::all();
-      return view('manage.roles.edit')->withRole($role)->withPermissions($permissions);
+      return view('Admin.roles.edit')->withRole($role)->withPermissions($permissions);
     }
 
     /**
@@ -93,6 +93,7 @@ class RoleController extends Controller
      */
     public function update(Request $request, $id)
     {
+
       $this->validateWith([
         'display_name' => 'required|max:255',
         'description' => 'sometimes|max:255'
@@ -103,8 +104,9 @@ class RoleController extends Controller
       $role->description = $request->description;
       $role->save();
 
-      if ($request->permissions) {
-        $role->syncPermissions(explode(',', $request->permissions));
+
+      if ($request->permissions_select) {
+        $role->syncPermissions($request->permissions_select);
       }
 
       Session::flash('success', 'Successfully update the '. $role->display_name . ' role in the database.');

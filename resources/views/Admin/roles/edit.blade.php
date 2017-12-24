@@ -1,83 +1,53 @@
-@extends('layouts.manage')
-
+@extends('layouts.admin_master')
+@section('title','Roles')
 @section('content')
-  <div class="flex-container">
-    <div class="columns m-t-10">
-      <div class="column">
-        <h1 class="title">Edit {{$role->display_name}}</h1>
-      </div>
-    </div>
-    <hr class="m-t-0">
-    <form action="{{route('roles.update', $role->id)}}" method="POST">
-      {{ csrf_field() }}
-      {{ method_field('PUT') }}
-      <div class="columns">
-        <div class="column">
-          <div class="box">
-            <article class="media">
-              <div class="media-content">
-                <div class="content">
-                  <h2 class="title">Role Details:</h1>
-                  <div class="field">
-                    <p class="control">
-                      <label for="display_name" class="label">Name (Human Readable)</label>
-                      <input type="text" class="input" name="display_name" value="{{$role->display_name}}" id="display_name">
-                    </p>
-                  </div>
-                  <div class="field">
-                    <p class="control">
-                      <label for="name" class="label">Slug (Can not be edited)</label>
-                      <input type="text" class="input" name="name" value="{{$role->name}}" disabled id="name">
-                    </p>
-                  </div>
-                  <div class="field">
-                    <p class="control">
-                      <label for="description" class="label">Description</label>
-                      <input type="text" class="input" value="{{$role->description}}" id="description" name="description">
-                    </p>
-                  </div>
-                  <input type="hidden" :value="permissionsSelected" name="permissions">
+  <div class="flex-container" xmlns="http://www.w3.org/1999/html">
+    <div class="container col-md-2 center-block"></div>
+    <div class="container col-md-8 center-block" >
+      <div class="panel panel-group">
+        <div class="panel panel-info">
+          <div class="panel-heading"><h1>Edit {{$role->display_name}}</h1></div>
+          <div class="panel-body">
+            <form action="{{route('roles.update', $role->id)}}" method="POST">
+              {{ csrf_field() }}
+              {{ method_field('PUT') }}
+              <label for="usr"> نام نمایشی </label>
+              <input type="text" class="form-control" name="display_name" id="display_name" value="{{$role->display_name}}">
+              <label for="usr"> نام اصلی </label>
+              <input type="text" class="form-control" name="name" id="name" value="{{$role->name}}" disabled>
+              <label> توضیحات</label>
+              <input type="text" class="form-control" name="description" id="description" value="{{$role->description}}">
+<br>
+              <div class="panel panel-danger" id="app">
+                <div class="panel-heading"> سطوح دسترسی</div>
+                <div class="panel-body">
+                  @foreach ($permissions as $permission)
+                    <div class="field">
+                      <input type="checkbox" v-model="permissions_selected" name="permissions_select[]" value="{{$permission->id}}">{{$permission->display_name}} </input>
+                    </div>
+                  @endforeach
+                </div>
+                <div class="panel-footer">
+                  <button class="button is-success">ثبت</button>
                 </div>
               </div>
-            </article>
+            </form>
           </div>
         </div>
       </div>
-
-      <div class="columns">
-        <div class="column">
-          <div class="box">
-            <article class="media">
-              <div class="media-content">
-                <div class="content">
-                  <h2 class="title">Permissions:</h2>
-                    @foreach ($permissions as $permission)
-                      <div class="field">
-                        <b-checkbox v-model="permissionsSelected" :native-value="{{$permission->id}}">{{$permission->display_name}} <em>({{$permission->description}})</em></b-checkbox>
-                      </div>
-                    @endforeach
-                </div>
-              </div>
-            </article>
-          </div> <!-- end of .box -->
-
-          <button class="button is-primary">Save Changes to Role</button>
-        </div>
-      </div>
-    </form>
+    </div>
   </div>
+
 @endsection
 
-
 @section('scripts')
-  <script>
-
-  var app = new Vue({
-    el: '#app',
-    data: {
-      permissionsSelected: {!!$role->permissions->pluck('id')!!}
-    }
-  });
-
-  </script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                password_options: 'keep',
+                permissions_selected:{!! $role->permissions->pluck('id') !!}
+            }
+        });
+    </script>
 @endsection

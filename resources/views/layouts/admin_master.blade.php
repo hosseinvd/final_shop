@@ -328,7 +328,7 @@
 
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
-                <li class="active"><a href="{{route('a_Dashboard')}}"><i class="fa fa-dashboard text-orange "></i> <span>داشبورد</span></a></li>
+                <li class="active"><a href="{{route('a_Dashboard')}}"><i class="fa fa-dashboard text-red "></i> <span>داشبورد</span></a></li>
                 @role('superadministrator|administrator')
                 <li class="active treeview">
                     <a href="#">
@@ -336,8 +336,8 @@
                         <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{route('a_CreateProductCategory')}}"><i class="fa fa-circle-o text-orange "></i> ایجاد دسته جدید</a></li>
-                        <li class="active"><a href="{{route('a_CreateProducts')}}"><i class="fa fa-circle-o text-blue"></i> ایجاد محصول جدید</a></li>
+                        <li class="active"><a href="{{route('a_CreateProductCategory')}}"><i class="fa fa-circle-o text-light-blue "></i> ایجاد دسته جدید</a></li>
+                        <li class="active"><a href="{{route('a_CreateProducts')}}"><i class="fa fa-circle-o text-light-blue"></i> ایجاد محصول جدید</a></li>
                         <li class="active"><a href="{{route('a_Products')}}"><i class="fa fa-circle-o text-light-blue"></i>مشاهده و ویرایش محصولات </a></li>
                     </ul>
                 </li>
@@ -348,8 +348,8 @@
                         <span class="pull-left-container"></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{route('a_show_create_page')}}"><i class="fa fa-file-o text-orange "></i> ایجاد صفحه جدید</a></li>
-                        <li class="active"><a href="{{route('a_show_Edit_page')}}"><i class="fa fa-file-o text-blue"></i> مشاهده و ویرایش صفحه</a></li>
+                        <li class="active"><a href="{{route('a_show_create_page')}}"><i class="fa fa-file-o text-light-blue "></i> ایجاد صفحه جدید</a></li>
+                        <li class="active"><a href="{{route('a_show_Edit_page')}}"><i class="fa fa-file-o text-light-blue"></i> مشاهده و ویرایش صفحه</a></li>
                     </ul>
                 </li>
                 <li class="active treeview">
@@ -359,8 +359,9 @@
                         <span class="pull-left-container"></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{route('users.index')}}"><i class="fa fa-users text-orange" aria-hidden="true" ></i>مدیریت کاربران</a></li>
-                        <li class="active"><a href="{{route('permissions.index')}}"><i class="fa fa-user-secret text-blue" aria-hidden="true" ></i>سطوح دسترسی</a></li>
+                        <li class="active"><a href="{{route('users.index')}}"><i class="fa fa-users text-light-blue" aria-hidden="true" ></i>مدیریت کاربران</a></li>
+                        <li class="active"><a href="{{route('permissions.index')}}"><i class="fa fa-user-secret text-light-blue" aria-hidden="true" ></i>سطوح دسترسی</a></li>
+                        <li class="active"><a href="{{route('roles.index')}}"><i class="fa fa-user-circle text-light-blue" aria-hidden="true"></i>مدریت جایگاه</a></li>
                     </ul>
                 </li>
             </ul>
