@@ -22,7 +22,11 @@ Route::get('/addToCart/{product}', 'ProductController@addToCart')->name('addToCa
 
 Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/user-profile', 'UserController@profile')->name('u_user-profile');
+    Route::get('/basket', 'UserController@basket')->name('user-basket');
+    Route::get('request','UserController@Getway_request')->name('Gateway-Request');
+    Route::any('callback/from/bank','UserController@Getway_back')->name('Gateway-back');
 });
+
 
 //admin panel route
 Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|administrator|editor']],function(){
@@ -68,7 +72,8 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
 Route::get('/forbidden',function(){
     return view('Forbidden');
 });
-Route::get('/basket', 'UserController@basket')->name('user-basket');
+
+
 
 Auth::routes();
 

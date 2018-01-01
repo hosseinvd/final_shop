@@ -8,6 +8,7 @@
 @endsection
 @section('content')
     <div class="container">
+
         <h2>Table</h2>
         <div class="table-responsive">
             <table class="table">
@@ -56,7 +57,9 @@
             </table>
         </div>
     </div>
+
+        <a class="navbar-brand" href="{{route('Gateway-Request')}}">pay</a>
     <button type="button" class="btn btn-default btn-lg">
-        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+
     </button>
 @endsection

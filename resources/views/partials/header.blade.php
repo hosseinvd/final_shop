@@ -8,7 +8,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{route('products')}}"><i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i>
+
+                <a class="navbar-brand" href="{{route('products')}}"><i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i>
                 Zaniss</a>
         </div>
 

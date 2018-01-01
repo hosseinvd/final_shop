@@ -13,4 +13,9 @@ class Product extends Model
     {
         return $this->hasMany('App\m_image');
     }
+
+    public function comments()
+    {
+        return $this->morphMany('App\Comment', 'commentable');
+    }
 }

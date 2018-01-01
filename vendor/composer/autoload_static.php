@@ -90,6 +90,8 @@ class ComposerStaticInit837e508db83c852264f606b809f2dd0e
             'Laravel\\Tinker\\' => 15,
             'Laratrust\\' => 10,
             'Laracasts\\Generators\\' => 21,
+            'Larabookir\\Gateway\\Tests\\' => 25,
+            'Larabookir\\Gateway\\' => 19,
         ),
         'I' => 
         array (
@@ -289,6 +291,14 @@ class ComposerStaticInit837e508db83c852264f606b809f2dd0e
         array (
             0 => __DIR__ . '/..' . '/laracasts/generators/src',
         ),
+        'Larabookir\\Gateway\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/larabook/gateway/tests',
+        ),
+        'Larabookir\\Gateway\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/larabook/gateway/src',
+        ),
         'Intervention\\Image\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
@@ -407,6 +417,7 @@ class ComposerStaticInit837e508db83c852264f606b809f2dd0e
 
     public static $classMap = array (
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AclController' => __DIR__ . '/../..' . '/app/Http/Controllers/AclController.php',
@@ -424,7 +435,6 @@ class ComposerStaticInit837e508db83c852264f606b809f2dd0e
         'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Controllers\\ajaxController' => __DIR__ . '/../..' . '/app/Http/Controllers/ajaxController.php',
-        'App\\Http\\Controllers\\hosseintest' => __DIR__ . '/../..' . '/app/Http/Controllers/hvd/hosseintest.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -2111,6 +2121,43 @@ class ComposerStaticInit837e508db83c852264f606b809f2dd0e
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
+        'Larabookir\\Gateway\\Enum' => __DIR__ . '/..' . '/larabook/gateway/src/Enum.php',
+        'Larabookir\\Gateway\\Exceptions\\BankException' => __DIR__ . '/..' . '/larabook/gateway/src/Exceptions/BankException.php',
+        'Larabookir\\Gateway\\Exceptions\\ConfigFileNotFoundException' => __DIR__ . '/..' . '/larabook/gateway/src/Exceptions/ConfigFileNotFoundException.php',
+        'Larabookir\\Gateway\\Exceptions\\GatewayException' => __DIR__ . '/..' . '/larabook/gateway/src/Exceptions/GatewayException.php',
+        'Larabookir\\Gateway\\Exceptions\\InvalidRequestException' => __DIR__ . '/..' . '/larabook/gateway/src/Exceptions/InvalidRequestException.php',
+        'Larabookir\\Gateway\\Exceptions\\NotFoundTransactionException' => __DIR__ . '/..' . '/larabook/gateway/src/Exceptions/NotFoundTransactionException.php',
+        'Larabookir\\Gateway\\Exceptions\\PortNotFoundException' => __DIR__ . '/..' . '/larabook/gateway/src/Exceptions/PortNotFoundException.php',
+        'Larabookir\\Gateway\\Exceptions\\RetryException' => __DIR__ . '/..' . '/larabook/gateway/src/Exceptions/RetryException.php',
+        'Larabookir\\Gateway\\Gateway' => __DIR__ . '/..' . '/larabook/gateway/src/Gateway.php',
+        'Larabookir\\Gateway\\GatewayResolver' => __DIR__ . '/..' . '/larabook/gateway/src/GatewayResolver.php',
+        'Larabookir\\Gateway\\GatewayServiceProvider' => __DIR__ . '/..' . '/larabook/gateway/src/GatewayServiceProvider.php',
+        'Larabookir\\Gateway\\JahanPay\\JahanPay' => __DIR__ . '/..' . '/larabook/gateway/src/JahanPay/JahanPay.php',
+        'Larabookir\\Gateway\\JahanPay\\JahanPayException' => __DIR__ . '/..' . '/larabook/gateway/src/JahanPay/JahanPayException.php',
+        'Larabookir\\Gateway\\Mellat\\Mellat' => __DIR__ . '/..' . '/larabook/gateway/src/Mellat/Mellat.php',
+        'Larabookir\\Gateway\\Mellat\\MellatException' => __DIR__ . '/..' . '/larabook/gateway/src/Mellat/MellatException.php',
+        'Larabookir\\Gateway\\Parsian\\Parsian' => __DIR__ . '/..' . '/larabook/gateway/src/Parsian/Parsian.php',
+        'Larabookir\\Gateway\\Parsian\\ParsianErrorException' => __DIR__ . '/..' . '/larabook/gateway/src/Parsian/ParsianErrorException.php',
+        'Larabookir\\Gateway\\Parsian\\ParsianResult' => __DIR__ . '/..' . '/larabook/gateway/src/Parsian/ParsianResult.php',
+        'Larabookir\\Gateway\\Pasargad\\Parser' => __DIR__ . '/..' . '/larabook/gateway/src/Pasargad/Parser.php',
+        'Larabookir\\Gateway\\Pasargad\\Pasargad' => __DIR__ . '/..' . '/larabook/gateway/src/Pasargad/Pasargad.php',
+        'Larabookir\\Gateway\\Pasargad\\PasargadErrorException' => __DIR__ . '/..' . '/larabook/gateway/src/Pasargad/PasargadErrorException.php',
+        'Larabookir\\Gateway\\Pasargad\\PasargadResult' => __DIR__ . '/..' . '/larabook/gateway/src/Pasargad/PasargadResult.php',
+        'Larabookir\\Gateway\\Pasargad\\RSA' => __DIR__ . '/..' . '/larabook/gateway/src/Pasargad/RSA.php',
+        'Larabookir\\Gateway\\Pasargad\\RSAKeyType' => __DIR__ . '/..' . '/larabook/gateway/src/Pasargad/RSAProcessor.php',
+        'Larabookir\\Gateway\\Pasargad\\RSAProcessor' => __DIR__ . '/..' . '/larabook/gateway/src/Pasargad/RSAProcessor.php',
+        'Larabookir\\Gateway\\Payline\\Payline' => __DIR__ . '/..' . '/larabook/gateway/src/Payline/Payline.php',
+        'Larabookir\\Gateway\\Payline\\PaylineReceiveException' => __DIR__ . '/..' . '/larabook/gateway/src/Payline/PaylineReceiveException.php',
+        'Larabookir\\Gateway\\Payline\\PaylineSendException' => __DIR__ . '/..' . '/larabook/gateway/src/Payline/PaylineSendException.php',
+        'Larabookir\\Gateway\\PortAbstract' => __DIR__ . '/..' . '/larabook/gateway/src/PortAbstract.php',
+        'Larabookir\\Gateway\\PortInterface' => __DIR__ . '/..' . '/larabook/gateway/src/PortInterface.php',
+        'Larabookir\\Gateway\\Sadad\\Sadad' => __DIR__ . '/..' . '/larabook/gateway/src/Sadad/Sadad.php',
+        'Larabookir\\Gateway\\Sadad\\SadadException' => __DIR__ . '/..' . '/larabook/gateway/src/Sadad/SadadException.php',
+        'Larabookir\\Gateway\\Sadad\\SadadResult' => __DIR__ . '/..' . '/larabook/gateway/src/Sadad/SadadResult.php',
+        'Larabookir\\Gateway\\Saman\\Saman' => __DIR__ . '/..' . '/larabook/gateway/src/Saman/Saman.php',
+        'Larabookir\\Gateway\\Saman\\SamanException' => __DIR__ . '/..' . '/larabook/gateway/src/Saman/SamanException.php',
+        'Larabookir\\Gateway\\Zarinpal\\Zarinpal' => __DIR__ . '/..' . '/larabook/gateway/src/Zarinpal/Zarinpal.php',
+        'Larabookir\\Gateway\\Zarinpal\\ZarinpalException' => __DIR__ . '/..' . '/larabook/gateway/src/Zarinpal/ZarinpalException.php',
         'Laracasts\\Generators\\Commands\\MigrationMakeCommand' => __DIR__ . '/..' . '/laracasts/generators/src/Commands/MigrationMakeCommand.php',
         'Laracasts\\Generators\\Commands\\PivotMigrationMakeCommand' => __DIR__ . '/..' . '/laracasts/generators/src/Commands/PivotMigrationMakeCommand.php',
         'Laracasts\\Generators\\Commands\\SeedMakeCommand' => __DIR__ . '/..' . '/laracasts/generators/src/Commands/SeedMakeCommand.php',
