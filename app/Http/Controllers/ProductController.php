@@ -23,6 +23,15 @@ class ProductController extends AdminController
         return view('shop.index', compact('products'));
     }
 
+    public function Show_product(Product $product)
+    {
+//        $product->increment('viewCount');
+        $comments = $product->comments()->where('approved' , 1)->where('parent_id', 0)->latest()->with(['comments' => function($query) {
+            $query->where('approved' , 1)->latest();
+        }])->get();
+        return view('shop.show_product', compact('product', 'comments'));
+    }
+
     public function CreateProducts()
     {
         $categories = Category::all();

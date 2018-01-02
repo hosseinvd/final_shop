@@ -25,4 +25,15 @@ class HomeController extends Controller
     {
         return view('products');
     }
+
+    public function comment(Request $request)
+    {
+        $this->validate($request,[
+            'comment' => 'required|min:5'
+        ]);
+
+        $input=$request->except(['_token']);
+        auth()->user()->comments()->create($input);
+        return back();
+    }
 }

@@ -166,6 +166,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Morilog\Jalali\JalaliServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -232,6 +233,7 @@ return [
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Gateway' => \Larabookir\Gateway\Gateway::class,
+        'jDate' => Morilog\Jalali\Facades\jDate::class
     ],
 
 ];

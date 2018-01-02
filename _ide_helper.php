@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.22 on 2017-12-28.
+ * Generated for Laravel 5.5.22 on 2018-01-01.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -12625,6 +12625,63 @@ namespace Intervention\Image\Facades {
  
 }
 
+namespace Larabookir\Gateway { 
+
+    class Gateway {
+        
+        /**
+         * Get supported ports
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getSupportedPorts()
+        {
+            return \Larabookir\Gateway\GatewayResolver::getSupportedPorts();
+        }
+        
+        /**
+         * Gets query builder from you transactions table
+         *
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getTable()
+        {
+            return \Larabookir\Gateway\GatewayResolver::getTable();
+        }
+        
+        /**
+         * Callback
+         *
+         * @return \Larabookir\Gateway\$this->port 
+         * @throws InvalidRequestException
+         * @throws NotFoundTransactionException
+         * @throws PortNotFoundException
+         * @throws RetryException
+         * @static 
+         */ 
+        public static function verify()
+        {
+            return \Larabookir\Gateway\GatewayResolver::verify();
+        }
+        
+        /**
+         * Create new object from port class
+         *
+         * @param int $port
+         * @throws PortNotFoundException
+         * @static 
+         */ 
+        public static function make($port)
+        {
+            return \Larabookir\Gateway\GatewayResolver::make($port);
+        }
+         
+    }
+ 
+}
+
 namespace Barryvdh\Debugbar { 
 
     class Facade {
@@ -13336,6 +13393,95 @@ namespace UxWeb\SweetAlert {
         public static function getJsonConfig()
         {
             return \UxWeb\SweetAlert\SweetAlertNotifier::getJsonConfig();
+        }
+         
+    }
+ 
+}
+
+namespace Morilog\Jalali\Facades { 
+
+    class jDate {
+        
+        /**
+         * 
+         *
+         * @param string|null $str
+         * @param null $timezone
+         * @return $this 
+         * @static 
+         */ 
+        public static function forge($str = null, $timezone = null)
+        {
+            return \Morilog\Jalali\jDate::forge($str, $timezone);
+        }
+        
+        /**
+         * 
+         *
+         * @return \DateTime|static 
+         * @static 
+         */ 
+        public static function getDateTime()
+        {
+            return \Morilog\Jalali\jDate::getDateTime();
+        }
+        
+        /**
+         * 
+         *
+         * @param $format
+         * @return bool|string 
+         * @static 
+         */ 
+        public static function format($format)
+        {
+            return \Morilog\Jalali\jDate::format($format);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $str
+         * @return $this 
+         * @static 
+         */ 
+        public static function reforge($str)
+        {
+            return \Morilog\Jalali\jDate::reforge($str);
+        }
+        
+        /**
+         * 
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function ago()
+        {
+            return \Morilog\Jalali\jDate::ago();
+        }
+        
+        /**
+         * 
+         *
+         * @return bool|string 
+         * @static 
+         */ 
+        public static function until()
+        {
+            return \Morilog\Jalali\jDate::until();
+        }
+        
+        /**
+         * 
+         *
+         * @return int 
+         * @static 
+         */ 
+        public static function time()
+        {
+            return \Morilog\Jalali\jDate::time();
         }
          
     }
@@ -15461,9 +15607,13 @@ namespace  {
 
     class Image extends \Intervention\Image\Facades\Image {}
 
+    class Gateway extends \Larabookir\Gateway\Gateway {}
+
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
 
     class Alert extends \UxWeb\SweetAlert\SweetAlert {}
+
+    class jDate extends \Morilog\Jalali\Facades\jDate {}
  
 }
 

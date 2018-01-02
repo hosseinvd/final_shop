@@ -7,6 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/kkszymanowski/traitor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/larabook/gateway" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laracasts/generators" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/morilog/jalali" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/santigarcor/laratrust" />
     </content>
@@ -36,6 +37,7 @@
           <root url="file://$MODULE_DIR$/vendor/kkszymanowski/traitor" />
           <root url="file://$MODULE_DIR$/vendor/larabook/gateway" />
           <root url="file://$MODULE_DIR$/vendor/laracasts/generators" />
+          <root url="file://$MODULE_DIR$/vendor/morilog/jalali" />
           <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
           <root url="file://$MODULE_DIR$/vendor/santigarcor/laratrust" />
         </CLASSES>
@@ -45,6 +47,7 @@
           <root url="file://$MODULE_DIR$/vendor/kkszymanowski/traitor" />
           <root url="file://$MODULE_DIR$/vendor/larabook/gateway" />
           <root url="file://$MODULE_DIR$/vendor/laracasts/generators" />
+          <root url="file://$MODULE_DIR$/vendor/morilog/jalali" />
           <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
           <root url="file://$MODULE_DIR$/vendor/santigarcor/laratrust" />
         </SOURCES>

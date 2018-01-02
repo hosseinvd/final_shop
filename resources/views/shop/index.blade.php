@@ -7,7 +7,9 @@
             @foreach($productChunk as $product)
                 <div class="col-sm-6 col-md-4 ">
                     <div class="thumbnail">
-                        <img src="{{asset('product_image').'/'.$product->images()->first()->imagePath}}" alt="...">
+                        <a href="{{route('show_product',$product->id)}}">
+                            <img src="{{asset('product_image').'/'.$product->images()->first()->imagePath}}" alt="...">
+                        </a>
                         <div class="caption">
                             <h3>{{$product->title}}</h3>
                             <p class="description">{{$product->description}}</p>

@@ -11,14 +11,12 @@
 */
 
 Route::get('/', 'ProductController@getIndex')->name('products');
+Route::get('/product/{product}', 'ProductController@Show_product')->name('show_product');
+Route::get('/addToCart/{product}', 'ProductController@addToCart')->name('addToCart');
+Route::post('/comment' , 'HomeController@comment');
 
 Route::get('/ta','ajaxController@index')->name('test_ajax');
 Route::post('/ta','ajaxController@create');
-
-Route::get('/addToCart/{product}', 'ProductController@addToCart')->name('addToCart');
-
-
-
 
 Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/user-profile', 'UserController@profile')->name('u_user-profile');
@@ -28,7 +26,8 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
 });
 
 
-//admin panel route
+
+//-----------------------------------------admin panel route-------------------------------------------------------------
 Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|administrator|editor']],function(){
     Route::get('/', 'AdminController@Dashboard')->name('a_Dashboard');
 // category
@@ -66,14 +65,13 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
 // jquery post request to page update
     Route::post('/Update','AdminController@jquery_post');
 
-
 });
+//------------------------------admin panel route--------------------------------------//
+//-------------------------------------------------------------------------------------//
 
 Route::get('/forbidden',function(){
     return view('Forbidden');
 });
-
-
 
 Auth::routes();
 

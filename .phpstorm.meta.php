@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-12-28.
+    * Generated on 2018-01-01.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -63,6 +63,9 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'jalali' => \Morilog\Jalali\jDate::class,
+        'jDateTime' => \Morilog\Jalali\jDateTime::class,
+        'gateway' => \Larabookir\Gateway\GatewayResolver::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -216,6 +219,9 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'jalali' => \Morilog\Jalali\jDate::class,
+        'jDateTime' => \Morilog\Jalali\jDateTime::class,
+        'gateway' => \Larabookir\Gateway\GatewayResolver::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -369,6 +375,9 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'jalali' => \Morilog\Jalali\jDate::class,
+        'jDateTime' => \Morilog\Jalali\jDateTime::class,
+        'gateway' => \Larabookir\Gateway\GatewayResolver::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -522,6 +531,9 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'jalali' => \Morilog\Jalali\jDate::class,
+        'jDateTime' => \Morilog\Jalali\jDateTime::class,
+        'gateway' => \Larabookir\Gateway\GatewayResolver::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -675,6 +687,9 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'jalali' => \Morilog\Jalali\jDate::class,
+        'jDateTime' => \Morilog\Jalali\jDateTime::class,
+        'gateway' => \Larabookir\Gateway\GatewayResolver::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -828,6 +843,9 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'jalali' => \Morilog\Jalali\jDate::class,
+        'jDateTime' => \Morilog\Jalali\jDateTime::class,
+        'gateway' => \Larabookir\Gateway\GatewayResolver::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -981,6 +999,9 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'jalali' => \Morilog\Jalali\jDate::class,
+        'jDateTime' => \Morilog\Jalali\jDateTime::class,
+        'gateway' => \Larabookir\Gateway\GatewayResolver::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
