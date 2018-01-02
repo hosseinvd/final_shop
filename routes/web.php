@@ -41,6 +41,7 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
 
     Route::get('/Products', 'ProductController@Products')->name('a_Products');
     Route::delete('/Products', 'ProductController@DeleteProducts')->name('a_Delete_Products');
+    Route::get('/product/{product}', 'ProductController@a_Show_product')->name('a_show_product');
 
     Route::post('/EditProducts', 'ProductController@EditProducts')->name('a_Edit_Products');
     Route::patch('/EditProducts', 'ProductController@EditProducts_Add_image')->name('a_Edit_Products_Image');
@@ -61,6 +62,10 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
 // permission Controller
     Route::resource('/permissions', 'PermissionController', ['except' => 'destroy']);
     Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
+
+    Route::resource('comments','CommentController');
+    Route::get('disapprove','CommentController@disapprove')->name('a_disapprove_comment');
+
 
 // jquery post request to page update
     Route::post('/Update','AdminController@jquery_post');

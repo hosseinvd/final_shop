@@ -32,10 +32,19 @@ class ProductController extends AdminController
         return view('shop.show_product', compact('product', 'comments'));
     }
 
+    public function a_Show_product(Product $product)
+    {
+//        $product->increment('viewCount');
+        $comments = $product->comments()->where('approved' , 1)->where('parent_id', 0)->latest()->with(['comments' => function($query) {
+            $query->where('approved' , 1)->latest();
+        }])->get();
+        return view('Admin.Product.show_product', compact('product', 'comments'));
+    }
+
     public function CreateProducts()
     {
         $categories = Category::all();
-        return view('Admin.CreateProducts', compact('categories'));
+        return view('Admin.Product.CreateProducts', compact('categories'));
     }
 
     public function UploadImage_ckeditor()
@@ -89,14 +98,14 @@ class ProductController extends AdminController
             ]);
         }
 
-        return view('Admin.CreateProducts');
+        return view('Admin.Product.CreateProducts');
 
     }
 
     public function Products()
     {
         $products = Product::paginate(6);
-        return view('Admin.Products', compact('products'));
+        return view('Admin.Product.Products', compact('products'));
     }
 
     public function DeleteProducts(Request $request)
@@ -112,7 +121,7 @@ class ProductController extends AdminController
 
         $s_product = Product::find($request->product_id);
 
-        return view('Admin.EditProduct', compact('categories', 's_product'));
+        return view('Admin.Product.EditProduct', compact('categories', 's_product'));
     }
 
     public function EditProducts_Add_image(Request $request)

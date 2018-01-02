@@ -38,6 +38,12 @@
                                 id="{{$product->id}}"
                         >حذف
                         </button>
+                        <br>
+                        <a href="{{route('a_show_product',$product->id)}}" class="btn btn-success">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+
+                            مشاهده
+                        </a>
 
                     </td>
                 </tr>

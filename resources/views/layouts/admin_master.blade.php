@@ -6,8 +6,8 @@
     <title>@yield('title')</title>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{asset('css/adminlte.css')}}"  crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('css/style_m.css')}}"  crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('css/adminlte.css')}}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('css/style_m.css')}}" crossorigin="anonymous">
     @yield('styles')
 
     <!--[if lt IE 9]>
@@ -15,7 +15,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<!-- jQuery 3 -->
+    <!-- jQuery 3 -->
     <script src="{{asset('js/adminlte/jquery.min.js')}}"></script>
     <!-- Bootstrap 3.3.7 -->
     <script src="{{asset('js/adminlte/bootstrap.min.js')}}"></script>
@@ -50,7 +50,7 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini">پنل</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg" ><b>Zaniss Admin</b></span>
+            <span class="logo-lg"><b>Zaniss Admin</b></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -75,7 +75,8 @@
                                     <li><!-- start message -->
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                <img src="dist/img/user2-160x160.jpg" class="img-circle"
+                                                     alt="User Image">
                                             </div>
                                             <h4>
 
@@ -88,7 +89,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="dist/img/user3-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
                                             </div>
                                             <h4>
                                                 نگین
@@ -100,7 +102,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="dist/img/user4-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
                                             </div>
                                             <h4>
                                                 نسترن
@@ -112,7 +115,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="dist/img/user3-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
                                             </div>
                                             <h4>
                                                 نگین
@@ -124,7 +128,8 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="dist/img/user4-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
                                             </div>
                                             <h4>
                                                 نسترن
@@ -197,7 +202,8 @@
                                                 <small class="pull-left">20%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%"
+                                                     role="progressbar"
                                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                                                     <span class="sr-only">20% تکمیل شده</span>
                                                 </div>
@@ -212,7 +218,8 @@
                                                 <small class="pull-left">40%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar"
+                                                <div class="progress-bar progress-bar-green" style="width: 40%"
+                                                     role="progressbar"
                                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                                                     <span class="sr-only">40% تکمیل شده</span>
                                                 </div>
@@ -227,7 +234,8 @@
                                                 <small class="pull-left">60%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar"
+                                                <div class="progress-bar progress-bar-red" style="width: 60%"
+                                                     role="progressbar"
                                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                                                     <span class="sr-only">60% تکمیل شده</span>
                                                 </div>
@@ -242,7 +250,8 @@
                                                 <small class="pull-left">80%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
+                                                <div class="progress-bar progress-bar-yellow" style="width: 80%"
+                                                     role="progressbar"
                                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                                                     <span class="sr-only">80% تکمیل شده</span>
                                                 </div>
@@ -328,7 +337,8 @@
 
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
-                <li class="active"><a href="{{route('a_Dashboard')}}"><i class="fa fa-dashboard text-red "></i> <span>داشبورد</span></a></li>
+                <li class="active"><a href="{{route('a_Dashboard')}}"><i class="fa fa-dashboard text-red "></i> <span>داشبورد</span></a>
+                </li>
                 @role('superadministrator|administrator')
                 <li class="active treeview">
                     <a href="#">
@@ -336,9 +346,12 @@
                         <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{route('a_CreateProductCategory')}}"><i class="fa fa-circle-o text-light-blue "></i> ایجاد دسته جدید</a></li>
-                        <li class="active"><a href="{{route('a_CreateProducts')}}"><i class="fa fa-circle-o text-light-blue"></i> ایجاد محصول جدید</a></li>
-                        <li class="active"><a href="{{route('a_Products')}}"><i class="fa fa-circle-o text-light-blue"></i>مشاهده و ویرایش محصولات </a></li>
+                        <li class="active"><a href="{{route('a_CreateProductCategory')}}"><i
+                                        class="fa fa-circle-o text-light-blue "></i> ایجاد دسته جدید</a></li>
+                        <li class="active"><a href="{{route('a_CreateProducts')}}"><i
+                                        class="fa fa-circle-o text-light-blue"></i> ایجاد محصول جدید</a></li>
+                        <li class="active"><a href="{{route('a_Products')}}"><i
+                                        class="fa fa-circle-o text-light-blue"></i>مشاهده و ویرایش محصولات </a></li>
                     </ul>
                 </li>
                 @endrole
@@ -348,8 +361,10 @@
                         <span class="pull-left-container"></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{route('a_show_create_page')}}"><i class="fa fa-file-o text-light-blue "></i> ایجاد صفحه جدید</a></li>
-                        <li class="active"><a href="{{route('a_show_Edit_page')}}"><i class="fa fa-file-o text-light-blue"></i> مشاهده و ویرایش صفحه</a></li>
+                        <li class="active"><a href="{{route('a_show_create_page')}}"><i
+                                        class="fa fa-file-o text-light-blue "></i> ایجاد صفحه جدید</a></li>
+                        <li class="active"><a href="{{route('a_show_Edit_page')}}"><i
+                                        class="fa fa-file-o text-light-blue"></i> مشاهده و ویرایش صفحه</a></li>
                     </ul>
                 </li>
                 <li class="active treeview">
@@ -359,9 +374,37 @@
                         <span class="pull-left-container"></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{route('users.index')}}"><i class="fa fa-users text-light-blue" aria-hidden="true" ></i>مدیریت کاربران</a></li>
-                        <li class="active"><a href="{{route('permissions.index')}}"><i class="fa fa-user-secret text-light-blue" aria-hidden="true" ></i>سطوح دسترسی</a></li>
-                        <li class="active"><a href="{{route('roles.index')}}"><i class="fa fa-user-circle text-light-blue" aria-hidden="true"></i>مدریت جایگاه</a></li>
+                        <li class="active"><a href="{{route('users.index')}}"><i class="fa fa-users text-light-blue"
+                                                                                 aria-hidden="true"></i>مدیریت
+                                کاربران</a></li>
+                        <li class="active"><a href="{{route('permissions.index')}}"><i
+                                        class="fa fa-user-secret text-light-blue" aria-hidden="true"></i>سطوح دسترسی</a>
+                        </li>
+                        <li class="active"><a href="{{route('roles.index')}}"><i
+                                        class="fa fa-user-circle text-light-blue" aria-hidden="true"></i>مدریت
+                                جایگاه</a></li>
+                    </ul>
+                </li>
+                <li class="active treeview">
+                    <a href="#">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <span>نظرات</span>
+                        <span class="pull-left-container"></span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li class="active"><a href="{{route('comments.index')}}"><i class="fa fa-comments" aria-hidden="true"></i>
+
+                                نظرات تائید شده
+                                {{$approved=\App\Comment::where('approved',1)->count()}}
+                            </a></li>
+
+                        <li class="active"><a href="{{route('a_disapprove_comment')}}"><i class="fa fa-comments" aria-hidden="true"></i>
+
+                                نظرات تائید نشده
+                                {{$approved=\App\Comment::where('approved',0)->count()}}
+                            </a></li>
+
                     </ul>
                 </li>
             </ul>
