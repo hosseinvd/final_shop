@@ -332,74 +332,74 @@
     <!-- right side column. contains the logo and sidebar -->
     <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
+        <section class="sidebar-collapse" >
             <!-- Sidebar user panel -->
 
             <!-- sidebar menu: : style can be found in sidebar.less -->
-            <ul class="sidebar-menu" data-widget="tree">
+            <ul class="sidebar-menu " data-widget="tree">
                 <li class="active"><a href="{{route('a_Dashboard')}}"><i class="fa fa-dashboard text-red "></i> <span>داشبورد</span></a>
                 </li>
                 @role('superadministrator|administrator')
-                <li class="active treeview">
+                <li class="treeview">
                     <a href="#">
                         <i class="fa fa-product-hunt"></i> <span>محصولات</span>
                         <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{route('a_CreateProductCategory')}}"><i
+                        <li ><a href="{{route('a_CreateProductCategory')}}"><i
                                         class="fa fa-circle-o text-light-blue "></i> ایجاد دسته جدید</a></li>
-                        <li class="active"><a href="{{route('a_CreateProducts')}}"><i
+                        <li ><a href="{{route('a_CreateProducts')}}"><i
                                         class="fa fa-circle-o text-light-blue"></i> ایجاد محصول جدید</a></li>
-                        <li class="active"><a href="{{route('a_Products')}}"><i
+                        <li ><a href="{{route('a_Products')}}"><i
                                         class="fa fa-circle-o text-light-blue"></i>مشاهده و ویرایش محصولات </a></li>
                     </ul>
                 </li>
                 @endrole
-                <li class="active treeview">
+                <li class="treeview">
                     <a href="#">
                         <i class="fa fa-file-o" aria-hidden="true"></i> <span>مدیریت صفحات</span>
-                        <span class="pull-left-container"></span>
+                        <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{route('a_show_create_page')}}"><i
+                        <li><a href="{{route('a_show_create_page')}}"><i
                                         class="fa fa-file-o text-light-blue "></i> ایجاد صفحه جدید</a></li>
-                        <li class="active"><a href="{{route('a_show_Edit_page')}}"><i
+                        <li><a href="{{route('a_show_Edit_page')}}"><i
                                         class="fa fa-file-o text-light-blue"></i> مشاهده و ویرایش صفحه</a></li>
                     </ul>
                 </li>
-                <li class="active treeview">
+                <li class="treeview">
                     <a href="#">
                         <i class="fa fa-key" aria-hidden="true"></i>
                         <span>تنظیمات سطوح دسترسی</span>
-                        <span class="pull-left-container"></span>
+                        <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{route('users.index')}}"><i class="fa fa-users text-light-blue"
+                        <li><a href="{{route('users.index')}}"><i class="fa fa-users text-light-blue"
                                                                                  aria-hidden="true"></i>مدیریت
                                 کاربران</a></li>
-                        <li class="active"><a href="{{route('permissions.index')}}"><i
+                        <li><a href="{{route('permissions.index')}}"><i
                                         class="fa fa-user-secret text-light-blue" aria-hidden="true"></i>سطوح دسترسی</a>
                         </li>
-                        <li class="active"><a href="{{route('roles.index')}}"><i
+                        <li><a href="{{route('roles.index')}}"><i
                                         class="fa fa-user-circle text-light-blue" aria-hidden="true"></i>مدریت
                                 جایگاه</a></li>
                     </ul>
                 </li>
-                <li class="active treeview">
+                <li class="treeview">
                     <a href="#">
                         <i class="fa fa-comment" aria-hidden="true"></i>
                         <span>نظرات</span>
-                        <span class="pull-left-container"></span>
+                        <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
                     </a>
                     <ul class="treeview-menu">
 
-                        <li class="active"><a href="{{route('comments.index')}}"><i class="fa fa-comments" aria-hidden="true"></i>
+                        <li><a href="{{route('comments.index')}}"><i class="fa fa-comments" aria-hidden="true"></i>
 
                                 نظرات تائید شده
                                 {{$approved=\App\Comment::where('approved',1)->count()}}
                             </a></li>
 
-                        <li class="active"><a href="{{route('a_disapprove_comment')}}"><i class="fa fa-comments" aria-hidden="true"></i>
+                        <li><a href="{{route('a_disapprove_comment')}}"><i class="fa fa-comments" aria-hidden="true"></i>
 
                                 نظرات تائید نشده
                                 {{$approved=\App\Comment::where('approved',0)->count()}}
