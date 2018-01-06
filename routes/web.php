@@ -21,11 +21,11 @@ Route::post('/ta','ajaxController@create');
 Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/user-profile', 'UserController@profile')->name('u_user-profile');
     Route::get('/basket', 'UserController@basket')->name('user-basket');
-    Route::get('request','UserController@Getway_request')->name('Gateway-Request');
+
+    Route::patch('/UpdateCart/', 'ProductController@updateCart')->name('updateCart');
+    Route::post('request','UserController@Getway_request')->name('Gateway-Request');
     Route::any('callback/from/bank','UserController@Getway_back')->name('Gateway-back');
 });
-
-
 
 //-----------------------------------------admin panel route-------------------------------------------------------------
 Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|administrator|editor']],function(){
@@ -65,7 +65,6 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
 
     Route::resource('comments','CommentController');
     Route::get('disapprove','CommentController@disapprove')->name('a_disapprove_comment');
-
 
 // jquery post request to page update
     Route::post('/Update','AdminController@jquery_post');

@@ -20,8 +20,9 @@ class UserController extends Controller
         return view('user.Basket');
     }
 
-    public function Getway_request()
+    public function Getway_request(Request $request)
     {
+        dd($request->all());
         try {
 
             $gateway = \Gateway::ZARINPAL();

@@ -175,5 +175,16 @@ class ProductController extends AdminController
         return back();
     }
 
+    public function updateCart(Request $request)
+    {
+
+        $this->validate(request(), [
+            'row_qty' => 'required|numeric|min:0',
+        ]);
+        Cart::update($request->row_id,$request->row_qty);
+
+        return redirect(route('user-basket'));
+    }
+
 
 }
