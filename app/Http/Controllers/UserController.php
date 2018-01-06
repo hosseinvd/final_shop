@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Library\ShowTable;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,6 +20,8 @@ class UserController extends Controller
 
         return view('user.Basket');
     }
+
+
 
     public function Getway_request(Request $request)
     {
@@ -58,6 +61,51 @@ class UserController extends Controller
 
             echo $e->getMessage();
         }
+    }
+
+    public function addToCart(Product $product)
+    {
+        Cart::add($product->id, $product->title, 1, $product->price);
+
+        return back();
+    }
+
+    public function update_full_basket(Request $request)
+    {
+        for ($i=0;$i<count($request->row_id);$i++){
+            Cart::update($request->row_id[$i],$request->row_qty[$i]);
+        }
+        return redirect()->back();
+    }
+
+    public function updateCart(Request $request)
+    {
+
+        $this->validate(request(), [
+            'row_qty' => 'required|numeric|min:0',
+        ]);
+        Cart::update($request->row_id,$request->row_qty);
+
+        return redirect(route('user-basket'));
+    }
+
+    public function jquery_post(Request $request)
+    {
+        $this->validate(request(), [
+            'row_qty' => 'required|numeric|min:0',
+        ]);
+        Cart::update($request->row_id,$request->row_qty);
+
+        $showtable=new ShowTable();
+        if (isset($request->request_name)) {
+            $request_name = $request->request_name;
+            switch ($request_name) {
+                case "basket_update":
+                    return $showtable->user_basket();
+
+            }
+        }
+
     }
 
 }

@@ -12,7 +12,7 @@
 
 Route::get('/', 'ProductController@getIndex')->name('products');
 Route::get('/product/{product}', 'ProductController@Show_product')->name('show_product');
-Route::get('/addToCart/{product}', 'ProductController@addToCart')->name('addToCart');
+Route::get('/addToCart/{product}', 'UserController@addToCart')->name('addToCart');
 Route::post('/comment' , 'HomeController@comment');
 
 Route::get('/ta','ajaxController@index')->name('test_ajax');
@@ -22,7 +22,8 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/user-profile', 'UserController@profile')->name('u_user-profile');
     Route::get('/basket', 'UserController@basket')->name('user-basket');
 
-    Route::patch('/UpdateCart/', 'ProductController@updateCart')->name('updateCart');
+    Route::patch('/UpdateCart/', 'UserController@jquery_post')->name('updateCart');
+    Route::post('/update_full_basket/','UserController@update_full_basket')->name('update_full_basket');
     Route::post('request','UserController@Getway_request')->name('Gateway-Request');
     Route::any('callback/from/bank','UserController@Getway_back')->name('Gateway-back');
 });

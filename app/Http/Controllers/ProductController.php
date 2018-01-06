@@ -168,23 +168,7 @@ class ProductController extends AdminController
 
     }
 
-    public function addToCart(Product $product)
-    {
-        Cart::add($product->id, $product->title, 1, $product->price);
 
-        return back();
-    }
-
-    public function updateCart(Request $request)
-    {
-
-        $this->validate(request(), [
-            'row_qty' => 'required|numeric|min:0',
-        ]);
-        Cart::update($request->row_id,$request->row_qty);
-
-        return redirect(route('user-basket'));
-    }
 
 
 }
