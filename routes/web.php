@@ -17,6 +17,10 @@ Route::post('/comment' , 'HomeController@comment');
 
 Route::get('/ta','ajaxController@index')->name('test_ajax');
 Route::post('/ta','ajaxController@create');
+Route::get('/rapiden',function (){
+    return view('rapiden_layouts.master');
+});
+
 
 Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/user-profile', 'UserController@profile')->name('u_user-profile');
