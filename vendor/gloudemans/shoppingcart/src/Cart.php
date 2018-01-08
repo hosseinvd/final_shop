@@ -1,7 +1,9 @@
 <?php
+namespace App;
 
 namespace Gloudemans\Shoppingcart;
 
+use App\Product;
 use Closure;
 use Illuminate\Support\Collection;
 use Illuminate\Session\SessionManager;
@@ -43,6 +45,10 @@ class Cart
      * @param \Illuminate\Session\SessionManager      $session
      * @param \Illuminate\Contracts\Events\Dispatcher $events
      */
+//    public function images()
+//    {
+//        return $this->hasMany(Product::class);
+//    }
     public function __construct(SessionManager $session, Dispatcher $events)
     {
         $this->session = $session;

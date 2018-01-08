@@ -11,6 +11,7 @@
 */
 
 Route::get('/', 'ProductController@getIndex')->name('products');
+
 Route::get('/product/{product}', 'ProductController@Show_product')->name('show_product');
 Route::get('/addToCart/{product}', 'UserController@addToCart')->name('addToCart');
 Route::post('/comment' , 'HomeController@comment');

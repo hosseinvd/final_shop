@@ -33,7 +33,14 @@
                             <?php $i++; ?>
                             <td>{{$i}}</td>
                             {{--<td>{{$row->rowId}}</td>--}}
-                            <td><p><strong>{{$row->name}}</strong></p></td>
+                            <td>
+                                <a href="{{route('show_product',$row->id)}}">
+                                    <p><strong>{{$row->name}}</strong></p>
+                                    <img  src="{{asset('product_image').'/'.\App\Product::find($row->id)->images()->first()->imagePath}}"
+                                         alt="...">
+                                </a>
+
+                            </td>
                             <td>
                                 <input class="form-control" id="row_id_{{$i}}" type="hidden" name="row_id[]"
                                        value="{{$row->rowId}}">

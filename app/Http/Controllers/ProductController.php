@@ -16,13 +16,20 @@ use Intervention\Image\Facades\Image;
 
 class ProductController extends AdminController
 {
-    public function getIndex()
-    {
-        $products = Product::paginate(6);
+    public function r_getIndex()
+{
+    $products = Product::paginate(8);
 
         return view('shop.index', compact('products'));
-    }
+}
 
+    public function getIndex()
+    {
+        $products = Product::paginate(8);
+
+//        return view('shop.index', compact('products'));
+        return view('rapiden_layouts.index', compact('products'));
+    }
     public function Show_product(Product $product)
     {
 //        $product->increment('viewCount');

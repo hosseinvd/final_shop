@@ -2,368 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7dea3e0-9911-4ce4-9329-6fd95d114d3f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/vazir-bold-fd-wl.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/vazir-bold-fd-wl.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/vazir-bold-fd-wl.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/vazir-bold-fd-wl.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/vazir-fd-wl.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/vazir-fd-wl.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/vazir-fd-wl.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/vazir-fd-wl.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/btn_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/email.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/googleplus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/pinterest.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/top-cart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/top-cart2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/3.1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/4.1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/4.2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/4.3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/banner/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/bg-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blog/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blog/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blog/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blog/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blog/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blog/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blog/man-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blog/man-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blog/man-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blog/man-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/4.1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/4.2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/4.3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/4.4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/4.5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/4.6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/brand/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/cart/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/cart/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/cart/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/cart/btn_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/cart/top-cart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/cart/top-cart2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/client/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/client/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/client/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/electronic/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/electronic/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/electronic/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/electronic/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/electronic/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/electronic/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/footer/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/footer/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/footer/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/footer/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/footer/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/footer/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/footer/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icon/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icon/email.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icon/facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icon/googleplus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icon/pinterest.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icon/twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/logo_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/map-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/1-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/1-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/menu-l/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/payment.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/16.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/product/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/slider/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/slider/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/slider/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/slider/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/slider/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/slider/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/slider/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/myriad-fd-wl-ext.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/myriad-fd-wl-ext.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/myriad-fd-wl-ext.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/myriad-fd-wl-ext.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/vazir-bold-fd-wl.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/vazir-bold-fd-wl.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/vazir-bold-fd-wl.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/vazir-bold-fd-wl.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/vazir-fd-wl.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/vazir-fd-wl.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/vazir-fd-wl.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/vazir-fd-wl.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/3.1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/4.1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/4.2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/4.3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/banner/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/bg-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/blog/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/blog/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/blog/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/blog/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/blog/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/blog/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/blog/man-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/blog/man-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/blog/man-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/blog/man-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/4.1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/4.2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/4.3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/4.4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/4.5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/4.6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/brand/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/cart/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/cart/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/cart/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/cart/btn_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/cart/top-cart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/cart/top-cart2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/client/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/client/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/client/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/electronic/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/electronic/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/electronic/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/electronic/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/electronic/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/electronic/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/footer/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/footer/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/footer/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/footer/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/footer/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/footer/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/footer/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/icon/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/icon/email.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/icon/facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/icon/googleplus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/icon/pinterest.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/icon/twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/logo_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/map-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/1-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/1-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/menu-l/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/payment.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/16.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/product/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/slider/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/slider/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/slider/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/slider/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/slider/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/slider/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/img/slider/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/rapiden.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/ajax-mail.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/jquery-ui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/jquery.magnific-popup.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/jquery.meanmenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/jquery.nivo.slider.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/jquery.placeholder.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/jquery.scrollup.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/owl.carousel.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/plugins.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/vendor/jquery-1.12.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/rapiden_js/vendor/modernizr-2.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/animate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/jquery-ui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/magnific-popup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/meanmenu.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/nivo-slider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/owl.carousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/blog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/client.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/default-myriad.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/footer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/header.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/mainmenu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/other-page.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/product-tab.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/product.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/shortcodes.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/shortcode/slider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/ajax-mail.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/jquery-ui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/jquery.magnific-popup.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/jquery.meanmenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/jquery.nivo.slider.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/jquery.placeholder.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/jquery.scrollup.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/owl.carousel.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/plugins.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/vendor/jquery-1.12.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/js/vendor/modernizr-2.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/my_style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/rapiden.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/rapiden/rapiden.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/rapiden_mystyle.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/partials/category_sidebar.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/partials/mainmenu.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue-template-compiler/browser.js" afterPath="$PROJECT_DIR$/node_modules/vue-template-compiler/browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue-template-compiler/build.js" afterPath="$PROJECT_DIR$/node_modules/vue-template-compiler/build.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue-template-compiler/package.json" afterPath="$PROJECT_DIR$/node_modules/vue-template-compiler/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/README.md" afterPath="$PROJECT_DIR$/node_modules/vue/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/dist/vue.common.js" afterPath="$PROJECT_DIR$/node_modules/vue/dist/vue.common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/dist/vue.esm.js" afterPath="$PROJECT_DIR$/node_modules/vue/dist/vue.esm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/dist/vue.js" afterPath="$PROJECT_DIR$/node_modules/vue/dist/vue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/dist/vue.min.js" afterPath="$PROJECT_DIR$/node_modules/vue/dist/vue.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/dist/vue.runtime.common.js" afterPath="$PROJECT_DIR$/node_modules/vue/dist/vue.runtime.common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/dist/vue.runtime.esm.js" afterPath="$PROJECT_DIR$/node_modules/vue/dist/vue.runtime.esm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/dist/vue.runtime.js" afterPath="$PROJECT_DIR$/node_modules/vue/dist/vue.runtime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/dist/vue.runtime.min.js" afterPath="$PROJECT_DIR$/node_modules/vue/dist/vue.runtime.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/package.json" afterPath="$PROJECT_DIR$/node_modules/vue/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/compiler/codegen/events.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/compiler/codegen/events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/compiler/codegen/index.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/compiler/codegen/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/compiler/helpers.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/compiler/helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/compiler/index.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/compiler/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/compiler/parser/index.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/compiler/parser/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/compiler/parser/text-parser.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/compiler/parser/text-parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/core/instance/init.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/core/instance/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/core/instance/state.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/core/instance/state.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/core/util/options.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/core/util/options.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/core/util/props.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/core/util/props.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/core/vdom/create-component.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/core/vdom/create-component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/core/vdom/create-element.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/core/vdom/create-element.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/core/vdom/helpers/update-listeners.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/core/vdom/helpers/update-listeners.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/core/vdom/patch.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/core/vdom/patch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/web/compiler/modules/class.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/web/compiler/modules/class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/web/compiler/modules/model.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/web/compiler/modules/model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/web/compiler/modules/style.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/web/compiler/modules/style.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/compiler/index.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/compiler/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/compiler/modules/append.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/compiler/modules/append.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/compiler/modules/class.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/compiler/modules/class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/compiler/modules/index.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/compiler/modules/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/compiler/modules/style.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/compiler/modules/style.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/entry-framework.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/entry-framework.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/runtime/index.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/runtime/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/runtime/modules/events.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/runtime/modules/events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/util/index.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/platforms/weex/util/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/src/shared/util.js" afterPath="$PROJECT_DIR$/node_modules/vue/src/shared/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vue/types/vue.d.ts" afterPath="$PROJECT_DIR$/node_modules/vue/types/vue.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/admin.js" afterPath="$PROJECT_DIR$/public/js/admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/mix-manifest.json" afterPath="$PROJECT_DIR$/public/mix-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/components/ExampleComponent.vue" afterPath="$PROJECT_DIR$/resources/assets/js/components/ExampleComponent.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Product.php" afterPath="$PROJECT_DIR$/app/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/Basket.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/Basket.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.mix.js" afterPath="$PROJECT_DIR$/webpack.mix.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/gloudemans/shoppingcart/src/Cart.php" afterPath="$PROJECT_DIR$/vendor/gloudemans/shoppingcart/src/Cart.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -377,61 +27,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <file leaf-file-name="Basket.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/user/Basket.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+            <state relative-caret-position="572">
+              <caret line="74" column="49" lean-forward="true" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            <state relative-caret-position="172">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
-                <element signature="e#40#66#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Library/ShowTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="149" column="24" lean-forward="false" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
-              <folding>
-                <element signature="e#31#47#0#PHP" expanded="true" />
-                <marker date="1515260798934" expanded="true" signature="1055:1310" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="1074:1287" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="1410:1922" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="1607:1900" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="2171:2426" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="2190:2403" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="2533:3045" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="2730:3023" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="3246:3545" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="3262:3520" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="3275:3503" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="3536:3545" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="3757:4095" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="3757:4498" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="3878:4095" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="4165:4345" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="4589:5167" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="4614:4737" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="4614:4777" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="4656:4662" ph=" " />
-                <marker date="1515260798934" expanded="true" signature="4802:4920" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="4802:4955" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="4844:4850" ph=" " />
-                <marker date="1515260798934" expanded="true" signature="5021:5137" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="5021:5167" ph="..." />
-                <marker date="1515260798934" expanded="true" signature="5022:5028" ph=" " />
+                <element signature="e#22#38#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -440,40 +52,73 @@
       <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="2939" column="23" lean-forward="false" selection-start-line="2939" selection-start-column="23" selection-end-line="2939" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rapiden.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/rapiden/rapiden.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+            <state relative-caret-position="555">
+              <caret line="161" column="164" lean-forward="false" selection-start-line="161" selection-start-column="164" selection-end-line="161" selection-end-column="164" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/admin.js">
+      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/partials/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="396">
+              <caret line="18" column="109" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="111" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/rapiden/my_style.css">
+      <file leaf-file-name="rapiden_mystyle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/rapiden_mystyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style_m.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/style_m.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_ide_helper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_ide_helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="12510" column="45" lean-forward="false" selection-start-line="12510" selection-start-column="45" selection-end-line="12510" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/gloudemans/shoppingcart/src/Cart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="2" selection-end-line="50" selection-end-column="7" />
+              <folding>
+                <element signature="e#58#74#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-259">
+              <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -518,9 +163,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="php artisan db:seed" />
-      <command text="php artisan migrate:fresh" />
-      <command text="php artisan db:seed" />
       <command text="php artisan migrate:fresh" />
       <command text="php artisan db:seed" />
       <command text="php artisan migrate:fresh" />
@@ -543,6 +185,9 @@
       <command text="npm -v" />
       <command text="npm install" />
       <command text="php artisan serve" />
+      <command text="php artisan public vendor" />
+      <command text="php artisan publish vendor" />
+      <command text="php artisan vendor:publish" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -554,12 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/hvd/hosseinController.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/permissions/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/roles/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/roles/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/roles/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/permissions/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/roles/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" />
@@ -567,13 +206,11 @@
         <option value="$PROJECT_DIR$/config/cart.php" />
         <option value="$PROJECT_DIR$/config/gateway.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_12_30_153358_create_comments_table.php" />
-        <option value="$PROJECT_DIR$/app/Product.php" />
         <option value="$PROJECT_DIR$/resources/views/shop/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Comment.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/comment.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/shop/show_product.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Product/Products.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Product/show_product.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Comment/approved.blade.php" />
@@ -592,18 +229,26 @@
         <option value="$PROJECT_DIR$/app/Info_user.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/app/Library/ShowTable.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/resources/views/user/Basket.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/rapiden/rapiden.scss" />
         <option value="$PROJECT_DIR$/resources/assets/rapiden/my_style.css" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/ExampleComponent.vue" />
         <option value="$PROJECT_DIR$/resources/assets/rapiden/css/owl.carousel.css" />
         <option value="$PROJECT_DIR$/resources/assets/rapiden/rapiden.js" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
+        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/partials/category_sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/partials/mainmenu.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/shop/show_product.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
+        <option value="$PROJECT_DIR$/app/Product.php" />
+        <option value="$PROJECT_DIR$/vendor/gloudemans/shoppingcart/src/Cart.php" />
+        <option value="$PROJECT_DIR$/resources/views/user/Basket.blade.php" />
+        <option value="$PROJECT_DIR$/public/rapiden_js/my_style.css" />
+        <option value="$PROJECT_DIR$/public/css/rapiden_mystyle.css" />
         <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php" />
       </list>
     </option>
@@ -711,8 +356,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-4" />
-    <option name="y" value="81" />
+    <option name="x" value="163" />
+    <option name="y" value="70" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -744,7 +389,29 @@
             <path>
               <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
@@ -756,6 +423,19 @@
               <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="rapiden" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
@@ -775,7 +455,29 @@
               <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="rapiden_layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="rapiden_layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="shop" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
@@ -799,18 +501,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Laravel\Final_Shop\public\rapiden_js" />
+      <recent name="E:\Laravel\Final_Shop\resources\views\rapiden_layouts" />
+      <recent name="E:\Laravel\Final_Shop\public" />
+      <recent name="E:\Laravel\Final_Shop\resources\assets\rapiden\js" />
+      <recent name="E:\Laravel\Final_Shop\resources\assets\rapiden\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Laravel\Final_Shop\public\css" />
       <recent name="E:\Laravel\Final_Shop\resources\views\Admin\Product" />
       <recent name="E:\Laravel\Final_Shop\app\Http\Controllers\hvd" />
       <recent name="E:\Laravel\Final_Shop\resources\views\Admin\Users" />
       <recent name="E:\Laravel\Final_Shop\resources\views\layouts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Laravel\Final_Shop\public\rapiden_js" />
-      <recent name="E:\Laravel\Final_Shop\public" />
-      <recent name="E:\Laravel\Final_Shop\resources\assets\rapiden\js" />
-      <recent name="E:\Laravel\Final_Shop\resources\assets\rapiden\css" />
-      <recent name="E:\Laravel\Final_Shop\resources\assets\rapiden" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -867,26 +570,27 @@
       <workItem from="1514989443797" duration="9700000" />
       <workItem from="1515246828114" duration="13041000" />
       <workItem from="1515332597469" duration="6863000" />
+      <workItem from="1515419478833" duration="10107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244097000" />
+    <option name="totallyTimeSpent" value="254204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26812366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2707889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32752994" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19804135" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -929,118 +633,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_12_30_153358_create_comments_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_12_16_150216_laratrust_setup_tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1320">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/ProductTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/gloudemans/shoppingcart/src/Cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="348" column="20" lean-forward="false" selection-start-line="348" selection-start-column="20" selection-end-line="348" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/ProuductFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="74" column="97" lean-forward="false" selection-start-line="74" selection-start-column="97" selection-end-line="74" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" column="56" lean-forward="false" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/LaratrustSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="77" column="55" lean-forward="false" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Info_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="124" column="7" lean-forward="false" selection-start-line="124" selection-start-column="7" selection-end-line="124" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#23#63#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="68" column="33" lean-forward="false" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,7 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,25 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1958">
           <caret line="89" column="22" lean-forward="false" selection-start-line="82" selection-start-column="8" selection-end-line="96" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <element signature="e#40#66#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1160,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1168,15 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/rapiden/my_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1184,15 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/Basket.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="86" column="40" lean-forward="false" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1216,7 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,9 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1250,16 +802,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/rapiden/rapiden.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
+        <state relative-caret-position="44">
           <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1268,15 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,7 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1292,16 +833,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Library/ShowTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
+        <state relative-caret-position="3212">
           <caret line="149" column="24" lean-forward="false" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
           <folding>
-            <element signature="e#31#47#0#PHP" expanded="true" />
+            <element signature="e#31#47#0#PHP" expanded="false" />
             <marker date="1515260798934" expanded="true" signature="1055:1310" ph="..." />
             <marker date="1515260798934" expanded="true" signature="1074:1287" ph="..." />
             <marker date="1515260798934" expanded="true" signature="1410:1922" ph="..." />
@@ -1336,15 +876,185 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/shop/show_product.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/admin_master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="415" column="17" lean-forward="false" selection-start-line="415" selection-start-column="0" selection-end-line="416" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/partials/category_sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="122" column="6" lean-forward="false" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/partials/mainmenu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="26" column="11" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="28" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/shop/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2803">
+          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-713">
+          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="e#40#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_ide_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12510" column="45" lean-forward="false" selection-start-line="12510" selection-start-column="45" selection-end-line="12510" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_08_162335_create_shoppingcart_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#38#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gloudemans/shoppingcart/src/Cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="2" selection-end-line="50" selection-end-column="7" />
+          <folding>
+            <element signature="e#58#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1736">
+          <caret line="124" column="7" lean-forward="false" selection-start-line="124" selection-start-column="7" selection-end-line="124" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/Basket.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="74" column="49" lean-forward="true" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-259">
+          <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/rapiden/my_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style_m.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/rapiden_mystyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="109" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="111" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="2939" column="23" lean-forward="false" selection-start-line="2939" selection-start-column="23" selection-end-line="2939" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="555">
+          <caret line="161" column="164" lean-forward="false" selection-start-line="161" selection-start-column="164" selection-end-line="161" selection-end-column="164" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

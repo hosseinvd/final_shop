@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Library\ShowTable;
+use App\Product;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,6 +11,7 @@ use Larabookir\Gateway\Gateway;
 
 class UserController extends Controller
 {
+
     public function profile()
     {
         return view('user.profile');

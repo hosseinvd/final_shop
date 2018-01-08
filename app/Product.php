@@ -2,12 +2,15 @@
 
 namespace App;
 use App\m_image;
+use Gloudemans\Shoppingcart\Cart;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
 
     protected $guarded=[];
+
+
 
     public function images()
     {
