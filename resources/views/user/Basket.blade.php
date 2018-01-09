@@ -16,6 +16,7 @@
                     <thead>
                     <tr>
                         <th>#</th>
+                        <th>image</th>
                         <th>Product Name</th>
                         <th>Quantity</th>
                         <th>refresh</th>
@@ -32,12 +33,15 @@
                         <tr>
                             <?php $i++; ?>
                             <td>{{$i}}</td>
+                                <td>
+                                    <img  src="{{asset('product_image').'/'.\App\Product::find($row->id)->images()->first()->imagePath}}"
+                                          alt="...">
+                                </td>
                             {{--<td>{{$row->rowId}}</td>--}}
                             <td>
                                 <a href="{{route('show_product',$row->id)}}">
                                     <p><strong>{{$row->name}}</strong></p>
-                                    <img  src="{{asset('product_image').'/'.\App\Product::find($row->id)->images()->first()->imagePath}}"
-                                         alt="...">
+
                                 </a>
 
                             </td>

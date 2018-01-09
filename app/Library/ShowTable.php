@@ -97,71 +97,105 @@ class ShowTable
 
     public function user_basket()
     {
-
-        echo "<div class='table-responsive' id='C_table'>";
-        echo "
-        <table class='table'>
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Product Name</th>
-            <th>Quantity</th>
-            <th>refresh</th>
-            <th>Product Price</th>
-            <th>tax</th>
-            <th>Totla row Price</th>
-
-        </tr>
-        </thead>
-        <tbody>
-        ";
         $i = 0;
         $total=Cart::total();
         $tax=Cart::tax();
         $subtotal=Cart::subtotal();
+        $route_products=route('products');
+        echo "<div class='table-content table-responsive'>
+        <table>
+        <thead>
+        <tr>
+            <th>ردیف</th>
+            <th class=\"product-thumbnail\">تصویر</th>
+            <th class=\"product-name\">محصول</th>
+            <th class=\"product-quantity\">تعداد</th>
+            <th>refresh</th>
+            <th class=\"product-price\">قیمت</th>
+            <th class=\"product-subtotal\">جمع</th>
+            <th class=\"product-remove\">حذف</th>
+        </tr>
+        </thead>
+        <tbody>
+        ";
         foreach (Cart::content() as $row) {
             $i++;
+            $image_path = asset('product_image') . '/' . \App\Product::find($row->id)->images()->first()->imagePath;
+            $product_address = route('show_product', $row->id);
             echo "
-                <tr>
-                    <td>$i</td>
-                    <td><p><strong>$row->name</strong></p></td>
-                    <td>
-                        <input class='form-control' id='row_id_$i' type='hidden' name='row_id[]' value='$row->rowId'>
-                        <input class='form-control' id='row_qty_$i' type='number' name='row_qty[]' value='$row->qty'>
-                    </td>
-                    <td>
-                        <button  type='button' class='btn btn-warning ' id='refresh' value='$i'><i class='fa fa-refresh' aria-hidden='true'></i></button>
-                    </td>
-                    <td>$row->price</td>
-                    <td>$row->qty*$row->tax</td>
-                    <td>$row->total</td>
+                            <tr>
+                            <td>$i</td>
+                            <td class='product-thumbnail'>
+                                <img  src='$image_path'
+                                      alt='...'>
+                            </td>
+                            <td class='product-name'>
+                                <a href='$product_address'>
+                                    <p><strong>$row->name</strong></p>
+                                </a>
+                            </td>
+                            <td class='product-quantity'>
+                                <input class='form-control' id='row_id_$i' type='hidden' name='row_id[]'
+                                       value='$row->rowId'>
+                                <input class='form-control row_qty' id='row_qty_$i' type='number' name='row_qty[]'
+                                       value='$row->qty'>
+                            </td>
+                            <td>
+                                <button type='button' class='btn btn-warning ' id='refresh' value='$i'><i
+                                            class='fa fa-refresh' aria-hidden='true'></i></button>
+                            </td>
+                            <td class='product-price'>$row->price</td>                        
+                            <td class='product-subtotal'>$row->subtotal</td>
+                            <td class='product-remove'><a href='#'><i class='fa fa-times'></i></a></td>                                   
                 </tr>
-                ";
+                 ";
         };
-
         echo "
         </tbody>
-                    <tfoot>
-                    <tr>
-                        <td colspan='2'>&nbsp;</td>
-                        <td>Subtotal</td>
-                        <td>$subtotal</td>
-                    </tr>
-                    <tr>
-                        <td colspan='2'>&nbsp;</td>
-                        <td>Tax</td>
-                        <td>$tax</td>
-                    </tr>
-                    <tr>
-                        <td colspan='2'>&nbsp;</td>
-                        <td>Total</td>
-                        <td>$total</td>
-                    </tr>
-
-                    </tfoot>
-                </table>
+        </table>
+        </div>
+        ";
+        echo "
+            <div class='row'>
+                <div class='col-md-9 col-sm-7 col-xs-12'>
+                    <div class='buttons-cart'>
+                        <input type='submit' value='به روز رسانی سبد'>
+                        <a href='$route_products'>ادامه خرید</a>
+                    </div>
+                    <div class='coupon'>
+                        <h3>کد تخفیف</h3>
+                        <p>کد تخفیف خود را در صورت وجود وارد نمایید</p>
+                        <input type='text' placeholder='کد تخفیف'>
+                        <input type='submit' value='اعمال تخفیف'>
+                    </div>
+                </div>
+                <div class='col-md-3 col-sm-5 col-xs-12'>
+                    <div class='cart_totals'>
+                        <h2>مجموع سبد</h2>
+                        <table>
+                            <tbody>
+                            <tr class='cart-subtotal'>
+                                <th>زیر مجموعه</th>
+                                <td><span class='amount'>$subtotal <small>تومان</small></span></td>
+                            </tr>
+                            <tr class='cart-subtotal'>
+                                <th>مالیات</th>
+                                <td><span class='amount'>$tax <small>تومان</small></span></td>
+                            </tr>
+                            <tr class='order-total'>
+                                <th>جمع</th>
+                                <td>
+                                    <strong><span class='amount'>$total <small>تومان</small></span></strong>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>            
+            </div>            
         ";
 
     }
+
 
 }

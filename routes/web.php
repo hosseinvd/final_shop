@@ -12,15 +12,16 @@
 
 Route::get('/', 'ProductController@getIndex')->name('products');
 
-Route::get('/product/{product}', 'ProductController@Show_product')->name('show_product');
+Route::get('/product/view_item/{product}', 'ProductController@Show_product')->name('show_product');
+Route::get('/product/{category}', 'ProductController@Show_product_in_cat')->name('products_in_cat');
+
+
 Route::get('/addToCart/{product}', 'UserController@addToCart')->name('addToCart');
 Route::post('/comment' , 'HomeController@comment');
 
 Route::get('/ta','ajaxController@index')->name('test_ajax');
 Route::post('/ta','ajaxController@create');
-Route::get('/rapiden',function (){
-    return view('rapiden_layouts.master');
-});
+
 
 
 Route::group(['prefix'=>'user','middleware'=>'auth'],function(){

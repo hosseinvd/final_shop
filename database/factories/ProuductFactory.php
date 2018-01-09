@@ -14,6 +14,6 @@ $factory->define(App\Product::class, function (Faker $faker) {
         'color'=>$faker->colorName,
         'weight'=>rand(1,100),
         'size'=>rand(1,50),
-        'category_id' => $faker->randomElement(\App\Category::pluck('id')->toArray())
+//        'category_id' => $faker->randomElement(\App\Category::pluck('id')->toArray())
     ];
 });

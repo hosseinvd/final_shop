@@ -10,8 +10,10 @@ class Product extends Model
 
     protected $guarded=[];
 
-
-
+    public function categories()
+    {
+        return $this->belongsToMany('App\Category');
+    }
     public function images()
     {
         return $this->hasMany('App\m_image');

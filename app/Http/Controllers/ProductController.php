@@ -16,19 +16,13 @@ use Intervention\Image\Facades\Image;
 
 class ProductController extends AdminController
 {
-    public function r_getIndex()
-{
-    $products = Product::paginate(8);
 
-        return view('shop.index', compact('products'));
-}
 
     public function getIndex()
     {
         $products = Product::paginate(8);
-
-//        return view('shop.index', compact('products'));
-        return view('rapiden_layouts.index', compact('products'));
+        $categories=Category::all();
+        return view('rapiden_layouts.index', compact('products','categories'));
     }
     public function Show_product(Product $product)
     {
@@ -37,6 +31,14 @@ class ProductController extends AdminController
             $query->where('approved' , 1)->latest();
         }])->get();
         return view('shop.show_product', compact('product', 'comments'));
+    }
+
+    public function Show_product_in_cat(Category $category)
+    {
+        $products=$category->products()->paginate(8);
+        $categories=Category::all();
+        return view('rapiden_layouts.index', compact('products','categories'));
+
     }
 
     public function a_Show_product(Product $product)

@@ -4,10 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Library\ShowTable;
 use App\Product;
+use App\m_image;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Larabookir\Gateway\Gateway;
+use App\Category;
+use App\Http\Requests\StoreProduct;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class UserController extends Controller
 {
@@ -19,8 +25,9 @@ class UserController extends Controller
     public function basket()
     {
         Cart::store(Auth::user()->name,\auth()->id());
+        return view('rapiden_layouts.user.Basket');
+//        return view('user.Basket');
 
-        return view('user.Basket');
     }
 
 

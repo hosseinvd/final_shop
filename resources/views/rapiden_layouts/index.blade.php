@@ -9,6 +9,14 @@
     @include('rapiden_layouts.partials.mainmenu')
 @endsection
 
+@section('header')
+    @include('rapiden_layouts.partials.main_header')
+@endsection
+
+@section('slider-area')
+    @include('rapiden_layouts.partials.slider-area')
+@endsection
+
 @section('content')
 
     <div class="new-product-area dotted-style-2">

@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-//php artisan migrate:refresh//php artisan migrate:fresh//-php artisan db:seed
+//1-php artisan migrate:fresh//
+//2-php artisan db:seed//
 class CreateUsersTable extends Migration
 {
     /**
@@ -55,8 +56,8 @@ class CreateUsersTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('viewCount')->default('0');
-            $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+//            $table->integer('category_id')->unsigned();
+//            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('title');
             $table->integer('price');
             $table->float('discount')->nullable();

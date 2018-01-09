@@ -8,4 +8,9 @@ class Category extends Model
 {
     protected $guarded=['id'];
 
+    public function products()
+    {
+        return $this->belongsToMany('App\Product');
+    }
+
 }
