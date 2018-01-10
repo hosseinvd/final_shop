@@ -26,11 +26,11 @@ class ProductController extends AdminController
     }
     public function Show_product(Product $product)
     {
-//        $product->increment('viewCount');
+        $product->increment('viewCount');
         $comments = $product->comments()->where('approved' , 1)->where('parent_id', 0)->latest()->with(['comments' => function($query) {
             $query->where('approved' , 1)->latest();
         }])->get();
-        return view('shop.show_product', compact('product', 'comments'));
+        return view('rapiden_layouts.show_product', compact('product', 'comments'));
     }
 
     public function Show_product_in_cat(Category $category)
@@ -43,7 +43,7 @@ class ProductController extends AdminController
 
     public function a_Show_product(Product $product)
     {
-//        $product->increment('viewCount');
+        $product->increment('viewCount');
         $comments = $product->comments()->where('approved' , 1)->where('parent_id', 0)->latest()->with(['comments' => function($query) {
             $query->where('approved' , 1)->latest();
         }])->get();
@@ -84,6 +84,7 @@ class ProductController extends AdminController
     {
 
 //        $input_product=$request->except(['_token','images']);
+        $category=Category::find($request->category_id);
 
         $product = new Product;
         $product->title = $request->title;
@@ -94,10 +95,12 @@ class ProductController extends AdminController
         $product->size = $request->size;
         $product->color = $request->color;
         $product->warranty = $request->warranty;
-        $product->category_id = $request->category_id;
+//        $product->category_id = $request->category_id;
         $product->description = $request->description;
         $product->long_description = $request->long_description;
         $product->save();
+        $category->products()->attach($product->id);
+
         $file = $request->file('images');
         if ($file) {
             $imagesUrl = $this->uploadImages($file);
@@ -107,7 +110,7 @@ class ProductController extends AdminController
             ]);
         }
 
-        return view('Admin.Product.CreateProducts');
+        return redirect(route('a_CreateProducts'));
 
     }
 
@@ -168,7 +171,7 @@ class ProductController extends AdminController
         $product->size = $request->size;
         $product->color = $request->color;
         $product->warranty = $request->warranty;
-        $product->category_id = $request->category_id;
+//        $product->category_id = $request->category_id;
         $product->description = $request->description;
         $product->long_description = $request->long_description;
         $product->save();
