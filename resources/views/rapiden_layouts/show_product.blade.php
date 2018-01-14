@@ -27,27 +27,42 @@
                     <div class="product-zoom dotted-style-1">
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div class="tab-pane active" id="home">
-                                <div class="pro-large-img">
-                                    <img src="{{asset('product_image').'/'.$product->images()->first()->imagePath}}" alt="...">                                    <a class="popup-link" href="img/product/1.jpg">مشاهده بزرگتر <i class="fa fa-search-plus" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                            @foreach($product->images as $index=>$image)
-                                <div class="tab-pane" id="profile_{{$index}}">
-                                    <div class="pro-large-img">
-                                        <img src="{{asset('product_image').'/'.$image->imagePath}}" alt="...">
-                                        <a class="popup-link" href="{{asset('product_image').'/'.$image->imagePath}}">مشاهده بزرگتر <i class="fa fa-search-plus" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            @endforeach
 
+                            @foreach($product->images as $index=>$image)
+                                @if($index==0)
+                                    <div class="tab-pane active" id="home_product">
+                                        <div class="pro-large-img">
+                                            <img src="{{asset('product_image').'/'.$image->imagePath}}" alt="">
+                                            <a class="popup-link" href="{{asset('product_image').'/'.$product->images()->first()->imagePath}}">مشاهده بزرگتر <i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                @else
+                                    <div class="tab-pane" id="profile_{{$index}}">
+                                        <div class="pro-large-img">
+                                            <img src="{{asset('product_image').'/'.$image->imagePath}}" alt="...">
+                                            <a class="popup-link" href="{{asset('product_image').'/'.$image->imagePath}}">مشاهده بزرگتر <i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
 
                         </div>
                         <!-- Nav tabs -->
                         <ul class="details-tab owl-carousel">
-                            <li class="active"><a href="#home" data-toggle="tab"><img src="{{asset('product_image').'/'.$product->images()->first()->imagePath}}" alt=""></a></li>
                             @foreach($product->images as $index=>$image)
-                                <li><a href="#profile_{{$index}}" data-toggle="tab"><img src="{{asset('product_image').'/'.$image->imagePath}}" alt=""></a></li>
+                                @if($index==0)
+                                      <li class="active">
+                                          <a href="#home_product" data-toggle="tab"><img src="{{asset('product_image').'/'.$image->imagePath}}" alt=""></a>
+                                          <a class="popup-link" href="{{asset('product_image').'/'.$image->imagePath}}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                      </li>
+                                @else
+                                      <li>
+                                          <a href="#profile_{{$index}}" data-toggle="tab"><img src="{{asset('product_image').'/'.$image->imagePath}}" alt=""></a>
+                                          <a class="popup-link" href="{{asset('product_image').'/'.$image->imagePath}}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+
+                                      </li>
+
+                                @endif
                             @endforeach
                         </ul>
                     </div>
@@ -72,11 +87,15 @@
                         <div class="short-desc">
                             <p>{{$product->description}}</p>
                         </div>
+
                         <div class="box-quantity">
-                            <form action="#">
+                            <form class="form-horizontal" method="post" action="{{route('addToCart_with_number')}}" enctype="multipart/form-data">
+                                {{csrf_field()}}
+                                <input class="form-control"  type="hidden" name="id"
+                                       value="{{$product->id}}">
                                 <label>تعداد</label>
-                                <input type="number" value="1" min="1">
-                                <button>افزودن به سبد</button>
+                                <input type="number" name="qty" value="1" min="1">
+                                <button type="submit">افزودن به سبد</button>
                             </form>
                         </div>
 

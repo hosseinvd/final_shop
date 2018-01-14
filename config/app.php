@@ -181,6 +181,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laratrust\LaratrustServiceProvider::class,
         Larabookir\Gateway\GatewayServiceProvider::class,
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+
     ],
 
     /*
@@ -233,7 +235,9 @@ return [
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Gateway' => \Larabookir\Gateway\Gateway::class,
-        'jDate' => Morilog\Jalali\Facades\jDate::class
+        'jDate' => Morilog\Jalali\Facades\jDate::class,
+        'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
+
     ],
 
 ];

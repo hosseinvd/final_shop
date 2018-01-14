@@ -23,7 +23,7 @@ class AdminController extends Controller
         $imagePath = "/product_image/";//create image path
         $filename = time() . $file->getClientOriginalName();
         $file = $file->move(public_path($imagePath), $filename);
-        $sizes = ["240", "600"];
+        $sizes = ["240", "900"];
         $url['images'] = $this->resize($file->getRealPath(), $sizes, $imagePath, $filename);
         $url['thumb'] = $url['images'][$sizes[1]];
         return $url;

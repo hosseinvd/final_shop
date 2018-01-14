@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.22 on 2018-01-01.
+ * Generated for Laravel 5.5.22 on 2018-01-13.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -12682,6 +12682,95 @@ namespace Larabookir\Gateway {
  
 }
 
+namespace Morilog\Jalali\Facades { 
+
+    class jDate {
+        
+        /**
+         * 
+         *
+         * @param string|null $str
+         * @param null $timezone
+         * @return $this 
+         * @static 
+         */ 
+        public static function forge($str = null, $timezone = null)
+        {
+            return \Morilog\Jalali\jDate::forge($str, $timezone);
+        }
+        
+        /**
+         * 
+         *
+         * @return \DateTime|static 
+         * @static 
+         */ 
+        public static function getDateTime()
+        {
+            return \Morilog\Jalali\jDate::getDateTime();
+        }
+        
+        /**
+         * 
+         *
+         * @param $format
+         * @return bool|string 
+         * @static 
+         */ 
+        public static function format($format)
+        {
+            return \Morilog\Jalali\jDate::format($format);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $str
+         * @return $this 
+         * @static 
+         */ 
+        public static function reforge($str)
+        {
+            return \Morilog\Jalali\jDate::reforge($str);
+        }
+        
+        /**
+         * 
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function ago()
+        {
+            return \Morilog\Jalali\jDate::ago();
+        }
+        
+        /**
+         * 
+         *
+         * @return bool|string 
+         * @static 
+         */ 
+        public static function until()
+        {
+            return \Morilog\Jalali\jDate::until();
+        }
+        
+        /**
+         * 
+         *
+         * @return int 
+         * @static 
+         */ 
+        public static function time()
+        {
+            return \Morilog\Jalali\jDate::time();
+        }
+         
+    }
+ 
+}
+
 namespace Barryvdh\Debugbar { 
 
     class Facade {
@@ -13399,89 +13488,73 @@ namespace UxWeb\SweetAlert {
  
 }
 
-namespace Morilog\Jalali\Facades { 
+namespace Anhskohbo\NoCaptcha\Facades { 
 
-    class jDate {
+    class NoCaptcha {
         
         /**
-         * 
+         * Render HTML captcha.
          *
-         * @param string|null $str
-         * @param null $timezone
-         * @return $this 
-         * @static 
-         */ 
-        public static function forge($str = null, $timezone = null)
-        {
-            return \Morilog\Jalali\jDate::forge($str, $timezone);
-        }
-        
-        /**
-         * 
-         *
-         * @return \DateTime|static 
-         * @static 
-         */ 
-        public static function getDateTime()
-        {
-            return \Morilog\Jalali\jDate::getDateTime();
-        }
-        
-        /**
-         * 
-         *
-         * @param $format
-         * @return bool|string 
-         * @static 
-         */ 
-        public static function format($format)
-        {
-            return \Morilog\Jalali\jDate::format($format);
-        }
-        
-        /**
-         * 
-         *
-         * @param string $str
-         * @return $this 
-         * @static 
-         */ 
-        public static function reforge($str)
-        {
-            return \Morilog\Jalali\jDate::reforge($str);
-        }
-        
-        /**
-         * 
-         *
+         * @param array $attributes
          * @return string 
          * @static 
          */ 
-        public static function ago()
+        public static function display($attributes = array())
         {
-            return \Morilog\Jalali\jDate::ago();
+            return \Anhskohbo\NoCaptcha\NoCaptcha::display($attributes);
         }
         
         /**
-         * 
+         * Render js source
          *
-         * @return bool|string 
+         * @param null $lang
+         * @param bool $callback
+         * @param string $onLoadClass
+         * @return string 
          * @static 
          */ 
-        public static function until()
+        public static function renderJs($lang = null, $callback = false, $onLoadClass = 'onloadCallBack')
         {
-            return \Morilog\Jalali\jDate::until();
+            return \Anhskohbo\NoCaptcha\NoCaptcha::renderJs($lang, $callback, $onLoadClass);
         }
         
         /**
-         * 
+         * Verify no-captcha response.
          *
-         * @return int 
+         * @param string $response
+         * @param string $clientIp
+         * @return bool 
          * @static 
          */ 
-        public static function time()
+        public static function verifyResponse($response, $clientIp = null)
         {
-            return \Morilog\Jalali\jDate::time();
+            return \Anhskohbo\NoCaptcha\NoCaptcha::verifyResponse($response, $clientIp);
+        }
+        
+        /**
+         * Verify no-captcha response by Symfony Request.
+         *
+         * @param \Request $request
+         * @return bool 
+         * @static 
+         */ 
+        public static function verifyRequest($request)
+        {
+            return \Anhskohbo\NoCaptcha\NoCaptcha::verifyRequest($request);
+        }
+        
+        /**
+         * Get recaptcha js link.
+         *
+         * @param string $lang
+         * @param boolean $callback
+         * @param string $onLoadClass
+         * @return string 
+         * @static 
+         */ 
+        public static function getJsLink($lang = null, $callback = false, $onLoadClass = 'onloadCallBack')
+        {
+            return \Anhskohbo\NoCaptcha\NoCaptcha::getJsLink($lang, $callback, $onLoadClass);
         }
          
     }
@@ -15609,11 +15682,13 @@ namespace  {
 
     class Gateway extends \Larabookir\Gateway\Gateway {}
 
+    class jDate extends \Morilog\Jalali\Facades\jDate {}
+
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
 
     class Alert extends \UxWeb\SweetAlert\SweetAlert {}
 
-    class jDate extends \Morilog\Jalali\Facades\jDate {}
+    class NoCaptcha extends \Anhskohbo\NoCaptcha\Facades\NoCaptcha {}
  
 }
 

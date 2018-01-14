@@ -291,7 +291,7 @@
                                         <a href="#">صفحه من</a>
                                     </div>
                                     <div class="col-xs-4 text-center">
-                                        <a href="#">فروش</a>
+                                        <a href="{{route('products')}}">فروشگاه</a>
                                     </div>
                                     <div class="col-xs-4 text-center">
                                         <a href="#">دوستان</a>

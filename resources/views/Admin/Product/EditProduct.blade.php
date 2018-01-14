@@ -83,7 +83,10 @@
                 <div class="form-group">
                     <label class="control-label" for="description">توضیح مختصر </label>
                     <div>
-                        <textarea class="form-control" rows="6" id="description" name="description"></textarea>
+                        <textarea class="form-control" rows="6" id="description" name="description">
+                            {{$s_product->description}}
+
+                        </textarea>
                     </div>
                 </div>
 
@@ -94,6 +97,7 @@
                     <div>
                     <textarea rows="5" class="form-control" name="long_description" id="body"
                               placeholder="توضیحات را وارد کنید">
+                        {{$s_product->long_description}}
                     </textarea>
                     </div>
                 </div>

@@ -105,8 +105,7 @@ class ProductController extends AdminController
         if ($file) {
             $imagesUrl = $this->uploadImages($file);
             $product->images()->saveMany([
-                new m_image(['imagePath' => $imagesUrl['images']['600'], 'imageSize' => '600']),
-//                new m_image(['imagePath' => $imagesUrl['images']['240'], 'imageSize' => '240']),
+                new m_image(['imagePath' => $imagesUrl['images']['900'], 'imageSize' => '900']),
             ]);
         }
 
@@ -143,7 +142,7 @@ class ProductController extends AdminController
         if ($file) {
             $imagesUrl = $this->uploadImages($file);
             $product->images()->saveMany([
-                new m_image(['imagePath' => $imagesUrl['images']['600'], 'imageSize' => '600']),
+                new m_image(['imagePath' => $imagesUrl['images']['900'], 'imageSize' => '900']),
 //                new m_image(['imagePath' => $imagesUrl['images']['240'], 'imageSize' => '240']),
             ]);
             $product->save();

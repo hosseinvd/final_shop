@@ -79,6 +79,17 @@ class UserController extends Controller
         return back();
     }
 
+    public function addToCartWithNumber(Request $request)
+    {
+//        dd($request->all());
+        $this->validate(request(), [
+            'qty' => 'required|numeric|min:1',
+        ]);
+        $product=Product::find($request->id);
+        Cart::add($product->id, $product->title, $request->qty, $product->price);
+        return back();
+    }
+
     public function update_full_basket(Request $request)
     {
         for ($i=0;$i<count($request->row_id);$i++){

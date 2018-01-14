@@ -5,16 +5,26 @@
     <div class="row">
         <div class="col-sm-12 col-md-12">
             <div class="thumbnail">
-                <img src="{{asset('product_image').'/'.$product->images()->first()->imagePath}}" alt="...">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                @foreach($product->images as $index=>$image)
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                            <div class="pro-large-img">
+                                <img class="m_admin_image" src="{{asset('product_image').'/'.$image->imagePath}}" alt="...">
+                            </div>
+                        </div>
+                @endforeach
+                </div>
                 <div class="caption">
                     <h3>{{$product->title}}</h3>
-                    <p class="description">{{$product->description}}</p>
-                    <div class="clearfix">
-                        <div class="pull-left price">{{$product->price}}</div>
-                        <div><a href="{{route('addToCart',$product->id)}}" class="btn btn-success pull-right"
-                                role="button">Button</a>
+                    <div class="short-desc">
+                        <p>{{$product->description}}</p>
+                    </div>
+                    <div class="tab-pane active" id="home3">
+                        <div class="pro-desc">
+                            <p>{!!$product->long_description!!}</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
