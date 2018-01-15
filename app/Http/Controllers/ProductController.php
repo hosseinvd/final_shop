@@ -50,6 +50,16 @@ class ProductController extends AdminController
         return view('Admin.Product.show_product', compact('product', 'comments'));
     }
 
+    public function product_search(Request $request)
+    {
+        $category_id=$request->category_id;
+
+        $products = Product::where('title', 'LIKE', "%$request->product_title%")->wherehas('categories',function($query) use($category_id){$query->where('id','LIKE',"$category_id");})->paginate(8);
+
+        $categories=Category::all();
+        return view('rapiden_layouts.index_search_result', compact('products','categories'));
+    }
+
     public function CreateProducts()
     {
         $categories = Category::all();

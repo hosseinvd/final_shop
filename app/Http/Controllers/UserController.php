@@ -20,8 +20,10 @@ class UserController extends Controller
 
     public function profile()
     {
+
         return view('user.profile');
     }
+
     public function basket()
     {
         Cart::store(Auth::user()->name,\auth()->id());
@@ -98,6 +100,7 @@ class UserController extends Controller
         return redirect()->back();
     }
 
+
     public function updateCart(Request $request)
     {
 
@@ -109,20 +112,28 @@ class UserController extends Controller
         return redirect(route('user-basket'));
     }
 
+    public function delete_Cart_item($rowId)
+    {
+        Cart::remove($rowId);
+        return redirect()->back();
+    }
+
     public function jquery_post(Request $request)
     {
-        $this->validate(request(), [
-            'row_qty' => 'required|numeric|min:0',
-        ]);
-        Cart::update($request->row_id,$request->row_qty);
 
         $showtable=new ShowTable();
         if (isset($request->request_name)) {
             $request_name = $request->request_name;
             switch ($request_name) {
                 case "basket_update":
+                    $this->validate(request(), [
+                        'row_qty' => 'required|numeric|min:0',
+                    ]);
+                    Cart::update($request->row_id,$request->row_qty);
                     return $showtable->user_basket();
-
+                case "basket_delete":
+                    Cart::remove($request->rowId);
+                    return $showtable->user_basket();
             }
         }
 

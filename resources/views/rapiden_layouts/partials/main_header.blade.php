@@ -80,12 +80,17 @@
                     <div class="header-bottom-middle">
 
                         <div class="search-box">
-                            <form action="#">
-                                <select name="#" id="select">
-                                    <option value="">همه دسته ها</option>
-                                    <option value="40">لوازم جانبی</option>
+                            <form class="form-horizontal" method="post" action="{{route('product_search')}}"
+                                  enctype="multipart/form-data">
+                                {{csrf_field()}}
+                                <select name="category_id" id="select">
+                                 <option value="%">همه دسته ها</option>
+                                @foreach($categories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                 @endforeach
                                 </select>
-                                <input type="text" placeholder="جستجو...">
+
+                                <input type="text" name="product_title" placeholder="جستجو..." value="">
                                 <button><i class="fa fa-search"></i></button>
                             </form>
                         </div>

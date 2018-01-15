@@ -146,7 +146,10 @@ class ShowTable
                             </td>
                             <td class='product-price'>$row->price</td>                        
                             <td class='product-subtotal'>$row->subtotal</td>
-                            <td class='product-remove'><a href='#'><i class='fa fa-times'></i></a></td>                                   
+                            <td>
+                               <button type='button' class='btn btn-danger ' id='delete_row' value=''$row->rowId'><i
+                                class='fa fa-trash' aria-hidden='true'></i></button>
+                            </td>                                   
                 </tr>
                  ";
         };

@@ -6,7 +6,7 @@
 @endsection
 
 @section('mainmenu')
-    @include('rapiden_layouts.partials.mainmenu')
+    @include('rapiden_layouts.partials.user_mainmenu')
 @endsection
 
 @section('content')
@@ -19,111 +19,120 @@
                 </ol>
             </div>
         </div>
-        <form class="form-horizontal" method="post" action="{{route('update_full_basket')}}" enctype="multipart/form-data">
+        <form class="form-horizontal" method="post" action="{{route('update_full_basket')}}"
+              enctype="multipart/form-data">
             {{csrf_field()}}
             <div id="basket_table">
-            <div class="table-content table-responsive" >
-                <table>
-                    <thead>
-                    <tr>
-                        <th>ردیف</th>
-                        <th class="product-thumbnail">تصویر</th>
-                        <th class="product-name">محصول</th>
-                        <th class="product-quantity">تعداد</th>
-                        <th>refresh</th>
-                        <th class="product-price">قیمت</th>
-                        <th class="product-subtotal">جمع</th>
-                        <th class="product-remove">حذف</th>
-
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php $i=0; ?>
-                    @foreach(Cart::content() as $row)
+                <div class="table-content table-responsive">
+                    <table>
+                        <thead>
                         <tr>
-                            <?php $i++; ?>
-                            <td>$i</td>
-                            <td class="product-thumbnail">
-                                <img  src="{{asset('product_image').'/'.\App\Product::find($row->id)->images()->first()->imagePath}}"
-                                      alt="...">
-                            </td>
-                            {{--<td>{{$row->rowId}}</td>--}}
-                            <td class="product-name">
-                                <a href="{{route('show_product',$row->id)}}">
-                                    <p><strong>{{$row->name}}</strong></p>
-                                </a>
-                            </td>
-                            <td class="product-quantity">
-                                <input class="form-control" id="row_id_{{$i}}" type="hidden" name="row_id[]"
-                                       value="{{$row->rowId}}">
-                                <input class="form-control row_qty" id="row_qty_{{$i}}" type="number" name="row_qty[]"
-                                       value="{{$row->qty}}">
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-warning " id="refresh" value="{{$i}}"><i
-                                            class="fa fa-refresh" aria-hidden="true"></i></button>
-                            </td>
-                            <td class="product-price">{{$row->price}}</td>
-                            {{--<td>{{$row->qty*$row->tax}}</td>--}}
-                            <td class="product-subtotal">{{$row->subtotal}}</td>
-                            <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
+                            <th>ردیف</th>
+                            <th class="product-thumbnail">تصویر</th>
+                            <th class="product-name">محصول</th>
+                            <th class="product-quantity">تعداد</th>
+                            <th>refresh</th>
+                            <th class="product-price">قیمت</th>
+                            <th class="product-subtotal">جمع</th>
+                            <th class="product-remove">حذف</th>
+
                         </tr>
-                    @endforeach
+                        </thead>
+                        <tbody>
+                        <?php $i = 0; ?>
+                        @foreach(Cart::content() as $row)
+                            <tr>
+                                <?php $i++; ?>
+                                <td>$i</td>
+                                <td class="product-thumbnail">
+                                    <img src="{{asset('product_image').'/'.\App\Product::find($row->id)->images()->first()->imagePath}}"
+                                         alt="...">
+                                </td>
+                                {{--<td>{{$row->rowId}}</td>--}}
+                                <td class="product-name">
+                                    <a href="{{route('show_product',$row->id)}}">
+                                        <p><strong>{{$row->name}}</strong></p>
+                                    </a>
+                                </td>
+                                <td class="product-quantity">
+                                    <input class="form-control" id="row_id_{{$i}}" type="hidden" name="row_id[]"
+                                           value="{{$row->rowId}}">
+                                    <input class="form-control row_qty" id="row_qty_{{$i}}" type="number"
+                                           name="row_qty[]"
+                                           value="{{$row->qty}}">
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-warning " id="refresh" value="{{$i}}"><i
+                                                class="fa fa-refresh" aria-hidden="true"></i></button>
+                                </td>
+                                <td class="product-price">{{$row->price}}</td>
+                                {{--<td>{{$row->qty*$row->tax}}</td>--}}
+                                <td class="product-subtotal">{{$row->subtotal}}</td>
+                                <td>
+                                    {{--                                <a href="{{route('delete_Cart_item',$row->rowId)}}"><i class="fa fa-times"></i></a>--}}
+                                    <button type="button" class="btn btn-danger " id="delete_row" value="{{$row->rowId}}"><i
+                                                class="fa fa-trash" aria-hidden="true"></i></button>
+                                </td>
+                            </tr>
+                        @endforeach
 
-                    </tbody>
-                </table>
-            </div>
-            <div class="row">
-                        <div class="col-md-9 col-sm-7 col-xs-12">
-                            <div class="buttons-cart">
-                                <input type="submit" value="به روز رسانی سبد">
-                                <a href="{{route('products')}}">ادامه خرید</a>
-                                {{--<button type="submit" class="btn btn-success btn-block">refresh all</button>--}}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-md-9 col-sm-7 col-xs-12">
+                        <div class="buttons-cart">
+                            <input type="submit" value="به روز رسانی سبد">
+                            <a href="{{route('products')}}">ادامه خرید</a>
+                            {{--<button type="submit" class="btn btn-success btn-block">refresh all</button>--}}
 
-                            </div>
-                            <div class="coupon">
-                                <h3>کد تخفیف</h3>
-                                <p>کد تخفیف خود را در صورت وجود وارد نمایید</p>
-                                <input type="text" placeholder="کد تخفیف">
-                                <input type="submit" value="اعمال تخفیف">
-                            </div>
                         </div>
-                        <div class="col-md-3 col-sm-5 col-xs-12">
-                            <div class="cart_totals">
-                                <h2>مجموع سبد</h2>
-                                <table>
-                                    <tbody>
-                                    <tr class="cart-subtotal">
-                                        <th>زیر مجموعه</th>
-                                        <td><span class="amount"><?php echo Cart::subtotal(); ?> <small>تومان</small></span></td>
-                                    </tr>
-                                    <tr class="cart-subtotal">
-                                        <th>مالیات</th>
-                                        <td><span class="amount"><?php echo Cart::tax(); ?> <small>تومان</small></span></td>
-                                    </tr>
-                                    <tr class="order-total">
-                                        <th>جمع</th>
-                                        <td>
-                                            <strong><span class="amount"><?php echo Cart::total(); ?> <small>تومان</small></span></strong>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div class="coupon">
+                            <h3>کد تخفیف</h3>
+                            <p>کد تخفیف خود را در صورت وجود وارد نمایید</p>
+                            <input type="text" placeholder="کد تخفیف">
+                            <input type="submit" value="اعمال تخفیف">
                         </div>
-            </div>
+                    </div>
+                    <div class="col-md-3 col-sm-5 col-xs-12">
+                        <div class="cart_totals">
+                            <h2>مجموع سبد</h2>
+                            <table>
+                                <tbody>
+                                <tr class="cart-subtotal">
+                                    <th>زیر مجموعه</th>
+                                    <td><span class="amount"><?php echo Cart::subtotal(); ?>
+                                            <small>تومان</small></span></td>
+                                </tr>
+                                <tr class="cart-subtotal">
+                                    <th>مالیات</th>
+                                    <td><span class="amount"><?php echo Cart::tax(); ?>
+                                            <small>تومان</small></span></td>
+                                </tr>
+                                <tr class="order-total">
+                                    <th>جمع</th>
+                                    <td>
+                                        <strong><span class="amount"><?php echo Cart::total(); ?>
+                                                <small>تومان</small></span></strong>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
 
-            <form class="form-horizontal" method="post" action="{{route('Gateway-Request')}}" enctype="multipart/form-data">
-                {{csrf_field()}}
-                <input type="hidden" class="form-control" name="total_price" value="{{Cart::total()}}">
+        <form class="form-horizontal" method="post" action="{{route('Gateway-Request')}}" enctype="multipart/form-data">
+            {{csrf_field()}}
+            <input type="hidden" class="form-control" name="total_price" value="{{Cart::total()}}">
 
-                <div class="wc-proceed-to-checkout">
-                    <button type="submit" class="btn btn-info ">pay</button>
-                </div>
+            <div class="wc-proceed-to-checkout">
+                <button type="submit" class="btn btn-info ">pay</button>
+            </div>
 
-            </form>
+        </form>
 
 
         @endsection
@@ -155,6 +164,38 @@
                         }
                     });
 
+                    $(document).on('click', '#delete_row', function (event) {
+                        CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+                        var _method = 'DELETE';
+                        var rowId = $(this).attr("value");
+                        swal({
+                                title: "آیا از عملیات حذف مطمئن هستید",
+                                text: "عملیات حذف محصول",
+                                type: "warning",
+                                showCancelButton: true,
+                                confirmButtonClass: "btn-danger",
+                                confirmButtonText: "بله ",
+                                cancelButtonText: "لغو عملیات",
+                                closeOnConfirm: false,
+                                closeOnCancel: false
+                            },
+                            function (isConfirm) {
+                                if (isConfirm) {
+                                    $.post("{{route('updateCart')}}", {
+                                        request_name: "basket_delete",
+                                        'rowId': rowId,
+                                        _token: CSRF_TOKEN,
+                                        _method: _method,
+                                    }, function (data) {
+                                        $("#basket_table").html(data);
+                                    });
+                                    swal("حذف", "عملیات حذف با موفقیت پایان یافت", "success");
+                                } else {
+                                    swal("لغو", "عملیات لغو گردید", "error");
+                                }
+                            });
+
+                    });
                 });
 
             </script>

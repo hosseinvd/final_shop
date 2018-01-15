@@ -10,10 +10,12 @@
 |
 */
 
-Route::get('/', 'ProductController@getIndex')->name('products');
+Route::get('/', 'ProductController@getIndex')->name('products');//home
 
 Route::get('/product/view_item/{product}', 'ProductController@Show_product')->name('show_product');
 Route::get('/product/{category}', 'ProductController@Show_product_in_cat')->name('products_in_cat');
+Route::post('/product/search', 'ProductController@product_search')->name('product_search');
+
 
 Route::get('/addToCart/{product}', 'UserController@addToCart')->name('addToCart');
 Route::post('/addToCart/', 'UserController@addToCartWithNumber')->name('addToCart_with_number');
@@ -30,7 +32,11 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/basket', 'UserController@basket')->name('user-basket');
 
     Route::patch('/UpdateCart/', 'UserController@jquery_post')->name('updateCart');
+    Route::delete('/UpdateCart/', 'UserController@jquery_post')->name('deleteCart');
+
     Route::post('/update_full_basket/','UserController@update_full_basket')->name('update_full_basket');
+    Route::get('/delete_Cart_item/{rowId}', 'UserController@delete_Cart_item')->name('delete_Cart_item');
+
     Route::post('request','UserController@Getway_request')->name('Gateway-Request');
     Route::any('callback/from/bank','UserController@Getway_back')->name('Gateway-back');
 });
