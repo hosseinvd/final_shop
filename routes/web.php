@@ -26,7 +26,6 @@ Route::get('/ta','ajaxController@index')->name('test_ajax');
 Route::post('/ta','ajaxController@create');
 
 
-
 Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/user-profile', 'UserController@profile')->name('u_user-profile');
     Route::get('/basket', 'UserController@basket')->name('user-basket');
@@ -37,8 +36,12 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::post('/update_full_basket/','UserController@update_full_basket')->name('update_full_basket');
     Route::get('/delete_Cart_item/{rowId}', 'UserController@delete_Cart_item')->name('delete_Cart_item');
 
+    Route::get('/checkout', 'UserController@checkout')->name('user-checkout');
+    Route::post('/add_address','UserController@add_address')->name('user_add_address');
+
     Route::post('request','UserController@Getway_request')->name('Gateway-Request');
     Route::any('callback/from/bank','UserController@Getway_back')->name('Gateway-back');
+
 });
 
 //-----------------------------------------admin panel route-------------------------------------------------------------

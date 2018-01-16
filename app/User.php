@@ -39,6 +39,11 @@ class User extends Authenticatable
         return $this->hasMany(Baskets::class);
     }
 
+    public function addresses()
+    {
+        return $this->hasMany(Users_address::class);
+    }
+
     public function info_user()
     {
         return $this->hasOne('App\Info_user');

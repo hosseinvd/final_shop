@@ -54,10 +54,14 @@
                             </li>
                         </ul>
                         <ul>
-                            <li class="slide-toggle-3 text-uppercase"><a href="#">فارسی</a>
+                            <li class="slide-toggle-3 text-uppercase"><a href="{{route('user-basket')}}"> {{Cart::count()}} آیتم در سبد خرید</a>
                                 <ul class="show-toggle-3">
-                                    <li><a href="#">انگلیسی</a></li>
-                                    <li><a href="#">فارسی</a></li>
+                                    <li>
+                                        <a href="{{route('user-basket')}}">
+                                            <span class="title-cart">سبد خرید</span>
+                                            <span class="count-item">{{Cart::count()}} محصول</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -67,4 +71,5 @@
         </div>
     </div>
 
+    <!-- header-bottom-area-end -->
 </header>

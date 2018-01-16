@@ -28,6 +28,27 @@ class UserController extends Controller
 
     public function basket()
     {
+
+        return view('rapiden_layouts.user.Basket');
+    }
+
+    public function checkout()
+    {
+        $user_addresses=Auth::user()->addresses()->get();
+        return view('rapiden_layouts.user.checkout',compact('user_addresses'));
+    }
+
+    public function add_address(Request $request)
+    {
+//        dd($request->all());
+        $user_addresses=Auth::user()->addresses()->create(['name_family'=>$request->name_family,'mobile_number'=>$request->mobile_number,
+            'phone_number'=>$request->phone_number,'province'=>$request->province,'city'=>$request->city,'address'=>$request->address,
+            'postal_code'=>$request->postal_code,'email'=>$request->email,'country'=>'iran']);
+        return redirect()->route('user-checkout');
+    }
+
+    public function Getway_request(Request $request)
+    {
         Cart::store(Auth::user()->name,\auth()->id());
         $basket=Auth::user()->baskets()->create(['content'=>Cart::content()]);
         foreach(Cart::content() as $row)
@@ -43,34 +64,26 @@ class UserController extends Controller
             $stuffs->discount_code=0;
             $stuffs->discount_description=" no discount ";
             $stuffs->save();
+        }
+        Cart::destroy();
+        return redirect()->back();
+//        dd($request->all());
+//        try {
 //
-//            $stuffs->create(['basket_id'=>$basket->id,'product_id'=>$row->id,'qty'=>$row->qty,'price'=>$row->price,'tax'=>$row->tax,
-//                'total_price'=>$row->total,'discount'=>'0','discount_code'=>'null','discount_description'=>'null']);
-        }
-        return view('rapiden_layouts.user.Basket');
-    }
-
-
-
-    public function Getway_request(Request $request)
-    {
-        dd($request->all());
-        try {
-
-            $gateway = \Gateway::ZARINPAL();
-            $gateway->setCallback(url('callback/from/bank'));
-            $gateway->price(1000)->ready();
-            $refId =  $gateway->refId();
-            $transID = $gateway->transactionId();
-
-            // Your code here
-
-            return $gateway->redirect();
-
-        } catch (Exception $e) {
-
-            echo $e->getMessage();
-        }
+//            $gateway = \Gateway::ZARINPAL();
+//            $gateway->setCallback(url('callback/from/bank'));
+//            $gateway->price(1000)->ready();
+//            $refId =  $gateway->refId();
+//            $transID = $gateway->transactionId();
+//
+//            // Your code here
+//
+//            return $gateway->redirect();
+//
+//        } catch (Exception $e) {
+//
+//            echo $e->getMessage();
+//        }
     }
 
     public function Getway_back()

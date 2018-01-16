@@ -32,14 +32,34 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('family');
             $table->string('national_code');
-            $table->string('phone_number',20)->nullable();;
-            $table->string('mobile_number',20)->nullable();;
-            $table->string('address')->nullable();;
+            $table->string('phone_number',20)->nullable();
+            $table->string('mobile_number',20)->nullable();
+            $table->string('country')->nullable();
+            $table->string('province')->nullable();
+            $table->string('city')->nullable();
+            $table->string('address')->nullable();
+            $table->string('postal_code');
             $table->boolean('gender')->default(0);
             $table->string('user_email')->unique();
-            $table->integer('basket_number')->unsigned()->default(0);
             $table->date('birthday');
             $table->integer('reseller_code');
+            $table->softDeletes();
+            $table->timestamps();
+        });
+
+        Schema::create('users_addresses', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('name_family');
+            $table->string('phone_number',20)->nullable();
+            $table->string('mobile_number',20)->nullable();
+            $table->string('country');
+            $table->string('province');
+            $table->string('city');
+            $table->string('address')->nullable();
+            $table->string('postal_code');
+            $table->string('email');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -166,6 +186,7 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('comments');
         Schema::dropIfExists('stuffs');
         Schema::dropIfExists('baskets');
+        Schema::dropIfExists('users_addresses');
 
     }
 }

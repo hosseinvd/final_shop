@@ -118,21 +118,24 @@
                                 </tr>
                                 </tbody>
                             </table>
+                            <div class="wc-proceed-to-checkout">
+                                <a href="{{route('user-checkout')}}">پرداخت</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
 
-        <form class="form-horizontal" method="post" action="{{route('Gateway-Request')}}" enctype="multipart/form-data">
-            {{csrf_field()}}
-            <input type="hidden" class="form-control" name="total_price" value="{{Cart::total()}}">
+        {{--<form class="form-horizontal" method="post" action="{{route('Gateway-Request')}}" enctype="multipart/form-data">--}}
+            {{--{{csrf_field()}}--}}
+            {{--<input type="hidden" class="form-control" name="total_price" value="{{Cart::total()}}">--}}
 
-            <div class="wc-proceed-to-checkout">
-                <button type="submit" class="btn btn-info ">pay</button>
-            </div>
+            {{--<div class="wc-proceed-to-checkout">--}}
+                {{--<button type="submit" class="btn btn-info ">pay</button>--}}
+            {{--</div>--}}
 
-        </form>
+        {{--</form>--}}
 
 
         @endsection
