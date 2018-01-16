@@ -34,6 +34,11 @@ class User extends Authenticatable
         return $this->hasMany(Comment::class);
     }
 
+    public function baskets()
+    {
+        return $this->hasMany(Baskets::class);
+    }
+
     public function info_user()
     {
         return $this->hasOne('App\Info_user');

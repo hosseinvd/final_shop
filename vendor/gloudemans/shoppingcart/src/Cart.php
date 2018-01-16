@@ -4,6 +4,7 @@ namespace App;
 namespace Gloudemans\Shoppingcart;
 
 use App\Product;
+use App\Stuff;
 use Closure;
 use Illuminate\Support\Collection;
 use Illuminate\Session\SessionManager;
@@ -71,6 +72,7 @@ class Cart
 
         return $this;
     }
+
 
     /**
      * Get the current cart instance.

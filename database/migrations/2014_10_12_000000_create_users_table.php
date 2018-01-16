@@ -26,7 +26,9 @@ class CreateUsersTable extends Migration
         });
 
         Schema::create('info_users', function (Blueprint $table) {
-            $table->increments('user_id')->references('id')->on('users')->onDelete('cascade');;
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('name');
             $table->string('family');
             $table->string('national_code');
@@ -56,8 +58,6 @@ class CreateUsersTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('viewCount')->default('0');
-//            $table->integer('category_id')->unsigned();
-//            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('title');
             $table->integer('price');
             $table->float('discount')->nullable();
@@ -121,6 +121,30 @@ class CreateUsersTable extends Migration
             $table->timestamps();
 
         });
+
+        Schema::create('baskets', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->longText('content');
+            $table->nullableTimestamps();
+        });
+
+        Schema::create('stuffs', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('basket_id')->unsigned()->index();
+            $table->foreign('basket_id')->references('id')->on('baskets');
+            $table->integer('product_id')->unsigned()->index();
+            $table->foreign('product_id')->references('id')->on('products');
+            $table->integer('qty');
+            $table->integer('price');
+            $table->integer('tax');
+            $table->integer('total_price');
+            $table->float('discount');
+            $table->string('discount_description');
+            $table->integer('discount_code');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -140,7 +164,8 @@ class CreateUsersTable extends Migration
         Schema::drop('category_product');
         Schema::dropIfExists('pages');
         Schema::dropIfExists('comments');
-
+        Schema::dropIfExists('stuffs');
+        Schema::dropIfExists('baskets');
 
     }
 }

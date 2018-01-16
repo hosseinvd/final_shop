@@ -2,7 +2,7 @@
     <div class="mainmenu bg-color-4 ">
         <nav>
             <ul>
-                <li class="active">پروفایل
+                <li class="active"><a href={{route('products')}}>پروفایل من</a>
                     <ul>
                         <li><a href={{route('products')}}>پروفایل من</a></li>
                         <li><a href={{route('products')}}>وضعیت </a></li>
@@ -15,7 +15,6 @@
                     <ul>
                         <li><a href="wishlist.html">پرداختها</a></li>
                         <li><a href="cart.html">صفحه سبد خرید</a></li>
-                        <li><a href="contact-us.html">تماس با ما</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html">درباره ما</a></li>

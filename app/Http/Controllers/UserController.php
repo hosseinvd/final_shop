@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Baskets;
 use App\Library\ShowTable;
 use App\Product;
 use App\m_image;
+use App\Stuff;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,9 +29,25 @@ class UserController extends Controller
     public function basket()
     {
         Cart::store(Auth::user()->name,\auth()->id());
+        $basket=Auth::user()->baskets()->create(['content'=>Cart::content()]);
+        foreach(Cart::content() as $row)
+        {
+            $stuffs=new Stuff();
+            $stuffs->basket_id=$basket->id;
+            $stuffs->product_id=$row->id;
+            $stuffs->qty=$row->qty;
+            $stuffs->price=$row->price;
+            $stuffs->tax=$row->tax;
+            $stuffs->total_price=$row->total;
+            $stuffs->discount=0;
+            $stuffs->discount_code=0;
+            $stuffs->discount_description=" no discount ";
+            $stuffs->save();
+//
+//            $stuffs->create(['basket_id'=>$basket->id,'product_id'=>$row->id,'qty'=>$row->qty,'price'=>$row->price,'tax'=>$row->tax,
+//                'total_price'=>$row->total,'discount'=>'0','discount_code'=>'null','discount_description'=>'null']);
+        }
         return view('rapiden_layouts.user.Basket');
-//        return view('user.Basket');
-
     }
 
 
