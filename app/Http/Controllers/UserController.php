@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Baskets;
+use App\Discount;
 use App\Library\ShowTable;
 use App\Product;
 use App\m_image;
 use App\Stuff;
+use App\Users_address;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Larabookir\Gateway\Gateway;
 use App\Category;
 use App\Http\Requests\StoreProduct;
@@ -50,7 +53,8 @@ class UserController extends Controller
     public function payment(Request $request)
     {
 //        dd($request->all());
-        return view('rapiden_layouts.user.payment');
+        $address=Users_address::find($request->select_address);
+        return view('rapiden_layouts.user.payment',compact('address'));
     }
 
     public function Getway_request(Request $request)
@@ -72,6 +76,7 @@ class UserController extends Controller
             $stuffs->save();
         }
         Cart::destroy();
+        $request->session()->forget('discount');
         return redirect()->back();
 //        dd($request->all());
 //        try {
@@ -155,6 +160,12 @@ class UserController extends Controller
         return redirect()->back();
     }
 
+    public function CalcDiscount($code)
+    {
+        $discount=Discount::where('code','=',$code)->firstOrFail();
+        dd($discount);
+    }
+
     public function jquery_post(Request $request)
     {
 
@@ -171,6 +182,29 @@ class UserController extends Controller
                 case "basket_delete":
                     Cart::remove($request->rowId);
                     return $showtable->user_basket();
+                case "calc_discount":
+                    $discount_row=Discount::where('code','=',$request->code)->first();
+                    if(!empty($discount_row)){
+
+                        if(strcmp($discount_row->calc_mode,'MAX')==0) {
+                            $discount = ($discount_row->percent / 100) * Cart::total();
+                            if($discount<$discount_row->value)$discount=$discount_row->value;
+                        }
+                        if(strcmp($discount_row->calc_mode,'MIN')==0) {
+                            $discount = ($discount_row->percent / 100) * Cart::total();
+                            if($discount>$discount_row->value)$discount=$discount_row->value;
+                        }
+                        session(['discount' => $discount]);
+
+                    }
+                    else{
+                        $discount=0;
+                        session(['discount' => $discount]);
+                    }
+
+//                    Session::set('discount',$discount);
+
+                    return $showtable->user_basket_discount($discount);
             }
         }
 

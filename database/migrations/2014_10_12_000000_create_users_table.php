@@ -145,14 +145,15 @@ class CreateUsersTable extends Migration
         Schema::create('discounts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('code');
-            $table->string('type');
+            $table->float('commission')->default(0);
+            $table->string('type');//type=(Discount,reseller_Discount)
             $table->string('calc_mode');//mode=(MAX,MIN,Value,Percent)
-            $table->float('percent');
-            $table->float('value');
-            $table->integer('numbers');
-            //user who benefit from discount or reseler
-            $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->float('percent')->default(0);
+            $table->float('value')->default(0);
+            $table->integer('numbers')->default(0);
+            //marketer who benefit from discount or reseler
+            $table->integer('marketer_id')->unsigned()->index();
+            $table->foreign('marketer_id')->references('id')->on('users');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->string('description')->nullable();

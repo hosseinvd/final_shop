@@ -2,121 +2,95 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7dea3e0-9911-4ce4-9329-6fd95d114d3f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/032ef5e18d00945cf8454167f87b5778.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/11fbe8759d57e88de37d55b9ac69dc14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/136108b07acb639ad875c7a0f4c06acd.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/1c42576ebbc0612365e07d93ebe24dd2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/37e10aa930eb930c9a134510703097b8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/3ba6abdef80446a22cd35d358df609ad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/3c2be69c1da2c1210a2334f0cc46d28a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/441d73e49c6979e69e60b056bc6657b7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/459fa9ee786e1019a98a315bc3de4c87.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/54c344ed279ecd6a7e56fd795aa70e3b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/55867b99a3bc89c1afd44417a6a10579.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/5677e76ab146d743e4d11c6662137db0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/60e32c2aa9ad546054b467ae2cacdfac.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/6a2680c27bcc703e88455091f40b0026.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/6f717e35fca9c55a106811075195e2d1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/8c05a8bc970cba8a59689d7a7016e04a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/98827e72398523237a6d412880cd47d2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/b16f13f9b5df8bf75e940298b281e255.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/b6de2f2fef008727e0f8ee91124acc8a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/c479e6eb8092a8144370517cfaae228a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/c7480ad31e136332e527ea21f06f0cac.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/ca0a6ebe5a9428a7e200aa4f5fd25aa4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/ca83b66f10d11ed76a23b473b0af1398.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/d735dd72ef2dfe35689092ebae6a982b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/df68293068a465971822cf392c975ee9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/e00617615e64f1d7d765e5e9e697cabf.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/e12462e3ec4e3ce5967f1a46f9326d2a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/e78ccc86dfca834868db91bb57983a06.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/eb0bb5cc7561a6e164c4a6017b960d43.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/f1dad5011d88ab2ed21c7b68ac5eb975.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/f84a5e955c30447afd72077fac26f8ef.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/fdd9cad5df6d71addf2f9bea8fa13e1f.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Discount.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Order.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/factories/DiscountFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/factories/Users_addressesFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/payment.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/05f2452c2b165fe3ec9673d98068cb19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/0f24ca16b2eda8b5be272a228f01c0d5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/174e004f8090a961db6d1e2a2542f713.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/1c7f729463d38248b9198f8afdfb2e17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/22e480e11307ba6e981105bae8d0fbdb.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/26364a691596df3f5b88487d48a42429.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/2d6b6e1b796ab7071277b8fdc50cb567.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/3efe444780f3c20a1b543d0ec4d04590.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/418b2b16aa6c2b024df756f696be49c3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/4b14b91465893839e3e769ceac8ac1c5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/57fbd2d52c71afb4b3612f4db718485c.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/58db1495fe3cc10a89de386a053069a3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/5d1237fe60d8bfee70b45f992501ed92.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/681413a00d92322b043d05453adba0ca.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/6865db969fad1d72d3c6fc1bb0d4f9d9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/6b993b5953d6316585b50026dee6ad6f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/720c6f57b42573a13a73cb28e97c69ac.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/73a89c4a1233361a963e279cfec8205a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/8572a1fc2009c893be2ec0956aeb4e23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/8812e0eb7c07741f9223ae1fe72a273d.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/8d9ed06e23ef645db810265566164868.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/92bf88429a34b987245b3ddd9d34b60e.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/a01f76718b928d0c90412be3ad1cbfb8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/a398e2e818617807e58ff030568acc36.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/b790dc9225b81e2539e584660a9121fb.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/d4e0644751dea9a63d522059ef2061c4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/d728bb9a649cd093f0ee708de8818ce5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/df3501148fc330fc15094c491702cb24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/ee5f44d9d4876cad3f825a4b351cb261.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/f57ac6f8db97783da1e07c3ffe0bee8b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/f5f72ab9425dc25c9829032a0c3b2fca.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/fa1cb5e312b2d7b89c01a3f934103e6f.jpg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/1a4fcea9d968e722e597f60f0da405ff.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/28d2e135d77d5c2940e3c885bcdc5f45.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/457bfc962659cdaa461f66c2bdba1384.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/4dd53dc6128f907058930c086be878be.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/51a1781dfe3512289264654979f7878a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/69ad667cf48ded53bb0544d2a4102600.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/76f6f793010557bbc1143ac2e24441de.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/78d4c4b9f10826f786bf6e621c61a267.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/7dac457ecbfb98c735f8c6b302be7c9f.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/87154a28b8d1e88277230720dbffd647.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/88603cc80b206efe193b88fc5c3d8903.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/8ad59c90fbc07f770072f81927069491.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/94d0bd500657392ee408ca3f7e98c2a3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/95f7366fb4a9a53933034348e921ebfe.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/9f43e92833b4f3ea46f9f985719332df.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/adeb4a7201dd840af98e651e626faf90.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/b525c8a3e6ac6d1e58c1c1b1e6819085.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/bc8e0f5ff01c913e5d31dba2ddb7ee54.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/d921dcc909bb4420f799dd9ebdb00841.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/e086aeac14d1e446f85717bbc1ee1659.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/ff680d415c20be9a7333a88663137567.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/032ef5e18d00945cf8454167f87b5778.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/11fbe8759d57e88de37d55b9ac69dc14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/136108b07acb639ad875c7a0f4c06acd.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/17d5c06ae439015f8939b45f9dfb1b92.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/1c42576ebbc0612365e07d93ebe24dd2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/1c6c8dcf3335451a3309a8d5186b1798.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/271515ce6b6b635a8fdff5bb55bcf05b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/29955ff1ec88132df0c76f4c92c06a63.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/37e10aa930eb930c9a134510703097b8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/441d73e49c6979e69e60b056bc6657b7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/459fa9ee786e1019a98a315bc3de4c87.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/54c344ed279ecd6a7e56fd795aa70e3b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/5677e76ab146d743e4d11c6662137db0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/60e32c2aa9ad546054b467ae2cacdfac.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/6a2680c27bcc703e88455091f40b0026.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/6e574d3600a1464932193cb55365e83f.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/7a08ce21c42507c8c1e4a6c3161ef2a6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/7d8312b46d9dbbb46c48b55535035b35.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/8c05a8bc970cba8a59689d7a7016e04a.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/98827e72398523237a6d412880cd47d2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/9eae1e42c86b835a27d3241d4cb0cc40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/ade5ef615b671b7862e879c6cd7304b2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/b16f13f9b5df8bf75e940298b281e255.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/b6de2f2fef008727e0f8ee91124acc8a.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/c479e6eb8092a8144370517cfaae228a.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/c7480ad31e136332e527ea21f06f0cac.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/ca0a6ebe5a9428a7e200aa4f5fd25aa4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/cc244cafdbd97055c6b58fcc5755f4b2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/d735dd72ef2dfe35689092ebae6a982b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/df68293068a465971822cf392c975ee9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/e00617615e64f1d7d765e5e9e697cabf.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/e12462e3ec4e3ce5967f1a46f9326d2a.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/e78ccc86dfca834868db91bb57983a06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/eb0bb5cc7561a6e164c4a6017b960d43.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/f1dad5011d88ab2ed21c7b68ac5eb975.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/f84a5e955c30447afd72077fac26f8ef.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/f95d542b1a515393ac44ebb454b6d0c2.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Final_Shop.iml" afterPath="$PROJECT_DIR$/.idea/Final_Shop.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.phpstorm.meta.php" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_ide_helper.php" afterPath="$PROJECT_DIR$/_ide_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Baskets.php" afterPath="$PROJECT_DIR$/app/Baskets.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Library/ShowTable.php" afterPath="$PROJECT_DIR$/app/Library/ShowTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Users_address.php" afterPath="$PROJECT_DIR$/app/Users_address.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/factories/DiscountFactory.php" afterPath="$PROJECT_DIR$/database/factories/DiscountFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/factories/Users_addressesFactory.php" afterPath="$PROJECT_DIR$/database/factories/Users_addressesFactory.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/rapiden_layouts/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/Basket.blade.php" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/Basket.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/checkout.blade.php" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/checkout.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/payment.blade.php" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/payment.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/05528d721b4b7845fe56bc6005d68bbb.jpg" afterPath="$PROJECT_DIR$/public/product_image/7a08ce21c42507c8c1e4a6c3161ef2a6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/10225a340b91b37214a829a84eba9942.jpg" afterPath="$PROJECT_DIR$/public/product_image/a99f8568adbd93febd009f2dd31e7dab.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/255a2cfaf7ad117b667d1a11d78ef544.jpg" afterPath="$PROJECT_DIR$/public/product_image/477a29e52383d7f4ac762868eab5caff.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/3bc8b7c8bc8aed617a5c4604783e3d41.jpg" afterPath="$PROJECT_DIR$/public/product_image/ce1b231b7c1a4754f04f4a03ba15ced4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/3ed4ea4d49d9437bded5df8e76c335d2.jpg" afterPath="$PROJECT_DIR$/public/product_image/9eae1e42c86b835a27d3241d4cb0cc40.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/5cc1dafa0646d123af74167dfcfdfe78.jpg" afterPath="$PROJECT_DIR$/public/product_image/dcd7622bd2fe75695b648e0cbdff86eb.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/60b3e674b930e0f710d6b3c349946994.jpg" afterPath="$PROJECT_DIR$/public/product_image/fee4eec798b6746131b7a3871687aad8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/62d428c6995386eb14995ea7c780a113.jpg" afterPath="$PROJECT_DIR$/public/product_image/6e574d3600a1464932193cb55365e83f.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/62fec65371898383c5c2bb3b0d4a3866.jpg" afterPath="$PROJECT_DIR$/public/product_image/1c6c8dcf3335451a3309a8d5186b1798.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/78b165a7e856165ba07e20cbdd1997fe.jpg" afterPath="$PROJECT_DIR$/public/product_image/ade5ef615b671b7862e879c6cd7304b2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/955999c4580e973a62a331d242db6267.jpg" afterPath="$PROJECT_DIR$/public/product_image/cc244cafdbd97055c6b58fcc5755f4b2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/a9005e05f6dceb7b4ef3b92e4ad21c66.jpg" afterPath="$PROJECT_DIR$/public/product_image/7d8312b46d9dbbb46c48b55535035b35.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/a9460226fcc1fd1147f9a886611750e1.jpg" afterPath="$PROJECT_DIR$/public/product_image/271515ce6b6b635a8fdff5bb55bcf05b.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/d899c7096368395fa2122d2549ee43e8.jpg" afterPath="$PROJECT_DIR$/public/product_image/29955ff1ec88132df0c76f4c92c06a63.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/e9fdb6a95b9040c12226fbf31a3fb57d.jpg" afterPath="$PROJECT_DIR$/public/product_image/f95d542b1a515393ac44ebb454b6d0c2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/f3ec62a46fbca70f2710d6d61c4018da.jpg" afterPath="$PROJECT_DIR$/public/product_image/17d5c06ae439015f8939b45f9dfb1b92.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/3ba6abdef80446a22cd35d358df609ad.jpg" afterPath="$PROJECT_DIR$/public/product_image/6f85b32c35355eb8e9b720107e34f25f.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/3c2be69c1da2c1210a2334f0cc46d28a.jpg" afterPath="$PROJECT_DIR$/public/product_image/84e153457e3f213af26cba097597f7ee.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/477a29e52383d7f4ac762868eab5caff.jpg" afterPath="$PROJECT_DIR$/public/product_image/ff113089176034383e549377b6f1a520.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/55867b99a3bc89c1afd44417a6a10579.jpg" afterPath="$PROJECT_DIR$/public/product_image/19ebc1894b79e2f09cde5943fca89d3b.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/6f717e35fca9c55a106811075195e2d1.jpg" afterPath="$PROJECT_DIR$/public/product_image/4d02f39562c8091acee3d36fdab7e6be.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/a99f8568adbd93febd009f2dd31e7dab.jpg" afterPath="$PROJECT_DIR$/public/product_image/1a5a39e1b2e2f0879f223b5a66790033.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/ca83b66f10d11ed76a23b473b0af1398.jpg" afterPath="$PROJECT_DIR$/public/product_image/1adfab58f1d8e4f5e243e4689f6ba305.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/ce1b231b7c1a4754f04f4a03ba15ced4.jpg" afterPath="$PROJECT_DIR$/public/product_image/b67676796b114ffb6136d7082ddaf8aa.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/dcd7622bd2fe75695b648e0cbdff86eb.jpg" afterPath="$PROJECT_DIR$/public/product_image/6dc1440a663dcd5f443250d468c25c96.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/fdd9cad5df6d71addf2f9bea8fa13e1f.jpg" afterPath="$PROJECT_DIR$/public/product_image/97d17418afc5b42e7a4a0eef2365b983.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/fee4eec798b6746131b7a3871687aad8.jpg" afterPath="$PROJECT_DIR$/public/product_image/615a4b44dedbc7b995eb505ff2fcc90a.jpg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -133,9 +107,83 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+            <state relative-caret-position="483">
+              <caret line="41" column="47" lean-forward="true" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="56" column="71" lean-forward="true" selection-start-line="56" selection-start-column="71" selection-end-line="56" selection-end-column="71" />
+              <folding>
+                <element signature="e#40#56#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Library/ShowTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="242" column="48" lean-forward="false" selection-start-line="235" selection-start-column="28" selection-end-line="246" selection-end-column="33" />
+              <folding>
+                <marker date="1516206003978" expanded="true" signature="1055:1310" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="1074:1287" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="1410:1922" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="1607:1900" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="2171:2426" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="2190:2403" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="2533:3045" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="2730:3023" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="3350:3817" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="3366:3817" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="3382:3792" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="3395:3775" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="3808:3817" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="4114:5808" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="4213:4352" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="4270:4318" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="4406:4608" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="4466:4574" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="4666:5038" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="4772:4831" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="4947:5004" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="5071:5310" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="5175:5276" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="5178:5267" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="5515:5751" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="5633:5708" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="6006:8005" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="6064:6612" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="6111:6274" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="6315:6589" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="6670:7974" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="6716:7951" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="6804:7762" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="6836:7731" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="6872:7698" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="6927:7113" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="7168:7345" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="7398:7661" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="7480:7627" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="7825:7924" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="8352:9990" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="8425:9980" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="8461:9947" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="8516:8702" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="8757:8934" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="8987:9250" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="9069:9216" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="9303:9571" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="9387:9537" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="9624:9910" ph="..." />
+                <marker date="1516206003978" expanded="true" signature="9719:9876" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,18 +191,18 @@
       <file leaf-file-name="Discount.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Discount.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="0">
               <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Baskets.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Baskets.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Baskets.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+            <state relative-caret-position="440">
+              <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -163,28 +211,40 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+            <state relative-caret-position="-8">
+              <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+              <folding>
+                <marker date="1516197715659" expanded="true" signature="987:1046" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="payment.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/payment.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="73" column="30" lean-forward="true" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Users_address.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Users_address.php">
+      <file leaf-file-name="checkout.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/checkout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="516">
+              <caret line="52" column="42" lean-forward="true" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014_10_12_000000_create_users_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <file leaf-file-name="Basket.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/Basket.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+            <state relative-caret-position="321">
+              <caret line="95" column="34" lean-forward="false" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -236,13 +296,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="php artisan serve" />
-      <command text="composer install" />
-      <command text="php artisan serve" />
-      <command text="php artisan migrate" />
-      <command text="php artisan migrate:fresh" />
-      <command text="php artisan db:seed" />
-      <command text="composer require barryvdh/laravel-ide-helper" />
       <command text="php artisan ide-helper:generate" />
       <command text="composer require doctrine/dbal" />
       <command text="php artisan dump autoload" />
@@ -261,6 +314,13 @@
       <command text="php artisan migrate:fresh" />
       <command text="php artisan db:seed" />
       <command text="php artisan serve" />
+      <command text="php artisan migrate:fresh" />
+      <command text="composer install" />
+      <command text="php artisan migrate:fresh" />
+      <command text="php artisan db:seed" />
+      <command text="php artisan migrate:fresh" />
+      <command text="php artisan db:seed" />
+      <command text="php artisan serve" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -272,7 +332,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/partials/comment.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Product/EditProduct.blade.php" />
@@ -286,7 +345,6 @@
         <option value="$PROJECT_DIR$/resources/lang/en/validation.php" />
         <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/rapiden/rapiden.scss" />
-        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/partials/mainmenu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/partials/slider-area.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/partials/main_header.blade.php" />
@@ -305,24 +363,26 @@
         <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/partials/user_header.blade.php" />
         <option value="$PROJECT_DIR$/database/factories/ImageFactory.php" />
         <option value="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-        <option value="$PROJECT_DIR$/app/Library/ShowTable.php" />
-        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/user/Basket.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_01_17_072049_create_orders_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_01_17_072824_create_discounts_table.php" />
-        <option value="$PROJECT_DIR$/database/factories/Users_addressesFactory.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/database/factories/DiscountFactory.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/user/checkout.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/user/payment.blade.php" />
         <option value="$PROJECT_DIR$/app/Users_address.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Order.php" />
         <option value="$PROJECT_DIR$/app/Discount.php" />
         <option value="$PROJECT_DIR$/app/Baskets.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/database/factories/Users_addressesFactory.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/database/factories/DiscountFactory.php" />
+        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Library/ShowTable.php" />
+        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/user/Basket.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/user/payment.blade.php" />
       </list>
     </option>
   </component>
@@ -437,10 +497,26 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-51" />
-    <option name="y" value="179" />
+    <option name="x" value="420" />
+    <option name="y" value="157" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Blade files</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -464,87 +540,52 @@
         <subPane>
           <expand>
             <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Library" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="factories" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="seeds" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="rapiden_layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="rapiden_layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
@@ -554,15 +595,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -646,11 +687,12 @@
       <workItem from="1516163659078" duration="299000" />
       <workItem from="1516166955525" duration="4526000" />
       <workItem from="1516171678018" duration="8879000" />
+      <workItem from="1516197753472" duration="8838000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340351000" />
+    <option name="totallyTimeSpent" value="349189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -662,13 +704,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34520724" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3491471" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26220363" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26115343" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -717,27 +759,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/assets/rapiden/rapiden.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/rapiden_js/sweetalert.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/partials/category_sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/partials/slider-area.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
@@ -770,13 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -832,13 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="250" column="0" lean-forward="true" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/profile_master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2266">
@@ -889,67 +896,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/ImageFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Library/ShowTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="197" column="55" lean-forward="false" selection-start-line="197" selection-start-column="55" selection-end-line="197" selection-end-column="55" />
-          <folding>
-            <marker date="1516168051668" expanded="true" signature="1055:1310" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="1074:1287" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="1410:1922" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="1607:1900" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="2171:2426" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="2190:2403" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="2533:3045" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="2730:3023" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="3350:3817" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="3366:3817" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="3382:3792" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="3395:3775" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="3808:3817" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="4114:5808" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="4213:4352" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="4270:4318" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="4406:4608" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="4466:4574" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="4666:5038" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="4772:4831" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="4947:5004" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="5071:5310" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="5175:5276" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="5178:5267" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="5515:5751" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="5633:5708" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="6006:7929" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="6064:6612" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="6111:6274" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="6315:6589" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="6670:7898" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="6716:7875" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="6791:7686" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="6827:7653" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="6882:7068" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="7123:7300" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="7353:7616" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="7435:7582" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="7749:7790" ph="..." />
-            <marker date="1516168051668" expanded="true" signature="7749:7848" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -967,14 +917,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1515575397774" expanded="true" signature="484:585" ph="ALTER TABLE ${$this-&gt;getLogTable()}" />
-            <marker date="1515575397774" expanded="true" signature="608:703" ph="ALTER TABLE ${$this-&gt;getLogTable()}" />
-            <marker date="1515575397774" expanded="true" signature="880:961" ph="ALTER TABLE `${$this-&gt;getTable()}`... " />
-            <marker date="1515575397774" expanded="true" signature="984:1092" ph="ALTER TABLE `${$this-&gt;getLogTable()}`... " />
-            <marker date="1515575397774" expanded="true" signature="1115:1230" ph="ALTER TABLE ${$this-&gt;getLogTable()}" />
-            <marker date="1515575397774" expanded="true" signature="1377:1459" ph="ALTER TABLE `${$this-&gt;getTable()}`... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -994,130 +937,227 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_17_072824_create_discounts_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_17_072824_create_discounts_table.php" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_17_072049_create_orders_table.php" />
+    <entry file="file://$PROJECT_DIR$/app/Order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="180">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_17_072049_create_orders_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Discount.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/Users_addressesFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/DiscountFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="63" lean-forward="false" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/Basket.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="4" column="52" lean-forward="false" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/checkout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="29" column="89" lean-forward="false" selection-start-line="29" selection-start-column="89" selection-end-line="29" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/payment.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Users_address.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="52" column="12" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+        <state relative-caret-position="0">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+        <state relative-caret-position="-8">
+          <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+          <folding>
+            <marker date="1516197715659" expanded="true" signature="987:1046" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="61" lean-forward="false" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/ImageFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/Users_addressesFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/DiscountFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Users_address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-693">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="206" column="42" lean-forward="false" selection-start-line="206" selection-start-column="42" selection-end-line="206" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Discount.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="168">
+          <caret line="148" column="47" lean-forward="true" selection-start-line="148" selection-start-column="43" selection-end-line="148" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Baskets.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        <state relative-caret-position="440">
+          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/Basket.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="95" column="34" lean-forward="false" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Library/ShowTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="242" column="48" lean-forward="false" selection-start-line="235" selection-start-column="28" selection-end-line="246" selection-end-column="33" />
+          <folding>
+            <marker date="1516206003978" expanded="true" signature="1055:1310" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="1074:1287" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="1410:1922" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="1607:1900" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="2171:2426" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="2190:2403" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="2533:3045" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="2730:3023" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="3350:3817" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="3366:3817" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="3382:3792" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="3395:3775" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="3808:3817" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="4114:5808" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="4213:4352" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="4270:4318" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="4406:4608" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="4466:4574" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="4666:5038" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="4772:4831" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="4947:5004" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="5071:5310" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="5175:5276" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="5178:5267" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="5515:5751" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="5633:5708" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="6006:8005" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="6064:6612" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="6111:6274" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="6315:6589" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="6670:7974" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="6716:7951" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="6804:7762" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="6836:7731" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="6872:7698" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="6927:7113" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="7168:7345" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="7398:7661" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="7480:7627" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="7825:7924" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="8352:9990" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="8425:9980" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="8461:9947" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="8516:8702" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="8757:8934" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="8987:9250" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="9069:9216" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="9303:9571" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="9387:9537" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="9624:9910" ph="..." />
+            <marker date="1516206003978" expanded="true" signature="9719:9876" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="41" column="47" lean-forward="true" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="56" column="71" lean-forward="true" selection-start-line="56" selection-start-column="71" selection-end-line="56" selection-end-column="71" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/checkout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="52" column="42" lean-forward="true" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/payment.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="73" column="30" lean-forward="true" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
           <folding />
         </state>
       </provider>

@@ -87,16 +87,19 @@
                             {{--<button type="submit" class="btn btn-success btn-block">refresh all</button>--}}
 
                         </div>
-                        {{--<div class="coupon">--}}
-                            {{--<h3>کد تخفیف</h3>--}}
-                            {{--<p>کد تخفیف خود را در صورت وجود وارد نمایید</p>--}}
-                            {{--<input type="text" placeholder="کد تخفیف">--}}
-                            {{--<input type="submit" value="اعمال تخفیف">--}}
-                        {{--</div>--}}
+                        <div class="coupon">
+                            <h3>کد تخفیف</h3>
+                            <p>کد تخفیف یا کد معرف خود را در صورت وجود وارد نمایید</p>
+                            <input type="text" id="discount_code" placeholder="کد تخفیف">
+                            <div class="col-md-3 col-sm-5 col-xs-12">
+                            <input type="button" id="discount" value="اعمال تخفیف">
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-3 col-sm-5 col-xs-12">
                         <div class="cart_totals">
                             <h2>مجموع سبد</h2>
+                            <div id="pay_value">
                             <table>
                                 <tbody>
                                 <tr class="cart-subtotal">
@@ -118,6 +121,7 @@
                                 </tr>
                                 </tbody>
                             </table>
+                            </div>
                             <div class="wc-proceed-to-checkout">
                                 <a href="{{route('user-checkout')}}">پرداخت</a>
                             </div>
@@ -165,6 +169,21 @@
                                 $("#basket_table").html(data);
                             });
                         }
+                    });
+
+                    $(document).on('click', '#discount', function (event) {
+                        CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+                        var _method = 'PUT';
+                        var code=$("#discount_code").val();
+                        $.post("{{route('updateCart')}}", {
+                            request_name: "calc_discount",
+                            'code': code,
+                            _token: CSRF_TOKEN,
+                            _method: _method,
+                        }, function (data) {
+                            $("#pay_value").html(data);
+                        });
+
                     });
 
                     $(document).on('click', '#delete_row', function (event) {

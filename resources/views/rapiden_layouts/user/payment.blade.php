@@ -68,10 +68,9 @@
                 <div class="row">
                     <div class="col-md-9 col-sm-7 col-xs-12">
                         <div class="coupon">
-                        <h3>کد تخفیف</h3>
-                        <p>کد تخفیف خود را در صورت وجود وارد نمایید</p>
-                        <input type="text" placeholder="کد تخفیف">
-                        <input type="submit" value="اعمال تخفیف">
+                            <h3>{{$address->name_family}}</h3>
+                            <p>{{$address->address}}</p>
+                            <p>{{$address->mobile_number}}</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-5 col-xs-12">
@@ -94,6 +93,18 @@
                                     <td>
                                         <strong><span class="amount"><?php echo Cart::total(); ?>
                                                 <small>تومان</small></span></strong>
+                                    </td>
+                                </tr>
+                                <tr class='order-total'>
+                                    <th>تخفیف</th>
+                                    <td>
+                                        <strong><span class='amount'>{{session()->get('discount')}} <small>تومان</small></span></strong>
+                                    </td>
+                                </tr>
+                                <tr class='order-total'>
+                                    <th>مبلغ قابل پرداخت</th>
+                                    <td>
+                                        <strong><span class='amount'>{{Cart::total()-Session::get('discount')}} <small>تومان</small></span></strong>
                                     </td>
                                 </tr>
                                 </tbody>

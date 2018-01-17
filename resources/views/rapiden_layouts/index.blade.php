@@ -17,6 +17,11 @@
     @include('rapiden_layouts.partials.slider-area')
 @endsection
 
+@section('scripts')
+    {!! NoCaptcha::renderJs('fa', false, 'recaptchaCallback') !!}
+    {{--    {!! NoCaptcha::renderJs() !!}--}}
+@endsection
+
 @section('content')
 
     <div class="new-product-area dotted-style-2">

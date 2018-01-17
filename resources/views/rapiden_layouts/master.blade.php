@@ -16,9 +16,12 @@
 
     <link rel="stylesheet" href="{{asset('css/rapiden.css')}}">
     <link rel="stylesheet" href="{{asset('css/rapiden_mystyle.css')}}">
+
     @yield('styles')
 
-    <script src="{{asset('rapiden_js/vendor/modernizr-2.8.3.min.js')}}"></script>
+    <script src="{{asset('rapiden_js/vendor/modernizr-2.8.3.min.js')}}">
+
+    </script>
 </head>
 <body>
 <!--[if lt IE 9]>
@@ -194,10 +197,18 @@
                         <div class="col-md-6 col-md-offset-4">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> مرا به خاطر بسپار
+                                    {!! NoCaptcha::display() !!}
+
+                                    @if ($errors->has('g-recaptcha-response'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                        </span>
+                                    @endif
                                 </label>
                             </div>
                         </div>
+
                     </div>
 
                     <div class="form-group">

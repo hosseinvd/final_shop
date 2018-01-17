@@ -176,6 +176,7 @@ class ShowTable
                 <div class='col-md-3 col-sm-5 col-xs-12'>
                     <div class='cart_totals'>
                         <h2>مجموع سبد</h2>
+                        <div id='pay_value'>
                         <table>
                             <tbody>
                             <tr class='cart-subtotal'>
@@ -194,12 +195,58 @@ class ShowTable
                             </tr>
                             </tbody>
                         </table>
+                        </div>
                         <div class=\"wc-proceed-to-checkout\">
                                 <a href='$user_checkout'>پرداخت</a>
                         </div>
                     </div>
                 </div>            
             </div>            
+        ";
+
+    }
+
+    public function user_basket_discount($discount)
+    {
+        $i = 0;
+        $total=Cart::total();
+        $tax=Cart::tax();
+        $subtotal=Cart::subtotal();
+        $route_products=route('products');
+        $user_checkout=route('user-checkout');
+        $total_with_disc=$total-$discount;
+        echo "
+                        <h2>مجموع سبد</h2>
+                        <table>
+                            <tbody>
+                            <tr class='cart-subtotal'>
+                                <th>زیر مجموعه</th>
+                                <td><span class='amount'>$subtotal <small>تومان</small></span></td>
+                            </tr>
+                            <tr class='cart-subtotal'>
+                                <th>مالیات</th>
+                                <td><span class='amount'>$tax <small>تومان</small></span></td>
+                            </tr>
+                            <tr class='order-total'>
+                                <th>جمع</th>
+                                <td>
+                                    <strong><span class='amount'>$total <small>تومان</small></span></strong>
+                                </td>
+                            </tr>
+                            <tr class='order-total'>
+                                <th>تخفیف</th>
+                                <td>
+                                    <strong><span class='amount'>$discount <small>تومان</small></span></strong>
+                                </td>
+                            </tr>
+                            <tr class='order-total'>
+                                <th>مبلغ قابل پرداخت</th>
+                                <td>
+                                    <strong><span class='amount'>$total_with_disc <small>تومان</small></span></strong>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
         ";
 
     }

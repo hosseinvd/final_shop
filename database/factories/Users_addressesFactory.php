@@ -13,6 +13,6 @@ $factory->define(App\Users_address::class, function (Faker $faker) {
         'address'=>$faker->address,
         'postal_code'=>$faker->postcode,
         'email'=>$faker->email,
-        'user_id'=>$faker->randomElement(\App\Category::pluck('id')->toArray()),
+        'user_id'=>$faker->randomElement(\App\User::pluck('id')->toArray()),
     ];
 });
