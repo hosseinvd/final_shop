@@ -13,8 +13,18 @@ class Baskets extends Model
         return $this->hasMany(Stuff::class);
     }
 
+    public function discount()
+    {
+        return $this->hasOne(Discount::class);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
     }
 }

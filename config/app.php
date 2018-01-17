@@ -167,6 +167,7 @@ return [
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Morilog\Jalali\JalaliServiceProvider::class,
+
         /*
          * Package Service Providers...
          */

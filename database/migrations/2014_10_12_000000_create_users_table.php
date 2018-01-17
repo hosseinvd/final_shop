@@ -52,8 +52,8 @@ class CreateUsersTable extends Migration
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('name_family');
-            $table->string('phone_number',20)->nullable();
-            $table->string('mobile_number',20)->nullable();
+            $table->string('phone_number',40)->nullable();
+            $table->string('mobile_number',40)->nullable();
             $table->string('country');
             $table->string('province');
             $table->string('city');
@@ -142,13 +142,35 @@ class CreateUsersTable extends Migration
 
         });
 
+        Schema::create('discounts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('code');
+            $table->string('type');
+            $table->string('calc_mode');//mode=(MAX,MIN,Value,Percent)
+            $table->float('percent');
+            $table->float('value');
+            $table->integer('numbers');
+            //user who benefit from discount or reseler
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
+            $table->string('description')->nullable();
+            $table->timestamps();
+        });
+
         Schema::create('baskets', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
             $table->longText('content');
+            $table->integer('discount_id')->unsigned()->index();
+            $table->foreign('discount_id')->references('id')->on('discounts');
+            $table->float('total_discount');
             $table->nullableTimestamps();
+
         });
+
 
         Schema::create('stuffs', function (Blueprint $table) {
             $table->increments('id');
@@ -163,6 +185,18 @@ class CreateUsersTable extends Migration
             $table->float('discount');
             $table->string('discount_description');
             $table->integer('discount_code');
+            $table->timestamps();
+        });
+
+        Schema::create('orders', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('users_address_id')->unsigned()->index();
+            $table->foreign('users_address_id')->references('id')->on('users');
+            $table->integer('basket_id')->unsigned()->index();
+            $table->foreign('basket_id')->references('id')->on('baskets');
+            $table->smallInteger('pay_method');//0=not pay/1=cash/2=check/
             $table->timestamps();
         });
     }
@@ -187,6 +221,8 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('stuffs');
         Schema::dropIfExists('baskets');
         Schema::dropIfExists('users_addresses');
+        Schema::dropIfExists('discounts');
+        Schema::dropIfExists('orders');
 
     }
 }

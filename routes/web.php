@@ -16,7 +16,6 @@ Route::get('/product/view_item/{product}', 'ProductController@Show_product')->na
 Route::get('/product/{category}', 'ProductController@Show_product_in_cat')->name('products_in_cat');
 Route::post('/product/search', 'ProductController@product_search')->name('product_search');
 
-
 Route::get('/addToCart/{product}', 'UserController@addToCart')->name('addToCart');
 Route::post('/addToCart/', 'UserController@addToCartWithNumber')->name('addToCart_with_number');
 
@@ -24,7 +23,6 @@ Route::post('/comment' , 'HomeController@comment');
 
 Route::get('/ta','ajaxController@index')->name('test_ajax');
 Route::post('/ta','ajaxController@create');
-
 
 Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/user-profile', 'UserController@profile')->name('u_user-profile');
@@ -38,6 +36,7 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
 
     Route::get('/checkout', 'UserController@checkout')->name('user-checkout');
     Route::post('/add_address','UserController@add_address')->name('user_add_address');
+    Route::post('/payment','UserController@payment')->name('user_payment');
 
     Route::post('request','UserController@Getway_request')->name('Gateway-Request');
     Route::any('callback/from/bank','UserController@Getway_back')->name('Gateway-back');
@@ -95,7 +94,6 @@ Route::get('/forbidden',function(){
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 

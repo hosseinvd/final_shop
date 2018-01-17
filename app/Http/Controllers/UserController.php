@@ -47,6 +47,12 @@ class UserController extends Controller
         return redirect()->route('user-checkout');
     }
 
+    public function payment(Request $request)
+    {
+//        dd($request->all());
+        return view('rapiden_layouts.user.payment');
+    }
+
     public function Getway_request(Request $request)
     {
         Cart::store(Auth::user()->name,\auth()->id());

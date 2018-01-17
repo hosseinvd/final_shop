@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.22 on 2018-01-13.
+ * Generated for Laravel 5.5.22 on 2018-01-17.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -12771,6 +12771,79 @@ namespace Morilog\Jalali\Facades {
  
 }
 
+namespace Anhskohbo\NoCaptcha\Facades { 
+
+    class NoCaptcha {
+        
+        /**
+         * Render HTML captcha.
+         *
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */ 
+        public static function display($attributes = array())
+        {
+            return \Anhskohbo\NoCaptcha\NoCaptcha::display($attributes);
+        }
+        
+        /**
+         * Render js source
+         *
+         * @param null $lang
+         * @param bool $callback
+         * @param string $onLoadClass
+         * @return string 
+         * @static 
+         */ 
+        public static function renderJs($lang = null, $callback = false, $onLoadClass = 'onloadCallBack')
+        {
+            return \Anhskohbo\NoCaptcha\NoCaptcha::renderJs($lang, $callback, $onLoadClass);
+        }
+        
+        /**
+         * Verify no-captcha response.
+         *
+         * @param string $response
+         * @param string $clientIp
+         * @return bool 
+         * @static 
+         */ 
+        public static function verifyResponse($response, $clientIp = null)
+        {
+            return \Anhskohbo\NoCaptcha\NoCaptcha::verifyResponse($response, $clientIp);
+        }
+        
+        /**
+         * Verify no-captcha response by Symfony Request.
+         *
+         * @param \Request $request
+         * @return bool 
+         * @static 
+         */ 
+        public static function verifyRequest($request)
+        {
+            return \Anhskohbo\NoCaptcha\NoCaptcha::verifyRequest($request);
+        }
+        
+        /**
+         * Get recaptcha js link.
+         *
+         * @param string $lang
+         * @param boolean $callback
+         * @param string $onLoadClass
+         * @return string 
+         * @static 
+         */ 
+        public static function getJsLink($lang = null, $callback = false, $onLoadClass = 'onloadCallBack')
+        {
+            return \Anhskohbo\NoCaptcha\NoCaptcha::getJsLink($lang, $callback, $onLoadClass);
+        }
+         
+    }
+ 
+}
+
 namespace Barryvdh\Debugbar { 
 
     class Facade {
@@ -13482,79 +13555,6 @@ namespace UxWeb\SweetAlert {
         public static function getJsonConfig()
         {
             return \UxWeb\SweetAlert\SweetAlertNotifier::getJsonConfig();
-        }
-         
-    }
- 
-}
-
-namespace Anhskohbo\NoCaptcha\Facades { 
-
-    class NoCaptcha {
-        
-        /**
-         * Render HTML captcha.
-         *
-         * @param array $attributes
-         * @return string 
-         * @static 
-         */ 
-        public static function display($attributes = array())
-        {
-            return \Anhskohbo\NoCaptcha\NoCaptcha::display($attributes);
-        }
-        
-        /**
-         * Render js source
-         *
-         * @param null $lang
-         * @param bool $callback
-         * @param string $onLoadClass
-         * @return string 
-         * @static 
-         */ 
-        public static function renderJs($lang = null, $callback = false, $onLoadClass = 'onloadCallBack')
-        {
-            return \Anhskohbo\NoCaptcha\NoCaptcha::renderJs($lang, $callback, $onLoadClass);
-        }
-        
-        /**
-         * Verify no-captcha response.
-         *
-         * @param string $response
-         * @param string $clientIp
-         * @return bool 
-         * @static 
-         */ 
-        public static function verifyResponse($response, $clientIp = null)
-        {
-            return \Anhskohbo\NoCaptcha\NoCaptcha::verifyResponse($response, $clientIp);
-        }
-        
-        /**
-         * Verify no-captcha response by Symfony Request.
-         *
-         * @param \Request $request
-         * @return bool 
-         * @static 
-         */ 
-        public static function verifyRequest($request)
-        {
-            return \Anhskohbo\NoCaptcha\NoCaptcha::verifyRequest($request);
-        }
-        
-        /**
-         * Get recaptcha js link.
-         *
-         * @param string $lang
-         * @param boolean $callback
-         * @param string $onLoadClass
-         * @return string 
-         * @static 
-         */ 
-        public static function getJsLink($lang = null, $callback = false, $onLoadClass = 'onloadCallBack')
-        {
-            return \Anhskohbo\NoCaptcha\NoCaptcha::getJsLink($lang, $callback, $onLoadClass);
         }
          
     }
@@ -15684,11 +15684,11 @@ namespace  {
 
     class jDate extends \Morilog\Jalali\Facades\jDate {}
 
+    class NoCaptcha extends \Anhskohbo\NoCaptcha\Facades\NoCaptcha {}
+
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
 
     class Alert extends \UxWeb\SweetAlert\SweetAlert {}
-
-    class NoCaptcha extends \Anhskohbo\NoCaptcha\Facades\NoCaptcha {}
  
 }
 

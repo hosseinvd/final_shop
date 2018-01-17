@@ -27,7 +27,7 @@
         <div class="container">
             <div class="row">
                 @if($user_addresses->count()>0)
-                <form class="form-horizontal" method="post" action="" enctype="multipart/form-data">
+                <form class="form-horizontal" method="post" action="{{route('user_payment')}}" enctype="multipart/form-data">
                     {{csrf_field()}}
 
                     <div class="col md-12">

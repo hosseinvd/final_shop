@@ -158,6 +158,7 @@ class ShowTable
         </table>
         </div>
         ";
+        $user_checkout=route('user-checkout');
         echo "
             <div class='row'>
                 <div class='col-md-9 col-sm-7 col-xs-12'>
@@ -193,6 +194,9 @@ class ShowTable
                             </tr>
                             </tbody>
                         </table>
+                        <div class=\"wc-proceed-to-checkout\">
+                                <a href='$user_checkout'>پرداخت</a>
+                        </div>
                     </div>
                 </div>            
             </div>            

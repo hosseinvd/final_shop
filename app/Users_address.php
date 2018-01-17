@@ -12,4 +12,8 @@ class Users_address extends Model
     {
         return $this->hasMany(User::class);
     }
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }
