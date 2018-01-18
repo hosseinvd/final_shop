@@ -13,6 +13,7 @@ use App\Users_address;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Larabookir\Gateway\Gateway;
 use App\Category;
@@ -82,8 +83,13 @@ class UserController extends Controller
 
         Cart::store(Auth::user()->name,\auth()->id());
         $basket=Auth::user()->baskets()->create(['content'=>Cart::content(),'discount_id'=>$request->discount_id,'total_discount'=>$discount]);
+
+        \Eloquent::unguard();
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         $order=Auth::user()->orders()->create(['basket_id'=>$basket->id,'users_address_id'=>$address->id,
             'pay_method'=>'1']);
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
         foreach(Cart::content() as $row)
         {
             $stuffs=new Stuff();
