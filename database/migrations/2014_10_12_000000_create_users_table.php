@@ -194,7 +194,7 @@ class CreateUsersTable extends Migration
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('users_address_id')->unsigned()->index();
-            $table->foreign('users_address_id')->references('id')->on('users');
+            $table->foreign('users_address_id')->references('id')->on('users_addresses');
             $table->integer('basket_id')->unsigned()->index();
             $table->foreign('basket_id')->references('id')->on('baskets');
             $table->smallInteger('pay_method');//0=not pay/1=cash/2=check/
