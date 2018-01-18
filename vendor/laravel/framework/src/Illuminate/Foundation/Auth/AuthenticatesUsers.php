@@ -17,8 +17,7 @@ trait AuthenticatesUsers
      */
     public function showLoginForm()
     {
-//        return view('auth.login');
-        return view('rapiden_layouts.login');
+        return view('auth.login');
     }
 
     /**
@@ -63,7 +62,6 @@ trait AuthenticatesUsers
         $this->validate($request, [
             $this->username() => 'required|string',
             'password' => 'required|string',
-            'g-recaptcha-response' => 'required|captcha',
         ]);
     }
 

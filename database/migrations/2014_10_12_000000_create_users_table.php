@@ -144,7 +144,7 @@ class CreateUsersTable extends Migration
 
         Schema::create('discounts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('code');
+            $table->string('code')->unique();
             $table->float('commission')->default(0);
             $table->string('type');//type=(Discount,reseller_Discount)
             $table->string('calc_mode');//mode=(MAX,MIN,Value,Percent)

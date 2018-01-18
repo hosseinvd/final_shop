@@ -19,7 +19,7 @@
                 </ol>
             </div>
         </div>
-        <form class="form-horizontal" method="post" action="{{route('update_full_basket')}}"
+        <form class="form-horizontal" method="post" action="{{route('Gateway-Request')}}"
               enctype="multipart/form-data">
             {{csrf_field()}}
             <div id="basket_table">
@@ -42,8 +42,13 @@
                                 <?php $i++; ?>
                                 <td>{{$i}}</td>
                                 <td class="product-thumbnail">
-                                    <img src="{{asset('product_image').'/'.\App\Product::find($row->id)->images()->first()->imagePath}}"
-                                         alt="...">
+                                    @if((\App\Product::find($row->id)->images()->exists()))
+                                        <img src="{{asset('product_image').'/'.\App\Product::find($row->id)->images()->first()->imagePath}}"
+                                             alt="...">
+                                    @else
+                                        <img src="{{asset('images/picture-not-available.jpg')}}"
+                                             alt="...">
+                                    @endif
                                 </td>
                                 {{--<td>{{$row->rowId}}</td>--}}
                                 <td class="product-name">
@@ -52,7 +57,7 @@
                                     </a>
                                 </td>
                                 <td class="product-quantity">
-                                    <input class="form-control" id="row_id_{{$i}}" type="hidden" name="row_id[]"
+                                    <input class="form-control" id="row_id_{{$i}}" type="hidden"
                                            value="{{$row->rowId}}">
                                     {{$row->qty}}
                                 </td>
@@ -68,6 +73,7 @@
                 <div class="row">
                     <div class="col-md-9 col-sm-7 col-xs-12">
                         <div class="coupon">
+                            <input type="hidden"  name="address_id" value="{{$address->id}}">
                             <h3>{{$address->name_family}}</h3>
                             <p>{{$address->address}}</p>
                             <p>{{$address->mobile_number}}</p>
@@ -98,6 +104,8 @@
                                 <tr class='order-total'>
                                     <th>تخفیف</th>
                                     <td>
+                                        <input type="hidden" name="discount_id" value="{{session()->get('discount_id')}}">
+                                        <input type="hidden" name="discount_code" value="{{session()->get('discount_code')}}">
                                         <strong><span class='amount'>{{session()->get('discount')}} <small>تومان</small></span></strong>
                                     </td>
                                 </tr>
@@ -110,7 +118,8 @@
                                 </tbody>
                             </table>
                             <div class="wc-proceed-to-checkout">
-                                <a href="{{route('user-checkout')}}">پرداخت</a>
+                                <button type="submit">پرداخت</button>
+                                {{--<a href="{{route('user-checkout')}}">پرداخت</a>--}}
                             </div>
                         </div>
                     </div>
@@ -118,18 +127,7 @@
             </div>
         </form>
 
-        {{--<form class="form-horizontal" method="post" action="{{route('Gateway-Request')}}" enctype="multipart/form-data">--}}
-        {{--{{csrf_field()}}--}}
-        {{--<input type="hidden" class="form-control" name="total_price" value="{{Cart::total()}}">--}}
-
-        {{--<div class="wc-proceed-to-checkout">--}}
-        {{--<button type="submit" class="btn btn-info ">pay</button>--}}
-        {{--</div>--}}
-
-        {{--</form>--}}
-
-
-        @endsection
+  @endsection
 
 
 

@@ -120,7 +120,14 @@ class ShowTable
         ";
         foreach (Cart::content() as $row) {
             $i++;
-            $image_path = asset('product_image') . '/' . \App\Product::find($row->id)->images()->first()->imagePath;
+            if((\App\Product::find($row->id)->images()->exists())){
+                $image_path = asset('product_image') . '/' . \App\Product::find($row->id)->images()->first()->imagePath;
+
+            }else
+            {
+                $image_path = asset('images/picture-not-available.jpg');
+
+            }
             $product_address = route('show_product', $row->id);
             echo "
                             <tr>
@@ -216,7 +223,7 @@ class ShowTable
         $user_checkout=route('user-checkout');
         $total_with_disc=$total-$discount;
         echo "
-                        <h2>مجموع سبد</h2>
+                        
                         <table>
                             <tbody>
                             <tr class='cart-subtotal'>

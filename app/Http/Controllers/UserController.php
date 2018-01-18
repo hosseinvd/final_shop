@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Baskets;
 use App\Discount;
 use App\Library\ShowTable;
+use App\Order;
 use App\Product;
 use App\m_image;
 use App\Stuff;
@@ -31,6 +32,9 @@ class UserController extends Controller
 
     public function basket()
     {
+        session(['discount_code' => "null"]);
+        session(['discount' => "0"]);
+        session(['discount_id'=>"1"]);
 
         return view('rapiden_layouts.user.Basket');
     }
@@ -59,8 +63,27 @@ class UserController extends Controller
 
     public function Getway_request(Request $request)
     {
+//        dd($request->all());
+        $discount_row=Discount::where('code','=',$request->discount_code)->first();
+        if(!empty($discount_row)) {
+
+            if (strcmp($discount_row->calc_mode, 'MAX') == 0) {
+                $discount = ($discount_row->percent / 100) * Cart::total();
+                if ($discount < $discount_row->value) $discount = $discount_row->value;
+            }
+            if (strcmp($discount_row->calc_mode, 'MIN') == 0) {
+                $discount = ($discount_row->percent / 100) * Cart::total();
+                if ($discount > $discount_row->value) $discount = $discount_row->value;
+            }
+        }else{
+            $discount=0;
+        }
+        $address=Users_address::find($request->address_id);
+
         Cart::store(Auth::user()->name,\auth()->id());
-        $basket=Auth::user()->baskets()->create(['content'=>Cart::content()]);
+        $basket=Auth::user()->baskets()->create(['content'=>Cart::content(),'discount_id'=>$request->discount_id,'total_discount'=>$discount]);
+        $order=Auth::user()->orders()->create(['basket_id'=>$basket->id,'users_address_id'=>$address->id,
+            'pay_method'=>'1']);
         foreach(Cart::content() as $row)
         {
             $stuffs=new Stuff();
@@ -76,8 +99,7 @@ class UserController extends Controller
             $stuffs->save();
         }
         Cart::destroy();
-        $request->session()->forget('discount');
-        return redirect()->back();
+        return redirect()->route('products');
 //        dd($request->all());
 //        try {
 //
@@ -183,6 +205,7 @@ class UserController extends Controller
                     Cart::remove($request->rowId);
                     return $showtable->user_basket();
                 case "calc_discount":
+                    session(['discount_code' => $request->code]);
                     $discount_row=Discount::where('code','=',$request->code)->first();
                     if(!empty($discount_row)){
 
@@ -195,14 +218,13 @@ class UserController extends Controller
                             if($discount>$discount_row->value)$discount=$discount_row->value;
                         }
                         session(['discount' => $discount]);
-
+                        session(['discount_id' => $discount_row->id]);
                     }
                     else{
                         $discount=0;
                         session(['discount' => $discount]);
+                        session(['discount_id' => "1"]);
                     }
-
-//                    Session::set('discount',$discount);
 
                     return $showtable->user_basket_discount($discount);
             }

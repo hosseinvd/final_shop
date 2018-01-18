@@ -21,6 +21,7 @@ class ProductController extends AdminController
     public function getIndex()
     {
         $products = Product::paginate(8);
+//        dd($products);
         $categories=Category::all();
         return view('rapiden_layouts.index', compact('products','categories'));
     }

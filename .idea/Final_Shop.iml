@@ -18,6 +18,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/morilog/jalali" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/santigarcor/laratrust" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -26,12 +27,10 @@
         <CLASSES>
           <root url="phar://$MODULE_DIR$/phing-latest.phar/" />
           <root url="phar://$MODULE_DIR$/vendor/phar-io/manifest/tests/_fixture/test.phar/" />
-          <root url="phar://$MODULE_DIR$/vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.1.phar/" />
         </CLASSES>
         <SOURCES>
           <root url="phar://$MODULE_DIR$/phing-latest.phar/" />
           <root url="phar://$MODULE_DIR$/vendor/phar-io/manifest/tests/_fixture/test.phar/" />
-          <root url="phar://$MODULE_DIR$/vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.1.phar/" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -46,6 +45,7 @@
           <root url="file://$MODULE_DIR$/vendor/laracasts/generators" />
           <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
           <root url="file://$MODULE_DIR$/vendor/santigarcor/laratrust" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
@@ -54,6 +54,7 @@
           <root url="file://$MODULE_DIR$/vendor/laracasts/generators" />
           <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
           <root url="file://$MODULE_DIR$/vendor/santigarcor/laratrust" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
         </SOURCES>
       </library>
     </orderEntry>

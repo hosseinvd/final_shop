@@ -119,7 +119,12 @@
 
                                                 <li>
                                                     <a class="product-image" href="{{route('show_product',$row->id)}}">
+                                                        @if((\App\Product::find($row->id)->images()->exists()))
                                                         <img   alt="" src="{{asset('product_image').'/'.\App\Product::find($row->id)->images()->first()->imagePath}}">
+                                                        @else
+                                                            <img src="{{asset('images/picture-not-available.jpg')}}"
+                                                                 alt="...">
+                                                        @endif
                                                     </a>
                                                     <div class="product-details">
                                                         <p class="cartproduct-name">

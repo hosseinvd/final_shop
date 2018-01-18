@@ -36,8 +36,13 @@
                         <div class="single-product  white-bg">
                             <div class="product-img pt-20">
                                 <a href="{{route('show_product',$product->id)}}">
-                                    <img src="{{asset('product_image').'/'.$product->images()->first()->imagePath}}"
+                                    @if(($product->images()->exists()))
+                                        <img src="{{asset('product_image').'/'.$product->images()->first()->imagePath}}"
                                          alt="...">
+                                    @else
+                                        <img src="{{asset('images/picture-not-available.jpg')}}"
+                                             alt="...">
+                                    @endif
                                 </a>
                             </div>
                             <div class="product-content product-i">

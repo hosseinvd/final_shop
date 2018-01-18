@@ -45,8 +45,14 @@
                                 <?php $i++; ?>
                                 <td>{{$i}}</td>
                                 <td class="product-thumbnail">
-                                    <img src="{{asset('product_image').'/'.\App\Product::find($row->id)->images()->first()->imagePath}}"
-                                         alt="...">
+                                    @if((\App\Product::find($row->id)->images()->exists()))
+                                        <img src="{{asset('product_image').'/'.\App\Product::find($row->id)->images()->first()->imagePath}}"
+                                             alt="...">
+                                    @else
+                                        <img src="{{asset('images/picture-not-available.jpg')}}"
+                                             alt="...">
+                                    @endif
+
                                 </td>
                                 {{--<td>{{$row->rowId}}</td>--}}
                                 <td class="product-name">
