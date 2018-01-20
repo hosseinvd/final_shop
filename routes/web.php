@@ -26,6 +26,9 @@ Route::post('/ta','ajaxController@create');
 
 Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/user-profile', 'UserController@profile')->name('u_user-profile');
+    Route::get('/enter_user_info', 'UserController@enter_user_info')->name('enter_user_info');
+    Route::post('/enter_user_info/submit','UserController@submit')->name('user_info_submit');
+
     Route::get('/basket', 'UserController@basket')->name('user-basket');
 
     Route::patch('/UpdateCart/', 'UserController@jquery_post')->name('updateCart');
@@ -44,6 +47,9 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
 
     Route::post('request','UserController@Getway_request')->name('Gateway-Request');
     Route::any('callback/from/bank','UserController@Getway_back')->name('Gateway-back');
+
+    Route::get('/comments', 'UserController@comments')->name('user-comments');
+
 
 });
 

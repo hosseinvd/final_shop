@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Basket;
 use App\Discount;
+use App\Info_user;
 use App\Library\ShowTable;
 use App\Order;
 use App\Product;
@@ -28,7 +29,33 @@ class UserController extends Controller
     public function profile()
     {
 
-        return view('user.profile');
+        return view('rapiden_layouts.user.profile');
+    }
+    public function enter_user_info()
+    {
+
+        return view('rapiden_layouts.user.enter_user_info');
+    }
+
+    public function submit(Request $request)
+    {
+//        dd($request->all());
+        $user_info=Auth::user()->info_user()->create([
+            'name'=>$request->name,
+            'family'=>$request->family,
+            'national_code'=>$request->national_code,
+            'phone_number'=>$request->phone_number,
+            'mobile_number'=>$request->mobile_number,
+            'country'=>$request->country,
+            'province'=>$request->province,
+            'city'=>$request->city,
+            'address'=>$request->address,
+            'postal_code'=>$request->postal_code,
+            'user_email'=>$request->user_email,
+            'birthday'=>$request->birthday,
+            'reseller_code'=>"0",
+        ]);
+//        return view('rapiden_layouts.user.enter_user_info');
     }
 
     public function basket()
@@ -64,10 +91,14 @@ class UserController extends Controller
 
     public function orders()
     {
-//        $orders=Order::where('user_id','=',Auth::user()->id)->with('users_address','baskets')->get();
         $orders=Auth::user()->orders()->with('users_address','basket')->get();
-//        dd($orders->first()->basket);
         return view('rapiden_layouts.user.oreders',compact('orders'));
+    }
+
+    public function comments()
+    {
+        $comments=Auth::user()->comments()->get();
+        return view('rapiden_layouts.user.comments',compact('comments'));
     }
 
     public function Getway_request(Request $request)
@@ -107,7 +138,10 @@ class UserController extends Controller
             $stuffs->discount_description=" no discount ";
             $stuffs->save();
         }
-//        Cart::destroy();
+        Cart::destroy();
+        session(['discount_code' => "null"]);
+        session(['discount' => "0"]);
+        session(['discount_id'=>"1"]);
         return redirect()->route('user-orders');
 //        dd($request->all());
 //        try {
