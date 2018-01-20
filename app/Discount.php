@@ -10,7 +10,7 @@ class Discount extends Model
 
     public function baskets()
     {
-        return $this->hasmany(Baskets::class);
+        return $this->hasmany(Basket::class);
     }
     public function user()
     {

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Baskets;
+use App\Basket;
 use App\Discount;
 use App\Library\ShowTable;
 use App\Order;
@@ -62,6 +62,14 @@ class UserController extends Controller
         return view('rapiden_layouts.user.payment',compact('address'));
     }
 
+    public function orders()
+    {
+//        $orders=Order::where('user_id','=',Auth::user()->id)->with('users_address','baskets')->get();
+        $orders=Auth::user()->orders()->with('users_address','basket')->get();
+//        dd($orders->first()->basket);
+        return view('rapiden_layouts.user.oreders',compact('orders'));
+    }
+
     public function Getway_request(Request $request)
     {
 //        dd($request->all());
@@ -80,15 +88,10 @@ class UserController extends Controller
             $discount=0;
         }
         $address=Users_address::find($request->address_id);
-
-        Cart::store(Auth::user()->name,\auth()->id());
-        $basket=Auth::user()->baskets()->create(['content'=>Cart::content(),'discount_id'=>$request->discount_id,'total_discount'=>$discount]);
-
-//        \Eloquent::unguard();
-//        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-        $order=Auth::user()->orders()->create(['basket_id'=>$basket->id,'users_address_id'=>$address->id,
+        $order=Auth::user()->orders()->create(['users_address_id'=>$address->id,
             'pay_method'=>'1']);
-//        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        Cart::store(Auth::user()->name,\auth()->id());
+        $basket=Auth::user()->baskets()->create(['order_id'=>$order->id,'content'=>Cart::content(),'discount_id'=>$request->discount_id,'total_discount'=>$discount]);
 
         foreach(Cart::content() as $row)
         {
@@ -104,8 +107,8 @@ class UserController extends Controller
             $stuffs->discount_description=" no discount ";
             $stuffs->save();
         }
-        Cart::destroy();
-        return redirect()->route('products');
+//        Cart::destroy();
+        return redirect()->route('user-orders');
 //        dd($request->all());
 //        try {
 //

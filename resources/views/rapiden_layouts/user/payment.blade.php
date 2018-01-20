@@ -119,7 +119,6 @@
                             </table>
                             <div class="wc-proceed-to-checkout">
                                 <button type="submit">پرداخت</button>
-                                {{--<a href="{{route('user-checkout')}}">پرداخت</a>--}}
                             </div>
                         </div>
                     </div>

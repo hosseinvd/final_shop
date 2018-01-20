@@ -36,7 +36,7 @@ class User extends Authenticatable
 
     public function baskets()
     {
-        return $this->hasMany(Baskets::class);
+        return $this->hasMany(Basket::class);
     }
 
     public function addresses()

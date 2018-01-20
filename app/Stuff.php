@@ -11,6 +11,11 @@ class Stuff extends Model
 
     public function basket()
     {
-        return $this->belongsTo(Baskets::class);
+        return $this->belongsTo(Basket::class);
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
     }
 }

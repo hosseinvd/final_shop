@@ -47,22 +47,6 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('users_addresses', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->string('name_family');
-            $table->string('phone_number',40)->nullable();
-            $table->string('mobile_number',40)->nullable();
-            $table->string('country');
-            $table->string('province');
-            $table->string('city');
-            $table->string('address')->nullable();
-            $table->string('postal_code');
-            $table->string('email');
-            $table->softDeletes();
-            $table->timestamps();
-        });
 
         Schema::create('password_resets', function (Blueprint $table) {
             $table->string('email')->index();
@@ -160,10 +144,40 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
+        Schema::create('users_addresses', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('name_family');
+            $table->string('phone_number',40)->nullable();
+            $table->string('mobile_number',40)->nullable();
+            $table->string('country');
+            $table->string('province');
+            $table->string('city');
+            $table->string('address')->nullable();
+            $table->string('postal_code');
+            $table->string('email');
+            $table->softDeletes();
+            $table->timestamps();
+        });
+
+
+        Schema::create('orders', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('users_address_id')->unsigned()->index();
+            $table->foreign('users_address_id')->references('id')->on('users_addresses');
+            $table->smallInteger('pay_method');//0=not pay/1=cash/2=check/
+            $table->timestamps();
+        });
+
         Schema::create('baskets', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('order_id')->unsigned()->index();
+            $table->foreign('order_id')->references('id')->on('orders');
             $table->longText('content');
             $table->integer('discount_id')->unsigned()->index();
             $table->foreign('discount_id')->references('id')->on('discounts');
@@ -189,17 +203,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('orders', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('users_address_id')->unsigned()->index();
-            $table->foreign('users_address_id')->references('id')->on('users_addresses');
-            $table->integer('basket_id')->unsigned()->index();
-            $table->foreign('basket_id')->references('id')->on('baskets');
-            $table->smallInteger('pay_method');//0=not pay/1=cash/2=check/
-            $table->timestamps();
-        });
+
     }
 
     /**

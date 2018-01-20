@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Baskets extends Model
+class Basket extends Model
 {
     protected $guarded=[];
 

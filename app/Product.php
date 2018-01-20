@@ -15,7 +15,10 @@ class Product extends Model
         return $this->belongsToMany('App\Category');
     }
 
-
+    public function stuff()
+    {
+        return $this->hasone('App\Stuff');
+    }
 
     public function images()
     {
