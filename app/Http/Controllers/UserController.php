@@ -23,13 +23,14 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
-class UserController extends Controller
+class UserController extends AdminController
 {
 
     public function profile()
     {
-
-        return view('rapiden_layouts.user.profile');
+        $user_info=Auth::user()->info_user()->first();
+//        dd($user_info);
+        return view('rapiden_layouts.user.profile',compact('user_info'));
     }
     public function enter_user_info()
     {
@@ -40,6 +41,12 @@ class UserController extends Controller
     public function submit(Request $request)
     {
 //        dd($request->all());
+        $file = $request->file('images');
+        $imagesUrl['images']['400']="no_img";
+        if ($file) {
+            $imagesUrl = $this->upload_profile_Images($file);
+//            $imagesUrl['images']['900']
+        }
         $user_info=Auth::user()->info_user()->create([
             'name'=>$request->name,
             'family'=>$request->family,
@@ -54,8 +61,10 @@ class UserController extends Controller
             'user_email'=>$request->user_email,
             'birthday'=>$request->birthday,
             'reseller_code'=>"0",
+            'imagePath'=>$imagesUrl['images']['400'],
         ]);
-//        return view('rapiden_layouts.user.enter_user_info');
+
+        return redirect()->route('u_user-profile');
     }
 
     public function basket()

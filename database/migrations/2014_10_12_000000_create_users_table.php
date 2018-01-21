@@ -43,6 +43,7 @@ class CreateUsersTable extends Migration
             $table->string('user_email')->unique();
             $table->date('birthday');
             $table->integer('reseller_code');
+            $table->string('imagePath')->default('null');
             $table->softDeletes();
             $table->timestamps();
         });

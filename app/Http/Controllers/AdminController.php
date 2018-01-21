@@ -30,6 +30,19 @@ class AdminController extends Controller
 
     }
 
+    protected function upload_profile_Images($file)
+    {
+        $year = Carbon::now()->month;
+        $imagePath = "/images/profile_img/";//create image path
+        $filename = time() . $file->getClientOriginalName();
+        $file = $file->move(public_path($imagePath), $filename);
+        $sizes = ["400"];
+        $url['images'] = $this->resize($file->getRealPath(), $sizes, $imagePath, $filename);
+//        $url['thumb'] = $url['images'][$sizes[1]];
+        return $url;
+
+    }
+
     private function resize($path, $sizes, $imagePath, $filename)
     {
         $images['original'] = $imagePath . $filename;

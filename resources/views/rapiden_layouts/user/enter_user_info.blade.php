@@ -5,6 +5,7 @@
     @include('rapiden_layouts.partials.user_header')
 @endsection
 @section('styles')
+    <link rel="stylesheet" href="{{asset('css/dropzone.css')}}"  crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="all" href="{{asset('datePicker/js-persian-cal.css')}}" >
 @endsection
 @section('mainmenu')
@@ -43,9 +44,14 @@
                             <label for="billing_last_name">نام خانوادگی<abbr title="required" class="required">*</abbr></label>
                             <input type="text" name="family" id="family" class="form-controller" required>
                         </p>
-                        <p class="form-row col-sm-12">
+                        <p class="form-row col-sm-6">
                             <label for="billing_company">کد ملی <abbr title="required" class="required">*</abbr></label>
                             <input type="number" name="national_code" id="national_code" class="form-controller" required>
+                        </p>
+                        <p class="form-row col-sm-6">
+                        <label>تصویر</label>
+                        <input type="file" class="form-controller" name="images" id="images"
+                               placeholder="تصویر " value="">
                         </p>
                         <p class="form-row col-sm-6">
                             <label for="billing_email">آدرس ایمیل<abbr title="required" class="required">*</abbr></label>
@@ -106,4 +112,5 @@
 @endsection
 @section('scripts')
     <script type="text/javascript" src="{{asset('datePicker/js-persian-cal.min.js')}}" ></script>
+    <script src="{{asset('js/dropzone.js')}}"></script>
 @endsection
