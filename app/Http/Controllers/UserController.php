@@ -114,24 +114,36 @@ class UserController extends AdminController
     {
 //        dd($request->all());
         $discount_row=Discount::where('code','=',$request->discount_code)->first();
-        if(!empty($discount_row)) {
 
-            if (strcmp($discount_row->calc_mode, 'MAX') == 0) {
-                $discount = ($discount_row->percent / 100) * Cart::total();
-                if ($discount < $discount_row->value) $discount = $discount_row->value;
-            }
-            if (strcmp($discount_row->calc_mode, 'MIN') == 0) {
-                $discount = ($discount_row->percent / 100) * Cart::total();
-                if ($discount > $discount_row->value) $discount = $discount_row->value;
+        if(!empty($discount_row)) {
+            if($discount_row->numbers>0) {
+                if (strcmp($discount_row->calc_mode, 'MAX') == 0) {
+                    $discount = ($discount_row->percent / 100) * Cart::total();
+                    if ($discount < $discount_row->value) $discount = $discount_row->value;
+                }
+                if (strcmp($discount_row->calc_mode, 'MIN') == 0) {
+                    $discount = ($discount_row->percent / 100) * Cart::total();
+                    if ($discount > $discount_row->value) $discount = $discount_row->value;
+                }
+                $discount_row->decrement('numbers');
             }
         }else{
             $discount=0;
         }
+        $pay=Cart::total()-$discount;
         $address=Users_address::find($request->address_id);
         $order=Auth::user()->orders()->create(['users_address_id'=>$address->id,
             'pay_method'=>'1']);
         Cart::store(Auth::user()->name,\auth()->id());
-        $basket=Auth::user()->baskets()->create(['order_id'=>$order->id,'content'=>Cart::content(),'discount_id'=>$request->discount_id,'total_discount'=>$discount]);
+        $basket=Auth::user()->baskets()->create([
+            'order_id'=>$order->id,
+            'content'=>Cart::content(),
+            'discount_id'=>$request->discount_id,
+            'price'=>Cart::subtotal(),
+            'tax'=>Cart::tax(),
+            'total_discount'=>$discount,
+            'paid'=>$pay,
+        ]);
 
         foreach(Cart::content() as $row)
         {
@@ -142,8 +154,8 @@ class UserController extends AdminController
             $stuffs->price=$row->price;
             $stuffs->tax=$row->tax;
             $stuffs->total_price=$row->total;
-            $stuffs->discount=0;
-            $stuffs->discount_code=0;
+            $stuffs->discount="1";
+            $stuffs->discount_code=$request->discount_id;
             $stuffs->discount_description=" no discount ";
             $stuffs->save();
         }
@@ -237,6 +249,7 @@ class UserController extends AdminController
     public function CalcDiscount($code)
     {
         $discount=Discount::where('code','=',$code)->firstOrFail();
+
         dd($discount);
     }
 
@@ -259,6 +272,7 @@ class UserController extends AdminController
                 case "calc_discount":
                     session(['discount_code' => $request->code]);
                     $discount_row=Discount::where('code','=',$request->code)->first();
+//                    $discount_row->decrement('numbers');
                     if(!empty($discount_row)){
 
                         if(strcmp($discount_row->calc_mode,'MAX')==0) {

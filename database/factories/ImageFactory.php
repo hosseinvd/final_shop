@@ -4,8 +4,12 @@ use Faker\Generator as Faker;
 
 $factory->define(App\m_image::class, function (Faker $faker) {
     return [
-        'imagePath'=>$faker->image('public/product_image',$width = 960, $height = 720,'food',false),
+        'imagePath'=>$faker->image('public/product_image',$width = 960, $height = 720,'technics',false),
         'product_id' => $faker->randomElement(\App\Product::pluck('id')->toArray()),
         'imageSize'=>'960'
     ];
 });
+
+
+//category:'abstract', 'animals', 'business', 'cats', 'city', 'food', 'nightlife',
+//        'fashion', 'people', 'nature', 'sports', 'technics', 'transport'

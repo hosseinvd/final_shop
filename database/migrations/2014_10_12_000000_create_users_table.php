@@ -182,7 +182,10 @@ class CreateUsersTable extends Migration
             $table->longText('content');
             $table->integer('discount_id')->unsigned()->index();
             $table->foreign('discount_id')->references('id')->on('discounts');
-            $table->float('total_discount');
+            $table->float('price')->nullable();
+            $table->float('tax')->nullable();
+            $table->float('total_discount')->nullable();
+            $table->float('paid')->nullable();
             $table->nullableTimestamps();
 
         });
@@ -203,7 +206,6 @@ class CreateUsersTable extends Migration
             $table->integer('discount_code');
             $table->timestamps();
         });
-
 
     }
 
