@@ -89,6 +89,14 @@
                                     <td><span class="amount"><?php echo Cart::subtotal(); ?>
                                             <small>تومان</small></span></td>
                                 </tr>
+                                <tr class='cart-subtotal'>
+                                    <th>تخفیف</th>
+                                    <td>
+                                        <input type="hidden" name="discount_id" value="{{session()->get('discount_id')}}">
+                                        <input type="hidden" name="discount_code" value="{{session()->get('discount_code')}}">
+                                        <strong><span class='amount'>{{session()->get('discount')}} <small>تومان</small></span></strong>
+                                    </td>
+                                </tr>
                                 <tr class="cart-subtotal">
                                     <th>مالیات</th>
                                     <td><span class="amount"><?php echo Cart::tax(); ?>
@@ -101,14 +109,7 @@
                                                 <small>تومان</small></span></strong>
                                     </td>
                                 </tr>
-                                <tr class='order-total'>
-                                    <th>تخفیف</th>
-                                    <td>
-                                        <input type="hidden" name="discount_id" value="{{session()->get('discount_id')}}">
-                                        <input type="hidden" name="discount_code" value="{{session()->get('discount_code')}}">
-                                        <strong><span class='amount'>{{session()->get('discount')}} <small>تومان</small></span></strong>
-                                    </td>
-                                </tr>
+
                                 <tr class='order-total'>
                                     <th>مبلغ قابل پرداخت</th>
                                     <td>

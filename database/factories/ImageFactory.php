@@ -4,7 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\m_image::class, function (Faker $faker) {
     return [
-        'imagePath'=>$faker->image('public/product_image',$width = 960, $height = 720,'technics',false),
+        'imagePath'=>$faker->image('public/product_image',$width = 800, $height = 600,'animals',false, false),
         'product_id' => $faker->randomElement(\App\Product::pluck('id')->toArray()),
         'imageSize'=>'960'
     ];

@@ -22,6 +22,6 @@ class DiscountTableSeeder extends Seeder
         'numbers'=>10000,
         'start_date'=>$faker->dateTime('now'),
         'end_date'=>$faker->dateTime('2099-04-25 08:37:17'),
-        'marketer_id'=>1]);
+        'user_id'=>1]);
     }
 }

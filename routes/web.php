@@ -31,15 +31,14 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::patch('/enter_user_info/submit','UserController@upload_img')->name('user_upload_img');
 
     Route::get('/basket', 'UserController@basket')->name('user-basket');
+    Route::get('/refund_basket/{basket}', 'UserController@refund_basket')->name('user-refund_basket');
 
     Route::patch('/UpdateCart/', 'UserController@jquery_post')->name('updateCart');
     Route::delete('/UpdateCart/', 'UserController@jquery_post');
     Route::put('/UpdateCart/', 'UserController@jquery_post');
 
-
     Route::post('/update_full_basket/','UserController@update_full_basket')->name('update_full_basket');
     Route::get('/delete_Cart_item/{rowId}', 'UserController@delete_Cart_item')->name('delete_Cart_item');
-
 
     Route::get('/checkout', 'UserController@checkout')->name('user-checkout');
     Route::post('/add_address','UserController@add_address')->name('user_add_address');
@@ -50,7 +49,6 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::any('callback/from/bank','UserController@Getway_back')->name('Gateway-back');
 
     Route::get('/comments', 'UserController@comments')->name('user-comments');
-
 
 });
 

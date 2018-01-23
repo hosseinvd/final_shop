@@ -15,7 +15,7 @@
             <div class="container">
                 <ol class="breadcrumb">
                     <li><a href="{{route('products')}}"><i class="fa fa-home"></i> خانه</a></li>
-                    <li class="active">سبد خرید</li>
+                    <li class="active">بازگشت محصول</li>
                 </ol>
             </div>
         </div>
@@ -30,23 +30,25 @@
                             <th>ردیف</th>
                             <th class="product-thumbnail">تصویر</th>
                             <th class="product-name">محصول</th>
-                            <th class="product-quantity">تعداد</th>
                             <th>refresh</th>
-                            <th class="product-price">قیمت</th>
+                            <th class="product-price">قیمت خالص</th>
+                            <th class="product-price"> تخفیف محاسبه شده</th>
+                            {{--<th class="product-price">مالیات</th>--}}
+                            <th class="product-quantity"> تعداد خریداری شده</th>
+                            <th class="product-quantity"> تعداد جدید</th>
                             <th class="product-subtotal">جمع</th>
-                            <th class="product-remove">حذف</th>
 
                         </tr>
                         </thead>
                         <tbody>
                         <?php $i = 0; ?>
-                        @foreach(Cart::content() as $row)
+                        @foreach($basket->stuffs as $stuff)
                             <tr>
                                 <?php $i++; ?>
                                 <td>{{$i}}</td>
                                 <td class="product-thumbnail">
-                                    @if((\App\Product::find($row->id)->images()->exists()))
-                                        <img src="{{asset('product_image').'/'.\App\Product::find($row->id)->images()->first()->imagePath}}"
+                                    @if(($stuff->product->images()->exists()))
+                                        <img src="{{asset('product_image').'/'.$stuff->product->images()->first()->imagePath}}"
                                              alt="...">
                                     @else
                                         <img src="{{asset('images/picture-not-available.jpg')}}"
@@ -54,89 +56,40 @@
                                     @endif
 
                                 </td>
-                                {{--<td>{{$row->rowId}}</td>--}}
+                                {{--<td>{{$stuff->rowId}}</td>--}}
                                 <td class="product-name">
-                                    <a href="{{route('show_product',$row->id)}}">
-                                        <p><strong>{{$row->name}}</strong></p>
+                                    <a href="{{route('show_product',$stuff->product->id)}}">
+                                        <p><strong>{{$stuff->product->title}}</strong></p>
                                     </a>
-                                </td>
-                                <td class="product-quantity">
-                                    <input class="form-control" id="row_id_{{$i}}" type="hidden" name="row_id[]"
-                                           value="{{$row->rowId}}">
-                                    <input class="form-control row_qty" id="row_qty_{{$i}}" type="number"  min="0"
-                                           name="row_qty[]"
-                                           value="{{$row->qty}}">
                                 </td>
                                 <td>
                                     <button type="button" class="btn btn-warning " id="refresh" value="{{$i}}"><i
                                                 class="fa fa-refresh" aria-hidden="true"></i></button>
                                 </td>
-                                <td class="product-price">{{$row->price}}</td>
-                                {{--<td>{{$row->qty*$row->tax}}</td>--}}
-                                <td class="product-subtotal">{{$row->subtotal}}</td>
-                                <td>
-                                    {{--                                <a href="{{route('delete_Cart_item',$row->rowId)}}"><i class="fa fa-times"></i></a>--}}
-                                    <button type="button" class="btn btn-danger " id="delete_row" value="{{$row->rowId}}"><i
-                                                class="fa fa-trash" aria-hidden="true"></i></button>
+                                <td class="product-price">{{$stuff->price}}</td>
+                                <td class="product-price">{{$stuff->discount*$stuff->price}}</td>
+                                <td class="product-price">{{$stuff->qty}}</td>
+
+                                    {{--<td class="product-price">{{$stuff->tax}}</td>--}}
+                                <td class="product-quantity">
+                                    <input class="form-control" id="row_id_{{$i}}" type="hidden" name="row_id[]"
+                                           value="{{$stuff->id}}">
+                                    <input class="form-control row_qty" id="row_qty_{{$i}}" type="number"  min="0" max="{{$stuff->qty}}"
+                                           name="row_qty[]"
+                                           value="{{$stuff->qty}}">
                                 </td>
+                                <td class="product-subtotal">{{(1-$stuff->discount)*($stuff->price*$stuff->qty)}}</td>
+
                             </tr>
                         @endforeach
 
                         </tbody>
                     </table>
                 </div>
-                <div class="row">
-                    <div class="col-md-9 col-sm-7 col-xs-12">
-                        <div class="buttons-cart">
-                            <input type="submit" value="به روز رسانی سبد">
-                            <a href="{{route('products')}}">ادامه خرید</a>
-                            {{--<button type="submit" class="btn btn-success btn-block">refresh all</button>--}}
+                <p class="bg-danger">* توجه در صورت تائید بازگشت کالا مقدار پرداختی شما برای مالیات محاسبه نشده همچنین مبلغ پرداختی شما با احتساب کد تخفیف مورد محاسبه قرار می گیرد.</p>
 
-                        </div>
-                        <div class="coupon">
-                            <h3>کد تخفیف</h3>
-                            <p>کد تخفیف یا کد معرف خود را در صورت وجود وارد نمایید</p>
-                            <input type="text" id="discount_code" placeholder="کد تخفیف">
-                            <div class="col-md-3 col-sm-5 col-xs-12">
-                            <input type="button" id="discount" value="اعمال تخفیف">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-5 col-xs-12">
-                        <div class="cart_totals">
-                            <h2>مجموع سبد</h2>
-                            <div id="pay_value">
-                            <table>
-                                <tbody>
-                                <tr class="cart-subtotal">
-                                    <th>زیر مجموعه</th>
-                                    <td><span class="amount"><?php echo Cart::subtotal(); ?>
-                                            <small>تومان</small></span></td>
-                                </tr>
-                                <tr class="cart-subtotal">
-                                    <th>مالیات</th>
-                                    <td><span class="amount"><?php echo Cart::tax(); ?>
-                                            <small>تومان</small></span></td>
-                                </tr>
-                                <tr class="order-total">
-                                    <th>جمع</th>
-                                    <td>
-                                        <strong><span class="amount"><?php echo Cart::total(); ?>
-                                                <small>تومان</small></span></strong>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            </div>
-                            <div class="wc-proceed-to-checkout">
-                                <a href="{{route('user-checkout')}}">پرداخت</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </form>
-
         {{--<form class="form-horizontal" method="post" action="{{route('Gateway-Request')}}" enctype="multipart/form-data">--}}
             {{--{{csrf_field()}}--}}
             {{--<input type="hidden" class="form-control" name="total_price" value="{{Cart::total()}}">--}}

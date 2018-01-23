@@ -62,11 +62,11 @@
                                                 {{$order->basket->paid}}
                                             </td>
                                             <td style="width:10%">
-                                                <i class="fa fa-truck" aria-hidden="true"></i>
+                                                <i class="fa fa-truck fa-2x" aria-hidden="true"></i>
                                             </td>
                                             <td style="width:20%">
                                                 <a data-toggle="collapse" data-parent="#accordion"
-                                                   href="#collapse{{$i}}">جزئیات سفارش <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> </a>
+                                                   href="#collapse{{$i}}">جزئیات سفارش <i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i> </a>
                                                     {{--{{$order->basket->stuffs->count()}}--}}
                                                     {{--{{$order->basket->stuffs->first()->product->title}}--}}
                                             </td>
@@ -76,8 +76,7 @@
                                 </div>
                                 <div id="collapse{{$i}}" class="panel-collapse collapse">
                                     <div class="panel-heading">
-                                        <p class="bg-info" style="text-align: center">جزئیات سفارش  </p>
-
+                                        <p class="bg-info" style="text-align: center">جزئیات سفارش  <a><i class="fa fa-print " aria-hidden="true"></i></a>   </p>
                                     </div>
                                     <div class="panel-body">
                                         <div class="table-content table-responsive">
@@ -112,7 +111,8 @@
                                                     <h3>{{$order->users_address->name_family}}</h3>
                                                     <p>{{$order->users_address->address}}</p>
                                                     <p>{{$order->users_address->mobile_number}}</p>
-
+                                                    <p><a href="{{route('user-refund_basket',$order->basket->id)}}"><i class="fa fa-reply fa-3x" aria-hidden="true"></i><i class="fa fa-money fa-2x" aria-hidden="true"></i>
+                                                    </a></p>
                                                 </div>
                                             </div>
                                             <div class="col-md-3 col-sm-5 col-xs-12">
@@ -123,6 +123,17 @@
                                                             <th>بهای خالص</th>
                                                             <td><span class="amount">{{$order->basket->price}}
                                                                     <small>تومان</small></span></td>
+                                                        </tr>
+                                                        <tr class='cart-subtotal'>
+                                                            <th>تخفیف</th>
+                                                            <td>
+                                                                <input type="hidden" name="discount_id"
+                                                                       value="{{session()->get('discount_id')}}">
+                                                                <input type="hidden" name="discount_code"
+                                                                       value="{{session()->get('discount_code')}}">
+                                                                <strong><span class='amount'>{{$order->basket->total_discount}}
+                                                                        <small>تومان</small></span></strong>
+                                                            </td>
                                                         </tr>
                                                         <tr class="cart-subtotal">
                                                             <th>مالیات</th>
@@ -136,17 +147,7 @@
                                                                         <small>تومان</small></span></strong>
                                                             </td>
                                                         </tr>
-                                                        <tr class='cart-subtotal'>
-                                                            <th>تخفیف</th>
-                                                            <td>
-                                                                <input type="hidden" name="discount_id"
-                                                                       value="{{session()->get('discount_id')}}">
-                                                                <input type="hidden" name="discount_code"
-                                                                       value="{{session()->get('discount_code')}}">
-                                                                <strong><span class='amount'>{{$order->basket->total_discount}}
-                                                                        <small>تومان</small></span></strong>
-                                                            </td>
-                                                        </tr>
+
                                                         <tr class='order-total'>
                                                             <th> مبلغ محاسبه شده</th>
                                                             <td>

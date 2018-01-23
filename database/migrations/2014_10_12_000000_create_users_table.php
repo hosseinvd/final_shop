@@ -65,7 +65,7 @@ class CreateUsersTable extends Migration
             $table->integer('viewCount')->default('0');
             $table->string('title');
             $table->integer('price');
-            $table->float('discount')->nullable();
+            $table->float('discount',8,4)->nullable();
             $table->integer('inventory');
             $table->string('warranty')->nullable();
             $table->string('color')->nullable();
@@ -134,11 +134,11 @@ class CreateUsersTable extends Migration
             $table->string('type');//type=(Discount,reseller_Discount)
             $table->string('calc_mode');//mode=(MAX,MIN,Value,Percent)
             $table->float('percent')->default(0);
-            $table->float('value')->default(0);
+            $table->float('value',12,4)->default(0);
             $table->integer('numbers')->default(0);
             //marketer who benefit from discount or reseler
-            $table->integer('marketer_id')->unsigned()->index();
-            $table->foreign('marketer_id')->references('id')->on('users');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->string('description')->nullable();
@@ -169,7 +169,7 @@ class CreateUsersTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('users_address_id')->unsigned()->index();
             $table->foreign('users_address_id')->references('id')->on('users_addresses');
-            $table->smallInteger('pay_method');//0=not pay/1=cash/2=check/
+            $table->smallInteger('pay_method');//0=didn't pay/1=cash/2=check/
             $table->timestamps();
         });
 
@@ -186,8 +186,8 @@ class CreateUsersTable extends Migration
             $table->float('tax')->nullable();
             $table->float('total_discount')->nullable();
             $table->float('paid')->nullable();
+            $table->smallInteger('basket_type')->default('0');//normal=0,refund=1
             $table->nullableTimestamps();
-
         });
 
 
@@ -198,10 +198,10 @@ class CreateUsersTable extends Migration
             $table->integer('product_id')->unsigned()->index();
             $table->foreign('product_id')->references('id')->on('products');
             $table->integer('qty');
-            $table->integer('price');
-            $table->integer('tax');
-            $table->integer('total_price');
-            $table->float('discount');
+            $table->float('price');
+            $table->float('tax');
+            $table->float('total_price');
+            $table->float('discount',8,4);
             $table->string('discount_description');
             $table->integer('discount_code');
             $table->timestamps();

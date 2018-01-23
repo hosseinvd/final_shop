@@ -76,6 +76,11 @@ class UserController extends AdminController
         return view('rapiden_layouts.user.Basket');
     }
 
+    public function refund_basket(Basket $basket)
+    {
+       return view('rapiden_layouts.user.refund_basket',compact('basket'));
+    }
+
     public function checkout()
     {
         $user_addresses=Auth::user()->addresses()->get();
@@ -118,11 +123,11 @@ class UserController extends AdminController
         if(!empty($discount_row)) {
             if($discount_row->numbers>0) {
                 if (strcmp($discount_row->calc_mode, 'MAX') == 0) {
-                    $discount = ($discount_row->percent / 100) * Cart::total();
+                    $discount = ($discount_row->percent / 100) * Cart::subtotal();
                     if ($discount < $discount_row->value) $discount = $discount_row->value;
                 }
                 if (strcmp($discount_row->calc_mode, 'MIN') == 0) {
-                    $discount = ($discount_row->percent / 100) * Cart::total();
+                    $discount = ($discount_row->percent / 100) * Cart::subtotal();
                     if ($discount > $discount_row->value) $discount = $discount_row->value;
                 }
                 $discount_row->decrement('numbers');
@@ -131,6 +136,7 @@ class UserController extends AdminController
             $discount=0;
         }
         $pay=Cart::total()-$discount;
+        $discount_percent=$discount/Cart::subtotal();
         $address=Users_address::find($request->address_id);
         $order=Auth::user()->orders()->create(['users_address_id'=>$address->id,
             'pay_method'=>'1']);
@@ -154,7 +160,7 @@ class UserController extends AdminController
             $stuffs->price=$row->price;
             $stuffs->tax=$row->tax;
             $stuffs->total_price=$row->total;
-            $stuffs->discount="1";
+            $stuffs->discount=$discount_percent;
             $stuffs->discount_code=$request->discount_id;
             $stuffs->discount_description=" no discount ";
             $stuffs->save();
@@ -276,11 +282,11 @@ class UserController extends AdminController
                     if(!empty($discount_row)){
 
                         if(strcmp($discount_row->calc_mode,'MAX')==0) {
-                            $discount = ($discount_row->percent / 100) * Cart::total();
+                            $discount = ($discount_row->percent / 100) * Cart::subtotal();
                             if($discount<$discount_row->value)$discount=$discount_row->value;
                         }
                         if(strcmp($discount_row->calc_mode,'MIN')==0) {
-                            $discount = ($discount_row->percent / 100) * Cart::total();
+                            $discount = ($discount_row->percent / 100) * Cart::subtotal();
                             if($discount>$discount_row->value)$discount=$discount_row->value;
                         }
                         session(['discount' => $discount]);

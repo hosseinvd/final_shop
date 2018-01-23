@@ -12,6 +12,6 @@ $factory->define(App\Discount::class, function (Faker $faker) {
         'numbers'=>0,
         'start_date'=>$faker->dateTime('now'),
         'end_date'=>$faker->dateTime('2099-04-25 08:37:17'),
-        'marketer_id'=>$faker->randomElement(\App\User::pluck('id')->toArray()),
+        'user_id'=>$faker->randomElement(\App\User::pluck('id')->toArray()),
     ];
 });

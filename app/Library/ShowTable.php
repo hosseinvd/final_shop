@@ -231,6 +231,12 @@ class ShowTable
                                 <td><span class='amount'>$subtotal <small>تومان</small></span></td>
                             </tr>
                             <tr class='cart-subtotal'>
+                                <th>تخفیف</th>
+                                <td>
+                                    <strong><span class='amount'>$discount <small>تومان</small></span></strong>
+                                </td>
+                            </tr>
+                            <tr class='cart-subtotal'>
                                 <th>مالیات</th>
                                 <td><span class='amount'>$tax <small>تومان</small></span></td>
                             </tr>
@@ -239,13 +245,7 @@ class ShowTable
                                 <td>
                                     <strong><span class='amount'>$total <small>تومان</small></span></strong>
                                 </td>
-                            </tr>
-                            <tr class='order-total'>
-                                <th>تخفیف</th>
-                                <td>
-                                    <strong><span class='amount'>$discount <small>تومان</small></span></strong>
-                                </td>
-                            </tr>
+                            </tr>                            
                             <tr class='order-total'>
                                 <th>مبلغ قابل پرداخت</th>
                                 <td>

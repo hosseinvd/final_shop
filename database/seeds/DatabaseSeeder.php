@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(LaratrustSeeder::class);
         // $this->call(UsersTableSeeder::class);
         $discount = factory(\App\Discount::class, 1)->create();
-        $categories = factory(\App\Category::class, 8)->create();
+        $categories = factory(\App\Category::class, 4)->create();
         $products = factory(\App\Product::class, 8)->create();
         $address=factory(\App\Users_address::class, 24)->create();
 //        $this->call(m_imagesTableSeeder::class);
