@@ -27,4 +27,10 @@ class Basket extends Model
     {
         return $this->belongsTo(Order::class);
     }
+
+    public function refund_basket()
+    {
+        return $this->hasOne(Basket::class , 'children_id' , 'id');
+    }
+
 }

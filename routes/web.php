@@ -32,6 +32,7 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
 
     Route::get('/basket', 'UserController@basket')->name('user-basket');
     Route::get('/refund_basket/{basket}', 'UserController@refund_basket')->name('user-refund_basket');
+    Route::post('/refund_stuffs', 'UserController@refund_stuffs')->name('user-refund_stuffs');
 
     Route::patch('/UpdateCart/', 'UserController@jquery_post')->name('updateCart');
     Route::delete('/UpdateCart/', 'UserController@jquery_post');
@@ -49,6 +50,7 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::any('callback/from/bank','UserController@Getway_back')->name('Gateway-back');
 
     Route::get('/comments', 'UserController@comments')->name('user-comments');
+
 
 });
 
@@ -72,7 +74,11 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
     Route::patch('/EditProducts', 'ProductController@EditProducts_Add_image')->name('a_Edit_Products_Image');
     Route::delete('/EditProducts', 'ProductController@EditProducts_Delete_image')->name('a_Edit_Products_delete_Image');
     Route::post('/UpdateProducts', 'ProductController@Update_Products')->name('a_Update_product');
-//  Page manager routes
+
+
+    Route::get('/Orders', 'OrderController@orders')->name('a_orders');
+
+    //  Page manager routes
     Route::get('/AddPage','PageController@CreatePage')->name('a_show_create_page');
     Route::post('/AddPage','PageController@StorePage')->name('a_Store_page');
     Route::get('/AddPage/{id}','PageController@ShowPage')->name('a_show_page');

@@ -113,7 +113,7 @@
 
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                     <p>
-                                        <label>نام کاربری <span class="required">*</span></label>
+                                        <label>شماره همراه یا ایمیل <span class="required">*</span></label>
 
                                         <input id="email" type="text" class="form-control" name="email"
                                                value="{{ old('email') }}" required>

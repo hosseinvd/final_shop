@@ -165,6 +165,8 @@ class CreateUsersTable extends Migration
 
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('info_user_id')->unsigned()->index();
+            $table->foreign('info_user_id')->references('id')->on('info_users');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('users_address_id')->unsigned()->index();
@@ -175,6 +177,7 @@ class CreateUsersTable extends Migration
 
         Schema::create('baskets', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('children_id')->unsigned()->default(0);
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('order_id')->unsigned()->index();
@@ -187,6 +190,7 @@ class CreateUsersTable extends Migration
             $table->float('total_discount')->nullable();
             $table->float('paid')->nullable();
             $table->smallInteger('basket_type')->default('0');//normal=0,refund=1
+            $table->smallInteger('status')->default('0');//disapproved=0,suspend=1,approved=2
             $table->nullableTimestamps();
         });
 

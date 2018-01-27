@@ -78,7 +78,65 @@ class UserController extends AdminController
 
     public function refund_basket(Basket $basket)
     {
+//        dd($basket->all());
        return view('rapiden_layouts.user.refund_basket',compact('basket'));
+    }
+
+    public function refund_stuffs(Request $request)
+    {
+//        dd($request->all());
+        $parent_basket=Basket::find($request->basket_id);
+
+
+        $basket=new Basket();
+        $basket->children_id=0;
+        $basket->user_id=Auth::user()->id;
+        $basket->order_id=$parent_basket->order->id;
+        $basket->content=$parent_basket->content;
+        $basket->discount_id=$parent_basket->discount_id;
+        $price=0;
+        $total_discount=0;
+        $paid=0;
+
+        $basket->price=$price;
+        $basket->total_discount=$total_discount;
+        $basket->paid=$paid;
+        $basket->save();
+
+        $parent_basket=Basket::find($request->basket_id);
+        $parent_basket->children_id=$basket->id;
+        $parent_basket->save();
+
+        for($x=0;$x<count($request->stuff_id);$x++)
+        {
+            $parent_stuff=Stuff::find($request->stuff_id[$x]);
+            $refund_qty=$parent_stuff->qty-$request->stuff_qty[$x];
+            if($refund_qty>0) {
+                $m_stuffs = new Stuff();
+                $m_stuffs->basket_id = $basket->id;
+                $m_stuffs->product_id = $parent_stuff->product_id;
+                $m_stuffs->qty = $refund_qty;
+                $m_stuffs->price = $parent_stuff->price;
+                $m_stuffs->tax = $parent_stuff->tax;
+                $m_stuffs->total_price = ($parent_stuff->price - $parent_stuff->discount*$parent_stuff->price) * $refund_qty;
+                $m_stuffs->discount = $parent_stuff->discount;
+                $m_stuffs->discount_code = $parent_stuff->discount_code;
+                $m_stuffs->discount_description = "refund stuff";
+                $total_discount = $parent_stuff->discount;
+                $price = $price + $parent_stuff->price * $refund_qty;
+                $m_stuffs->save();
+            }
+        }
+        $paid=$price-$price*$total_discount;
+
+        $basket=Basket::find($basket->id);
+        $basket->price=$price;
+        $basket->total_discount=$total_discount*$price;
+        $basket->paid=$paid;
+        $basket->basket_type=1;
+        $basket->save();
+
+        return redirect()->route('user-orders');
     }
 
     public function checkout()
@@ -105,7 +163,8 @@ class UserController extends AdminController
 
     public function orders()
     {
-        $orders=Auth::user()->orders()->with('users_address','basket')->get();
+        $orders=Auth::user()->orders()->with('users_address','baskets')->get();
+//        dd($orders->all());
         return view('rapiden_layouts.user.oreders',compact('orders'));
     }
 
@@ -138,7 +197,8 @@ class UserController extends AdminController
         $pay=Cart::total()-$discount;
         $discount_percent=$discount/Cart::subtotal();
         $address=Users_address::find($request->address_id);
-        $order=Auth::user()->orders()->create(['users_address_id'=>$address->id,
+        $info_user=Info_user::where('user_id',Auth::user()->id)->first();
+        $order=Auth::user()->orders()->create(['users_address_id'=>$address->id,'info_user_id'=>$info_user->id,
             'pay_method'=>'1']);
         Cart::store(Auth::user()->name,\auth()->id());
         $basket=Auth::user()->baskets()->create([
@@ -150,6 +210,7 @@ class UserController extends AdminController
             'total_discount'=>$discount,
             'paid'=>$pay,
         ]);
+
 
         foreach(Cart::content() as $row)
         {

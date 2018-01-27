@@ -19,9 +19,9 @@
                 </ol>
             </div>
         </div>
-        <form class="form-horizontal" method="post" action="{{route('update_full_basket')}}"
-              enctype="multipart/form-data">
+        <form class="form-horizontal" method="post" action="{{route('user-refund_stuffs')}}" enctype="multipart/form-data">
             {{csrf_field()}}
+            <input  type="hidden" name="basket_id" value="{{$basket->id}}">
             <div id="basket_table">
                 <div class="table-content table-responsive">
                     <table>
@@ -30,7 +30,6 @@
                             <th>ردیف</th>
                             <th class="product-thumbnail">تصویر</th>
                             <th class="product-name">محصول</th>
-                            <th>refresh</th>
                             <th class="product-price">قیمت خالص</th>
                             <th class="product-price"> تخفیف محاسبه شده</th>
                             {{--<th class="product-price">مالیات</th>--}}
@@ -62,20 +61,17 @@
                                         <p><strong>{{$stuff->product->title}}</strong></p>
                                     </a>
                                 </td>
-                                <td>
-                                    <button type="button" class="btn btn-warning " id="refresh" value="{{$i}}"><i
-                                                class="fa fa-refresh" aria-hidden="true"></i></button>
-                                </td>
+
                                 <td class="product-price">{{$stuff->price}}</td>
                                 <td class="product-price">{{$stuff->discount*$stuff->price}}</td>
                                 <td class="product-price">{{$stuff->qty}}</td>
 
                                     {{--<td class="product-price">{{$stuff->tax}}</td>--}}
                                 <td class="product-quantity">
-                                    <input class="form-control" id="row_id_{{$i}}" type="hidden" name="row_id[]"
+                                    <input class="form-control" id="row_id_{{$i}}" type="hidden" name="stuff_id[]"
                                            value="{{$stuff->id}}">
                                     <input class="form-control row_qty" id="row_qty_{{$i}}" type="number"  min="0" max="{{$stuff->qty}}"
-                                           name="row_qty[]"
+                                           name="stuff_qty[]"
                                            value="{{$stuff->qty}}">
                                 </td>
                                 <td class="product-subtotal">{{(1-$stuff->discount)*($stuff->price*$stuff->qty)}}</td>
@@ -85,100 +81,68 @@
 
                         </tbody>
                     </table>
+                    <div class="row">
+                        <div class="col-md-1 col-sm-1 col-xs-12">
+                        </div>
+                        <div class="col-md-7 col-sm-5 col-xs-12">
+
+                        </div>
+                        <div class="col-md-3 col-sm-5 col-xs-12">
+                            <div class="cart_totals">
+                                <table>
+                                    <tbody>
+                                    <tr class="cart-subtotal">
+                                        <th>بهای خالص</th>
+                                        <td><span class="amount">{{$stuff->basket->price}}
+                                                <small>تومان</small></span></td>
+                                    </tr>
+                                    <tr class='cart-subtotal'>
+                                        <th>تخفیف</th>
+                                        <td>
+                                            <input type="hidden" name="discount_id"
+                                                   value="{{session()->get('discount_id')}}">
+                                            <input type="hidden" name="discount_code"
+                                                   value="{{session()->get('discount_code')}}">
+                                            <strong><span class='amount'>{{$stuff->basket->total_discount*$stuff->basket->price}}
+                                                    <small>تومان</small></span></strong>
+                                        </td>
+                                    </tr>
+                                    <tr class="cart-subtotal">
+                                        <th>مالیات</th>
+                                        <td><span class="amount">0
+                                                <small>تومان</small></span></td>
+                                    </tr>
+                                    <tr class="cart-subtotal">
+                                        <th>جمع</th>
+                                        <td>
+                                            <strong><span class="amount">{{$stuff->basket->price-$stuff->basket->total_discount*$stuff->basket->price}}
+                                                    <small>تومان</small></span></strong>
+                                        </td>
+                                    </tr>
+
+                                    <tr class='order-total'>
+                                        <th> مبلغ محاسبه شده</th>
+                                        <td>
+                                            <strong><span class='amount'>{{$stuff->basket->paid}}
+                                                    <small>تومان</small></span></strong>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wc-proceed-to-checkout">
+                        <input type="submit" value="ثبت تغییرات">
+                    </div>
+
                 </div>
                 <p class="bg-danger">* توجه در صورت تائید بازگشت کالا مقدار پرداختی شما برای مالیات محاسبه نشده همچنین مبلغ پرداختی شما با احتساب کد تخفیف مورد محاسبه قرار می گیرد.</p>
 
             </div>
         </form>
-        {{--<form class="form-horizontal" method="post" action="{{route('Gateway-Request')}}" enctype="multipart/form-data">--}}
-            {{--{{csrf_field()}}--}}
-            {{--<input type="hidden" class="form-control" name="total_price" value="{{Cart::total()}}">--}}
-
-            {{--<div class="wc-proceed-to-checkout">--}}
-                {{--<button type="submit" class="btn btn-info ">pay</button>--}}
-            {{--</div>--}}
-
-        {{--</form>--}}
-
-
-        @endsection
-
-        @section('scripts')
-            <script type="text/javascript">
-
-                $(document).ready(function () {
-
-                    $(document).on('click', '#refresh', function (event) {
-                        CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-                        var _method = 'PATCH';
-                        var id = $(this).attr("value");
-                        var row_id = $("#row_id_" + id).val();
-                        var row_qty = $("#row_qty_" + id).val();
-                        if (isNaN(parseInt(row_qty, 10))) {
-                            alert("Input not valid");
-                        } else {
-                            $.post("{{route('updateCart')}}", {
-                                request_name: "basket_update",
-                                'id': id,
-                                'row_id': row_id,
-                                'row_qty': row_qty,
-                                _token: CSRF_TOKEN,
-                                _method: _method,
-                            }, function (data) {
-                                $("#basket_table").html(data);
-                            });
-                        }
-                    });
-
-                    $(document).on('click', '#discount', function (event) {
-                        CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-                        var _method = 'PUT';
-                        var code=$("#discount_code").val();
-                        $.post("{{route('updateCart')}}", {
-                            request_name: "calc_discount",
-                            'code': code,
-                            _token: CSRF_TOKEN,
-                            _method: _method,
-                        }, function (data) {
-                            $("#pay_value").html(data);
-                        });
-
-                    });
-
-                    $(document).on('click', '#delete_row', function (event) {
-                        CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-                        var _method = 'DELETE';
-                        var rowId = $(this).attr("value");
-                        swal({
-                                title: "آیا از عملیات حذف مطمئن هستید",
-                                text: "عملیات حذف محصول",
-                                type: "warning",
-                                showCancelButton: true,
-                                confirmButtonClass: "btn-danger",
-                                confirmButtonText: "بله ",
-                                cancelButtonText: "لغو عملیات",
-                                closeOnConfirm: false,
-                                closeOnCancel: false
-                            },
-                            function (isConfirm) {
-                                if (isConfirm) {
-                                    $.post("{{route('updateCart')}}", {
-                                        request_name: "basket_delete",
-                                        'rowId': rowId,
-                                        _token: CSRF_TOKEN,
-                                        _method: _method,
-                                    }, function (data) {
-                                        $("#basket_table").html(data);
-                                    });
-                                    swal("حذف", "عملیات حذف با موفقیت پایان یافت", "success");
-                                } else {
-                                    swal("لغو", "عملیات لغو گردید", "error");
-                                }
-                            });
-
-                    });
-                });
-
-            </script>
+    </div>
 @endsection
+
+
 

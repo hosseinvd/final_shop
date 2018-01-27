@@ -19,8 +19,7 @@
                 </ol>
             </div>
         </div>
-        <form class="form-horizontal" method="post" action="{{route('Gateway-Request')}}"
-              enctype="multipart/form-data">
+        <form class="form-horizontal" method="post" action="{{route('Gateway-Request')}}" enctype="multipart/form-data">
             {{csrf_field()}}
             <div id="basket_table">
                 <div class="table-content table-responsive">

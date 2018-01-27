@@ -15,7 +15,7 @@
     @yield('styles')
 </head>
 <body>
-@include('partials.header')
+@include('Admin.partials.header')
 <div class="container ">
     @yield('content')
 </div>

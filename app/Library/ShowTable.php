@@ -173,12 +173,14 @@ class ShowTable
                         <input type='submit' value='به روز رسانی سبد'>
                         <a href='$route_products'>ادامه خرید</a>
                     </div>
-                    <div class='coupon'>
-                        <h3>کد تخفیف</h3>
-                        <p>کد تخفیف خود را در صورت وجود وارد نمایید</p>
-                        <input type='text' placeholder='کد تخفیف'>
-                        <input type='submit' value='اعمال تخفیف'>
-                    </div>
+                    <div class=\"coupon\">
+                            <h3>کد تخفیف</h3>
+                            <p>کد تخفیف یا کد معرف خود را در صورت وجود وارد نمایید</p>
+                            <input type=\"text\" id=\"discount_code\" placeholder=\"کد تخفیف\">
+                            <div class=\"col-md-3 col-sm-5 col-xs-12\">
+                            <input type=\"button\" id=\"discount\" value=\"اعمال تخفیف\">
+                            </div>
+                     </div>
                 </div>
                 <div class='col-md-3 col-sm-5 col-xs-12'>
                     <div class='cart_totals'>

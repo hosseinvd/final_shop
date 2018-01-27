@@ -61,6 +61,24 @@ class LaratrustSeeder extends Seeder
                 'password' => bcrypt('password')
             ]);
 
+            $info_user = \App\Info_user::create([
+                'user_id'=>$user->id,
+                'name'=>ucwords(str_replace('_', ' ', $key)),
+                'family'=>ucwords(str_replace('_', ' ', $key)),
+                'national_code'=>1,
+                'phone_number'=>1,
+                'mobile_number'=>1,
+                'country'=>'IRAN',
+                'province'=>'',
+                'city'=>'',
+                'address'=>'',
+                'postal_code'=>'',
+                'user_email'=>$key.'@app.com',
+                'birthday'=>now(),
+                'reseller_code'=>"0",
+                'imagePath'=>'',
+            ]);
+
             $user->attachRole($role);
         }
 

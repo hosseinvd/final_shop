@@ -1,4 +1,4 @@
-@extends('layouts.admin_master')
+@extends('admin.layouts.admin_master')
 @section('title','Admic Create Page')
 @section('content')
     <div class="col-sm-10 center-block" style="margin-top: 2%">

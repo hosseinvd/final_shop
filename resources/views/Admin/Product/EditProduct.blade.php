@@ -1,10 +1,10 @@
-@extends('layouts.admin_master')
+@extends('admin.layouts.admin_master')
 @section('title','Larvel Add Product')
 @section('styles')
     <link rel="stylesheet" href="{{asset('css/dropzone.css')}}"  crossorigin="anonymous">
 @endsection
 @section('content')
-    @include('partials.errors')
+    @include('Admin.partials.errors')
     <br>
 
     <div class="container " >

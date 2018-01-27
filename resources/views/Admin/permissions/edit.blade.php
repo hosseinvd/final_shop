@@ -1,4 +1,4 @@
-@extends('layouts.admin_master')
+@extends('admin.layouts.admin_master')
 @section('title','Admic Create Page')
 @section('content')
   <div class="flex-container" xmlns="http://www.w3.org/1999/html">

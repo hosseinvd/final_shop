@@ -357,6 +357,17 @@
                 @endrole
                 <li class="treeview">
                     <a href="#">
+                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                        <span>سبدهای خرید</span>
+                        <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{route('a_orders')}}"><i class="fa fa-users text-light-blue"
+                                                                  aria-hidden="true"></i>                                همه سفارشات</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
                         <i class="fa fa-file-o" aria-hidden="true"></i> <span>مدیریت صفحات</span>
                         <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
                     </a>

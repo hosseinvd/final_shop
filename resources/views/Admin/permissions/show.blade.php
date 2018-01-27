@@ -1,4 +1,4 @@
-@extends('layouts.admin_master')
+@extends('admin.layouts.admin_master')
 @section('title','Permission ')
 @section('content')
   <div class="flex-container">

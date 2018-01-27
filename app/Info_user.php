@@ -12,4 +12,9 @@ class Info_user extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

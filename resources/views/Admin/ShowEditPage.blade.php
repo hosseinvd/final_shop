@@ -1,4 +1,4 @@
-@extends('layouts.admin_master')
+@extends('admin.layouts.admin_master')
 @section('title','Larvel Shopping Cart')
 @section('content')
     <div class="panel panel-default" id="C_table">
