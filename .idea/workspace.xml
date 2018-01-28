@@ -2,112 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7dea3e0-9911-4ce4-9329-6fd95d114d3f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/00291cb6559b87cac7f09b6be1b1a59d.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/0d0329abed277bce777525b3eb446a37.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/11953c8b2614ec036fe7f486f8ed569b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/12197dffa38062f1637a121a1a673c6f.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/142ff8cdce4001f7fd85f05e8e1a87d2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/164c50782f67acd513bc4d5b2d81fb40.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/2ac3ad9a649790126a76d0f877a39a5a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/2cbcc1b00ed13f5dca2eda499d22e4cf.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/2cc06d71b857cd11ce72e0800db1c4dd.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/2f82e6b07b3fcf33eff85238c32f19d9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/31fd75f7aeb7e65dcfeed2b9bd03988a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/32f3b2feadb38f362e450d42fdcac9fc.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/423683106bbdab9f8943c58a743883ce.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/48e90a33c2ba5d8d79871a5ce1e3f2f4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/62d9e3f60ef0549440e11fdc8f08ce51.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/6561da82e355680951bebc5f6eb8e523.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/67cc674dcd833ebfca51628e3edb3f7e.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/69381cd9442e393c541d0b08a28bb48c.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/70ad814eb826a16274f9ce07ec3a4b7b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/70fd7fe7de48307ce86df50874eff087.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/829eeb261a455558c8b50d0d501c9751.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/89fd686a714e068baefa0e2950ca9bda.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/9df75f68276c3733f91016b51b20d319.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/a42b3ceabbd55766a7aec96badf40220.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/ac2a863f01ff19a50336120c6d30fa0f.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/b19b38fdcf05e5ab08fc0781cabfd176.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/b5d54a33489438b23a4761c8651d5e2e.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/b645d2c5471f400c2ea686f714a2ff60.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/bc7dfc5fd7ad18712ee9e76c2fca7c44.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/bf0dd137329ffdab998aff5944913364.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/c491147ccd72e17366960d4a82c9b084.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/c6858f334d973fe3f25b72ca33bd154b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/d929f06a2c534dbc9919ea66ae7d762b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/d98bc217c08d588fa5eebc2e88c39737.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/d9a253fe35c8a5d15977ee1148bf3e1a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/da717ea1e219fba67f562589b9eae6c7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/e6a982fcaba7c1f9cfee9c58d3215a04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/product_image/eca8ea6ae75bff73f92cf136fbf73952.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/orders/oreders.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/15f526e721731a6afdb77b8902273ba0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/4b80639eb0f972d7ed7269f72b602fb8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/54c2223863418b448be0f49bab375de8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/6c853e218e38c1a1d55da279d4e402fc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/7698a364f84ca0fe1379b54ae93d842e.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/84d465b835af3e0d6e53785e1533be30.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/8c846a75ec5a1d3b0ef8da75916ae4c8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/98893a7ee54e6652c5372327fd9708f3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/a359cdf8ee969002be3453306b551a6a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/b88a60d204d653d543c4790d6d9ce4d0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/c771d771fb38636c8c3a8943daefe460.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/d14681d191ba014818f453497f9525d5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/f1fc13ffe5c3f185a2bd5772373b387b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/product_image/fb67c95848d2e0c9155a3ce06a5a892f.jpg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/BankAccount.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2018_01_28_084417_create_payments_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Basket.php" afterPath="$PROJECT_DIR$/app/Basket.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Info_user.php" afterPath="$PROJECT_DIR$/app/Info_user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Library/ShowTable.php" afterPath="$PROJECT_DIR$/app/Library/ShowTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Order.php" afterPath="$PROJECT_DIR$/app/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/factories/ImageFactory.php" afterPath="$PROJECT_DIR$/database/factories/ImageFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/LaratrustSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/LaratrustSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Comment/Comments.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Comment/Comments.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Comment/disapprove.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Comment/disapprove.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/CreatePage.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/CreatePage.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/CreateProductCategory.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/CreateProductCategory.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Dashboard.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/EditPage.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/EditPage.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Product/CreateProducts.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Product/CreateProducts.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Product/EditProduct.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Product/EditProduct.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Product/Products.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Product/Products.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Product/show_product.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Product/show_product.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/ShowEditPage.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/ShowEditPage.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/ShowPage.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/ShowPage.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Users/Create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Users/Create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Users/Edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Users/Edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Users/Show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Users/Show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Users/UserPermission.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Users/UserPermission.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Users/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Users/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/add_product.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/add_product.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/permissions/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/permissions/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/permissions/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/permissions/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/permissions/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/permissions/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/permissions/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/permissions/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/roles/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/roles/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/roles/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/roles/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/roles/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/roles/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/roles/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/roles/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/rapiden_layouts/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/oreders.blade.php" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/oreders.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/payment.blade.php" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/payment.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/refund_basket.blade.php" afterPath="$PROJECT_DIR$/resources/views/rapiden_layouts/user/refund_basket.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/7a08adde1af86d04373ac8eb9f623aa1.jpg" afterPath="$PROJECT_DIR$/public/product_image/648fc8b4787d2f56b4369194433c6246.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/product_image/85fa7723399960a3140e4b93b5552658.jpg" afterPath="$PROJECT_DIR$/public/product_image/301d033119827ff3c47b449c1ff75002.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/layouts/admin_master.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/layouts/admin_master.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/layouts/app.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/layouts/comment.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/layouts/comment.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/layouts/errors.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/layouts/errors.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/layouts/master.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/partials/errors.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/partials/errors.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/partials/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -121,34 +22,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Order.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="0">
               <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="oreders.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="oreders.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/orders/oreders.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="180">
               <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-              <folding>
-                <element signature="e#460#12759#0#HTML" expanded="false" />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_10_12_000000_create_users_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="204" column="29" lean-forward="false" selection-start-line="204" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,7 +55,7 @@
       <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
+            <state relative-caret-position="200">
               <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding>
                 <element signature="e#40#54#0#PHP" expanded="true" />
@@ -168,7 +67,7 @@
       <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="320">
               <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
               <folding />
             </state>
@@ -178,18 +77,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
+            <state relative-caret-position="1500">
               <caret line="75" column="15" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageFactory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/factories/ImageFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="91" lean-forward="false" selection-start-line="6" selection-start-column="91" selection-end-line="6" selection-end-column="91" />
               <folding />
             </state>
           </provider>
@@ -198,10 +87,10 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+            <state relative-caret-position="5200">
+              <caret line="279" column="0" lean-forward="false" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
               <folding>
-                <marker date="1517072827777" expanded="true" signature="1983:1992" ph="{...}" />
+                <marker date="1517124078079" expanded="true" signature="11806:11933" ph="..." />
               </folding>
             </state>
           </provider>
@@ -210,8 +99,8 @@
       <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="115" column="67" lean-forward="false" selection-start-line="115" selection-start-column="67" selection-end-line="115" selection-end-column="67" />
+            <state relative-caret-position="2300">
+              <caret line="115" column="77" lean-forward="false" selection-start-line="115" selection-start-column="77" selection-end-line="115" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -268,11 +157,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="php artisan db:seed" />
-      <command text="php artisan migrate:fresh" />
-      <command text="php artisan db:seed" />
-      <command text="php artisan migrate:fresh" />
-      <command text="php artisan db:seed" />
       <command text="php artisan migrate" />
       <command text="php artisan migrate:fresh" />
       <command text="php artisan db:seed" />
@@ -293,19 +177,19 @@
       <command text="php artisan db:seed" />
       <command text="php artisan migrate:fresh" />
       <command text="php artisan db:seed" />
+      <command text="php artisan make:migration BankAccounts -m" />
+      <command text="php artisan make --h" />
+      <command text="php artisan make:model BankAccount -m" />
+      <command text="php artisan make:model Payments -m" />
+      <command text="php artisan make:model Payment -m" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/rapiden_layouts/user/profile.blade.php" />
-        <option value="$PROJECT_DIR$/database/factories/Users_addressesFactory.php" />
         <option value="$PROJECT_DIR$/database/seeds/m_imagesTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/DiscountTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/factories/DiscountFactory.php" />
@@ -355,6 +239,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/orders/oreders.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_01_28_073526_create_bank_accounts_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_01_28_084417_create_payments_table.php" />
       </list>
     </option>
   </component>
@@ -508,77 +394,41 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Final_Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final_Shop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="rapiden_layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="final_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_shop" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -681,11 +531,13 @@
       <workItem from="1516717383684" duration="9147000" />
       <workItem from="1516889770096" duration="12717000" />
       <workItem from="1517062809677" duration="10507000" />
+      <workItem from="1517124301189" duration="3916000" />
+      <workItem from="1517129802402" duration="54000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="445313000" />
+    <option name="totallyTimeSpent" value="449283000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -697,13 +549,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19669509" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35732815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28726876" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -714,6 +565,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3867792" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -752,24 +604,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/payment.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="89" lean-forward="false" selection-start-line="21" selection-start-column="89" selection-end-line="21" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/user/refund_basket.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="143" column="10" lean-forward="false" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
-          <folding>
-            <element signature="e#4143#7151#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Basket.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
@@ -790,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,7 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,7 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -838,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -846,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,7 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -870,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -878,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -886,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -902,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -918,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -926,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -958,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -966,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -974,7 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,7 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -990,7 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -998,7 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,7 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,15 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15159">
           <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,14 +834,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="365" column="132" lean-forward="false" selection-start-line="365" selection-start-column="132" selection-end-line="365" selection-end-column="132" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        <state relative-caret-position="460">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1054,15 +849,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/factories/ImageFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="120">
           <caret line="6" column="91" lean-forward="false" selection-start-line="6" selection-start-column="91" selection-end-line="6" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1159">
           <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="84" column="30" lean-forward="true" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,14 +877,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="966">
           <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="115" column="67" lean-forward="false" selection-start-line="115" selection-start-column="67" selection-end-line="115" selection-end-column="67" />
+        <state relative-caret-position="2300">
+          <caret line="115" column="77" lean-forward="false" selection-start-line="115" selection-start-column="77" selection-end-line="115" selection-end-column="77" />
           <folding />
         </state>
       </provider>
@@ -1108,7 +898,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="0">
           <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding />
         </state>
@@ -1118,23 +908,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret line="75" column="27" lean-forward="false" selection-start-line="63" selection-start-column="12" selection-end-line="79" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+        <state relative-caret-position="5200">
+          <caret line="279" column="0" lean-forward="false" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
           <folding>
-            <marker date="1517072827777" expanded="true" signature="1983:1992" ph="{...}" />
+            <marker date="1517124078079" expanded="true" signature="11806:11933" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="320">
           <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
           <folding />
         </state>
@@ -1142,7 +931,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/rapiden_layouts/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
+        <state relative-caret-position="1500">
           <caret line="75" column="15" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
@@ -1150,7 +939,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
+        <state relative-caret-position="200">
           <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
@@ -1160,11 +949,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/orders/oreders.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="180">
           <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-          <folding>
-            <element signature="e#460#12759#0#HTML" expanded="false" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_28_084417_create_payments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_01_28_073526_create_bank_accounts_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="204" column="29" lean-forward="false" selection-start-line="204" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
