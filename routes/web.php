@@ -34,9 +34,7 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/refund_basket/{basket}', 'UserController@refund_basket')->name('user-refund_basket');
     Route::post('/refund_stuffs', 'UserController@refund_stuffs')->name('user-refund_stuffs');
 
-    Route::patch('/UpdateCart/', 'UserController@jquery_post')->name('updateCart');
-    Route::delete('/UpdateCart/', 'UserController@jquery_post');
-    Route::put('/UpdateCart/', 'UserController@jquery_post');
+    Route::post('/UpdateCart/', 'UserController@jquery_post')->name('updateCart');
 
     Route::post('/update_full_basket/','UserController@update_full_basket')->name('update_full_basket');
     Route::get('/delete_Cart_item/{rowId}', 'UserController@delete_Cart_item')->name('delete_Cart_item');
@@ -50,6 +48,8 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::any('callback/from/bank','UserController@Getway_back')->name('Gateway-back');
 
     Route::get('/comments', 'UserController@comments')->name('user-comments');
+
+    Route::get('/bank_account', 'UserController@bank_account')->name('user-bank_account');
 
 
 });

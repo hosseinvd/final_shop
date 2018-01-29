@@ -13,7 +13,7 @@
                 <li><a href={{route('user-comments')}}>نظرات من</a></li>
                 <li><a href="#">امور مالی</a>
                     <ul>
-                        <li><a href="wishlist.html">پرداختها</a></li>
+                        <li><a href={{route('user-bank_account')}}>گزارش مالی</a></li>
                         <li><a href="cart.html">صفحه سبد خرید</a></li>
                     </ul>
                 </li>

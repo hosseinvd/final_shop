@@ -157,7 +157,7 @@
 
                     $(document).on('click', '#refresh', function (event) {
                         CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-                        var _method = 'PATCH';
+                        var _method = 'POST';
                         var id = $(this).attr("value");
                         var row_id = $("#row_id_" + id).val();
                         var row_qty = $("#row_qty_" + id).val();
@@ -179,7 +179,7 @@
 
                     $(document).on('click', '#discount', function (event) {
                         CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-                        var _method = 'PUT';
+                        var _method = 'POST';
                         var code=$("#discount_code").val();
                         $.post("{{route('updateCart')}}", {
                             request_name: "calc_discount",
@@ -194,7 +194,7 @@
 
                     $(document).on('click', '#delete_row', function (event) {
                         CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-                        var _method = 'DELETE';
+                        var _method = 'POST';
                         var rowId = $(this).attr("value");
                         swal({
                                 title: "آیا از عملیات حذف مطمئن هستید",

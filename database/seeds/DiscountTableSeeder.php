@@ -17,11 +17,12 @@ class DiscountTableSeeder extends Seeder
         'code' => 'HVD',
         'type' => 'reseller_Discount',
         'calc_mode'=>'MIN',
+        'commission'=>10,
         'percent'=>10,
         'value' => 25,
         'numbers'=>10000,
         'start_date'=>$faker->dateTime('now'),
         'end_date'=>$faker->dateTime('2099-04-25 08:37:17'),
-        'user_id'=>1]);
+        'user_id'=>2]);
     }
 }

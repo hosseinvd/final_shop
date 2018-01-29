@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\BankAccount;
 use App\Basket;
 use App\Discount;
 use App\Info_user;
@@ -9,12 +10,14 @@ use App\Library\ShowTable;
 use App\Order;
 use App\Product;
 use App\m_image;
+use App\Reseller;
 use App\Stuff;
 use App\Users_address;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 use Larabookir\Gateway\Gateway;
 use App\Category;
@@ -22,6 +25,7 @@ use App\Http\Requests\StoreProduct;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use SebastianBergmann\Environment\Console;
 
 class UserController extends AdminController
 {
@@ -29,8 +33,12 @@ class UserController extends AdminController
     public function profile()
     {
         $user_info=Auth::user()->info_user()->first();
-//        dd($user_info);
-        return view('rapiden_layouts.user.profile',compact('user_info'));
+        $user_discount=Auth::user()->discount()->first();
+        $seller=Reseller::where('reseller_id','=',Auth::user()->id)->first();
+        $resellers=Auth::user()->resellers()->with('reseller_info')->get();
+
+//        dd($resellers);
+        return view('rapiden_layouts.user.profile',compact('user_info','seller','user_discount','resellers'));
     }
     public function enter_user_info()
     {
@@ -69,10 +77,6 @@ class UserController extends AdminController
 
     public function basket()
     {
-        session(['discount_code' => "null"]);
-        session(['discount' => "0"]);
-        session(['discount_id'=>"1"]);
-
         return view('rapiden_layouts.user.Basket');
     }
 
@@ -86,7 +90,6 @@ class UserController extends AdminController
     {
 //        dd($request->all());
         $parent_basket=Basket::find($request->basket_id);
-
 
         $basket=new Basket();
         $basket->children_id=0;
@@ -174,9 +177,17 @@ class UserController extends AdminController
         return view('rapiden_layouts.user.comments',compact('comments'));
     }
 
+
+
+    public function bank_account()
+    {
+        $bank_interactions=Auth::user()->bankaccounts()->with('payer')->get();
+        return view('rapiden_layouts.user.bank_account',compact('bank_interactions'));
+    }
+
     public function Getway_request(Request $request)
     {
-//        dd($request->all());
+        // calculate amount of discount
         $discount_row=Discount::where('code','=',$request->discount_code)->first();
 
         if(!empty($discount_row)) {
@@ -194,7 +205,10 @@ class UserController extends AdminController
         }else{
             $discount=0;
         }
+
+        // create order And Basket And Stuff
         $pay=Cart::total()-$discount;
+
         $discount_percent=$discount/Cart::subtotal();
         $address=Users_address::find($request->address_id);
         $info_user=Info_user::where('user_id',Auth::user()->id)->first();
@@ -226,10 +240,60 @@ class UserController extends AdminController
             $stuffs->discount_description=" no discount ";
             $stuffs->save();
         }
-        Cart::destroy();
+
+        // pay commission to seller and reseller
+        $discount_row=Discount::where('code','=',$request->discount_code)->first();
+        if(!empty($discount_row)) {
+            if(strcmp($discount_row->type,'reseller_Discount')==0)
+            {
+                if($discount_row->user_id==Auth::user()->id){
+                    $type=1;
+                }else{
+                    $type=3;
+                }
+                $commission=$discount_row->commission/100*Cart::subtotal();
+                $user_commission=$discount_row->user_id;
+                $bank_account=BankAccount::create([
+                    'money'=>$commission,
+                    'user_id'=>$user_commission,
+                    'payer_id'=>Auth::user()->id,
+                    'pay_to_id'=>$user_commission,
+                    'type'=>$type,
+                    'commission_paid'=>0,
+                    'basket_id'=>$basket->id,
+                ]);
+
+                $reseller=Reseller::where('reseller_id','=',$user_commission)->first();
+                if(!empty($reseller)) {
+                    $bank_account=BankAccount::create([
+                        'money'=>-1*$commission * $reseller->commission / 100,
+                        'user_id'=>$user_commission,
+                        'payer_id'=>$user_commission,
+                        'pay_to_id'=>$reseller->user->id,
+                        'type'=>4,
+                        'commission_paid'=>1,
+                        'basket_id'=>$basket->id,
+                    ]);
+
+                    $bank_account = BankAccount::create([
+                        'money' => $commission * $reseller->commission / 100,
+                        'user_id' => $reseller->user->id,
+                        'payer_id' => $user_commission,
+                        'pay_to_id'=>$reseller->user->id,
+                        'type' => 3,
+                        'commission_paid' => 0,
+                        'basket_id' => $basket->id,
+                    ]);
+                }
+
+            }
+        }
+
         session(['discount_code' => "null"]);
         session(['discount' => "0"]);
         session(['discount_id'=>"1"]);
+        Cart::destroy();
+
         return redirect()->route('user-orders');
 //        dd($request->all());
 //        try {
@@ -292,7 +356,7 @@ class UserController extends AdminController
         for ($i=0;$i<count($request->row_id);$i++){
             Cart::update($request->row_id[$i],$request->row_qty[$i]);
         }
-        return redirect()->back();
+        return redirect()->route('user-basket');
     }
 
 
@@ -339,16 +403,23 @@ class UserController extends AdminController
                 case "calc_discount":
                     session(['discount_code' => $request->code]);
                     $discount_row=Discount::where('code','=',$request->code)->first();
-//                    $discount_row->decrement('numbers');
                     if(!empty($discount_row)){
-
+                        $discount=0.00000;
+//                        $discount_row->decrement('numbers');
                         if(strcmp($discount_row->calc_mode,'MAX')==0) {
                             $discount = ($discount_row->percent / 100) * Cart::subtotal();
-                            if($discount<$discount_row->value)$discount=$discount_row->value;
+                            if($discount<$discount_row->value){
+                                $discount=$discount_row->value;
+                            }
                         }
                         if(strcmp($discount_row->calc_mode,'MIN')==0) {
-                            $discount = ($discount_row->percent / 100) * Cart::subtotal();
-                            if($discount>$discount_row->value)$discount=$discount_row->value;
+//                            $x=str_replace(",", "", Cart::subtotal());
+//                            Log::info('discount'.$x);
+
+                            $discount = (($discount_row->percent / 100) * (Cart::subtotal()));
+                            if($discount>$discount_row->value){
+                                $discount=$discount_row->value;
+                            }
                         }
                         session(['discount' => $discount]);
                         session(['discount_id' => $discount_row->id]);

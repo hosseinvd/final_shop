@@ -7,6 +7,7 @@ $factory->define(App\Discount::class, function (Faker $faker) {
         'code' => 'null_discount',
         'type' => 'admin',
         'calc_mode'=>'MAX',
+        'commission'=>10,
         'percent'=>0,
         'value' => 0,
         'numbers'=>0,

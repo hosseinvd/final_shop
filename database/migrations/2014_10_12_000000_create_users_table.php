@@ -136,7 +136,7 @@ class CreateUsersTable extends Migration
             $table->float('percent')->default(0);
             $table->float('value',12,4)->default(0);
             $table->integer('numbers')->default(0);
-            //marketer who benefit from discount or reseler
+            //marketer who benefit from discount or reseller
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
             $table->dateTime('start_date');

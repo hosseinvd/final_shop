@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs">
                     <div class="header-top-right">
-                        <span><a href="#">تلفن تماس: </a><span class="ltr_text">(+1)866-550-3669</span></span>
+                        <span><a href="#">تلفن تماس: </a><span class="ltr_text">09132948649</span></span>
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-8">

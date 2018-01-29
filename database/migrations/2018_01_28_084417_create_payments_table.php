@@ -19,8 +19,7 @@ class CreatePaymentsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->smallInteger('pay_method');//0=didn't pay/1=cash/2=check/
             $table->float('price',10,4);
-            $table->smallInteger('pay_method');//0=didn't pay/1=cash/2=check/
-            $table->boolean('refund')->default('false');
+            $table->smallInteger('refund')->default(0);
             $table->timestamps();
         });
     }

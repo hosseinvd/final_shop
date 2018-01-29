@@ -1,4 +1,4 @@
-@extends('admin.layouts.admin_master')sdfsdafaaaa
+@extends('admin.layouts.admin_master')
 @section('title','Orders')
 
 
