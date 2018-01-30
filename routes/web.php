@@ -96,6 +96,8 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
 
     Route::resource('comments','CommentController');
     Route::get('disapprove','CommentController@disapprove')->name('a_disapprove_comment');
+//discount Page
+    Route::resource('discount','DiscountController');
 
 // jquery post request to page update
     Route::post('/Update','AdminController@jquery_post');

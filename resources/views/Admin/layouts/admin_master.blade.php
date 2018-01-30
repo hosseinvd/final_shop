@@ -340,17 +340,21 @@
                 <li class="active"><a href="{{route('a_Dashboard')}}"><i class="fa fa-dashboard text-red "></i> <span>داشبورد</span></a>
                 </li>
                 @role('superadministrator|administrator')
-                <li class="treeview">
-                    <a href="#">
+
+                @if(Route::currentRouteName()=='a_CreateProductCategory' or Route::currentRouteName()=='a_CreateProducts' or Route::currentRouteName()=='a_Products')<li class="treeview active">@else<li class="treeview" >@endif
+                    <a href="{{route('a_Products')}}">
                         <i class="fa fa-product-hunt"></i> <span>محصولات</span>
                         <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li ><a href="{{route('a_CreateProductCategory')}}"><i
+                        @if(Route::currentRouteName()=='a_CreateProductCategory')<li class="active">@else<li >@endif
+                            <a href="{{route('a_CreateProductCategory')}}"><i
                                         class="fa fa-circle-o text-light-blue "></i> ایجاد دسته جدید</a></li>
-                        <li ><a href="{{route('a_CreateProducts')}}"><i
+                        @if(Route::currentRouteName()=='a_CreateProducts')<li class="active">@else<li >@endif
+                            <a href="{{route('a_CreateProducts')}}"><i
                                         class="fa fa-circle-o text-light-blue"></i> ایجاد محصول جدید</a></li>
-                        <li ><a href="{{route('a_Products')}}"><i
+                        @if(Route::currentRouteName()=='a_Products')<li class="active">@else<li >@endif
+                            <a href="{{route('a_Products')}}"><i
                                         class="fa fa-circle-o text-light-blue"></i>مشاهده و ویرایش محصولات </a></li>
                     </ul>
                 </li>
@@ -415,6 +419,18 @@
                                 نظرات تائید نشده
                                 {{$approved=\App\Comment::where('approved',0)->count()}}
                             </a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                        <span>تخفیف ها و بازاریاب ها</span>
+                        <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{route('discount.create')}}"><i class="fa fa-code" aria-hidden="true"></i>ایجاد تخفیف </a></li>
+                        <li><a href="{{route('discount.index')}}"><i class="fa fa-code" aria-hidden="true"></i> تخفیف ها </a></li>
 
                     </ul>
                 </li>
