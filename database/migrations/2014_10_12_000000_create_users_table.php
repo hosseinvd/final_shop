@@ -42,8 +42,12 @@ class CreateUsersTable extends Migration
             $table->boolean('gender')->default(0);
             $table->string('user_email')->unique();
             $table->date('birthday');
-            $table->integer('reseller_code');
             $table->string('imagePath')->default('null');
+            // seller id means some one who benefit from your sell and get commission
+            $table->integer('seller_id')->unsigned()->index();
+            $table->foreign('seller_id')->references('id')->on('users');
+            $table->float('commission',8,2)->default(0);//0<commission<100
+
             $table->softDeletes();
             $table->timestamps();
         });

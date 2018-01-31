@@ -75,8 +75,9 @@ class LaratrustSeeder extends Seeder
                 'postal_code'=>'',
                 'user_email'=>$key.'@app.com',
                 'birthday'=>now(),
-                'reseller_code'=>"0",
                 'imagePath'=>'',
+                'seller_id'=>'1',
+                'commission'=>'10'
             ]);
 
             $user->attachRole($role);

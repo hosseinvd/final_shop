@@ -34,11 +34,10 @@ class UserController extends AdminController
     {
         $user_info=Auth::user()->info_user()->first();
         $user_discount=Auth::user()->discount()->first();
-        $seller=Reseller::where('reseller_id','=',Auth::user()->id)->first();
-        $resellers=Auth::user()->resellers()->with('reseller_info')->get();
+//        $seller=Reseller::where('reseller_id','=',Auth::user()->id)->first();
+//        $seller=Auth::user()->info_user()->with('seller')->get();
 
-//        dd($resellers);
-        return view('rapiden_layouts.user.profile',compact('user_info','seller','user_discount','resellers'));
+        return view('rapiden_layouts.user.profile',compact('user_info','user_discount'));
     }
     public function enter_user_info()
     {
@@ -55,7 +54,8 @@ class UserController extends AdminController
             $imagesUrl = $this->upload_profile_Images($file);
 //            $imagesUrl['images']['900']
         }
-        $user_info=Auth::user()->info_user()->create([
+
+        $user_info=Auth::user()->info_user()->update([
             'name'=>$request->name,
             'family'=>$request->family,
             'national_code'=>$request->national_code,
@@ -68,7 +68,6 @@ class UserController extends AdminController
             'postal_code'=>$request->postal_code,
             'user_email'=>$request->user_email,
             'birthday'=>$request->birthday,
-            'reseller_code'=>"0",
             'imagePath'=>$imagesUrl['images']['400'],
         ]);
 
@@ -263,13 +262,15 @@ class UserController extends AdminController
                     'basket_id'=>$basket->id,
                 ]);
 
-                $reseller=Reseller::where('reseller_id','=',$user_commission)->first();
+//                $reseller=Reseller::where('reseller_id','=',$user_commission)->first();
+                $reseller=Info_user::where('user_id','=',$user_commission)->first();
+
                 if(!empty($reseller)) {
                     $bank_account=BankAccount::create([
                         'money'=>-1*$commission * $reseller->commission / 100,
                         'user_id'=>$user_commission,
                         'payer_id'=>$user_commission,
-                        'pay_to_id'=>$reseller->user->id,
+                        'pay_to_id'=>$reseller->seller_id,
                         'type'=>4,
                         'commission_paid'=>1,
                         'basket_id'=>$basket->id,
@@ -277,9 +278,9 @@ class UserController extends AdminController
 
                     $bank_account = BankAccount::create([
                         'money' => $commission * $reseller->commission / 100,
-                        'user_id' => $reseller->user->id,
+                        'user_id' => $reseller->seller_id,
                         'payer_id' => $user_commission,
-                        'pay_to_id'=>$reseller->user->id,
+                        'pay_to_id'=>$reseller->seller_id,
                         'type' => 3,
                         'commission_paid' => 0,
                         'basket_id' => $basket->id,

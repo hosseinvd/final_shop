@@ -82,11 +82,11 @@
                             @if(!empty($user_discount))
                                 @if(strcmp($user_discount->type,'reseller_Discount')==0)
                                     <h2>شما زیر مجموعه </h2>
-                                    <p><strong>کاربر: </strong> {{$seller->user->user_name}} </p>
-                                    @if(!empty($resellers))
+                                    <p><strong>کاربر: </strong> {{$user_info->seller->family}} </p>
+                                    @if(!empty($user_info->resellers))
                                         <h2>زیر مجموعه های شما </h2>
-                                        @foreach($resellers as $reseller)
-                                            <p><strong>کاربر</strong>{{$reseller->reseller_info->user_name}}</p>
+                                        @foreach($user_info->resellers as $reseller)
+                                            <p><strong>کاربر</strong>{{$reseller->family}}</p>
                                         @endforeach
                                     @endif
                                     <h2>کد بازاریاب و تخفیف</h2>

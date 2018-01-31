@@ -24,5 +24,7 @@ class DiscountTableSeeder extends Seeder
         'start_date'=>$faker->dateTime('now'),
         'end_date'=>$faker->dateTime('2099-04-25 08:37:17'),
         'user_id'=>2]);
+
+
     }
 }
