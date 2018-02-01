@@ -83,8 +83,9 @@ class RegisterController extends Controller
             'postal_code'=>'',
             'user_email'=>$data['email'],
             'birthday'=>now(),
-            'reseller_code'=>"0",
             'imagePath'=>'',
+            'seller_id'=>'1',
+            'commission'=>'0'
         ]);
         return $user;
 

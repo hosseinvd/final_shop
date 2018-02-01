@@ -46,20 +46,34 @@ class AclController extends Controller
             'email'=>'required|email|unique:users'
         ]);
         $password=trim($request->password);
-        $user=new User();
-        $user->name=$request->name;
-        $user->email=$request->email;
-        $user->password=Hash::make($password);
-        $user->save();
-        if ($request->Role_select) {
-            $user->syncRoles($request->Role_select);
-        }
-        if($user->save()){
-            return redirect()->route('users.show',$user->id);
-        }else{
-            Session::flash('danger','Sorry a problem occurred while creating this user.');
-            return redirect()->route('users.create');
-        }
+
+        $user=User::create([
+            'name' => $request->name,
+            'user_name'=>$request->email,
+            'email'=>$request->email,
+            'password' => Hash::make($password),
+        ]);
+        $info_user = \App\Info_user::create([
+            'user_id'=>$user->id,
+            'name'=>$request->name,
+            'family'=>$request->name,
+            'national_code'=>1,
+            'phone_number'=>1,
+            'mobile_number'=>1,
+            'country'=>'IRAN',
+            'province'=>'',
+            'city'=>'',
+            'address'=>'',
+            'postal_code'=>'',
+            'user_email'=>$request->email,
+            'birthday'=>now(),
+            'imagePath'=>'',
+            'seller_id'=>'1',
+            'commission'=>'0'
+        ]);
+
+        return redirect()->route('users.show',$user->id);
+
     }
 
     public function show($id)

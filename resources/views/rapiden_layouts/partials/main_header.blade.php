@@ -15,7 +15,7 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-2x" aria-hidden="true" ></i>  Guest <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a  data-toggle="modal" href="#myModal">Login</a></li>
+                                        <li><a  data-toggle="modal" href="{{route('register')}}">Login</a></li>
                                         <li><a href="{{route('register')}}">register</a></li>
                                     </ul>
                                 </li>

@@ -32,7 +32,7 @@
     </div>
     <div class="col-md-12 panel panel-info">
         <div class="panel-body">
-        @include('layouts.comment' , ['comments' => $comments , 'subject' => $product])
+        @include('admin.layouts.comment' , ['comments' => $comments , 'subject' => $product])
         </div>
     </div>
 @endsection

@@ -2,7 +2,7 @@
 @if(auth()->check())
     <div class="well">
         <h4>ثبت نظر :</h4>
-        @include('layouts.errors')
+        @include('admin.layouts.errors')
         <form role="form" action="/comment" method="post">
             {{ csrf_field() }}
             <input type="hidden" name="parent_id" value="0">

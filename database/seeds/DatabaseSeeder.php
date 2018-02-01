@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         $address=factory(\App\Users_address::class, 24)->create();
 //        $this->call(m_imagesTableSeeder::class);
         $this->call(DiscountTableSeeder::class);
-        $images = factory(\App\m_image::class, 12)->create();
+        $images = factory(\App\m_image::class, 16)->create();
 
     }
 }

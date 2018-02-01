@@ -404,6 +404,8 @@ class UserController extends AdminController
                 case "calc_discount":
                     session(['discount_code' => $request->code]);
                     $discount_row=Discount::where('code','=',$request->code)->first();
+                    Log::info('discount'.$discount_row);
+
                     if(!empty($discount_row)){
                         $discount=0.00000;
 //                        $discount_row->decrement('numbers');

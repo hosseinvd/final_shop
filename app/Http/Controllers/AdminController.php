@@ -65,6 +65,8 @@ class AdminController extends Controller
             switch ($request_name) {
                 case "user_name":
                     return $showtable->find_user($request->user_name);
+                case "user_sel":
+                    return $showtable->user_sel($request->user_name);
                 case "role_relect":
                     return $showtable->user_sort_role($request->role_id);
 

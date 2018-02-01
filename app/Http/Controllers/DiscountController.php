@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Discount;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Morilog\Jalali\jDateTime;
 
 class DiscountController extends Controller
 {
@@ -36,7 +38,29 @@ class DiscountController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $s_date = explode('-', $request->start_date);
+        $s_date_m=jDateTime::toGregorian($s_date[0], $s_date[1], $s_date[2]); // [2016, 5, 7]
+        $s_date_m=Carbon::createFromDate($s_date_m[0],$s_date_m[1],$s_date_m[2]);
+
+        $e_date = explode('-', $request->end_date);
+        $e_date_m=jDateTime::toGregorian($e_date[0], $e_date[1], $e_date[2]); // [2016, 5, 7]
+        $e_date_m=Carbon::createFromDate($e_date_m[0],$e_date_m[1],$e_date_m[2]);
+        //dd($request->all());
+        $discount=Discount::create([
+           'code'=>$request->code,
+            'commission'=>$request->commission,
+            'type'=>$request->type,
+            'calc_mode'=>$request->calc_mode,
+            'percent'=>$request->percent,
+            'value'=>$request->value,
+            'numbers'=>$request->numbers,
+            'user_id'=>$request->user_id,
+            'start_date'=>$s_date_m,
+            'end_date'=>$e_date_m,
+            'description'=>$request->description
+        ]);
+        return redirect()->back();
     }
 
     /**

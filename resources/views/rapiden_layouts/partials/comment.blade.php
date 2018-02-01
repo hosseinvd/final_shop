@@ -54,7 +54,7 @@
 
 @if(auth()->check())
     <div class="well">
-        @include('layouts.errors')
+        @include('admin.layouts.errors')
 
         <div class="comments-form">
             <div class="row">

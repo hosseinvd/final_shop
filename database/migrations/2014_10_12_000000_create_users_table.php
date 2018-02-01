@@ -135,8 +135,8 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('code')->unique();
             $table->float('commission')->default(0);
-            $table->string('type');//type=(Discount,reseller_Discount)
-            $table->string('calc_mode');//mode=(MAX,MIN,Value,Percent)
+            $table->string('type');//type=(Discount=1,reseller_Discount,reseller)
+            $table->string('calc_mode');//mode=(MAX,MIN,VALUE,PERCENT)
             $table->float('percent')->default(0);
             $table->float('value',12,4)->default(0);
             $table->integer('numbers')->default(0);
