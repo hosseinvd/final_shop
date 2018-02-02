@@ -2,11 +2,11 @@
     <div class="mainmenu bg-color-4 ">
         <nav>
             <ul>
-                <li class="active"><a href={{route('products')}}>پروفایل من</a>
+                <li class="active"><a href="">پروفایل من</a>
                     <ul>
-                        <li><a href={{route('enter_user_info')}}>پروفایل من</a></li>
-                        <li><a href={{route('products')}}>وضعیت </a></li>
-                        <li><a href={{route('products')}}>اطلاعات مشتری</a></li>
+                        <li><a href={{route('u_user-profile')}}>پروفایل من</a></li>
+                        <li><a href={{route('enter_user_info')}}>ویرایش اطلاعات</a></li>
+                        <li><a href={{route('products')}}>بازگشت به فروشگاه</a></li>
                     </ul>
                 </li>
                 <li><a href={{route('user-orders')}}>سفارشات من </a></li>

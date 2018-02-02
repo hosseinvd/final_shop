@@ -19,8 +19,9 @@ class CategoryController extends Controller
         $category=new Category;
         $category->name=$request->name;
         $category->description=$request->description;
+        $category->parent_id=$request->category_id;
         $category->save();
-        return 'Create done';
+        return redirect()->route('a_CreateProductCategory');
     }
 
     public function EditCategory(request $request)

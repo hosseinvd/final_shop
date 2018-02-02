@@ -79,32 +79,63 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="col-xs-12 col-sm-8">
-                            @if(!empty($user_discount))
-                                @if(strcmp($user_discount->type,'reseller_Discount')==0)
-                                    <h2>شما زیر مجموعه </h2>
-                                    <p><strong>کاربر: </strong> {{$user_info->seller->family}} </p>
-                                    @if(!empty($user_info->resellers))
-                                        <h2>زیر مجموعه های شما </h2>
-                                        @foreach($user_info->resellers as $reseller)
-                                            <p><strong>کاربر</strong>{{$reseller->family}}</p>
-                                        @endforeach
-                                    @endif
-                                    <h2>کد بازاریاب و تخفیف</h2>
-                                    <p><strong>کد :</strong>{{$user_discount->code}}</p>
-                                    <p><strong>درصد پورسانت :</strong> {{$user_discount->commission}} </p>
-                                    <p><strong>درصد تخفیف به مشتری :</strong> {{$user_discount->percent}} </p>
-                                    <p><strong>مدل محاسبه تخفیف :</strong> {{$user_discount->calc_mode}} </p>
-                                    <p><strong>تعداد باقی مانده :</strong> {{$user_discount->numbers}} </p>
-                                    <p><strong>شروع اعتبار
-                                            :</strong> {{jdate($user_discount->start_date)->format('%d %B، %Y')}} </p>
-                                    <p><strong>پایان اعتبار
-                                            :</strong> {{jdate($user_discount->end_date)->format('%d %B، %Y')}} </p>
-
-                                @endif
-                            @else
-                                <h2>کاربر گرامی برای شما کدی تعریف نگردیده است</h2>
+                            <h2>شما زیر مجموعه </h2>
+                            <p><strong>کاربر: </strong> {{$user_info->seller->family}} </p>
+                            @if(!empty($user_info->resellers))
+                                <h2>زیر مجموعه های شما </h2>
+                                <p><strong> کاربر: </strong>
+                                    @foreach($user_info->resellers as $reseller)
+                                        {{$reseller->family}},
+                                    @endforeach
+                                </p>
                             @endif
+
                         </div><!--/col-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="table-content table-responsive">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>ردیف</th>
+                                    <th> کد تخفیف</th>
+                                    <th>درصد پورسانت</th>
+                                    <th>درصد تخفیف به مشتری</th>
+                                    <th>مدل محاسبه تخفیف</th>
+                                    <th>تعداد باقی مانده</th>
+                                    <th>شروع اعتبار</th>
+                                    <th>پایان اعتبار</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php $i = 0; ?>
+                                @foreach($user_discounts as $user_discount)
+                                    @if(!empty($user_discount))
+                                        @if(strcmp($user_discount->type,'reseller_Discount')==0)
+                                            <tr>
+                                                <?php $i++; ?>
+                                                <td>{{$i}}</td>
+                                                <td>{{$user_discount->code}}</td>
+                                                <td>{{$user_discount->commission}}</td>
+                                                <td>{{$user_discount->percent}} </td>
+                                                <td>{{$user_discount->calc_mode}} </td>
+                                                <td>{{$user_discount->numbers}}</td>
+                                                <td> {{jdate($user_discount->start_date)->format('%d %B، %Y')}}</td>
+                                                <td>{{jdate($user_discount->end_date)->format('%d %B، %Y')}}</td>
+                                                @endif
+                                                @else
+                                                    <h2>کاربر گرامی برای شما کدی تعریف نگردیده است</h2>
+                                        @endif
+                                        @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

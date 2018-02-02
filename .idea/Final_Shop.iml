@@ -41,19 +41,39 @@
     <orderEntry type="module-library">
       <library name="PHP" type="php">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/anhskohbo/no-captcha" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/annotations" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/cache" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/collections" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/common" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
           <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
           <root url="file://$MODULE_DIR$/vendor/intervention/image" />
           <root url="file://$MODULE_DIR$/vendor/kkszymanowski/traitor" />
+          <root url="file://$MODULE_DIR$/vendor/larabook/gateway" />
           <root url="file://$MODULE_DIR$/vendor/laracasts/generators" />
+          <root url="file://$MODULE_DIR$/vendor/morilog/jalali" />
           <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
           <root url="file://$MODULE_DIR$/vendor/santigarcor/laratrust" />
           <root url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
         </CLASSES>
         <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/anhskohbo/no-captcha" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/annotations" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/cache" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/collections" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/common" />
+          <root url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
+          <root url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
           <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
           <root url="file://$MODULE_DIR$/vendor/intervention/image" />
           <root url="file://$MODULE_DIR$/vendor/kkszymanowski/traitor" />
+          <root url="file://$MODULE_DIR$/vendor/larabook/gateway" />
           <root url="file://$MODULE_DIR$/vendor/laracasts/generators" />
+          <root url="file://$MODULE_DIR$/vendor/morilog/jalali" />
           <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
           <root url="file://$MODULE_DIR$/vendor/santigarcor/laratrust" />
           <root url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />

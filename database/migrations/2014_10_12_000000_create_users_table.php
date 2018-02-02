@@ -60,6 +60,19 @@ class CreateUsersTable extends Migration
         });
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('parent_id')->unsigned()->default(0);
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->timestamps();
+        });
+        Schema::create('colors', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->timestamps();
+        });
+        Schema::create('warranties', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('name');
             $table->text('description')->nullable();
             $table->timestamps();
@@ -75,10 +88,33 @@ class CreateUsersTable extends Migration
             $table->string('color')->nullable();
             $table->integer('weight')->nullable();
             $table->string('size')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->longText('long_description')->nullable();
             $table->timestamps();
         });
+
+        Schema::create('color_product', function (Blueprint $table) {
+            $table->integer('color_id')->unsigned()->index();
+            $table->foreign('color_id')->references('id')->on('colors')->onDelete('cascade');
+            $table->integer('product_id')->unsigned()->index();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->primary(['color_id', 'product_id']);
+        });
+        Schema::create('product_warranty', function (Blueprint $table) {
+            $table->integer('warranty_id')->unsigned()->index();
+            $table->foreign('warranty_id')->references('id')->on('warranties')->onDelete('cascade');
+            $table->integer('product_id')->unsigned()->index();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->primary(['warranty_id', 'product_id']);
+        });
+        Schema::create('category_product', function (Blueprint $table) {
+            $table->integer('category_id')->unsigned()->index();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->integer('product_id')->unsigned()->index();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->primary(['category_id', 'product_id']);
+        });
+
         Schema::create(config('cart.database.table'), function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
@@ -86,9 +122,7 @@ class CreateUsersTable extends Migration
             $table->string('instance');
             $table->longText('content');
             $table->nullableTimestamps();
-
         });
-
 
         Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
@@ -100,7 +134,6 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-
         Schema::create('m_images', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('product_id')->unsigned();
@@ -110,13 +143,6 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('category_product', function (Blueprint $table) {
-            $table->integer('category_id')->unsigned()->index();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->integer('product_id')->unsigned()->index();
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->primary(['category_id', 'product_id']);
-        });
 
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');

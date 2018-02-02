@@ -6,17 +6,39 @@
     <br>
     <div class="container col-md-2 center-block"></div>
     <div class="container col-md-8 center-block">
+
         <div class="panel panel-group">
             <div class="panel panel-info">
                 <div class="panel-heading">ثبت دسته جدید</div>
+                <form class="form-horizontal" method="post" action="{{route('a_CreateProductCategory')}}" enctype="multipart/form-data">
+                    {{csrf_field()}}
                 <div class="panel-body">
-                    <label for="usr"> نام دسته </label>
-                    <input type="text" class="form-control" id="Category_name">
-                    <label for="pwd">توضیحات</label>
-                    <input type="text" class="form-control" id="Category_description">
-                    <br>
-                    <button type="button" class="btn btn-primary btn-block" id="add_category">ثبت</button>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="usr"> نام دسته </label>
+                            <input type="text" class="form-control" name="name" id="Category_name">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-push-1 col-sm-12">
+                        <div class="form-group">
+                            <label class="control-label">گروه</label>
+                            <select class="form-control" name="category_id" id="category_id" required>
+                                <option value="0">سرگروه</option>
+                                @foreach($categories as $category)
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <label for="pwd">توضیحات</label>
+                        <input type="text" class="form-control" name="description" id="Category_description">
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-block" id="add_category_1">ثبت</button>
+                    </div>
+
                 </div>
+                </form>
             </div>
 
             <div class="panel panel-info" id="C_table">
@@ -51,7 +73,7 @@
                                 <td>
                                     <button type="button" class="btn btn-danger btn-block our_button_d"
                                             id="{{$category->id}}" data-toggle="modal"
-                                            >حذف
+                                    >حذف
                                     </button>
                                 </td>
                             </tr>
@@ -94,13 +116,13 @@
 
         $(document).ready(function () {
             $(document).on('click', '.our_button_e', function (event) {
-                    var id = $(this).attr("id");
-                    var name = $("#tbl_name_" + id).val();
-                    var description = $("#tbl_description_" + id).val();
-                    $("#Category_name_m").val(name);
-                    $("#Category_description_m").val(description);
-                    $("#Category_id_m").val(id);
-             });
+                var id = $(this).attr("id");
+                var name = $("#tbl_name_" + id).val();
+                var description = $("#tbl_description_" + id).val();
+                $("#Category_name_m").val(name);
+                $("#Category_description_m").val(description);
+                $("#Category_id_m").val(id);
+            });
 
 
             $(document).on('click', '#edit_category_m', function (event) {
@@ -140,16 +162,18 @@
                 $("#save_item").hide("400");
                 $("#add_btn").show();
             });
+
             $('#add_category').click(function (event) {
                 CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
                 var name = $("#Category_name").val();
                 var description = $("#Category_description").val();
+                var category_id=$("#category_id").val();
                 $.post("/admin/CreateProductCategory", {
                     'name': name,
                     'description': description,
+                    'category_id':category_id,
                     _token: CSRF_TOKEN
                 }, function (data) {
-
                     $('#C_table').load(location.href + ' #C_table');
                 });
             })

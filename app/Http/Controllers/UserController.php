@@ -25,6 +25,7 @@ use App\Http\Requests\StoreProduct;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use Morilog\Jalali\jDateTime;
 use SebastianBergmann\Environment\Console;
 
 class UserController extends AdminController
@@ -33,16 +34,15 @@ class UserController extends AdminController
     public function profile()
     {
         $user_info=Auth::user()->info_user()->first();
-        $user_discount=Auth::user()->discount()->first();
-//        $seller=Reseller::where('reseller_id','=',Auth::user()->id)->first();
-//        $seller=Auth::user()->info_user()->with('seller')->get();
+        $user_discounts=Auth::user()->discount()->get();
+//        dd($user_discount);
 
-        return view('rapiden_layouts.user.profile',compact('user_info','user_discount'));
+        return view('rapiden_layouts.user.profile',compact('user_info','user_discounts'));
     }
     public function enter_user_info()
     {
-
-        return view('rapiden_layouts.user.enter_user_info');
+        $user_info=Auth::user()->info_user()->first();
+        return view('rapiden_layouts.user.enter_user_info',compact('user_info'));
     }
 
     public function submit(Request $request)
@@ -53,7 +53,15 @@ class UserController extends AdminController
         if ($file) {
             $imagesUrl = $this->upload_profile_Images($file);
 //            $imagesUrl['images']['900']
+            $image_path=$imagesUrl['images']['400'];
+        }else
+        {
+            $user_info=Auth::user()->info_user()->first();
+            $image_path=$user_info->imagePath;
         }
+        $s_date = explode('-', $request->birthday);
+        $s_date_m=jDateTime::toGregorian($s_date[0], $s_date[1], $s_date[2]); // [2016, 5, 7]
+        $s_date_m=Carbon::createFromDate($s_date_m[0],$s_date_m[1],$s_date_m[2]);
 
         $user_info=Auth::user()->info_user()->update([
             'name'=>$request->name,
@@ -67,8 +75,8 @@ class UserController extends AdminController
             'address'=>$request->address,
             'postal_code'=>$request->postal_code,
             'user_email'=>$request->user_email,
-            'birthday'=>$request->birthday,
-            'imagePath'=>$imagesUrl['images']['400'],
+            'birthday'=>$s_date_m,
+            'imagePath'=>$image_path,
         ]);
 
         return redirect()->route('u_user-profile');
