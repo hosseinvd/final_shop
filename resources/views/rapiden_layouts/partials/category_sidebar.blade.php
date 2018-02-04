@@ -5,12 +5,10 @@
         </div>
         <div class="product_vmegamenu">
             <ul>
-
-                @foreach($categories as $category)
-                <li>
-                    <a href="{{route('products_in_cat',$category->id)}}">{{$category->name}}</a></li>
-                <li>
-                @endforeach
+                {!! $cat_html !!}
+                {{--@foreach($categories as $category)--}}
+                    {{--<li><a href="{{route('products_in_cat',$category->id)}}">{{$category->name}}</a></li>--}}
+                {{--@endforeach--}}
             </ul>
         </div>
     </div>

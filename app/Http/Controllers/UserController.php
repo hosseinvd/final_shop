@@ -349,6 +349,11 @@ class UserController extends AdminController
         return back();
     }
 
+    public function category_html()
+    {
+        return view('category');
+    }
+
     public function addToCartWithNumber(Request $request)
     {
 //        dd($request->all());

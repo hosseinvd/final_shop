@@ -2,11 +2,13 @@
 
 namespace App\Library;
 
+use App\Category;
 use App\Info_user;
 use App\Product;
 use App\Role;
 use App\User;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Support\Facades\Log;
 
 class ShowTable
 {
@@ -304,5 +306,49 @@ class ShowTable
 
     }
 
+    public function cats()
+    {
+
+//        $categories = Category::where('parent_id','0')->get();
+//        $s="";
+//        foreach($categories as $category) {
+//                $s=$s."<li><a href='#'>$category->name</a>";
+//                $sub_cats=$category->categories;
+//                if(!empty($sub_cats)){
+//                    $s=$s."<div class='vmegamenu vmegamenu2'><span>";
+//                    foreach($sub_cats as $sub_cat) {
+//                        $s=$s."<a href='#'>$sub_cat->name</a>";
+//                    }
+//                    $s=$s."</span></div>";
+//                }
+//                $s=$s."</li>";
+//        }
+//        return $s;
+
+        $stack[0]='';
+        $s='';
+        $categories = Category::where('parent_id','0')->get();
+        foreach($categories as $i=>$category){
+            $stack[$i]=$category->id;
+            $s=$s.$category->id;
+        }
+        $index=$i;
+        while($index>=0){
+            if($index>=0) {
+                $categories = Category::find($stack[$index])->categories;
+                if($categories->isNotEmpty()){
+                    foreach($categories as $i=>$category){
+                        $stack[$index+$i]=$category->id;
+                        $s=$s.$category->id;
+                        $index=$index+1;
+                    }
+                }
+            }
+            $stack[$index]="0";
+            $index=$index-1;
+        }
+        dd($s);
+
+    }
 
 }
