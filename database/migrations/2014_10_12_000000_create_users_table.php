@@ -61,6 +61,7 @@ class CreateUsersTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('parent_id')->unsigned()->default(0);
+            $table->smallInteger('level')->unsigned()->default(0);
             $table->string('name');
             $table->text('description')->nullable();
             $table->timestamps();

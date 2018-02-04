@@ -335,12 +335,15 @@ class ShowTable
         $index=$i;
         while($index>=0){
             if($index>=0) {
-                $categories = Category::find($stack[$index])->categories;
-                if($categories->isNotEmpty()){
-                    foreach($categories as $i=>$category){
-                        $stack[$index+$i]=$category->id;
-                        $s=$s.$category->id;
-                        $index=$index+1;
+                if(0<$stack[$index]){
+                    $categories = Category::find($stack[$index])->categories;
+                    if($categories->isNotEmpty()){
+                        $s=$s.'*';
+                        foreach($categories as $i=>$category){
+                            $stack[$index+$i]=$category->id;
+                            $s=$s.' p_id->'.$category->parent_id.'-'.$category->id;
+                            $index=$index+1;
+                        }
                     }
                 }
             }

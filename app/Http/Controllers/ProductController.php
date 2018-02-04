@@ -24,8 +24,8 @@ class ProductController extends AdminController
         $categories=Category::all();
         $showTBL=new ShowTable;
 
-//        $cat_html=$showTBL->cats();
-        $cat_html="";
+        $cat_html=$showTBL->cats();
+//        $cat_html="";
 //        $cat_html="hello";
 //        dd($cat_html);
         return view('rapiden_layouts.index', compact('products','categories','cat_html'));
