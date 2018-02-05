@@ -305,53 +305,51 @@ class ShowTable
         ";
 
     }
-
-    public function cats()
+    public function category_tree()
     {
-
 //        $categories = Category::where('parent_id','0')->get();
 //        $s="";
 //        foreach($categories as $category) {
-//                $s=$s."<li><a href='#'>$category->name</a>";
-//                $sub_cats=$category->categories;
-//                if(!empty($sub_cats)){
-//                    $s=$s."<div class='vmegamenu vmegamenu2'><span>";
-//                    foreach($sub_cats as $sub_cat) {
-//                        $s=$s."<a href='#'>$sub_cat->name</a>";
-//                    }
-//                    $s=$s."</span></div>";
+//            $s=$s."<li><a href='#'>$category->name</a>";
+//            $sub_cats=$category->categories;
+//            if($sub_cats->isNotEmpty()){
+//
+//                $s=$s."<div class='vmegamenu'><span>";
+//                foreach($sub_cats as $sub_cat) {
+//                    $s=$s."<a href='#'>$sub_cat->name</a>";
 //                }
-//                $s=$s."</li>";
+//                $s=$s."</span></div>";
+//            }
+//            $s=$s."</li>";
 //        }
-//        return $s;
-
-        $stack[0]='';
-        $s='';
         $categories = Category::where('parent_id','0')->get();
-        foreach($categories as $i=>$category){
-            $stack[$i]=$category->id;
-            $s=$s.$category->id;
-        }
-        $index=$i;
-        while($index>=0){
-            if($index>=0) {
-                if(0<$stack[$index]){
-                    $categories = Category::find($stack[$index])->categories;
-                    if($categories->isNotEmpty()){
-                        $s=$s.'*';
-                        foreach($categories as $i=>$category){
-                            $stack[$index+$i]=$category->id;
-                            $s=$s.' p_id->'.$category->parent_id.'-'.$category->id;
-                            $index=$index+1;
+        $s="";
+
+        foreach($categories as $category) {
+                $s=$s."<li>\n<a href='".route('products_in_cat',$category->id)."'>$category->name</a>\n";
+                $sub_cats=$category->categories;
+                if($sub_cats->isNotEmpty()){
+                    $s=$s."<div class='vmegamenu'>\n";
+                    foreach($sub_cats as $sub_cat) {
+                        $sub_cats2=$sub_cat->categories;
+                        $s=$s."<span>\n";
+                        $s = $s . "<a href='".route('products_in_cat',$sub_cat->id)."' class='vgema-title'>$sub_cat->name</a>\n";
+                        if($sub_cats2->isNotEmpty()) {
+
+                            foreach($sub_cats2 as $sub_cat2) {
+                                $s = $s . "<a href='".route('products_in_cat',$sub_cat2->id)."'>$sub_cat2->name</a>\n";
+                            }
                         }
+                        $s=$s."</span>\n";
                     }
+                    $s=$s."</div>\n";
                 }
-            }
-            $stack[$index]="0";
-            $index=$index-1;
+                $s=$s."</li>\n";
         }
-        dd($s);
+        return $s;
 
     }
+
+
 
 }

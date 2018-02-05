@@ -65,6 +65,38 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 {{--{{csrf_field()}}--}}
+
+
+<div class="product_vmegamenu">
+    <ul>
+        <li>
+            <a href='#'>one</a>
+            <div class='vmegamenu'>
+                <span>
+                <a href='#' class='vgema-title'>two</a>
+                <a href='#'>four</a>
+                </span>
+            </div>
+        </li>
+        <li>
+            <a href='#'>five</a>
+            <div class='vmegamenu'>
+            </div>
+        </li>
+        <li>
+            <a href='#'>وسایل منزل</a>
+            <div class='vmegamenu'>
+                <span>
+                <a href='#' class='vgema-title'>وسایل برقی</a>
+                <a href='#'>وسایل برقی شارژی</a>
+                </span>
+            </div>
+        </li>
+
+
+    </ul>
+</div>
+
 @include('sweet::alert')
 </body>
 

@@ -10,8 +10,10 @@ class CategoryController extends Controller
     public function CreateProductCategory()
     {
 
-        $categories=Category::paginate(8);
-        return view('Admin.CreateProductCategory',compact('categories'));
+        $categories_p=Category::paginate(8);
+        $categories = Category::where('parent_id','0')->get();
+
+        return view('Admin.CreateProductCategory',compact('categories','categories_p'));
     }
 
     public function CreateCategory(request $request)

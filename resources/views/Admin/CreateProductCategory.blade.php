@@ -22,10 +22,20 @@
                     <div class="col-md-4 col-md-push-1 col-sm-12">
                         <div class="form-group">
                             <label class="control-label">گروه</label>
-                            <select class="form-control" name="category_id" id="category_id" required>
+                            <select  class="form-control" name="category_id" id="category_id" required>
                                 <option value="0">سرگروه</option>
                                 @foreach($categories as $category)
-                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                    <option value="{{$category->id}}"><strong>{{$category->name}}</strong></option>
+                                    <?php
+                                        $sub_cats=$category->categories;
+                                        if($sub_cats->isNotEmpty()){
+                                            echo "<optgroup>";
+                                            foreach($sub_cats as $sub_cat){
+                                                echo "<option value='$sub_cat->id'>$sub_cat->name</option>";
+                                            }
+                                            echo "</optgroup>";
+                                        }
+                                    ?>
                                 @endforeach
                             </select>
                         </div>
@@ -52,7 +62,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($categories as $category)
+                        @foreach($categories_p as $category)
                             <tr class="our_table" id="{{$category->id}}">
                                 <td>
                                     <input type="hidden" placeholder="write_items" id='tbl_name_{{$category->id}}'
@@ -84,7 +94,7 @@
             </div>
         </div>
     </div>
-    {{ $categories->links() }}
+    {{ $categories_p->links() }}
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
