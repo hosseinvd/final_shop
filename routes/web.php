@@ -77,6 +77,9 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
 
 
     Route::get('/Orders', 'OrderController@orders')->name('a_orders');
+    Route::patch('/Orders', 'OrderController@edit');
+    Route::put('/Orders', 'OrderController@approve_basket');
+    Route::delete('/Orders', 'OrderController@disapprove_basket');
 
     //  Page manager routes
     Route::get('/AddPage','PageController@CreatePage')->name('a_show_create_page');

@@ -335,7 +335,6 @@ class ShowTable
                         $s=$s."<span>\n";
                         $s = $s . "<a href='".route('products_in_cat',$sub_cat->id)."' class='vgema-title'>$sub_cat->name</a>\n";
                         if($sub_cats2->isNotEmpty()) {
-
                             foreach($sub_cats2 as $sub_cat2) {
                                 $s = $s . "<a href='".route('products_in_cat',$sub_cat2->id)."'>$sub_cat2->name</a>\n";
                             }
