@@ -2,29 +2,36 @@
 @section('title','Larvel Shopping Cart')
 @section('content')
 
-        <div class="breadcrumb-area">
-            <div class="container">
-                <ol class="breadcrumb">
-                    <li><a href="{{route('a_Dashboard')}}"><i class="fa fa-home"></i> داشبورد</a></li>
-                    <li class="active">تخفیفها</li>
-                </ol>
-            </div>
+    <div class="breadcrumb-area">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="{{route('a_Dashboard')}}"><i class="fa fa-home"></i> داشبورد</a></li>
+                <li class="active">تخفیفها</li>
+            </ol>
         </div>
-        <div class="panel panel-default" id="C_table">
-            <div class="panel-heading">تخفیفها</div>
-        <form class="form-horizontal" method="post" action="{{route('a_Edit_Products')}}" >
-            {{csrf_field()}}
-            <table class="table table-condensed">
-                <tr>
-                    <th>code</th>
-                    <th>درصد دتخفیف</th>
-                    <th>مقدار تخفیف</th>
-                    <th>تعداد باقی مانده</th>
+    </div>
+    <div class="panel panel-default" id="C_table">
+        <div class="panel-heading">تخفیفها</div>
 
-                </tr>
-                <tbody>
-                @foreach($discounts as $discount)
-                    <tr>
+        <table class="table table-condensed">
+            <tr>
+                <th>code</th>
+                <th>درصد دتخفیف</th>
+                <th>مقدار تخفیف</th>
+                <th>تعداد باقی مانده</th>
+                <th>نوع محاسبه</th>
+                <th>تاریخ شروع</th>
+                <th>تاریخ پایان</th>
+                <th>عملیات</th>
+            </tr>
+            <tbody>
+            @foreach($discounts as $discount)
+                @if($discount->numbers<=0 or \Carbon\Carbon::today()>$discount->end_date)
+                    <tr class="danger">
+                @else
+                    <tr class="success">
+                        @endif
+
                         <td>
                             {{$discount->code}}
                         </td>
@@ -39,14 +46,43 @@
                             {{$discount->numbers}}
 
                         </td>
+                        <td>
+                            {{$discount->calc_mode}}
+                        </td>
+                        <td>
+                            {{jdate($discount->start_date)->format('date')}}
+                        </td>
+                        <td>
+                            {{jdate($discount->end_date)->format('date')}}
+                        </td>
+                        <td>
+                            <button type="submit" name="product_id" class="btn btn-submit "
+                                    value="{{$discount->id}}"
+                            >ویرایش
+                            </button>
+                            @if($discount->numbers>0)
+                                <a href="{{route('discount.deactive',$discount->id)}}" class="btn btn-danger">
+                                    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                                    غیر فعال کردن
+                                </a>
+                            @else
+                                <a href="{{route('discount.deactive',$discount->id)}}" class="btn btn-danger disabled">
+                                    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                                    غیر فعال کردن
+                                </a>
+                            @endif
+                            <a href="{{route('a_show_product',$discount->id)}}" class="btn btn-success">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+
+                                مشاهده
+                            </a>
+                        </td>
                     </tr>
-                @endforeach
-                </tbody>
-            </table>
-        </form>
+                    @endforeach
+            </tbody>
+        </table>
+
         {{ $discounts->links() }}
     </div>
 @endsection
-@section('scripts')
 
-@endsection

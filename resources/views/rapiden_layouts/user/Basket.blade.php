@@ -63,7 +63,9 @@
                                 <td class="product-quantity">
                                     <input class="form-control" id="row_id_{{$i}}" type="hidden" name="row_id[]"
                                            value="{{$row->rowId}}">
-                                    <input class="form-control row_qty" id="row_qty_{{$i}}" type="number"  min="0"
+                                    <input class="form-control" id="product_id_{{$i}}" type="hidden" name="product_id[]"
+                                           value="{{$row->id}}">
+                                    <input class="form-control row_qty" id="row_qty_{{$i}}" type="number"  min="0" max="{{\App\Product::find($row->id)->inventory+10}}"
                                            name="row_qty[]"
                                            value="{{$row->qty}}">
                                 </td>
@@ -159,6 +161,7 @@
                         CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
                         var _method = 'POST';
                         var id = $(this).attr("value");
+                        var product_id = $("#product_id_" + id).val();
                         var row_id = $("#row_id_" + id).val();
                         var row_qty = $("#row_qty_" + id).val();
                         if (isNaN(parseInt(row_qty, 10))) {
@@ -169,6 +172,7 @@
                                 'id': id,
                                 'row_id': row_id,
                                 'row_qty': row_qty,
+                                'product_id':product_id,
                                 _token: CSRF_TOKEN,
                                 _method: _method,
                             }, function (data) {

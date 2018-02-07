@@ -16,7 +16,7 @@ class DiscountController extends Controller
      */
     public function index()
     {
-        $discounts=Discount::paginate(15);
+        $discounts=Discount::orderBy('created_at', 'desc')->paginate(15);
         return view('Admin.discount.index',compact('discounts'));
     }
 
@@ -105,6 +105,17 @@ class DiscountController extends Controller
      */
     public function destroy($id)
     {
-        //
+//        dd($id);
+//
+//        $discount=Discount::where('id',$id)->update(['numbers'=>'0']);
+//        dd($discount);
     }
+
+    public function deactive($id)
+    {
+        $discount=Discount::where('id',$id)->update(['numbers'=>'0']);
+        return redirect()->back();
+    }
+
+
 }

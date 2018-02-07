@@ -94,7 +94,7 @@
                                 <input class="form-control"  type="hidden" name="id"
                                        value="{{$product->id}}">
                                 <label>تعداد</label>
-                                <input type="number" name="qty" value="1" min="1">
+                                <input type="number" name="qty" value="1" min="1" max="{{$product->inventory}}">
                                 <button type="submit">افزودن به سبد</button>
                             </form>
                         </div>

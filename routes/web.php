@@ -29,7 +29,6 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/enter_user_info', 'UserController@enter_user_info')->name('enter_user_info');
     Route::post('/enter_user_info/submit','UserController@submit')->name('user_info_submit');
 //    Route::patch('/enter_user_info/submit','UserController@upload_img')->name('user_upload_img');
-
     Route::get('/basket', 'UserController@basket')->name('user-basket');
     Route::get('/refund_basket/{basket}', 'UserController@refund_basket')->name('user-refund_basket');
     Route::post('/refund_stuffs', 'UserController@refund_stuffs')->name('user-refund_stuffs');
@@ -50,7 +49,6 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::get('/comments', 'UserController@comments')->name('user-comments');
 
     Route::get('/bank_account', 'UserController@bank_account')->name('user-bank_account');
-
 
 });
 
@@ -75,13 +73,12 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
     Route::delete('/EditProducts', 'ProductController@EditProducts_Delete_image')->name('a_Edit_Products_delete_Image');
     Route::post('/UpdateProducts', 'ProductController@Update_Products')->name('a_Update_product');
 
-
     Route::get('/Orders', 'OrderController@orders')->name('a_orders');
     Route::patch('/Orders', 'OrderController@edit');
     Route::put('/Orders', 'OrderController@approve_basket');
     Route::delete('/Orders', 'OrderController@disapprove_basket');
 
-    //  Page manager routes
+//  Page manager routes
     Route::get('/AddPage','PageController@CreatePage')->name('a_show_create_page');
     Route::post('/AddPage','PageController@StorePage')->name('a_Store_page');
     Route::get('/AddPage/{id}','PageController@ShowPage')->name('a_show_page');
@@ -101,6 +98,7 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
     Route::get('disapprove','CommentController@disapprove')->name('a_disapprove_comment');
 //discount Page
     Route::resource('discount','DiscountController');
+    Route::get('discount/deactive/{id}','DiscountController@deactive')->name('discount.deactive');
 
 // jquery post request to page update
     Route::post('/Update','AdminController@jquery_post');

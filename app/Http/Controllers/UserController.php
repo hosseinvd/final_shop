@@ -222,19 +222,28 @@ class UserController extends AdminController
         $order=Auth::user()->orders()->create(['users_address_id'=>$address->id,'info_user_id'=>$info_user->id,
             'pay_method'=>'1']);
         Cart::store(Auth::user()->name,\auth()->id());
+
+        if($request->discount_id!=null){
+            $discount_id=$request->discount_id;
+        }else{
+            $discount_id='1';
+        }
+
         $basket=Auth::user()->baskets()->create([
             'order_id'=>$order->id,
             'content'=>Cart::content(),
-            'discount_id'=>$request->discount_id,
+            'discount_id'=>$discount_id,
             'price'=>Cart::subtotal(),
             'tax'=>Cart::tax(),
             'total_discount'=>$discount,
             'paid'=>$pay,
         ]);
 
-
         foreach(Cart::content() as $row)
         {
+            $product=Product::find($row->id);
+            $product->inventory=$product->inventory-$row->qty;
+            $product->save();
             $stuffs=new Stuff();
             $stuffs->basket_id=$basket->id;
             $stuffs->product_id=$row->id;
@@ -243,11 +252,10 @@ class UserController extends AdminController
             $stuffs->tax=$row->tax;
             $stuffs->total_price=$row->total;
             $stuffs->discount=$discount_percent;
-            $stuffs->discount_code=$request->discount_id;
+            $stuffs->discount_code=$discount_id;
             $stuffs->discount_description=" no discount ";
             $stuffs->save();
         }
-
         // pay commission to seller and reseller
         $discount_row=Discount::where('code','=',$request->discount_code)->first();
         if(!empty($discount_row)) {
@@ -368,7 +376,11 @@ class UserController extends AdminController
     public function update_full_basket(Request $request)
     {
         for ($i=0;$i<count($request->row_id);$i++){
-            Cart::update($request->row_id[$i],$request->row_qty[$i]);
+            $product=Product::find($request->product_id[$i]);
+            $pr=($product->inventory-$request->row_qty[$i]);
+            if($pr>=0) {
+                Cart::update($request->row_id[$i], $request->row_qty[$i]);
+            }
         }
         return redirect()->route('user-basket');
     }
@@ -409,8 +421,19 @@ class UserController extends AdminController
                     $this->validate(request(), [
                         'row_qty' => 'required|numeric|min:0',
                     ]);
-                    Cart::update($request->row_id,$request->row_qty);
-                    return $showtable->user_basket();
+                    $product=Product::find($request->product_id);
+                    $pr=($product->inventory-$request->row_qty);
+                    if($pr>=0){
+                        Cart::update($request->row_id,$request->row_qty);
+                        $s=$showtable->user_basket();
+                    }else{
+//                        $row_qty_temp=Cart::get($request->row_id)->qty;
+//                        Cart::update($request->row_id,$request->row_qty);
+                        $s=$showtable->user_basket();
+//                        Cart::update($request->row_id,$row_qty_temp);
+                        $s=$s."<h3>موجودی ".$product->title."کافی نیست</h3>";
+                    }
+                    return $s;
                 case "basket_delete":
                     Cart::remove($request->rowId);
                     return $showtable->user_basket();

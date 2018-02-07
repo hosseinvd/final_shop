@@ -166,6 +166,7 @@ class ShowTable
         ";
         foreach (Cart::content() as $row) {
             $i++;
+//            $pr=(Product::find($row->id)->inventory-$row->qty);
             if((\App\Product::find($row->id)->images()->exists())){
                 $image_path = asset('product_image') . '/' . \App\Product::find($row->id)->images()->first()->imagePath;
 
@@ -190,8 +191,11 @@ class ShowTable
                             <td class='product-quantity'>
                                 <input class='form-control' id='row_id_$i' type='hidden' name='row_id[]'
                                        value='$row->rowId'>
+                                <input class='form-control' id='product_id_$i' type='hidden' name='product_id[]'
+                                           value='$row->id'>
                                 <input class='form-control row_qty' id='row_qty_$i' type='number' name='row_qty[]'
                                        value='$row->qty'>
+                                            
                             </td>
                             <td>
                                 <button type='button' class='btn btn-warning ' id='refresh' value='$i'><i
