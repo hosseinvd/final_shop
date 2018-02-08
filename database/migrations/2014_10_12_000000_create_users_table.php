@@ -203,6 +203,8 @@ class CreateUsersTable extends Migration
             $table->integer('users_address_id')->unsigned()->index();
             $table->foreign('users_address_id')->references('id')->on('users_addresses');
             $table->smallInteger('pay_method');//0=didn't pay/1=cash/2=check/
+            $table->smallInteger('state')->default(0);//0=didn't process/1=check wherehouse /2=send/3=delivere
+
             $table->timestamps();
         });
 

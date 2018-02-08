@@ -78,7 +78,7 @@ class AclController extends Controller
 
     public function show($id)
     {
-        $user = User::where('id', $id)->with('roles')->first();
+        $user = User::where('id', $id)->with('roles','info_user')->first();
         return view('Admin.users.show',compact('user'));
     }
 

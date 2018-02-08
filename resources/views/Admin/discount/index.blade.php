@@ -56,10 +56,10 @@
                             {{jdate($discount->end_date)->format('date')}}
                         </td>
                         <td>
-                            <button type="submit" name="product_id" class="btn btn-submit "
-                                    value="{{$discount->id}}"
-                            >ویرایش
-                            </button>
+                            <a href="{{route('discount.edit',$discount->id)}}" class="btn btn-success">
+                                <i class="fa fa-edit" aria-hidden="true"></i>
+                                ویرایش
+                            </a>
                             @if($discount->numbers>0)
                                 <a href="{{route('discount.deactive',$discount->id)}}" class="btn btn-danger">
                                     <i class="fa fa-thumbs-down" aria-hidden="true"></i>
@@ -71,7 +71,7 @@
                                     غیر فعال کردن
                                 </a>
                             @endif
-                            <a href="{{route('a_show_product',$discount->id)}}" class="btn btn-success">
+                            <a href="{{route('discount.show',$discount->id)}}" class="btn btn-success">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
 
                                 مشاهده
