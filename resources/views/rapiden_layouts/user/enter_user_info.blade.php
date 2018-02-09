@@ -103,7 +103,7 @@
                         </p>
                         <p class="form-row col-sm-12">
                             <label for="billing_address_1">آدرس<abbr title="required" class="required">*</abbr></label>
-                            <textarea name="address" id="address" placeholder="آدرس" value="{{$user_info->address}}" class="form-controller" required></textarea>
+                            <textarea name="address" id="address" placeholder="آدرس" value="{{$user_info->address}}" class="form-controller" required>{{$user_info->address}}</textarea>
                         </p>
                         <p class="form-row col-sm-6">
                             <label for="billing_city">شهر<abbr title="required" class="required">*</abbr></label>

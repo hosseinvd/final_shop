@@ -24,16 +24,17 @@
             </div>
             <div class="panel panel-info">
                 <div class="col-xs-12 col-sm-4 text-center">
-                    <i class="fa fa-user fa-5x" aria-hidden="true"></i>
-                    <img src="{{asset('images/profile_img').'/'.$user->info_user->imagePath}}" alt=""
-                         class="center-block img-circle img-responsive">
-                    <ul class="list-inline ratings text-center" title="Ratings">
-                        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-                        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-                        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-                        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                    @if(($user->info_user->national_code!=1))
+                        <img src="{{asset('images/profile_img').'/'.$user->info_user->imagePath}}" alt=""
+                             class="center-block img-circle img-responsive">
+                        <ul class="list-inline ratings text-center" title="Ratings">
+                            <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                            <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                            <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                            <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
 
-                    </ul>
+                        </ul>
+                    @endif
                 </div><!--/col-->
                 <div class="col-xs-12 col-sm-8">
                     <h2>{{$user->info_user->name.' '.$user->info_user->family }}</h2>

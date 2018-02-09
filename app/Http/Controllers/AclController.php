@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Info_user;
 use App\Role;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Morilog\Jalali\Facades\jDateTime;
+use Morilog\Jalali\jDate;
 
 class AclController extends Controller
 {
@@ -86,21 +90,54 @@ class AclController extends Controller
     {
         $roles = Role::all();
         $user = User::where('id', $id)->with('roles')->first();
-        return view('Admin.Users.Edit',compact('user','roles'));
+        $user_info=Info_user::where('user_id',$id)->first();
+//        dd($user_info);
+        return view('Admin.Users.Edit',compact('user','roles','user_info'));
     }
 
     public function update(Request $request, $id)
     {
 //dd($request->Role_select);
+        $file = $request->file('images');
+        $imagesUrl['images']['400']="no_img";
+        if ($file) {
+            $imagesUrl = $this->upload_profile_Images($file);
+//            $imagesUrl['images']['900']
+            $image_path=$imagesUrl['images']['400'];
+        }else
+        {
+            $user_info=Info_user::where('user_id',$id)->first();
+            $image_path=$user_info->imagePath;
+        }
+        $s_date = explode('-', $request->birthday);
+        $s_date_m=jDateTime::toGregorian($s_date[0], $s_date[1], $s_date[2]); // [2016, 5, 7]
+        $s_date_m=Carbon::createFromDate($s_date_m[0],$s_date_m[1],$s_date_m[2]);
+
+        $user_info=Info_user::where('user_id',$id)->update([
+            'name'=>$request->name,
+            'family'=>$request->family,
+            'national_code'=>$request->national_code,
+            'phone_number'=>$request->phone_number,
+            'mobile_number'=>$request->mobile_number,
+            'country'=>$request->country,
+            'province'=>$request->province,
+            'city'=>$request->city,
+            'address'=>$request->address,
+            'postal_code'=>$request->postal_code,
+            'user_email'=>$request->user_email,
+            'birthday'=>$s_date_m,
+            'imagePath'=>$image_path,
+        ]);
+
         $this->validateWith([
-            'name' => 'required|max:255',
-            'email' => 'required|email|unique:users,email,'.$id
+            'u_name' => 'required|max:255',
+            'u_email' => 'required|email|unique:users,email,'.$id
         ]);
         $user=User::findOrFail($id);
-        $user->name=$request->name;
-        $user->email=$request->email;
+        $user->name=$request->u_name;
+        $user->email=$request->u_email;
         if(isset($request->change_pass)){
-            $password=trim($request->password);
+            $password=trim($request->u_password);
             $user->password=Hash::make($password);
         }
         $user->save();
