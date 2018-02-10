@@ -1,6 +1,15 @@
 @extends('admin.layouts.admin_master')
 @section('title','users')
 @section('content')
+    <div class="breadcrumb-area">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="{{route('a_Dashboard')}}"><i class="fa fa-home"></i> داشبورد</a></li>
+                <li><a href="{{route('users.index')}}"><i class="fa fa-home"></i> مدیریت کاربران</a></li>
+                <li class="active">اطلاعات کاربر</li>
+            </ol>
+        </div>
+    </div>
     <div class="col-sm-10 center-block" style="margin-top: 2%">
     <div class="panel panel-info">
         <div class="panel-heading">کاربر جدید</div>
@@ -23,7 +32,7 @@
 
             </div>
             <div class="panel panel-info">
-                <div class="col-xs-12 col-sm-4 text-center">
+                <div class="col-md-2 col-sm-4 text-center">
                     @if(($user->info_user->national_code!=1))
                         <img src="{{asset('images/profile_img').'/'.$user->info_user->imagePath}}" alt=""
                              class="center-block img-circle img-responsive">
@@ -36,7 +45,7 @@
                         </ul>
                     @endif
                 </div><!--/col-->
-                <div class="col-xs-12 col-sm-8">
+                <div class="col-md-5 col-sm-8">
                     <h2>{{$user->info_user->name.' '.$user->info_user->family }}</h2>
                     <p><strong>کد ملی :</strong> {{$user->info_user->national_code}} </p>
                     <p><strong>آدرس :</strong> {{$user->info_user->address}} </p>
@@ -47,6 +56,25 @@
                     </p>
                 </div><!--/col-->
             </div><!--/row-->
+            <div class="col-md-5">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-xs-12 col-sm-8">
+                            <h3>شما زیر مجموعه </h3>
+                            <p><strong>کاربر: </strong> {{$user->info_user->seller->family}} </p>
+                            @if(!empty($user->info_user->resellers))
+                                <h4>زیر مجموعه های شما </h4>
+                                <p><strong> کاربر: </strong>
+                                    @foreach($user->info_user->resellers as $reseller)
+                                        {{$reseller->family}},
+                                    @endforeach
+                                </p>
+                            @endif
+
+                        </div><!--/col-->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     </div>

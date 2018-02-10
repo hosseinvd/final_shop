@@ -1,6 +1,14 @@
 @extends('admin.layouts.admin_master')
 @section('title','Admic Create Page')
 @section('content')
+    <div class="breadcrumb-area">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="{{route('a_Dashboard')}}"><i class="fa fa-home"></i> داشبورد</a></li>
+                <li class="active"> مدیدریت کاربران</li>
+            </ol>
+        </div>
+    </div>
     <div class="col-sm-10 center-block" style="margin-top: 2%">
         <div class="panel">
             <div class="panel-heading">مدیریت کاربران</div>

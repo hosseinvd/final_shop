@@ -126,6 +126,8 @@ class AclController extends Controller
             'postal_code'=>$request->postal_code,
             'user_email'=>$request->user_email,
             'birthday'=>$s_date_m,
+            'commission'=>$request->commission,
+            'seller_id'=>$request->seller_id,
             'imagePath'=>$image_path,
         ]);
 

@@ -77,7 +77,7 @@ class LaratrustSeeder extends Seeder
                 'birthday'=>now(),
                 'imagePath'=>'',
                 'seller_id'=>'1',
-                'commission'=>'10'
+                'commission'=>'0'
             ]);
 
             $user->attachRole($role);

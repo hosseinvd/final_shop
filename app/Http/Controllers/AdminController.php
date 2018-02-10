@@ -67,6 +67,8 @@ class AdminController extends Controller
                     return $showtable->find_user($request->user_name);
                 case "user_sel":
                     return $showtable->user_sel($request->user_name);
+                case "seller_sel":
+                    return $showtable->seller_sel($request->user_name);
                 case "role_relect":
                     return $showtable->user_sort_role($request->role_id);
 

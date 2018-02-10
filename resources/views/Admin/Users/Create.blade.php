@@ -2,8 +2,16 @@
 @section('title','Admic Create Page')
 
 @section('content')
-    <div class="col-sm-10 center-block" style="margin-top: 2%">
+    <div class="breadcrumb-area">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="{{route('a_Dashboard')}}"><i class="fa fa-home"></i> داشبورد</a></li>
+                <li class="active">کاربر جدید</li>
+            </ol>
+        </div>
+    </div>
 
+    <div class="col-sm-10 center-block" style="margin-top: 2%">
         <form action="{{route('users.store')}}" method="POST">
             {{csrf_field()}}
             <div class="panel panel-info">

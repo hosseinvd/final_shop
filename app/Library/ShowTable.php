@@ -106,6 +106,49 @@ class ShowTable
         }
     }
 
+    public function seller_sel($user_name)
+    {
+        $user_id_default=\Auth::user()->id;
+        if (mb_strlen($user_name, 'UTF-8') > 3) {
+            echo "<table class='table table-striped table-advance table-hover' style='direction: rtl;'>";
+            echo "<thead>";
+            echo "<tr>";
+            echo "<th></th>";
+            echo "<th>نام</th>";
+            echo "<th>نام خانوادگی</th>";
+            echo "</tr>";
+            echo "</thead>";
+            echo "<tbody>";
+
+            $results= Info_user::where('family', 'LIKE', "%$user_name%")->where('seller_id','1')->get();
+
+            if ($results != false) {
+                $i = 1;
+                foreach ($results as $result) {
+                    echo "<tr>";
+                    echo "<td><input type='radio' name='seller_id' id='seller_id' value='$result->user_id'></td>";
+                    echo "<td>$result->name</td>";
+                    echo "<td>$result->family</td>";
+                    echo "</tr>";
+                    $i++;
+                }
+            } else {
+                echo "<tr>";
+                echo "<td><input type='hidden' name='seller_id' id='seller_id' value='$user_id_default'  checked></td>";
+                echo "<td colspan='4'>نتیجه ای یافت نشد.</td>";
+                echo "</tr>";
+                echo "</tbody>";
+                echo "</table>";
+            }
+        }
+        else {
+            echo "<div class='alert alert-info fade in' style='direction: rtl;'>														
+			برای جستجو فردی به ورود بیش از 3 کاراکتر (حرف یا عدد) نیاز است.
+			</div>
+			<input type='hidden' name='seller_id' id='seller_id' value='$user_id_default'  checked>";
+        }
+    }
+
     public function user_sort_role($role_id)
     {
         $roles = Role::where('id', $role_id)->with('users')->first();
