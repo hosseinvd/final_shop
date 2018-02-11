@@ -18,7 +18,7 @@
 
     <div class="col-sm-12 col-md-12 center-block" id="app" style="margin-top: 2%">
 
-        <form action="{{route('users.update',$user->id)}}" method="POST">
+        <form action="{{route('users.update',$user->id)}}" method="POST" enctype="multipart/form-data">
             {{csrf_field()}}
             {{method_field('PUT')}}
             <div class="col-md-12">
@@ -137,12 +137,8 @@
                                 <label for="billing_city">شهر<abbr title="required" class="required">*</abbr></label>
                                 <input type="text" name="city" id="city" value="{{$user_info->city}}" class="form-control" required>
 
-
                                 <label for="billing_postcode">کدپستی<abbr title="required" class="required">*</abbr></label>
                                     <input type="text" name="postal_code" id="postal_code" value="{{$user_info->postal_code}}" class="form-control" required>
-
-
-
 
                             </div>
 

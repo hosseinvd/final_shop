@@ -117,10 +117,37 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <div class="wc-proceed-to-checkout">
-                                <button type="submit">پرداخت</button>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12">
+
+                        <div class="different-address">
+                            <div class="ship-different-title">
+                                <h3>
+                                    <label>پرداخت غیر نقدی </label>
+                                    <input id="ship-box" type="checkbox">
+
+                                </h3>
+                            </div>
+                            <div id="ship-box-info" class="row">
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>نام و نام خانوادگی تحویل گیرنده <span class="required">*</span></label>
+                                        <input type="text" name="name_family" value="{{old('name_family')}}" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="order-button-payment">
+                                        <input type="submit" value="ثبت آدرس">
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="wc-proceed-to-checkout">
+                        <button type="submit">پرداخت</button>
                     </div>
                 </div>
             </div>

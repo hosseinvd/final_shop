@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Session;
 use Morilog\Jalali\Facades\jDateTime;
 use Morilog\Jalali\jDate;
 
-class AclController extends Controller
+class AclController extends AdminController
 {
     /**
      * Display a listing of the resource.
@@ -97,7 +97,7 @@ class AclController extends Controller
 
     public function update(Request $request, $id)
     {
-//dd($request->Role_select);
+//dd($request->all());
         $file = $request->file('images');
         $imagesUrl['images']['400']="no_img";
         if ($file) {

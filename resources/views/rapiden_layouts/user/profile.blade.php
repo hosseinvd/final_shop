@@ -81,7 +81,7 @@
                         <div class="col-xs-12 col-sm-8">
                             <h2>شما زیر مجموعه </h2>
                             <p><strong>کاربر: </strong> {{$user_info->seller->family}} </p>
-                            @if(!empty($user_info->resellers))
+                            @if(count($user_info->resellers)>0)
                                 <h2>زیر مجموعه های شما </h2>
                                 <p><strong> کاربر: </strong>
                                     @foreach($user_info->resellers as $reseller)

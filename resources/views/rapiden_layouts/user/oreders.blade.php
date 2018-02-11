@@ -28,6 +28,9 @@
                     <div class="panel-group" id="accordion">
                         <?php $i = 0; ?>
                         <div class="panel panel-default">
+                            @if(count($orders)==0)
+                                <h3>سفارشی ثبت نشده است</h3>
+                            @endif
                             @foreach($orders as $order)
                                 <?php $i++; ?>
 

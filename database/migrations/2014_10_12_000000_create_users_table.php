@@ -14,7 +14,6 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
@@ -47,7 +46,7 @@ class CreateUsersTable extends Migration
             $table->integer('seller_id')->unsigned()->index();
             $table->foreign('seller_id')->references('id')->on('users');
             $table->float('commission',8,2)->default(0);//0<commission<100
-
+            $table->integer('credit')->default(0);
             $table->softDeletes();
             $table->timestamps();
         });
@@ -78,6 +77,7 @@ class CreateUsersTable extends Migration
             $table->text('description')->nullable();
             $table->timestamps();
         });
+
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('viewCount')->default('0');
@@ -144,7 +144,6 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('viewCount')->default(0);
@@ -155,7 +154,6 @@ class CreateUsersTable extends Migration
             $table->integer('commentable_id')->unsigned();
             $table->string('commentable_type');
             $table->timestamps();
-
         });
 
         Schema::create('discounts', function (Blueprint $table) {
@@ -193,7 +191,6 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('info_user_id')->unsigned()->index();
@@ -204,9 +201,10 @@ class CreateUsersTable extends Migration
             $table->foreign('users_address_id')->references('id')->on('users_addresses');
             $table->smallInteger('pay_method');//0=didn't pay/1=cash/2=check/
             $table->smallInteger('state')->default(0);//0=didn't process/1=check wherehouse /2=send/3=delivere
-
             $table->timestamps();
         });
+
+
 
         Schema::create('baskets', function (Blueprint $table) {
             $table->increments('id');
@@ -224,6 +222,22 @@ class CreateUsersTable extends Migration
             $table->float('paid')->nullable();
             $table->smallInteger('basket_type')->default('0');//normal=0,refund=1
             $table->smallInteger('status')->default('0');//disapproved=0,suspend=1,approved=2
+            $table->nullableTimestamps();
+        });
+
+        Schema::create('cheques', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('serial_number');
+            $table->date('due_date');
+            $table->float('price');
+            $table->integer('order_id')->unsigned()->index();
+            $table->foreign('order_id')->references('id')->on('orders');
+            $table->smallInteger('state')->default(0);//0=didn't process/1=wait to pass /2=reject/3=pass/4=pass with delay
+            $table->text('description')->nullable();
+
+            $table->string('imagePath');
             $table->nullableTimestamps();
         });
 
@@ -268,6 +282,6 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('users_addresses');
         Schema::dropIfExists('discounts');
         Schema::dropIfExists('orders');
-
+        Schema::dropIfExists('cheques');
     }
 }

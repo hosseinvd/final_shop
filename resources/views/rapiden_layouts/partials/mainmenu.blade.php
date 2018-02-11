@@ -11,9 +11,9 @@
                 <li><a href="shop.html">محصولات جدید</a></li>
                 <li><a href="#">صفحات</a>
                     <ul>
-                        <li><a href="wishlist.html">لیست علاقه‌مندی ها</a></li>
-                        <li><a href="cart.html">صفحه سبد خرید</a></li>
-                        <li><a href="contact-us.html">تماس با ما</a></li>
+                        @foreach($pages as $page)
+                            <li><a href="{{route('show_page',$page->id)}}">{{$page->title}} </a></li>
+                        @endforeach
                     </ul>
                 </li>
                 <li><a href="about.html">درباره ما</a></li>

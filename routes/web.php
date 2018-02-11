@@ -11,6 +11,8 @@
 */
 
 Route::get('/', 'ProductController@getIndex')->name('products');//home
+Route::get('/page/{page}', 'ProductController@Show_page')->name('show_page');//Show_page
+
 
 Route::get('/product/view_item/{product}', 'ProductController@Show_product')->name('show_product');
 Route::get('/product/{category}', 'ProductController@Show_product_in_cat')->name('products_in_cat');

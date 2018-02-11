@@ -21,7 +21,10 @@
         </div>
         <div id="basket_table" id="accordion">
             <div class="table-content table-responsive">
-                <div class="panel-group" id="accordion">
+                @if(count($bank_interactions)==0)
+                    <h3>تراکنشی ثبت نشده </h3>
+                @else
+                    <div class="panel-group" id="accordion">
                     <?php $i = 0; ?>
                     <div class="panel panel-default">
                         <div class="panel-body">
@@ -101,8 +104,7 @@
                             </div>
                     </div>
                 </div>
-
-
+                @endif
             </div>
         </div>
     </div>

@@ -19,7 +19,10 @@
                 </ol>
             </div>
         </div>
-        <form class="form-horizontal" method="post" action="{{route('update_full_basket')}}"
+        @if(count($comments)==0)
+                <h3>نظری ثبت نشده </h3>
+        @else
+                <form class="form-horizontal" method="post" action="{{route('update_full_basket')}}"
               enctype="multipart/form-data">
             {{csrf_field()}}
             <div id="basket_table">
@@ -34,7 +37,9 @@
                         </tr>
                         </thead>
                         <tbody>
+
                         <?php $i = 0; ?>
+
                         @foreach($comments as $comment)
                             <tr>
                                 <?php $i++; ?>
@@ -63,5 +68,6 @@
                 </div>
             </div>
         </form>
+        @endif
     </div>
 @endsection
