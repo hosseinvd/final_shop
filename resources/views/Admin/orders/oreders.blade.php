@@ -12,9 +12,7 @@
                 </ol>
             </div>
         </div>
-        <form class="form-horizontal" method="post" action="{{route('update_full_basket')}}"
-              enctype="multipart/form-data">
-            {{csrf_field()}}
+
 
             <div id="basket_table" id="accordion">
                 <div class="table-content table-responsive">
@@ -217,7 +215,7 @@
 
                 </div>
             </div>
-        </form>
+
         {{ $orders->links() }}
 
     </div>

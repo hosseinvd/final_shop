@@ -27,40 +27,40 @@
         <div class="container">
             <div class="row">
                 @if($user_addresses->count()>0)
-                <form class="form-horizontal" method="post" action="{{route('user_payment')}}" enctype="multipart/form-data">
-                    {{csrf_field()}}
+                    <form class="form-horizontal" method="post" action="{{route('user_payment')}}" enctype="multipart/form-data">
+                        {{csrf_field()}}
 
-                    <div class="col md-12">
+                        <div class="col md-12">
 
-                        <h3>
-                            <label> یک آدرس انتخاب کنید یا آدرس جدید خود را وارد کنید </label>
-                            <input type="hidden" name="select_address" value="not select" type="radio" required>
-                        </h3>
-                    @foreach($user_addresses as $index=>$address)
-                            <div class="col-md-4">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">{{$address->name_family}}</div>
-                                    <div class="panel-body">
+                            <h3>
+                                <label> یک آدرس انتخاب کنید یا آدرس جدید خود را وارد کنید </label>
+                                <input type="hidden" name="select_address" value="not select" type="radio" required>
+                            </h3>
+                            @foreach($user_addresses as $index=>$address)
+                                <div class="col-md-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">{{$address->name_family}}</div>
+                                        <div class="panel-body">
                                         <span>
                                         {{$address->address}}
                                         </span>
-                                        <span>
+                                            <span>
                                         {{$address->mobile_number}}
                                         </span>
-                                    </div>
-                                    <div class="panel-footer">
-                                        <input name="select_address" value="{{$address->id}}" type="radio" required>
+                                        </div>
+                                        <div class="panel-footer">
+                                            <input name="select_address" value="{{$address->id}}" type="radio" required>
+                                        </div>
                                     </div>
                                 </div>
+                            @endforeach
+
+                            <div class="order-button-payment">
+                                <input type="submit" value="مرحله بعدی">
                             </div>
-                        @endforeach
 
-                        <div class="order-button-payment">
-                            <input type="submit" value="مرحله بعدی">
                         </div>
-
-                    </div>
-                </form>
+                    </form>
                 @endif
                 <form class="form-horizontal" method="post" action="{{route('user_add_address')}}" enctype="multipart/form-data" >
                     {{csrf_field()}}
@@ -103,13 +103,17 @@
                                 <div class="col-md-6">
                                     <div class="country-select">
                                         <label>استان <span class="required">*</span></label>
-                                        <input type="text" name="province" value="{{old('province')}}" placeholder="">
+                                        <select name="province">
+                                            <option value="isf">اصفهان</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="country-select">
                                         <label>شهر <span class="required">*</span></label>
-                                        <input type="text" name="city" value="{{old('city')}}" placeholder="">
+                                        <select name="city">
+                                            <option value="isf">اصفهان</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-12">

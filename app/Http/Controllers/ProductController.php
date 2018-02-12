@@ -22,14 +22,14 @@ class ProductController extends AdminController
     public function getIndex()
     {
         $products = Product::paginate(8);
-        $pages = page::orderBy('created_at','desc')->take(10)->get(['id','title']);
+//        $pages = page::orderBy('created_at','desc')->take(10)->get(['id','title']);
 //        dd($pages);
         $categories=Category::all();
         $showTBL=new ShowTable;
 
         $cat_html=$showTBL->category_tree();
 
-        return view('rapiden_layouts.index', compact('products','categories','cat_html','pages'));
+        return view('rapiden_layouts.index', compact('products','categories','cat_html'));
     }
     public function Show_product(Product $product)
     {
@@ -37,16 +37,16 @@ class ProductController extends AdminController
         $comments = $product->comments()->where('approved' , 1)->where('parent_id', 0)->latest()->with(['comments' => function($query) {
             $query->where('approved' , 1)->latest();
         }])->get();
-        $pages = page::orderBy('created_at','desc')->take(10)->get(['id','title']);
+//        $pages = page::orderBy('created_at','desc')->take(10)->get(['id','title']);
 
-        return view('rapiden_layouts.show_product', compact('product', 'comments','pages'));
+        return view('rapiden_layouts.show_product', compact('product', 'comments'));
     }
 
     public function Show_page(page $page)
     {
 
-        $pages = page::orderBy('created_at','desc')->take(10)->get(['id','title']);
-        return view('rapiden_layouts.page', compact('page','pages'));
+//        $pages = page::orderBy('created_at','desc')->take(10)->get(['id','title']);
+        return view('rapiden_layouts.page', compact('page'));
     }
 
     public function Show_product_in_cat(Category $category)

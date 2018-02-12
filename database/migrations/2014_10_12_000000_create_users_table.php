@@ -181,11 +181,11 @@ class CreateUsersTable extends Migration
             $table->string('name_family');
             $table->string('phone_number',40)->nullable();
             $table->string('mobile_number',40)->nullable();
-            $table->string('country');
-            $table->string('province');
-            $table->string('city');
-            $table->string('address')->nullable();
-            $table->string('postal_code');
+            $table->string('country',40);
+            $table->string('province',40);
+            $table->string('city',40);
+            $table->mediumText('address')->nullable();
+            $table->string('postal_code',60);
             $table->string('email');
             $table->softDeletes();
             $table->timestamps();
@@ -197,14 +197,13 @@ class CreateUsersTable extends Migration
             $table->foreign('info_user_id')->references('id')->on('info_users');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('users_address_id')->unsigned()->index();
+            $table->integer('users_address_id')->unsigned()->nullable();
             $table->foreign('users_address_id')->references('id')->on('users_addresses');
+            $table->mediumText('address')->nullable();
             $table->smallInteger('pay_method');//0=didn't pay/1=cash/2=check/
             $table->smallInteger('state')->default(0);//0=didn't process/1=check wherehouse /2=send/3=delivere
             $table->timestamps();
         });
-
-
 
         Schema::create('baskets', function (Blueprint $table) {
             $table->increments('id');
@@ -236,7 +235,7 @@ class CreateUsersTable extends Migration
             $table->foreign('order_id')->references('id')->on('orders');
             $table->smallInteger('state')->default(0);//0=didn't process/1=wait to pass /2=reject/3=pass/4=pass with delay
             $table->text('description')->nullable();
-
+            $table->string('mobile_number',20)->nullable();
             $table->string('imagePath');
             $table->nullableTimestamps();
         });

@@ -19,9 +19,6 @@
                 </ol>
             </div>
         </div>
-        <form class="form-horizontal" method="post" action="{{route('update_full_basket')}}"
-              enctype="multipart/form-data">
-            {{csrf_field()}}
 
             <div id="basket_table" id="accordion">
                 <div class="table-content table-responsive">
@@ -117,9 +114,10 @@
                                                 <div class="coupon">
                                                     <input type="hidden" name="address_id"
                                                            value="{{$order->users_address->id}}">
-                                                    <h3>{{$order->users_address->name_family}}</h3>
-                                                    <p>{{$order->users_address->address}}</p>
-                                                    <p>{{$order->users_address->mobile_number}}</p>
+                                                    {{--<h3>{{$order->users_address->name_family}}</h3>--}}
+                                                    {{--<p>{{$order->users_address->address}}</p>--}}
+                                                    {{--<p>{{$order->users_address->mobile_number}}</p>--}}
+                                                    <p>{{$order->address}}</p>
                                                     @if($basket->children_id==0)
                                                         @if($basket->paid>0)
                                                         <p><a href="{{route('user-refund_basket',$basket->id)}}"><i class="fa fa-reply fa-3x" aria-hidden="true"></i><i class="fa fa-money fa-2x" aria-hidden="true"></i>
@@ -196,7 +194,7 @@
 
                 </div>
             </div>
-        </form>
+    </div>
 
 
 

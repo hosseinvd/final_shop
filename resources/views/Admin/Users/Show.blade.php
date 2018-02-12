@@ -40,8 +40,6 @@
                             <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
                             <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
                             <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-
                         </ul>
                     @endif
                 </div><!--/col-->

@@ -160,7 +160,7 @@ class UserController extends AdminController
 //        dd($request->all());
         $user_addresses=Auth::user()->addresses()->create(['name_family'=>$request->name_family,'mobile_number'=>$request->mobile_number,
             'phone_number'=>$request->phone_number,'province'=>$request->province,'city'=>$request->city,'address'=>$request->address,
-            'postal_code'=>$request->postal_code,'email'=>$request->email,'country'=>'iran']);
+            'postal_code'=>$request->postal_code,'email'=>$request->email,'country'=>'ایران']);
         return redirect()->route('user-checkout');
     }
 
@@ -219,7 +219,10 @@ class UserController extends AdminController
         $discount_percent=$discount/Cart::subtotal();
         $address=Users_address::find($request->address_id);
         $info_user=Info_user::where('user_id',Auth::user()->id)->first();
-        $order=Auth::user()->orders()->create(['users_address_id'=>$address->id,'info_user_id'=>$info_user->id,
+        $order=Auth::user()->orders()->create([
+            'users_address_id'=>$address->id,
+            'info_user_id'=>$info_user->id,
+            'address'=>$address->country.' - '.$address->province.' - '.$address->city.' - '.$address->address.' - کدپستی : '.$address->postal_code.' - گیرنده : '.$address->name_family.' شماره تلفن : '.$address->mobile_number,
             'pay_method'=>'1']);
         Cart::store(Auth::user()->name,\auth()->id());
 

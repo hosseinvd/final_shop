@@ -270,15 +270,18 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-user user-image" aria-hidden="true"></i>
-
-                            {{--<img src="{{asset('hvd.jpg')}}" class="user-image" alt="User Image">--}}
+                            <?php $imagePath=Auth::user()->info_user->imagePath?>
+                            @if($imagePath!=null)
+                               <img src="{{asset('images/profile_img').'/'.$imagePath}}" class="user-image" alt="User Image">
+                            @endif
                             <span class="hidden-xs">{{Auth::user()->name}}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
+                                @if($imagePath!=null)
+                                    <img src="{{asset('images/profile_img').'/'.$imagePath}}" class="img-circle" alt="User Image">
+                                @endif
                                 <p>
                                     {{Auth::user()->name}}
                                     <small>مدیریت کل سایت</small>

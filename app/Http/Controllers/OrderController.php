@@ -23,6 +23,11 @@ class OrderController extends Controller
             'mobile_number'=>$request->mobile_number,
             'address'=>$request->address
             ]);
+
+        Order::where('users_address_id',$request->address_id)->update([
+            'address'=>'آدرس : '.$request->address.' تحویل گیرنده :  '.$request->name_family.' شماره تلفن : '.$request->mobile_number,
+        ]);
+
         $s=$request->address;
         return $s;
     }

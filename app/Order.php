@@ -26,4 +26,5 @@ class Order extends Model
         return $this->belongsTo('App\Info_user');
     }
 
+
 }

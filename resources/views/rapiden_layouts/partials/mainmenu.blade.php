@@ -11,9 +11,12 @@
                 <li><a href="shop.html">محصولات جدید</a></li>
                 <li><a href="#">صفحات</a>
                     <ul>
-                        @foreach($pages as $page)
-                            <li><a href="{{route('show_page',$page->id)}}">{{$page->title}} </a></li>
-                        @endforeach
+                        {{$pages = \App\page::orderBy('created_at','desc')->take(10)->get(['id','title'])}}
+                        @if(count($pages)>0)
+                            @foreach($pages as $page)
+                                <li><a href="{{route('show_page',$page->id)}}">{{$page->title}} </a></li>
+                            @endforeach
+                        @endif
                     </ul>
                 </li>
                 <li><a href="about.html">درباره ما</a></li>
