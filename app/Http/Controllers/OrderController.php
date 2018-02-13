@@ -12,7 +12,6 @@ class OrderController extends Controller
     public function orders()
     {
         $orders=Order::paginate(10);
-
         return view('Admin.orders.oreders',compact('orders'));
     }
 

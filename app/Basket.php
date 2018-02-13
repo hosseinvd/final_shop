@@ -28,6 +28,16 @@ class Basket extends Model
         return $this->belongsTo(Order::class);
     }
 
+    public function cheques()
+    {
+        return $this->hasMany(Cheque::class)->orderBy('created_at','ASC');
+    }
+
+    public function payments()
+    {
+        return $this->hasMany(Payment::class)->orderBy('created_at','ASC');
+    }
+
     public function refund_basket()
     {
         return $this->hasOne(Basket::class , 'children_id' , 'id');

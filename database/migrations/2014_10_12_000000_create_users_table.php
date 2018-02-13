@@ -198,7 +198,7 @@ class CreateUsersTable extends Migration
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('users_address_id')->unsigned()->nullable();
-            $table->foreign('users_address_id')->references('id')->on('users_addresses');
+            $table->foreign('users_address_id')->references('id')->on('users_addresses')->onDelete('set null');
             $table->mediumText('address')->nullable();
             $table->smallInteger('pay_method');//0=didn't pay/1=cash/2=check/
             $table->smallInteger('state')->default(0);//0=didn't process/1=check wherehouse /2=send/3=delivere
@@ -210,11 +210,11 @@ class CreateUsersTable extends Migration
             $table->integer('children_id')->unsigned()->default(0);
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('order_id')->unsigned()->index();
+            $table->integer('order_id')->unsigned()->nullable();
             $table->foreign('order_id')->references('id')->on('orders');
             $table->longText('content');
-            $table->integer('discount_id')->unsigned()->index();
-            $table->foreign('discount_id')->references('id')->on('discounts');
+            $table->integer('discount_id')->unsigned()->nullable();
+            $table->foreign('discount_id')->references('id')->on('discounts')->onDelete('set null');
             $table->float('price')->nullable();
             $table->float('tax')->nullable();
             $table->float('total_discount')->nullable();
@@ -229,10 +229,13 @@ class CreateUsersTable extends Migration
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('serial_number');
+            $table->string('pay_to')->nullable();//چک در وجه
+            $table->string('bank')->nullable();
+            $table->string('bank_address')->nullable();
             $table->date('due_date');
             $table->float('price');
-            $table->integer('order_id')->unsigned()->index();
-            $table->foreign('order_id')->references('id')->on('orders');
+            $table->integer('basket_id')->unsigned()->nullable();
+            $table->foreign('basket_id')->references('id')->on('baskets')->onDelete('set null');
             $table->smallInteger('state')->default(0);//0=didn't process/1=wait to pass /2=reject/3=pass/4=pass with delay
             $table->text('description')->nullable();
             $table->string('mobile_number',20)->nullable();

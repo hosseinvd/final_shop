@@ -45,7 +45,8 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::post('/payment','UserController@payment')->name('user_payment');
     Route::get('/orders', 'UserController@orders')->name('user-orders');
 
-    Route::post('request','UserController@Getway_request')->name('Gateway-Request');
+
+    Route::post('request','UserController@user_pay')->name('user_pay');
     Route::any('callback/from/bank','UserController@Getway_back')->name('Gateway-back');
 
     Route::get('/comments', 'UserController@comments')->name('user-comments');

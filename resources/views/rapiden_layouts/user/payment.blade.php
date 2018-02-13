@@ -19,7 +19,7 @@
                 </ol>
             </div>
         </div>
-        <form class="form-horizontal" method="post" action="{{route('Gateway-Request')}}" enctype="multipart/form-data">
+        <form class="form-horizontal" method="post" action="{{route('user_pay')}}" enctype="multipart/form-data">
             {{csrf_field()}}
             <div id="basket_table">
                 <div class="table-content table-responsive">
@@ -120,8 +120,8 @@
                             </table>
                             <div class="row col-md-12 col-sm-12">
                                 <label class="radio-inline"><input type="radio" name="pay_method" value="cash" checked>نقد</label>
-                                <label class="radio-inline"><input type="radio" name="pay_method" value="cheque">چک</label>
-                                <label class="radio-inline"><input type="radio" name="pay_method" value="credit">اعتباری</label>
+                                <label class="radio-inline"><input type="radio" name="pay_method" value="credit">چک</label>
+
                                 <br>
                             </div>
 

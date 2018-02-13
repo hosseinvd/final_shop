@@ -19,6 +19,8 @@ class CreatePaymentsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('cheque_id')->unsigned()->nullable();
             $table->foreign('cheque_id')->references('id')->on('cheques');
+            $table->integer('basket_id')->unsigned()->nullable();
+            $table->foreign('basket_id')->references('id')->on('baskets')->onDelete('set null');
             $table->smallInteger('pay_method');//1=cash/2=check/3=pay in location
             $table->smallInteger('state')->default(0);//0=waiting to pay,1=payed
             $table->float('price',10,4);

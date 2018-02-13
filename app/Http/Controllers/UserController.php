@@ -264,6 +264,8 @@ class UserController extends AdminController
         session(['discount' => "0"]);
         session(['discount_id'=>"1"]);
         Cart::destroy();
+
+        return $pay;
     }
 
     public function commission($basket_id,$discount_code){
@@ -318,30 +320,45 @@ class UserController extends AdminController
         }
 
     }
-    public function Getway_request(Request $request)
+    
+    public function user_pay(Request $request)
     {
-        $this->calc_money($request);
-
-        return redirect()->route('user-orders');
+        dd($request->all());
+        $price=$this->calc_money($request);
+        $pay_method = $request->pay_method;
+        switch ($pay_method) {
+            case "cash":
+                    $this->Getway_request($price);
+            case "credit":
+//                    redirect()->route('')
+        }
+//        $this->calc_money($request);
+//
+//        return redirect()->route('user-orders');
 //        dd($request->all());
-//        try {
 //
-//            $gateway = \Gateway::ZARINPAL();
-//            $gateway->setCallback(url('callback/from/bank'));
-//            $gateway->price(1000)->ready();
-//            $refId =  $gateway->refId();
-//            $transID = $gateway->transactionId();
-//
-//            // Your code here
-//
-//            return $gateway->redirect();
-//
-//        } catch (Exception $e) {
-//
-//            echo $e->getMessage();
-//        }
     }
 
+    public function Getway_request($price)
+    {
+        try {
+
+            $gateway = \Gateway::ZARINPAL();
+            $gateway->setCallback(url('callback/from/bank'));
+            $gateway->price(1000)->ready();
+            $refId =  $gateway->refId();
+            $transID = $gateway->transactionId();
+
+            // Your code here
+
+            return $gateway->redirect();
+
+        } catch (Exception $e) {
+
+            echo $e->getMessage();
+        }
+
+    }
     public function Getway_back()
     {
         try {
