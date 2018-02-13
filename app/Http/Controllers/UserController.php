@@ -192,7 +192,7 @@ class UserController extends AdminController
         return view('rapiden_layouts.user.bank_account',compact('bank_interactions'));
     }
 
-    public function Getway_request(Request $request)
+    public function calc_money($request)
     {
         // calculate amount of discount
         $discount_row=Discount::where('code','=',$request->discount_code)->first();
@@ -259,8 +259,16 @@ class UserController extends AdminController
             $stuffs->discount_description=" no discount ";
             $stuffs->save();
         }
+        $this->commission($basket->id,$request->discount_code);
+        session(['discount_code' => "null"]);
+        session(['discount' => "0"]);
+        session(['discount_id'=>"1"]);
+        Cart::destroy();
+    }
+
+    public function commission($basket_id,$discount_code){
         // pay commission to seller and reseller
-        $discount_row=Discount::where('code','=',$request->discount_code)->first();
+        $discount_row=Discount::where('code','=',$discount_code)->first();
         if(!empty($discount_row)) {
             if(strcmp($discount_row->type,'reseller_Discount')==0)
             {
@@ -278,7 +286,7 @@ class UserController extends AdminController
                     'pay_to_id'=>$user_commission,
                     'type'=>$type,
                     'commission_paid'=>0,
-                    'basket_id'=>$basket->id,
+                    'basket_id'=>$basket_id,
                 ]);
 
 //                $reseller=Reseller::where('reseller_id','=',$user_commission)->first();
@@ -292,7 +300,7 @@ class UserController extends AdminController
                         'pay_to_id'=>$reseller->seller_id,
                         'type'=>4,
                         'commission_paid'=>1,
-                        'basket_id'=>$basket->id,
+                        'basket_id'=>$basket_id,
                     ]);
 
                     $bank_account = BankAccount::create([
@@ -302,17 +310,17 @@ class UserController extends AdminController
                         'pay_to_id'=>$reseller->seller_id,
                         'type' => 3,
                         'commission_paid' => 0,
-                        'basket_id' => $basket->id,
+                        'basket_id' => $basket_id,
                     ]);
                 }
 
             }
         }
 
-        session(['discount_code' => "null"]);
-        session(['discount' => "0"]);
-        session(['discount_id'=>"1"]);
-        Cart::destroy();
+    }
+    public function Getway_request(Request $request)
+    {
+        $this->calc_money($request);
 
         return redirect()->route('user-orders');
 //        dd($request->all());
