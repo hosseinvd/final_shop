@@ -23,6 +23,11 @@ class Basket extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function user_info()
+    {
+        return $this->belongsTo(Info_user::class,'user_id','user_id');
+    }
+
     public function order()
     {
         return $this->belongsTo(Order::class);

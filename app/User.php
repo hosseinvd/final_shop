@@ -74,4 +74,9 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Info_user');
     }
+
+    public function cheques()
+    {
+        return $this->hasMany(Cheque::class);
+    }
 }

@@ -44,6 +44,9 @@ Route::group(['prefix'=>'user','middleware'=>'auth'],function(){
     Route::post('/add_address','UserController@add_address')->name('user_add_address');
     Route::post('/payment','UserController@payment')->name('user_payment');
     Route::get('/orders', 'UserController@orders')->name('user-orders');
+    Route::get('/cheques/{basket_id}', 'UserController@cheques')->name('user_basket_cheques');
+    Route::post('/add_cheques','UserController@add_cheque')->name('user_add_cheque');
+    Route::post('/add_pay','UserController@add_pay')->name('user_add_pay');
 
 
     Route::post('request','UserController@user_pay')->name('user_pay');

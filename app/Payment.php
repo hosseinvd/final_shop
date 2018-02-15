@@ -17,4 +17,8 @@ class Payment extends Model
         return $this->belongsTo(Basket::class);
     }
 
+    public function cheque()
+    {
+        return $this->hasone(Cheque::class);
+    }
 }

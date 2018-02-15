@@ -163,7 +163,7 @@ class CreateUsersTable extends Migration
             $table->string('type');//type=(Discount=1,reseller_Discount,reseller)
             $table->string('calc_mode');//mode=(MAX,MIN,VALUE,PERCENT)
             $table->float('percent')->default(0);
-            $table->float('value',12,4)->default(0);
+            $table->float('value',16,2)->default(0);
             $table->integer('numbers')->default(0);
             //marketer who benefit from discount or reseller
             $table->integer('user_id')->unsigned()->index();
@@ -215,25 +215,43 @@ class CreateUsersTable extends Migration
             $table->longText('content');
             $table->integer('discount_id')->unsigned()->nullable();
             $table->foreign('discount_id')->references('id')->on('discounts')->onDelete('set null');
-            $table->float('price')->nullable();
+            $table->float('price',16,2)->nullable();
             $table->float('tax')->nullable();
             $table->float('total_discount')->nullable();
-            $table->float('paid')->nullable();
+            $table->float('paid',16,2)->nullable();
             $table->smallInteger('basket_type')->default('0');//normal=0,refund=1
             $table->smallInteger('status')->default('0');//disapproved=0,suspend=1,approved=2
             $table->nullableTimestamps();
+        });
+
+        Schema::create('payments', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('basket_id')->unsigned()->nullable();
+            $table->foreign('basket_id')->references('id')->on('baskets')->onDelete('set null');
+            $table->smallInteger('pay_method');//1=cash/2=check/3=pay in location
+            $table->smallInteger('state')->default(0);//0=waiting to pay,1=payed
+            $table->float('price',16,2);
+            $table->string('ref_id')->nullable();
+            $table->string('sender_ac_number')->nullable();
+            $table->dateTime('transaction_date')->nullable();
+            $table->smallInteger('refund')->default(0);
+            $table->timestamps();
         });
 
         Schema::create('cheques', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('payment_id')->unsigned()->nullable();
+            $table->foreign('payment_id')->references('id')->on('payments');
             $table->string('serial_number');
             $table->string('pay_to')->nullable();//چک در وجه
             $table->string('bank')->nullable();
             $table->string('bank_address')->nullable();
             $table->date('due_date');
-            $table->float('price');
+            $table->float('price',16,2);
             $table->integer('basket_id')->unsigned()->nullable();
             $table->foreign('basket_id')->references('id')->on('baskets')->onDelete('set null');
             $table->smallInteger('state')->default(0);//0=didn't process/1=wait to pass /2=reject/3=pass/4=pass with delay
@@ -254,7 +272,7 @@ class CreateUsersTable extends Migration
             $table->float('price');
             $table->float('tax');
             $table->float('total_price');
-            $table->float('discount',8,4);
+            $table->float('discount',16,2);
             $table->string('discount_description');
             $table->integer('discount_code');
             $table->timestamps();
@@ -284,6 +302,7 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('users_addresses');
         Schema::dropIfExists('discounts');
         Schema::dropIfExists('orders');
+        Schema::dropIfExists('payments');
         Schema::dropIfExists('cheques');
     }
 }

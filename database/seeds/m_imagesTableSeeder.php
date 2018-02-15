@@ -16,7 +16,7 @@ class m_imagesTableSeeder extends Seeder
         for ($i=1; $i < 24; $i++) {
             DB::table('m_images')->insert([
                 'imagePath' => $faker->image('public/product_image', $width = 960, $height = 720, 'abstract', false),
-                'product_id' => $i%8+1,
+                'product_id' => $i%10+1,
                 'imageSize' => '960'
             ]);
         }

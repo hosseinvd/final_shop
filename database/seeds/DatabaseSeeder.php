@@ -19,9 +19,10 @@ class DatabaseSeeder extends Seeder
         $categories = factory(\App\Category::class, 8)->create();
         $products = factory(\App\Product::class, 10)->create();
         $address=factory(\App\Users_address::class, 24)->create();
-//        $this->call(m_imagesTableSeeder::class);
         $this->call(DiscountTableSeeder::class);
-        $images = factory(\App\m_image::class, 16)->create();
+        $this->call(m_imagesTableSeeder::class);
+
+        $images = factory(\App\m_image::class, 2)->create();
 
     }
 }

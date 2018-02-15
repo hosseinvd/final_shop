@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\BankAccount;
 use App\Basket;
+use App\Cheque;
 use App\Discount;
 use App\Info_user;
 use App\Library\ShowTable;
@@ -177,21 +178,161 @@ class UserController extends AdminController
 //        dd($orders->all());
         return view('rapiden_layouts.user.oreders',compact('orders'));
     }
-
     public function comments()
     {
         $comments=Auth::user()->comments()->get();
         return view('rapiden_layouts.user.comments',compact('comments'));
     }
+    public function add_cheque(Request $request)
+    {
+//        dd($request->all());
+        $s_date = explode('-', $request->due_date);
+        $s_date_m=jDateTime::toGregorian($s_date[0], $s_date[1], $s_date[2]); // [2016, 5, 7]
+        $s_date_m=Carbon::createFromDate($s_date_m[0],$s_date_m[1],$s_date_m[2]);
 
+        $payment=Auth::user()->payments()->create(['basket_id'=>$request->basket_id,'pay_method'=>'2','state'=>'0','price'=>$request->price,'transaction_date'=>Carbon::now()]);
 
+        $cheque=Auth::user()->cheques()->create(['payment_id'=>$payment->id,'serial_number'=>$request->serial_number,'pay_to'=>$request->pay_to,'price'=>$request->price,
+            'mobile_number'=>$request->mobile_number,'bank_address'=>$request->bank_address,'bank'=>$request->bank,'due_date'=>$s_date_m,
+            'basket_id'=>$request->basket_id,'description'=>$request->description,'imagePath'=>'']);
+        return redirect()->route('user_basket_cheques',$request->basket_id);
+    }
+    public function cheques($basket_id)
+    {
+        $pay=Basket::find($basket_id)->paid;
+        $payments=Basket::find($basket_id)->payments;
+//        dd($payments);
+        return view('rapiden_layouts.user.cheque',compact('payments','basket_id','pay'));
+    }
+    public function add_pay(Request $request)
+    {
+        $this->validate(request(), [
+            'price' => 'required|numeric|min:0',
+        ]);
+        $this->go_to_bank($request->price,$request->basket_id);
+        return redirect()->route('user_basket_cheques',$request->basket_id);
 
+    }
     public function bank_account()
     {
         $bank_interactions=Auth::user()->bankaccounts()->with('payer')->get();
         return view('rapiden_layouts.user.bank_account',compact('bank_interactions'));
     }
+    public function addToCart(Product $product)
+    {
+        Cart::add($product->id, $product->title, 1, $product->price);
+        return back();
+    }
+    public function category_html()
+    {
+        return view('category');
+    }
+    public function addToCartWithNumber(Request $request)
+    {
+//        dd($request->all());
+        $this->validate(request(), [
+            'qty' => 'required|numeric|min:1',
+        ]);
+        $product=Product::find($request->id);
+        Cart::add($product->id, $product->title, $request->qty, $product->price);
+        return back();
+    }
+    public function update_full_basket(Request $request)
+    {
+        for ($i=0;$i<count($request->row_id);$i++){
+            $product=Product::find($request->product_id[$i]);
+            $pr=($product->inventory-$request->row_qty[$i]);
+            if($pr>=0) {
+                Cart::update($request->row_id[$i], $request->row_qty[$i]);
+            }
+        }
+        return redirect()->route('user-basket');
+    }
+    public function updateCart(Request $request)
+    {
 
+        $this->validate(request(), [
+            'row_qty' => 'required|numeric|min:0',
+        ]);
+        Cart::update($request->row_id,$request->row_qty);
+
+        return redirect(route('user-basket'));
+    }
+    public function delete_Cart_item($rowId)
+    {
+        Cart::remove($rowId);
+        return redirect()->back();
+    }
+    public function CalcDiscount($code)
+    {
+        $discount=Discount::where('code','=',$code)->firstOrFail();
+
+        dd($discount);
+    }
+    public function jquery_post(Request $request)
+    {
+
+        $showtable=new ShowTable();
+        if (isset($request->request_name)) {
+            $request_name = $request->request_name;
+            switch ($request_name) {
+                case "basket_update":
+                    $this->validate(request(), [
+                        'row_qty' => 'required|numeric|min:0',
+                    ]);
+                    $product=Product::find($request->product_id);
+                    $pr=($product->inventory-$request->row_qty);
+                    if($pr>=0){
+                        Cart::update($request->row_id,$request->row_qty);
+                        $s=$showtable->user_basket();
+                    }else{
+//                        $row_qty_temp=Cart::get($request->row_id)->qty;
+//                        Cart::update($request->row_id,$request->row_qty);
+                        $s=$showtable->user_basket();
+//                        Cart::update($request->row_id,$row_qty_temp);
+                        $s=$s."<h3>موجودی ".$product->title."کافی نیست</h3>";
+                    }
+                    return $s;
+                case "basket_delete":
+                    Cart::remove($request->rowId);
+                    return $showtable->user_basket();
+                case "calc_discount":
+                    session(['discount_code' => $request->code]);
+                    $discount_row=Discount::where('code','=',$request->code)->first();
+                    Log::info('discount'.$discount_row);
+
+                    if(!empty($discount_row)){
+                        $discount=0.00000;
+//                        $discount_row->decrement('numbers');
+                        if(strcmp($discount_row->calc_mode,'MAX')==0) {
+                            $discount = ($discount_row->percent / 100) * Cart::subtotal();
+                            if($discount<$discount_row->value){
+                                $discount=$discount_row->value;
+                            }
+                        }
+                        if(strcmp($discount_row->calc_mode,'MIN')==0) {
+//                            $x=str_replace(",", "", Cart::subtotal());
+//                            Log::info('discount'.$x);
+
+                            $discount = (($discount_row->percent / 100) * (Cart::subtotal()));
+                            if($discount>$discount_row->value){
+                                $discount=$discount_row->value;
+                            }
+                        }
+                        session(['discount' => $discount]);
+                        session(['discount_id' => $discount_row->id]);
+                    }
+                    else{
+                        $discount=0;
+                        session(['discount' => $discount]);
+                        session(['discount_id' => "1"]);
+                    }
+
+                    return $showtable->user_basket_discount($discount);
+            }
+        }
+
+    }
     public function calc_money($request)
     {
         // calculate amount of discount
@@ -260,14 +401,13 @@ class UserController extends AdminController
             $stuffs->save();
         }
         $this->commission($basket->id,$request->discount_code);
-        session(['discount_code' => "null"]);
-        session(['discount' => "0"]);
-        session(['discount_id'=>"1"]);
-        Cart::destroy();
-
-        return $pay;
+//        session(['discount_code' => "null"]);
+//        session(['discount' => "0"]);
+//        session(['discount_id'=>"1"]);
+//        Cart::destroy();
+        $pay_info=['price'=>$pay,'basket_id'=>$basket->id];
+        return $pay_info;
     }
-
     public function commission($basket_id,$discount_code){
         // pay commission to seller and reseller
         $discount_row=Discount::where('code','=',$discount_code)->first();
@@ -320,23 +460,24 @@ class UserController extends AdminController
         }
 
     }
-    
     public function user_pay(Request $request)
     {
-        dd($request->all());
-        $price=$this->calc_money($request);
+        $pay_info=$this->calc_money($request);
         $pay_method = $request->pay_method;
         switch ($pay_method) {
             case "cash":
-                    $this->Getway_request($price);
+                $this->go_to_bank($pay_info['price'],$pay_info['basket_id']);
             case "credit":
-//                    redirect()->route('')
+                return redirect()->route('user_basket_cheques',$pay_info['basket_id']);
         }
-//        $this->calc_money($request);
-//
-//        return redirect()->route('user-orders');
-//        dd($request->all());
-//
+    }
+
+    public function go_to_bank($price,$basket_id)
+    {
+//        $this->Getway_request($price);
+        $payment=Auth::user()->payments()->create(['basket_id'=>$basket_id,'pay_method'=>'1','state'=>'1','price'=>$price,'sender_ac_number'=>'1235543',
+            'ref_id'=>'1','transaction_date'=>Carbon::now()]);
+
     }
 
     public function Getway_request($price)
@@ -368,6 +509,7 @@ class UserController extends AdminController
             $refId = $gateway->refId();
             $cardNumber = $gateway->cardNumber();
 
+            //        return redirect()->route('user-orders');
             // عملیات خرید با موفقیت انجام شده است
             // در اینجا کالا درخواستی را به کاربر ارائه میکنم
 
@@ -376,131 +518,6 @@ class UserController extends AdminController
 
             echo $e->getMessage();
         }
-    }
-
-    public function addToCart(Product $product)
-    {
-        Cart::add($product->id, $product->title, 1, $product->price);
-
-        return back();
-    }
-
-    public function category_html()
-    {
-        return view('category');
-    }
-
-    public function addToCartWithNumber(Request $request)
-    {
-//        dd($request->all());
-        $this->validate(request(), [
-            'qty' => 'required|numeric|min:1',
-        ]);
-        $product=Product::find($request->id);
-        Cart::add($product->id, $product->title, $request->qty, $product->price);
-        return back();
-    }
-
-    public function update_full_basket(Request $request)
-    {
-        for ($i=0;$i<count($request->row_id);$i++){
-            $product=Product::find($request->product_id[$i]);
-            $pr=($product->inventory-$request->row_qty[$i]);
-            if($pr>=0) {
-                Cart::update($request->row_id[$i], $request->row_qty[$i]);
-            }
-        }
-        return redirect()->route('user-basket');
-    }
-
-
-    public function updateCart(Request $request)
-    {
-
-        $this->validate(request(), [
-            'row_qty' => 'required|numeric|min:0',
-        ]);
-        Cart::update($request->row_id,$request->row_qty);
-
-        return redirect(route('user-basket'));
-    }
-
-    public function delete_Cart_item($rowId)
-    {
-        Cart::remove($rowId);
-        return redirect()->back();
-    }
-
-    public function CalcDiscount($code)
-    {
-        $discount=Discount::where('code','=',$code)->firstOrFail();
-
-        dd($discount);
-    }
-
-    public function jquery_post(Request $request)
-    {
-
-        $showtable=new ShowTable();
-        if (isset($request->request_name)) {
-            $request_name = $request->request_name;
-            switch ($request_name) {
-                case "basket_update":
-                    $this->validate(request(), [
-                        'row_qty' => 'required|numeric|min:0',
-                    ]);
-                    $product=Product::find($request->product_id);
-                    $pr=($product->inventory-$request->row_qty);
-                    if($pr>=0){
-                        Cart::update($request->row_id,$request->row_qty);
-                        $s=$showtable->user_basket();
-                    }else{
-//                        $row_qty_temp=Cart::get($request->row_id)->qty;
-//                        Cart::update($request->row_id,$request->row_qty);
-                        $s=$showtable->user_basket();
-//                        Cart::update($request->row_id,$row_qty_temp);
-                        $s=$s."<h3>موجودی ".$product->title."کافی نیست</h3>";
-                    }
-                    return $s;
-                case "basket_delete":
-                    Cart::remove($request->rowId);
-                    return $showtable->user_basket();
-                case "calc_discount":
-                    session(['discount_code' => $request->code]);
-                    $discount_row=Discount::where('code','=',$request->code)->first();
-                    Log::info('discount'.$discount_row);
-
-                    if(!empty($discount_row)){
-                        $discount=0.00000;
-//                        $discount_row->decrement('numbers');
-                        if(strcmp($discount_row->calc_mode,'MAX')==0) {
-                            $discount = ($discount_row->percent / 100) * Cart::subtotal();
-                            if($discount<$discount_row->value){
-                                $discount=$discount_row->value;
-                            }
-                        }
-                        if(strcmp($discount_row->calc_mode,'MIN')==0) {
-//                            $x=str_replace(",", "", Cart::subtotal());
-//                            Log::info('discount'.$x);
-
-                            $discount = (($discount_row->percent / 100) * (Cart::subtotal()));
-                            if($discount>$discount_row->value){
-                                $discount=$discount_row->value;
-                            }
-                        }
-                        session(['discount' => $discount]);
-                        session(['discount_id' => $discount_row->id]);
-                    }
-                    else{
-                        $discount=0;
-                        session(['discount' => $discount]);
-                        session(['discount_id' => "1"]);
-                    }
-
-                    return $showtable->user_basket_discount($discount);
-            }
-        }
-
     }
 
 }
