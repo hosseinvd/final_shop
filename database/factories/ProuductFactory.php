@@ -7,7 +7,7 @@ $factory->define(App\Product::class, function (Faker $faker) {
         'title' => $faker->company,
         'description' => $faker->realText($maxNbChars = 150, $indexSize = 1) ,
         'viewCount'=>0,
-        'price' => rand(100000,10000000),
+        'price' => rand(100,10000)*1000,
         'discount'=>rand(5,25),
         'inventory'=>rand(0,100),
         'warranty'=>'shop',
