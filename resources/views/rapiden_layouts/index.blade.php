@@ -49,12 +49,14 @@
                                 <div class="pro-title">
                                     <h4><a href="{{route('show_product',$product->id)}}">{{$product->title}}</a></h4>
                                 </div>
-                                <div class="pro-rating ">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                </div>
+                                {{--<div class="pro-rating ">--}}
+                                    {{--<a href="#"><i class="fa fa-star"></i></a>--}}
+                                {{--</div>--}}
                                 <div class="price-box">
-                                    <span class="old-price product-price"><del>{{$product->price}}</del></span>
-                                    <span class="price product-price">{{$product->price-$product->discount}} <small>تومان</small></span>
+                                    <span class="price product-price">{{$product->price}} <small>تومان</small></span>
+
+                                    {{--<span class="old-price product-price"><del>{{$product->price}}</del></span>--}}
+{{--                                    <span class="price product-price">{{$product->price-((($product->discount)/100)*$product->price)}} <small>تومان</small></span>--}}
                                 </div>
                                 <div class="product-icon">
                                     <div class="product-icon-right f-right">

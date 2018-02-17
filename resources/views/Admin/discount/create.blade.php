@@ -99,7 +99,6 @@
                         <input hidden type="hidden" class="form-control" id="user_id" placeholder="user_id" name="user_id" value="{{Auth::user()->id}}">
                     </div>
                 </div>
-
                 <div class="form-group">
                     <button type="submit" class="btn btn-success btn-block" id="add_discount">Submit</button>
                 </div>

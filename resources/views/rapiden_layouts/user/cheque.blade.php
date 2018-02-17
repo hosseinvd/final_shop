@@ -25,11 +25,10 @@
         </div>
     </div>
     <!-- breadcrumb end -->
-
     <!-- checkout-area start -->
     <div class="checkout-area">
         <div class="container">
-            <p><strong>مبلغ قابل پرداخت </strong>{{$pay}}</p>
+            <p><strong>مبلغ قابل پرداخت </strong>{{$pay-$payments->sum('price')}}</p>
             <div class="row">
                 @if($payments->count()>0)
                     @foreach($payments as $index=>$payment)
@@ -207,4 +206,5 @@
 
 
             </script>
+    </div>
 @endsection

@@ -237,6 +237,7 @@ class UserController extends AdminController
         Cart::add($product->id, $product->title, $request->qty, $product->price);
         return back();
     }
+
     public function update_full_basket(Request $request)
     {
         for ($i=0;$i<count($request->row_id);$i++){
@@ -248,9 +249,9 @@ class UserController extends AdminController
         }
         return redirect()->route('user-basket');
     }
+
     public function updateCart(Request $request)
     {
-
         $this->validate(request(), [
             'row_qty' => 'required|numeric|min:0',
         ]);
@@ -271,7 +272,6 @@ class UserController extends AdminController
     }
     public function jquery_post(Request $request)
     {
-
         $showtable=new ShowTable();
         if (isset($request->request_name)) {
             $request_name = $request->request_name;
@@ -467,6 +467,7 @@ class UserController extends AdminController
         switch ($pay_method) {
             case "cash":
                 $this->go_to_bank($pay_info['price'],$pay_info['basket_id']);
+                return redirect()->route('user-orders');
             case "credit":
                 return redirect()->route('user_basket_cheques',$pay_info['basket_id']);
         }
@@ -477,7 +478,6 @@ class UserController extends AdminController
 //        $this->Getway_request($price);
         $payment=Auth::user()->payments()->create(['basket_id'=>$basket_id,'pay_method'=>'1','state'=>'1','price'=>$price,'sender_ac_number'=>'1235543',
             'ref_id'=>'1','transaction_date'=>Carbon::now()]);
-
     }
 
     public function Getway_request($price)
@@ -512,7 +512,6 @@ class UserController extends AdminController
             //        return redirect()->route('user-orders');
             // عملیات خرید با موفقیت انجام شده است
             // در اینجا کالا درخواستی را به کاربر ارائه میکنم
-
 
         } catch (Exception $e) {
 

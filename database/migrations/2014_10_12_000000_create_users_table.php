@@ -83,7 +83,7 @@ class CreateUsersTable extends Migration
             $table->integer('viewCount')->default('0');
             $table->string('title');
             $table->integer('price');
-            $table->float('discount',16,4)->nullable();
+            $table->float('discount',8,2)->nullable();//percent between 0 to 100
             $table->integer('inventory');
             $table->string('warranty')->nullable();
             $table->string('color')->nullable();

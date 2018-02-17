@@ -6,8 +6,10 @@
                 <div class="slider-container">
                     <!-- Slider Image -->
                     <div id="mainSlider" class="nivoSlider slider-image">
-                        <img src="{{asset('img/slider/3.jpg')}}" alt="" title="#htmlcaption1">
-                        <img src="{{asset('img/slider/4.jpg')}}" alt="" title="#htmlcaption2">
+                        <img src="{{asset('img/slider/a.jpg')}}" alt="" title="#htmlcaption1">
+                        <img src="{{asset('img/slider/b.jpg')}}" alt="" title="#htmlcaption1">
+                        <img src="{{asset('img/slider/c.png')}}" alt="" title="#htmlcaption1">
+{{--                        <img src="{{asset('img/slider/3.jpg')}}" alt="" title="#htmlcaption1">--}}
                     </div>
                 </div>
             </div>

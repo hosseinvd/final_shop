@@ -19,7 +19,7 @@ class DiscountTableSeeder extends Seeder
         'calc_mode'=>'MIN',
         'commission'=>10,
         'percent'=>10,
-        'value' => 25,
+        'value' => 250000,
         'numbers'=>10000,
         'start_date'=>$faker->dateTime('now'),
         'end_date'=>$faker->dateTime('2099-04-25 08:37:17'),

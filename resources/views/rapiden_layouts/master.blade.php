@@ -77,7 +77,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="contact-text">
-                                        <span class="address">تبریز، ولیعصر، جنب بانک صادرات، پلاک 67، طبقه 135</span>
+                                        <span class="address">اصفهان خیابان فردوسی</span>
                                     </div>
                                 </li>
                                 <li>
@@ -85,7 +85,7 @@
                                         <i class="fa fa-envelope-o"></i>
                                     </div>
                                     <div class="contact-text">
-                                        <a href="#"><span>info@sample.com</span></a>
+                                        <a href="#"><span>hossein.vd@gmail.com</span></a>
                                     </div>
                                 </li>
                                 <li>
@@ -93,7 +93,7 @@
                                         <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="contact-text">
-                                        <span class="ltr_text">(+1)866-550-3669</span>
+                                        <span class="ltr_text">+989132948649</span>
                                     </div>
                                 </li>
                             </ul>

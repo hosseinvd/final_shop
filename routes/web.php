@@ -84,6 +84,11 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
     Route::put('/Orders', 'OrderController@approve_basket');
     Route::delete('/Orders', 'OrderController@disapprove_basket');
 
+    Route::get('/Payment/{payment}', 'PaymentController@ShowEditPage')->name('a_show_edit_payment');
+    Route::post('/Payment/store', 'PaymentController@a_Store_payment')->name('a_update_payment');
+    Route::put('/Payment', 'PaymentController@approve_payment');
+    Route::delete('/Payment', 'PaymentController@disapprove_payment');
+
 //  Page manager routes
     Route::get('/AddPage','PageController@CreatePage')->name('a_show_create_page');
     Route::post('/AddPage','PageController@StorePage')->name('a_Store_page');

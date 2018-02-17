@@ -26,8 +26,10 @@
                     <div class="panel-heading">اطلاعات</div>
                     <div class="panel-body">
                         <div class="col-md-2">
+                            @if(!empty($user_info->imagePath))
                             <img src="{{asset('images/profile_img').'/'.$user_info->imagePath}}" alt=""
                                  class="center-block img-circle img-responsive" style="width: 150px">
+                            @endif
                         </div>
                         <div class="form-group col-md-4 col-sm-12">
                             <div class="col-md-12">
