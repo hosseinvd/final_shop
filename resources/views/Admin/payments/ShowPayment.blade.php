@@ -12,7 +12,7 @@
             <div class="container">
                 <ol class="breadcrumb">
                     <li><a href="{{route('a_Dashboard')}}"><i class="fa fa-home"></i> داشبورد</a></li>
-                    <li class="active">اصلاح چک</li>
+                    <li class="active"> چک</li>
                 </ol>
             </div>
         </div>
@@ -24,53 +24,46 @@
                 <form class="form-horizontal" method="post" action="{{route('a_update_payment')}}"
                       enctype="multipart/form-data">
                     {{csrf_field()}}
-                    <div class="panel panel-info">
+                    <div class="panel panel-danger">
 
-                    <div class="panel-heading"><h2>ویرایش چک  </h2></div>
+                    <div class="panel-heading"><h2>مشخصات چک  </h2></div>
                         <br>
                     <div class="panel-body">
                         <div class="form-group">
+                            <label class="control-label col-sm-2">تاریخ <span class="required"></span></label>
+                            <div class="col-sm-4">
+                                {{jdate($payment->cheque->due_date)->format('%d %B، %Y')}}
+                            </div>
                             <label class="control-label col-sm-2">شماره سریال چک <span class="required">*</span></label>
                             <div class="col-sm-4">
-                                <input type="text" name="serial_number"
-                                       value="{{$payment->cheque->serial_number}}" placeholder="">
+                                {{$payment->cheque->serial_number}}
                                 <input type="hidden" name="basket_id" value="{{$payment->basket_id}}">
                                 <input type="hidden" name="payment_id" value="{{$payment->id}}">
                                 <input type="hidden" name="cheque_id" value="{{$payment->cheque->id}}">
-
-                            </div>
-
-                            <label class="control-label col-sm-2">مبلغ <span class="required"></span></label>
-                            <div class="col-sm-4">
-                                <input type="text" name="price" value="{{$payment->price}}"
-                                       placeholder="price">
                             </div>
                         </div>
+
                         <div class="form-group">
-
-                            <label class="control-label col-sm-2">موعد پرداخت <span class="required"></span></label>
+                            <label class="control-label col-sm-2">به موجب این چک مبلغ  <span class="required"></span></label>
                             <div class="col-sm-4">
-                                <input type="date" name="due_date" id="start_date"
-                                       value="{{jdate($payment->cheque->due_date)->format('%d %B، %Y')}}"
-                                       class="form-controller" required>
+                                {{$payment->price}} ریال
                             </div>
+                            <label class="control-label col-sm-2"> در وجه <span class="required">*</span></label>
+                            <div class="col-sm-4">
+                                {{$payment->cheque->pay_to}}
+                            </div>
+                        </div>
 
+
+
+                        <div class="form-group">
                             <label class="control-label col-sm-2"> بانک <span class="required"></span></label>
                             <div class="col-sm-4">
-                                <input type="text" name="bank" value="{{$payment->cheque->bank}}"
-                                       placeholder="">
+                                {{$payment->cheque->bank}}
                             </div>
-                        </div>
-                        <div class="form-group">
                             <label class="control-label col-sm-2">شعبه <span class="required"></span></label>
                             <div class="col-sm-4">
-                                <input type="text" name="bank_address"
-                                       value="{{$payment->cheque->bank_address}}" placeholder="">
-                            </div>
-                            <label class="control-label col-sm-2">چک در وجه <span class="required">*</span></label>
-                            <div class="col-sm-4">
-                                <input type="text" name="pay_to" value="{{$payment->cheque->pay_to}}"
-                                       placeholder="">
+                                {{$payment->cheque->bank_address}}
                             </div>
 
                         </div>
@@ -78,21 +71,15 @@
                             <label class="control-label col-sm-2">شماره تلفن صاحب چک <span
                                         class="required">*</span></label>
                             <div class="col-sm-4">
-                                <input type="text" name="mobile_number"
-                                       value="{{$payment->cheque->mobile_number}}" placeholder="">
+                                {{$payment->cheque->mobile_number}}
                             </div>
                             <label class="control-label col-sm-2">توضیحات <span class="required"></span></label>
                             <div class="col-sm-4">
-                                <input type="text" name="description" value="{{$payment->cheque->description}}"
-                                       placeholder="چنانچه چک متعلق به شخص دیگری است اعلام کنید">
+                                {{$payment->cheque->description}}
                             </div>
 
                         </div>
-                        <div class="form-group">
-                        <div class="col-md-4 col-sm-12 col-md-offset-7">
-                            <button type="submit" class="btn btn-success btn-block" >Submit</button>
-                        </div>
-                        </div>
+
                     </div>
                         <div class="panel-footer">
 

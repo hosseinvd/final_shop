@@ -371,6 +371,10 @@
                     <ul class="treeview-menu">
                         <li><a href="{{route('a_orders')}}"><i class="fa fa-users text-light-blue"
                                                                   aria-hidden="true"></i>                                همه سفارشات</a></li>
+                        <li><a href="{{route('a_disapprove_orders')}}"><i class="fa fa-users text-light-blue"
+                                                                          aria-hidden="true"></i> همه سفارشات تائید نشده</a>
+                        <li><a href="{{route('a_approve_orders')}}"><i class="fa fa-users text-light-blue"
+                                                                          aria-hidden="true"></i> همه سفارشات تائید شده</a>
                     </ul>
                 </li>
                 <li class="treeview">

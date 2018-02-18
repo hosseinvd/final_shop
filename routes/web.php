@@ -80,12 +80,16 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
     Route::post('/UpdateProducts', 'ProductController@Update_Products')->name('a_Update_product');
 
     Route::get('/Orders', 'OrderController@orders')->name('a_orders');
+    Route::get('/Orders/disapprove', 'OrderController@disapprove_orders')->name('a_disapprove_orders');
+    Route::get('/Orders/approve', 'OrderController@approve_orders')->name('a_approve_orders');
+    Route::post('/Orders/search', 'OrderController@search_orders')->name('a_search_orders');
     Route::patch('/Orders', 'OrderController@edit');
     Route::put('/Orders', 'OrderController@approve_basket');
     Route::delete('/Orders', 'OrderController@disapprove_basket');
 
     Route::get('/Payment/{payment}', 'PaymentController@ShowEditPage')->name('a_show_edit_payment');
-    Route::post('/Payment/store', 'PaymentController@a_Store_payment')->name('a_update_payment');
+    Route::get('/Payment/show/{payment}', 'PaymentController@ShowPage')->name('a_show_payment');
+    Route::post('/Payment/update', 'PaymentController@a_update_payment')->name('a_update_payment');
     Route::put('/Payment', 'PaymentController@approve_payment');
     Route::delete('/Payment', 'PaymentController@disapprove_payment');
 

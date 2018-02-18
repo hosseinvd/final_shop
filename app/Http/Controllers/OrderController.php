@@ -15,6 +15,41 @@ class OrderController extends Controller
         return view('Admin.orders.oreders',compact('orders'));
     }
 
+    public function search_orders(Request $request)
+    {
+//        dd($request->all());
+        if(strcmp($request->user_name,'*')!=0) {
+            $family = $request->user_name;
+            $orders = Order::wherehas('info_user', function ($q) use ($family) {
+                $q->where('family', 'LIKE', "%$family%");
+            })->paginate(10);
+        }elseif ($request->order_id!=0){
+//            dd($request->order_id);
+            $orders=Order::where('id',$request->order_id)->paginate(10);
+        }else{
+            $orders=Order::paginate(10);
+        }
+        return view('Admin.orders.oreders',compact('orders'));
+    }
+
+    public function disapprove_orders()
+    {
+
+        $orders=Order::wherehas('baskets',function($q){
+            $q->where('status','=',0);
+        })->paginate(10);
+        return view('Admin.orders.disapprove_orders',compact('orders'));
+    }
+
+    public function approve_orders()
+    {
+
+        $orders=Order::wherehas('baskets',function($q){
+            $q->where('status','=',2);
+        })->paginate(10);
+        return view('Admin.orders.approve_orders',compact('orders'));
+    }
+
     public function edit(Request $request)
     {
         Users_address::where('id',$request->address_id)->update([
