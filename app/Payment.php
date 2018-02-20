@@ -11,17 +11,14 @@ class Payment extends Model
     {
         return $this->belongsTo(User::class);
     }
-
     public function basket()
     {
         return $this->belongsTo(Basket::class);
     }
-
     public function cheque()
     {
         return $this->hasone(Cheque::class);
     }
-
     public function user_info()
     {
         return $this->belongsTo(Info_user::class,'user_id','user_id');
