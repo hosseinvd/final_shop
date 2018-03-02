@@ -31,27 +31,30 @@
                     {{csrf_field()}}
 
                     <div class="col md-12">
-
                         <h3>
                             <label> یک آدرس انتخاب کنید یا آدرس جدید خود را وارد کنید </label>
                             <input type="hidden" name="select_address" value="not select" type="radio" required>
                         </h3>
-                    @foreach($user_addresses as $index=>$address)
-                            <div class="col-md-4">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">{{$address->name_family}}</div>
-                                    <div class="panel-body">
-                                        <span>
-                                        {{$address->address}}
-                                        </span>
-                                        <span>
-                                        {{$address->mobile_number}}
-                                        </span>
-                                    </div>
-                                    <div class="panel-footer">
-                                        <input name="select_address" value="{{$address->id}}" type="radio" required>
+                        @foreach($user_addresses->chunk(3) as $chunk)
+                            <div class="row" >
+                            @foreach($chunk as $address)
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">{{$address->name_family}}</div>
+                                        <div class="panel-body">
+                                            <span>
+                                            {{$address->address}}
+                                            </span>
+                                            <span>
+                                            {{$address->mobile_number}}
+                                            </span>
+                                        </div>
+                                        <div class="panel-footer">
+                                            <input name="select_address" value="{{$address->id}}" type="radio" required>
+                                        </div>
                                     </div>
                                 </div>
+                            @endforeach
                             </div>
                         @endforeach
 

@@ -130,8 +130,6 @@
                             <button type="submit" class="btn btn-warning btn-block">پرداخت</button>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </form>

@@ -30,7 +30,7 @@
         </div>
         <div class="new-product-active border-1 owl-carousel">
 
-            @foreach($products->chunk(2) as $productChunk)
+            @foreach($products->chunk(3) as $productChunk)
                 <div class="new-product-items">
                     @foreach($productChunk as $product)
                         <div class="single-product  white-bg">

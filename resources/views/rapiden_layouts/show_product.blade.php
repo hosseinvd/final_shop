@@ -81,8 +81,8 @@
                             </p>
                         </div>
                         <div class="price-box">
-                            <span class="old-price product-price"><del>{{$product->price}}</del></span>
-                            <span class="price product-price">{{$product->price-$product->discount}} <small>تومان</small></span>
+                            {{--<span class="old-price product-price"><del>{{$product->price}}</del></span>--}}
+                            <span class="price product-price">{{$product->price}} <small>تومان</small></span>
                         </div>
                         <div class="short-desc">
                             <p>{{$product->description}}</p>

@@ -21,7 +21,7 @@ class ProductController extends AdminController
 
     public function getIndex()
     {
-        $products = Product::paginate(8);
+        $products = Product::paginate(12);
 //        $pages = page::orderBy('created_at','desc')->take(10)->get(['id','title']);
 //        dd($pages);
         $categories=Category::all();
@@ -51,10 +51,18 @@ class ProductController extends AdminController
 
     public function Show_product_in_cat(Category $category)
     {
-        $products=$category->products()->paginate(8);
-        $categories=Category::all();
-        return view('rapiden_layouts.index', compact('products','categories'));
+//        $products=$category->products()->paginate(8);
+//        $categories=Category::all();
+//        return view('rapiden_layouts.index', compact('products','categories'));
 
+        $products=$category->products()->paginate(8);
+
+        $categories=Category::all();
+        $showTBL=new ShowTable;
+
+        $cat_html=$showTBL->category_tree();
+
+        return view('rapiden_layouts.index', compact('products','categories','cat_html'));
     }
 
     public function a_Show_product(Product $product)
