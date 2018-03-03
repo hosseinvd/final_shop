@@ -31,12 +31,16 @@ class CategoryController extends Controller
         $category=Category::find($request->id);
         $category->name=$request->name;
         $category->description=$request->description;
+        if($request->sel_parent_id>=0) {
+           $category->parent_id = $request->sel_parent_id;
+        }
         $category->save();
         return 'Edit done';
     }
     public function DeleteCategory(request $request)
     {
         Category::destroy($request->id);
+
         return 'Delete done';
     }
 }

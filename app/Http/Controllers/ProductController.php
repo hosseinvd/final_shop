@@ -13,6 +13,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use function Sodium\increment;
 
 
 class ProductController extends AdminController
@@ -118,7 +119,7 @@ class ProductController extends AdminController
     {
 
 //        $input_product=$request->except(['_token','images']);
-        $category=Category::find($request->category_id);
+//        dd($request->category_id);
 
         $product = new Product;
         $product->title = $request->title;
@@ -129,12 +130,11 @@ class ProductController extends AdminController
         $product->size = $request->size;
         $product->color = $request->color;
         $product->warranty = $request->warranty;
-//        $product->category_id = $request->category_id;
         $product->description = $request->description;
         $product->long_description = $request->long_description;
         $product->save();
-        $category->products()->attach($product->id);
-
+        $product->categories()->sync($request->category_id);
+//        $category->products()->attach($product->id);
         $file = $request->file('images');
         if ($file) {
             $imagesUrl = $this->uploadImages($file);
@@ -156,6 +156,8 @@ class ProductController extends AdminController
     public function DeleteProducts(Request $request)
     {
         $product = Product::find($request->id);
+        $product->categories()->detach();
+
         $product->delete();
         return "Delete Success";
     }
@@ -166,7 +168,15 @@ class ProductController extends AdminController
 
         $s_product = Product::find($request->product_id);
 
-        return view('Admin.Product.EditProduct', compact('categories', 's_product'));
+        $index=0;
+        foreach($s_product->categories as $category)
+        {
+            $sub_cat[$index]=$category->id;
+            $index=$index+1;
+        }
+//        dd($sub_cat);
+
+        return view('Admin.Product.EditProduct', compact('categories', 's_product','sub_cat'));
     }
 
     public function EditProducts_Add_image(Request $request)
@@ -204,7 +214,7 @@ class ProductController extends AdminController
         $product->size = $request->size;
         $product->color = $request->color;
         $product->warranty = $request->warranty;
-//        $product->category_id = $request->category_id;
+        $product->categories()->sync($request->category_id);
         $product->description = $request->description;
         $product->long_description = $request->long_description;
         $product->save();

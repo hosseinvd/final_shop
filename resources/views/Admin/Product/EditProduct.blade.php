@@ -13,7 +13,7 @@
         <form class="form-horizontal" method="post" action="{{route('a_Update_product')}}" enctype="multipart/form-data">
             {{ csrf_field() }}
             <input type="hidden" name="p_id" id="product_id" value="{{$s_product->id}}">
-            <div class="col-sm-6">
+            <div class="col-md-6 col-sm-6">
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="title">عنوان :</label>
                     <div class="col-sm-10">
@@ -67,12 +67,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                    <label class="control-label col-sm-2">گروه :</label>
-                    <select class="form-control col-sm-4" name="category_id" id="category_id" required>
+                    <label class="control-label col-sm-4">گروه :</label>
+                    <select class="form-control col-sm-8" name="category_id[]" id="category_id" required multiple>
                         @foreach($categories as $category)
-                            @if($s_product->category_id==$category->id)
+                            {{--$s_product->category_id==$category->id--}}
+                            @if(in_array($category->id,$sub_cat))
                                 <option value="{{$category->id}}" selected>{{$category->name}}</option>
                             @else
                                 <option value="{{$category->id}}">{{$category->name}}</option>
@@ -80,6 +81,10 @@
                         @endforeach
                     </select>
                 </div>
+
+
+            </div>
+            <div class="col-md-12 col-sm-12">
                 <div class="form-group">
                     <label class="control-label" for="description">توضیح مختصر </label>
                     <div>
@@ -89,9 +94,6 @@
                         </textarea>
                     </div>
                 </div>
-
-            </div>
-            <div class="col-sm-12">
                 <div class="form-group">
                     <label>توضیحات کامل</label>
                     <div>
