@@ -169,6 +169,7 @@ class ProductController extends AdminController
         $s_product = Product::find($request->product_id);
 
         $index=0;
+        $sub_cat[0]=-1;
         foreach($s_product->categories as $category)
         {
             $sub_cat[$index]=$category->id;

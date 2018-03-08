@@ -67,10 +67,11 @@
                 },
                 function(isConfirm) {
                     if (isConfirm) {
-                        $.post("/admin/Products", {
+                        $.post("/admin/DeletePage", {
                             'id': id,
                             _token: CSRF_TOKEN,
                             _method: _method,
+
                         }, function (data) {
                             $('#C_table').load(location.href + ' #C_table');
                         });

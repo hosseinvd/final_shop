@@ -100,6 +100,8 @@ Route::group(['prefix'=>'admin','middleware' => ['role:superadministrator|admini
     Route::get('/ShowEditPage','PageController@ShowEditPage')->name('a_show_Edit_page');
     Route::post('/EditPage','PageController@EditPages')->name('a_Edit_page');
     Route::post('/UpdatePage','PageController@UpdatePage')->name('a_Update_page');
+    Route::delete('/DeletePage', 'PageController@DeletePage')->name('a_Delete_page');
+
 
     Route::post('/panel/upload-image','ProductController@UploadImage_ckeditor');
 

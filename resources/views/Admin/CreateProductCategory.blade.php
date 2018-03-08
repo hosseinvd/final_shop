@@ -46,7 +46,11 @@
                             <br>
                             <button type="submit" class="btn btn-primary btn-block" id="add_category_1">ثبت</button>
                         </div>
-
+                        {{--<div class="treeview">--}}
+                            {{--<ul>--}}
+                                {{--{!! $cat_html !!}--}}
+                            {{--</ul>--}}
+                        {{--</div>--}}
                     </div>
                 </form>
             </div>
@@ -198,20 +202,6 @@
                 });
             });
 
-//            $(document).on('click', '.our_button_d', function (event) {
-//                CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-//                var _method = 'DELETE';
-//                var id = $(this).attr("id");
-//
-//                $.post("/admin/CreateProductCategory", {
-//                    'id': id,
-//                    _token: CSRF_TOKEN,
-//                    _method: _method,
-//                }, function (data) {
-//                    $('#C_table').load(location.href + ' #C_table');
-//                });
-//
-//            });
 
             $(document).on('click', '.our_button_d', function (event) {
                 CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
@@ -245,40 +235,7 @@
 
             });
 
-
-            $(document).on('click', '.our_button_d', function (event) {
-                var image_id = $(this).attr("id");
-                var product_id = $("#product_id").val();
-                CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-                var _method = 'DELETE';
-                swal({
-                        title: "آیا از عملیات حذف مطمئن هستید",
-                        text: "عملیات حذف محصول",
-                        type: "warning",
-                        showCancelButton: true,
-                        confirmButtonClass: "btn-danger",
-                        confirmButtonText: "بله ",
-                        cancelButtonText: "لغو عملیات",
-                        closeOnConfirm: false,
-                        closeOnCancel: false
-                    },
-                    function (isConfirm) {
-                        if (isConfirm) {
-                            $.post("/admin/EditProducts", {
-                                'product_id': product_id,
-                                'image_id': image_id,
-                                _token: CSRF_TOKEN,
-                                _method: _method,
-                            }, function (data) {
-                                $('#C_table').html(data);
-                            });
-                            swal("حذف", "عملیات حذف با موفقیت پایان یافت", "success");
-                        } else {
-                            swal("لغو", "عملیات لغو گردید", "error");
-                        }
-                    });
-
-            });
+//
 
             $("#add_new_icon").click(function (event) {
                 $("#add_item").val(" ");

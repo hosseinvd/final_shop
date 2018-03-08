@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
+use App\Library\ShowTable;
 
 class CategoryController extends Controller
 {
@@ -13,7 +14,10 @@ class CategoryController extends Controller
         $categories_p=Category::paginate(8);
         $categories = Category::where('parent_id','0')->get();
 
-        return view('Admin.CreateProductCategory',compact('categories','categories_p'));
+        $showTBL=new ShowTable;
+        $cat_html=$showTBL->category_tree();
+
+        return view('Admin.CreateProductCategory',compact('categories','categories_p','cat_html'));
     }
 
     public function CreateCategory(request $request)

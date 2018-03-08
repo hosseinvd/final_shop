@@ -7,6 +7,11 @@
             {{csrf_field()}}
         <table class="table table-condensed">
             <tbody>
+            <th>تصویر</th>
+            <th>عنوان</th>
+            <th>قیمت</th>
+            <th>تعداد باقی مانده</th>
+            <th>عملیات</th>
             @foreach($products as $product)
                 <tr>
                     <td>
@@ -28,6 +33,9 @@
                         <div class="clearfix">
                             <div class="price">{{$product->price}}</div>
                         </div>
+                    </td>
+                    <td>
+                        {{$product->inventory}}
                     </td>
                     <td>
                         <button type="submit" name="product_id" class="btn btn-submit btn-block"

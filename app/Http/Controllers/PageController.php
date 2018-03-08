@@ -36,6 +36,13 @@ class PageController extends Controller
         return redirect(route('a_show_page',$page->id));
     }
 
+    public function DeletePage(Request $request)
+    {
+        $page=page::find($request->id);
+        $page->delete();
+        return 'delete page successfully';
+    }
+
     public function ShowPage($id)
     {
         $f_page=page::find($id);
