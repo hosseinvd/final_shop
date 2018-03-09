@@ -373,11 +373,12 @@
                                                     >عدم تائید<i class="fa fa-thumbs-down fa-x"></i>
                                                     </button>
 
-
+                                                    @if($payment->pay_method==2)
                                                     <a href="{{route('a_show_edit_payment',$payment->id)}}"
                                                        class="btn btn-warning btn-xs btn-payment-edit"
                                                     ><i class="fa fa-edit">ویرایش</i>
                                                     </a>
+                                                    @endif
                                                     <a href="{{route('a_show_payment',$payment->id)}}"
                                                        class="btn btn-info btn-xs btn-payment-show"
                                                     ><i class="fa fa-eye">نمایش</i>
