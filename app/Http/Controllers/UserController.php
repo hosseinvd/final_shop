@@ -202,7 +202,13 @@ class UserController extends AdminController
         $pay=Basket::find($basket_id)->paid;
         $payments=Basket::find($basket_id)->payments;
 //        dd($payments);
-        return view('rapiden_layouts.user.cheque',compact('payments','basket_id','pay'));
+        if($pay<=$payments->sum('price')) {
+            return redirect()->route('user-orders');
+        }
+        else {
+            return view('rapiden_layouts.user.cheque', compact('payments', 'basket_id', 'pay'));
+        }
+
     }
     public function add_pay(Request $request)
     {
@@ -401,10 +407,11 @@ class UserController extends AdminController
             $stuffs->save();
         }
         $this->commission($basket->id,$request->discount_code);
-//        session(['discount_code' => "null"]);
-//        session(['discount' => "0"]);
-//        session(['discount_id'=>"1"]);
-//        Cart::destroy();
+
+        session(['discount_code' => "null"]);
+        session(['discount' => "0"]);
+        session(['discount_id'=>"1"]);
+        Cart::destroy();
         $pay_info=['price'=>$pay,'basket_id'=>$basket->id];
         return $pay_info;
     }

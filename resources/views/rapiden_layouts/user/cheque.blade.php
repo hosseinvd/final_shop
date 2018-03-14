@@ -29,6 +29,9 @@
     <div class="checkout-area">
         <div class="container">
             <p><strong>مبلغ قابل پرداخت </strong>{{$pay-$payments->sum('price')}}</p>
+            @if ($pay<=$payments->sum('price'))
+                <a href="{{route('user-orders')}}"> مرحله بعدی</a>
+            @endif
             <div class="row">
                 @if($payments->count()>0)
                     @foreach($payments as $index=>$payment)
