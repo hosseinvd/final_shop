@@ -99,23 +99,24 @@
                                     <tr class='cart-subtotal'>
                                         <th>تخفیف</th>
                                         <td>
+                                            {{--//$stuff->basket->price--}}
                                             <input type="hidden" name="discount_id"
                                                    value="{{session()->get('discount_id')}}">
                                             <input type="hidden" name="discount_code"
                                                    value="{{session()->get('discount_code')}}">
-                                            <strong><span class='amount'>{{$stuff->basket->total_discount*$stuff->basket->price}}
+                                            <strong><span class='amount'>{{$stuff->basket->total_discount}}
                                                     <small>تومان</small></span></strong>
                                         </td>
                                     </tr>
                                     <tr class="cart-subtotal">
                                         <th>مالیات</th>
-                                        <td><span class="amount">0
-                                                <small>تومان</small></span></td>
+                                        <td><span class="amount">
+                                                {{$stuff->basket->tax}}<small>تومان</small></span></td>
                                     </tr>
                                     <tr class="cart-subtotal">
                                         <th>جمع</th>
                                         <td>
-                                            <strong><span class="amount">{{$stuff->basket->price-$stuff->basket->total_discount*$stuff->basket->price}}
+                                            <strong><span class="amount">{{$stuff->basket->price-$stuff->basket->total_discount}}
                                                     <small>تومان</small></span></strong>
                                         </td>
                                     </tr>
@@ -137,7 +138,7 @@
                     </div>
 
                 </div>
-                <p class="bg-danger">* توجه در صورت تائید بازگشت کالا مقدار پرداختی شما برای مالیات محاسبه نشده همچنین مبلغ پرداختی شما با احتساب کد تخفیف مورد محاسبه قرار می گیرد.</p>
+                <p class="bg-danger">* توجه در صورت تائید بازگشت کالا مقدار پرداختی شما به عنوان مالیات محاسبه نشده و همچنین مبلغ پرداختی شما با احتساب کد تخفیف مورد محاسبه قرار می گیرد.</p>
 
             </div>
         </form>

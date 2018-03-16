@@ -29,9 +29,7 @@
     <div class="checkout-area">
         <div class="container">
             <p><strong>مبلغ قابل پرداخت </strong>{{$pay-$payments->sum('price')}}</p>
-            @if ($pay<=$payments->sum('price'))
-                <a href="{{route('user-orders')}}"> مرحله بعدی</a>
-            @endif
+
             <div class="row">
                 @if($payments->count()>0)
                     @foreach($payments as $index=>$payment)
@@ -74,6 +72,14 @@
                         @endif
                     @endforeach
                 @endif
+                    @if ($pay<=$payments->sum('price'))
+
+                        <div class="col-md-12 col-sm-12">
+                            <div class="buttons-cart">
+                                <a href="{{route('user-orders')}}"> پرداخت شما تکمیل شده انتقال به بخش مجموعه سفارشات</a>
+                            </div>
+                        </div>
+                    @endif
                 <div class=" container col-lg-12 col-md-12">
                     <div class="panel-group" id="accordion">
                         <form class="form-horizontal" method="post" action="{{route('user_add_pay')}}"

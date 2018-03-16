@@ -41,13 +41,13 @@
                         </div>
                         <label class="control-label col-sm-2" for="value">مقدار تخفیف :</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control" id="value" placeholder="value" name="value">
+                            <input type="number" class="form-control" id="value" placeholder="value" name="value" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="commission" required>حق بازاریاب :</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" id="commission" placeholder="commission" name="commission">
+                            <input type="text" class="form-control" id="commission" placeholder="commission" name="commission" required>
                         </div>
                         <label class="control-label col-sm-2" for="calc_mode">نوع محاسبه :</label>
                         <div class="col-sm-4">
@@ -74,7 +74,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="description">توضیح مختصر :</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" id="description" placeholder="description" name="description">
+                            <input type="text" class="form-control" id="description" placeholder="description" name="description" >
                         </div>
                         <label class="control-label col-sm-2" for="end_date">تعداد :</label>
                         <div class="col-sm-4">
